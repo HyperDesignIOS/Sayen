@@ -1,0 +1,679 @@
+/*
+ Localizable.strings
+ Sreer
+ 
+ Created by admin on 4/9/19.
+  */
+
+
+"Success" = "نجحت العملية";
+"Failed" = "خطأ" ;
+
+"email_empty" = "البريد الإلكترونى مطلوب";
+"email_invalid" = "خطأ بحقل البريد الإلكتروني";
+"pw_empty" = "كلمة المرور مطلوبة";
+"pw_invalid" = "كلمة المرور خاطئة";
+"emptyPhoneNum" = "رقم الهاتف مطلوب";
+"phone" = "رقم الهاتف *" ;
+"invalidPhone" =  "رقم الهاتف يجب ان يبدأ ب 9665xxxxxxxx أو 00966xxxxxxxx أو 5xxxxxxxx أو 05xxxxxxxx";
+"invalidPhoneNum" = "رقم الهاتف غير صحيح و يجب أن يبدأ ب 5xxxxxxxx أو 05xxxxxxxx";
+"requiredPassword" = "يجب ان تدخل ";
+"success" = "نجحت العملية";
+"activeAccount" = "من فضلك";
+"activeAccountMessage" = "قم بتفعيل الحساب";
+"emailSent" = "تفقد بريدك الإلكتروني";
+"emailSentMessage" = "تم إرسال بريد إلكتروني";
+"ok" = "تم";
+"Error" = "حدث خطأ";
+"tryAgain" = "حاول مره اخري";
+"forgetPassword" = "نسيت كلمة المرور";
+"phoneVaildationMsg" = "صيغة رقم الجوال يجب ان تكون 05xxxxxxxx";
+"failed" = "خطأ";
+"cancel" = "إلغاء";
+"agree" = "موافق";
+"logout" = "هل تريد تسجيل الخروج؟";
+"signout" = "تسجيل خروج" ;
+"national_id" = "هوية وطنية" ;
+"national_placed" = "هوية مقيم" ;
+"national_pas" = "جواز سفر" ;
+"national_sar" = "هوية خليجية" ;
+"numberOfLines" = "رقم الحدود" ;
+"national1"= "إقامة / هوية مقيم" ;
+"national2" = "جواز سفر/هوية خليجي" ;
+"myNumbers"="أرقامي";
+"offers"="الإستعلام عن العروض المعتمدة";
+"complaints"="خدمات الشكاوى";
+"mkyas"="مقياس";
+"searchProcess"="الاستعلام عن الأجهزة المعتمدة";
+"otherServices"= "البلاغات";
+"code_pin_empty"="يجب إدخال رمز التحقق كاملا";
+"fllowUpVisitorAlert" = "عزيزى الزائر , يمكنك متابعة شكوى عبر تسجيل الدخول " ;
+"reportsVisitorAlert" = "عزيزى الزائر , يمكنك متابعة البلاغات عبر تسجيل الدخول " ;
+"myNumbersDesc" = "خدمة أرقامى تتيح للمستخدم الاطلاع على تفاصيل أرقام الهاتف و شرائح البيانات المسجلة برقم هويته لدى مقدمى خدمات الإتصالات و تقنية المعلومات";
+"offersDesc" = "تتيح خدمة العروض المعتمدة فى معرفة المستخدمين على تفاصيل العروض المعتمدة لجميع مقدمى الخدمة" ;
+
+"mkyasDesc" = "مقياس هو أحد مبادرات هيئة الإتصالات و تقنية المعلومات والتى تهدف لتأسيس منصة قياس لجودة تجربة إستخدام الإنترنت فى المملكة العربية السعودية" ;
+
+"searchService" = "تقدم الهيئة عدد من الخدمات المتعلقة بأجهزة الاتصالات وتقنية المعلومات لتمكين مصنعى أجهزة الاتصالات و تقنية المعلومات ومورديها من التأكد من مطابقة أجهزتهم للمواصفات الفنية" ;
+
+"otherService" = "هى خدمة تتيح للمستخدمين من التقديم على البلاغات التى تخص قطاع الاتصالات وتقنية المعلومات والتى تقع ضمن اختصاصات ومهام الهيئة" ;
+//MARK: Login
+"user_Name" = "رقم الهوية *" ;
+"password" = "كلمة المرور" ;
+"phoneNum" = "رقم الجوال *" ;
+"email" = "البريد الإلكترونى *" ;
+"address" = "العنوان *" ;
+"address_" = "تم إضافة العنوان" ;
+"Search" = "البحث";
+"new" = "الأكثر حداثة";
+"all" = "الكل";
+"newArrival" = "الأكثر حداثة";
+"bestSeller" = "الأفضل مبيعاً";
+
+"applyPromoCode" = "تطبيق الرمز الترويجي";
+"pleaseAddAnotherShippingAddress" = "من فضلك أضف عنوان توصيل آخر";
+//MARK: Reg
+"nationalType" = "نوع الهوية *" ;
+"borderLineNumber" = "رقم الحدود *" ;
+"passportNumber" = "رقم جواز السفر *" ;
+"fullName" = "اسمك الثلاثى *" ;
+//MARK: main home
+"serviceDesc" = "مثال" ;
+//MARK:Complaint
+"complaintMissingFIleDesc" = "عزيزى المستخدم هناك بيانات مفقودة يرجى إستكمالها.لديك مهلة يومين لإتمام المعلومات المطلوبة تبدأ من تاريخ يوم "  ;
+"at_date" = " الموافق ";
+"at_hour" =  "الساعة ";
+"select_your_image_from_" = "إختيار الملفات من" ;
+"photoGallery" = "الإستوديو" ;
+
+"this_app_isnot_authorized_to_use_Camera" = "هذا التطبيق غير مصرح له إستخدام الكاميرا" ;
+
+
+"files" = "الملفات" ;
+"attachType_isRequired" = "يجب إختيار نوع المرفق أولاً" ;
+"compType" = "نوع الشكوى الرئيسى *";
+"mainCompTypeRequired" = "نوع الشكوى الرئيسى مطلوب ";
+
+"serviceProvider" = "مقدم الخدمة *" ;
+"serviceProviderIsRequired" = "مقدم الخدمة حقل مطلوب " ;
+"error" = "خطأ";
+"name" = "الإسم" ;
+"nationalityType" = "نوع الهوية *" ;
+"nationalityID" = "رقم الهوية *" ;
+"phoneNumber" = "رقم الجوال للتواصل" ;
+"email_" = "البريد الإلكتروني";
+"hasOrganization" = "بموجب وكالة *" ;
+"organizationNum" = " رقم الوكالة * " ;
+"itsDate" = "تاريخها*" ;
+"sourceOf" = "صادرة من*" ;
+"pertisName" = "إسم المشترك*" ;
+"MultiID" = "رقم الهوية المشتركة*" ;
+"UserRequest" = "طلب الشاكي";
+"complaintNumUnder" = "رقم الخدمة محل الشكوى" ;
+"enterNumber" = "ادخل الرقم" ;
+"or" = "أو";
+"pickFromPhoneNumList" = "اختر من قائمة أرقامك" ;
+"ComplainterType" = "نوع الشكوى الفرعي*" ;
+"complaintEscalation" = "تصعيد الشكوى";
+"complaintBody" = "إذا لديك شكوى وأردت الإستعلام عن حالتها يمكنك ذلك, هذه الخدمة متوفره لجميع المستخدمين" ;
+"followComplaint" = "متابعة شكوى";
+"enter_compl_num" = "الرجاء أدخل رقم الشكوى" ;
+"enter_serv_num" = "الرجاء ادخال رقم الخدمة" ;
+"select_serv_provider" = "اختر مقدم الخدمة" ;
+//main Problems
+"payment_main" = "فواتير والتزامات مالية";
+"lowServiceQuality_main" = "تدنى مستوى خدمة أو انقطاعها" ;
+"registerServiceNum_main" = "تأسيس (رقم - خدمة)  دون طلب المستخدم" ;
+"changeOrNotNum_main"  = "نقل رقم أو عدم نقل رقم من مشغل لآخر" ;
+"cancelNum_main" = "إلغاء أو تعليق (رقم - خدمة)" ;
+"notActiveServ_main" = "عدم تفعيل خدمة او تطبيق مزاياها" ;
+"annoying_main" = "ازعاج" ;
+"humanHarmingWaves_main" = "التعرض البشرى للمجالات الكهرومغناطيسية للترددات الراديوية" ;
+"notSecretive_main" = "عدم الإلتزام بسرية معلومات المستخدم" ;
+
+//Sub Problems
+"missCalc_sub" = "خطأ فى احتساب الفاتورة" ;
+"notPaying_sub" = "عدم قيد سداد مبلغ مالى فى أنظمة مقدم الخدمة" ;
+"notReturn_sub" = "عدم إعادة مبلغ مالي" ;
+"dualPayment_sub" = "خصم من الرصيد (مسبق الدفع)" ;
+"creaditAddingProb_sub" = "عدم إضافة رصيد (مسبق الدفع)" ;
+"receiptProb_sub" = "عدم تزويد المستخدم بتفاصيل الفاتورة (مفوتر)" ;
+//
+"lowServ_sub" = "تدنى مستوى الخدمة" ;
+"disconnection_sub" = "انقطاع الخدمة" ;
+"establishment_sub" = "تأسيس رقم دون طلب المستخدم" ;
+"addServWithoutOrd_sub" = "اضافة خدمة دون طلب المستخدم" ;
+"transferWithout_sub" = "نقل رقم دون طلب المستخدم" ;
+"disableTransfer_sub" = "عدم تنفيذ طلب نقل رقم" ;
+"smsProblems_sub" = "عدم استقبال المكالمات والرسائل بعد انتقال الرقم لمشغل آخر" ;
+"onHoldServNum_sub" = "إلغاء أو تعليق (رقم - خدمة) دون طلب المستخدم" ;
+"notFunctionOnHoldServ_sub" = "عدم تنفيذ طلب المستخدم إلغاء أو تعليق (رقم - خدمة)" ;
+"cantAddComment" = "لا يمكن إضافة تعليق" ;
+"comment" = "التعليق*" ;
+"commentRequired" = "حقل التعليق مطلوب" ;
+"servNotAction_sub" = "عدم تفعيل خدمة" ;
+"benefits_notAction_sub" = "عدم تطبيق مزايا خدمة" ;
+"servNotReceived_sub" = "عدم تقديم خدمة" ;
+"annoying_sub" = "ازعاج" ;
+"spam_sub" = "التضرر من الرسائل الاقتحامية الدعائية (Spam)" ;
+"secretiveLess_sub" = "(يجب أرفاق مستند الشكوى - سبب اتهام الشركة بعدم الإلتزام بسرية المعلومات)" ;
+//Stage 3
+"subscriptionType" = "نوع الإشتراك*" ;
+"servType" = "نوع الخدمة الفرعي*" ;
+"serNum" = "رقم الخدمة محل الشكوى*" ;
+"subCompType" = "نوع الشكوى الفرعي*" ;
+"EnterPhone" = "فضلا ادخال رقم الجوال";
+"errorEscaleComplaint"= "خطأ فى تصعيد الشكوى";
+"successEscaleComplaint"= "تم استرجاع بيانات الشكوى بنجاح";
+
+//Visitor
+"ComplainerType" = "صفة الشاكي" ;
+"crNumber" = "رقم السجل التجاري*" ;
+"crValidateDate" = "تاريخ إنتهاء السجل التجاري*" ;
+"address" = "العنوان*" ;
+ "companyName" = "إسم الشركة*" ;
+"consPass" = "تأكيد كلمة المرور *" ;
+"industName" = "الإسم التجاري" ;
+"modelName" = "الموديل الصناعي";
+"manuf" = "المصنع" ;
+//Stage2
+"complainerStateType" = "صفة مقدم الخدمة" ;
+"complainer" = "مقدم الشكوى*" ;
+"mandateNum" = "رقم التفويض *" ;
+"mandateDate" = "تاريخ التفويض *" ;
+"agencyNum" = " رقم الوكالة* " ;
+"agencyDate" = "تاريخها*" ;
+"agencyOrigin" = "صادرة من*" ;
+"under_mandate" = "بموجب تفويض" ;
+"under_agency" = "بموجب وكالة" ;
+"complaintNum" = "رقم الشكوى *" ;
+"enterValue" = "من فضلك أدخل بيانات" ;
+"enterYourPhone" = "أدخل رقم جوال مسجل على الهوية الخاصة بك" ;
+"noData" = "لا توجد بيانات للعرض" ;
+
+"birthDate" = "تاريخ الميلاد *" ;
+"mobileToConnect" = "رقم الجوال للتواصل  *" ;
+"city" = "المدينة " ;
+"address" = "العنوان *" ;
+"expirDate" = "تاريخ الإنتهاء *" ;
+"nationality" = "الجنسية *" ;
+"receiptable" = "مفوتر" ;
+"prePaid" = "مسبق الدفع" ;
+
+
+"landLine" = "صوتي" ;
+"mobile" = "بيانات" ;
+"InternetLandLine" = "ثابت" ;
+"InternetMobile" = "انترنت ثابت" ;
+"isRequired" = " حقل مطلوب " ;
+"AddressDescription" = "تفاصيل العنوان";
+"street" = "الشارع";
+"country" = "الدولة";
+"ZipCode" = "الرمز البريدى";
+ "canotBeLessTHan" = " يجب ان لا يقل عن  " ;
+"Words" = " أحرف " ;
+"word" = " حرف ";
+"field" = " حقل ";
+"invalidEmail" = "البريد الإلكترونى غير صحيح" ;
+"passNotValid" = "كلمة المرور يجب أن تحتوى على اكثر من ٨ أحرف مكونين من أرقام وأحرف [A-z] وحروف خاصة" ;
+"newPassNotValid" = "كلمة المرور الجديدة يجب أن تحتوى على اكثر من ٨ أحرف مكونين من أرقام وأحرف [A-z] وحروف خاصة" ;
+
+"Saudi" = "سعودي" ;
+"Egyption" =  "مصري" ;
+"Kwity" = "كويتي" ;
+"pleaseCheckYourEMail" = "من فضلك تفقد البريد الإلكترونى الخاص بك";
+//
+
+"activeAccount"="تفعيل الحساب";
+"activeAccountMessage"="تم ارسال رابط تفعيل الحساب على بريدك الإلكترونى اضغط على رابط التفعيل لكى تتمكن من الحجز معنا";
+"emailSent"="تم ارسال بريد الكتروني";
+"emailSentMessage"="تم ارسال رابط على بريدك الإلكترونى لكى تتمكن من إعادة ضبط كلمة المرور الخاصة بك";
+"ok_"="حسنا";
+
+"pickFileType" = "اختر نوع الملف";
+"file_msg_error" = "حدث خطأ فى تحميل الملف" ;
+"photos" = "صور";
+"file" = "ملف";
+//
+"descAbout" = "هيئة الاتصالات وتقنية المعلومات هى الجهة المسؤولة عن تنظيم قطاع الاتصالات وتقنية المعلومات فى المملكة العربية السعودية. ويحدد كلٌ من ( نظام الاتصالات ) الصادر بقرار مجلس الوزراء ذى الرقم (74) فى 1422/3/5هـ ولائحته التنفيذية الصادرة بالقرار الوزارى رقم (11) فى 17 / 5 / 1423هـ الإطار القانونى الخاص بتنظيم القطاع. ويتضمن النظام عدداً من الأهداف منها: توفير خدمات اتصالات متطورة وكافية وبأسعار مناسبة، وإيجاد المناخ المناسب لتشجيع المنافسة العادلة، واستخدام الترددات بصورة فعّالة، وتوطين تقنية الاتصالات ومواكبة تقدمها، وتحقيق الوضوح والشفافية فى الإجراءات، بالإضافة إلى تحقيق مبادئ المساواة وعدم التمييز، وحماية المصلحة العامة ومصالح المستخدمين والمستثمرين.كما يحدد (تنظيم الهيئة)، الصادر بقرار مجلس الوزراء ذى الرقم (74) فى 1422/3/5هـ، والمعدل بقرار مجلس الوزراء ذى الرقم (133) في1424/5/21هـ، مهمات هيئة الاتصالات وتقنية المعلومات واختصاصاتها، بوصفها منظماً للقطاع يتمتع بالشخصية الاعتبارية، وبالاستقلال المالى والإداري";
+
+"oldPassword" =  "كلمة المرور القديمة" ;
+"confirmPassword" = "تأكيد كلمة المرور";
+"EditProfile" = "تعديل الملف الشخصي";
+"Edit" = "تعديل" ; 
+ "newPassword" = "كلمة المرور الجديدة" ;
+"errorMsgOldPassword" = "الرجاء ادخال كلمة المرور القديمة" ;
+"oldMessageNotTrue" = "كلمة المرور القديمة غير صحيحة" ;
+"pleaseEnterNewPassword" = "الرجاء ادخال كلمة المرور الجديدة" ;
+"newMsgNotTrue" = "كلمة المرور الجديدة غير صحيحة" ;
+"pleaseEnterConfirm" = "الرجاء ادخال تاكيد كلمة المرور" ;
+"confirmPasswordNotTrue" = "تأكيد كلمة المرور غير صحيحة" ;
+"passwordNotMatch" = "كلمات المرور غير متشابهة" ;
+"changePasswordSuccess" = "تم تعديل كلمة المرور بنجاح";
+"changePasswordNotSuccess" = "كلمة المرور القديمة غير صحيحة";
+"SAR" = "ريال" ;
+"successLogin" = "تم تسجيل الدخول بنجاح" ;
+"enterValidData" ="الرجاء ادخال بيانات صحيحة" ;
+"networkRes" =  "لا يوجد إتصال إنترنت" ;
+"resetSuccess" = "تم إعادة الضبط بنجاح" ;
+"reOrderedSuccess" = "تم ترتيب الخدمات بنجاح" ;
+"changeLang_" = "هل تريد تغيير لغة التطبيق؟";
+"logout_" = "هل تريد تسجيل الخروج؟";
+"cartHasBeenUpdated" = "تم تحديث محتويات العربة";
+"enterEmail" = "الرجاء ادخال البريد الإلكتروني" ;
+"enterValidEmail" = "الرجاء ادخال بريد الكترونى صحيح" ;
+"enterPhone" = "الرجاء ادخال رقم الجوال" ;
+"errorUpdateProfile" ="خطا فى تعديل الملف الشخصى الرجاء المحاوله مره اخرى" ;
+"cartIsEmpty" = "العربة فارغة";
+"stockNotAva" = "لا يدعم المخزون الكمية المحددة لهذا المنتج ";
+"successUpdatePhoto" = "تم تغيير الصورة الشخصية بنجاح" ;
+"from" = "من";
+"exceptDay" = "إلا يوم";
+"directionNotAva" = "الإحداثيات غير متوفرة" ;
+"to" = "إلى";
+"sorry" = "عذراً";
+"thisProductDoesntHaveUnits" = "لا توجد وحدات بذلك المنتج";
+"notes" = "الملاحظات";
+"piece" = "قطعة";
+"home" = "الرئيسية";
+"addAddress" = "إضافة عنوان" ;
+"editAddress" = "تعديل العنوان";
+"Gender" = "النوع";
+"removedItemFromCart" = "تم إزالة المنتج من عربتك";
+"addedItemToCart" = "تم أضافة المنتج لعربتك";
+"errorCode" =  "رمز التحقق غير صحيح" ;
+"stockOutOFStock" = "المنتج غير متاح";
+"left_in_stock" = "متوفر بالمتجر";
+"Categories" = "الأقسام";
+"Sale" = "الخصومات";
+"Cart" = "العربة";
+"privacyPolicy" = "سياسة الخصوصية" ;
+"ourBranches" = "فروعنا" ;
+"changeLang" = "تغيير اللغة" ;
+"addedToYourWishList" = "تم إضافة المنتج لقائمة المفضلات";
+"removedFromYourWishList" = "تم إزالة المنتج من قائمة المفضلات";
+"youDidnotAddAddress" = "لم يتم تسجيل عنوان خاص بك بعد, برجاء تسجيل حساب" ;
+"pleaseSelectShippingAddress" = "من فضلك إختر العنوان الذى تود توصيل المنتج إليه" ;
+"WishList" = "قائمة المفضلات";
+"terms" = "الشروط والأحكام" ;
+"ContactUs" = "تواصل معنا";
+"addressTitle" = "إسم العنوان حقل مطلوب";
+"billingTitle" = "إسم عنوان التحصيل حقل مطلوب";
+
+"addToWishList" = "إضافة إلى المفضلات";
+"removeFromWishList" = "إزالة من المفضلات";
+
+"Profile" = "الملف الشخصي";
+"aboutUs" = "من نحن";
+"successUpdateProfile" = "تم تعديل الملف الشخصى بنجاح" ;
+"codeSendToPhone" = "تم ارسال رمز التحقق الى هاتفك" ;
+"fieldSendCodeToPhone" = "تعذر ارسال رمز التحقق الى الهاتف" ;
+"chooseTypeOfIdentity" = "الرجاء اختر نوع الهوية" ;
+"pleaseChooseIdentityNumber" = "الرجاء ادخل رقم الهوية" ;
+"sendCodeOnPhone" = "تم ارسال رمز التحقق على الجوال المسجل" ;
+"invalidIdinty" = "تعذر التحقق من هوية المستخدم" ;
+"phoneVlaid" = "تم التحقق من هاتفك" ;
+"sendCodeOnEmail" = "تم ارسال رمز التحقق على البريد الإلكترونى المسجل" ;
+"couldnotValidIdentity" = "لا يمكن التحقق من الهوية" ;
+"enterValidIdentity" = "الرجاء ادخال رقم الهوية صحيح" ;
+"codeSentagain" = "تم إعادة ارسال رمز التحقق الى هاتفك" ;
+
+"notification_size" = "منطقة الاشعارات الهامة" ;
+
+"user_hint_limited" = "لم يتم التحقق من ملكية رقم الجوال الخاص بك راجع ملفك الشخصى و قم بتحديث الرقم ←" ;
+"user_hint_visitor" = "تسجيل الدخول";
+//
+"yourLocation" = "موقعك الحالى" ; 
+
+"idCheck" = "تم التحقق من بيانات الهوية " ;
+"invalidId" = "بيانات الهوية غير صحيحة" ;
+"invalidNationalId" = "رقم الهوية غير صحيحة" ;
+
+"enterId" = "الرجاء ادخال رقم الهوية" ;
+"enterValidId" = "الرجاء ادخال رقم الهوية صحيح" ;
+"enterExpDate" = "الرجاء ادخال تاريخ الانتهاء" ;
+"pickNationality" = "الرجاء اختيار الجنسية" ;
+"enterName" = "الرجاء ادخال الاسم" ;
+"nameLessThan3Chr" = "الاسم اقل من ٣ حروف" ;
+"addProfileImg" = "فضلا ارفق صورة الهوية" ;
+"idChecked" = "تم التحقق من بيانات الهوية " ;
+"invalidIdDetails" = "بيانات الهوية غير صحيحة" ;
+"enterPassPortNum" = "الرجاء ادخال رقم الجواز" ;
+"enterValidPasspNum" = "الرجاء ادخال رقم جواز صحيح" ;
+"addPhoto" = "فضلا ارفق صورة الهوية" ;
+"idMore7Num" = "يحب الا يقل رقم الهويه عن ٧ ارقام" ;
+"enterBirthDate" = "الرجاء ادخال تاريخ الميلاد" ;
+
+"enterValidPhone" = "تم إرسال رمز التحقق للجوال المُدخل";
+"notverified" = "تعذر التحقق";
+"emilIsEmpty" = "حقل البريد الإلكترونى فارغ";
+"loginSuccess" = "تم التسجيل الدخول بنجاح" ;
+"notCompletData" = "تعذر اكمال البيانات" ;
+"enterRequiredData" = "الرجاء ادخال البيانات المطلوبة" ;
+
+
+"indv" = "افراد";
+"comp" = "قطاع اعمال" ;
+
+"setting_faceID" = "يجب تفعيل الخاصية من اعدادات التطبيق";
+"faceId_unauth" = "لا يوجد بيانات لهذا المستخدم من فضلك قم بتسجيل الدخول";
+
+"newUser" = "مستخدم جديد";
+"userName" = "الاسم";
+"login" = "تسجيل الدخول" ;
+"newOffer" = "عرض جديد من زين" ;
+
+"newwwOffer" = " عرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديدعرض جديد";
+
+
+"loginWithFace" =  "الدخول ببصمة الوجه" ;
+"loginWithFaceDesc" = "سجل دخولك باستخدام بصمة وجهك التى تستخدمها فى فتح هاتفك" ;
+"loginwithFinger" = "الدخول بالبصمة" ;
+"loginWithFingerDesc" = "سجل دخولك باستخدام بصمة اصبعك التى تستخدمها فى فتح هاتفك" ;
+"saveFingerSuccess" = "تم حفظ البصمة بنجاح" ;
+"error_finger_setting" = "يجب ظبط إعدادات البصمة من هاتفك أولا" ;
+//MARK: Dynamic #Stage 3
+"region" = "المناطق";
+"city" = "المحافظة";
+"town" = "المدينة";
+"locality" = "التجمع السكني";
+
+"no3gServ" = " لا تتوفر أى تغطية للجيل الثالث";
+"no4gServ" = " لا تتوفر أى تغطية للجيل الرابع";
+"noInteriorsAreCovered" = "لا تتوفر تغطية فى الغرف الداخلية";
+"notActivatChip" = "لم يتم تفعيل الخدمة على الشريحة";
+"lowInternetSpeed" = "لا تتوفر سرعة الانترنت المطلوبة";
+"serviceNotActive" = " لم يتم تفعيل الخدمة رغم طلبها";
+"DSLNotAvailable" = " لا تتوفر خدمة ال DSL";
+"noFiberServiceAvailable" = "لا تتوفر خدمة ألياف ضوئية";
+ "definingProblem" = "تحديد المشكلة";
+"youhaveToPickLocation" = "يجب ان تقوم بإختيار موقع";
+"attachmentsType" = "نوع المرفق";
+"pickFile" = "إختيار ملف";
+
+"packagePeriod" = "مدة الباقة  ";
+
+"approveForSaveFile" = "موافق على حفظ الملف فى ملفاتك؟";
+
+"successRate" = "تم التقييم بنجاح" ;
+
+"successSaveFile" = "تم حفظ الملف بنجاح";
+
+"file" = "ملف";
+"actionFileTypeHeading" = "إضافة ملف";
+"actionFileTypeDescription" = "إختر نوع ملف";
+"camera" = "كاميرا" ;
+"phoneLibrary" =  "معرض الصور" ;
+"video" = "فيديو" ;
+"voice" = "صوت" ;
+"" = "";
+"" = "";
+"yes" = "نعم" ;
+"no" = "لا" ;
+"day" = "يوم" ;
+"xmlFormatError" = "هناك خطأ فى بيانات ال xml";
+
+"activeFingerd" = "مفعل و موثق" ;
+"activeNotNeedFingerd" = "مفعل و لا يتطلب توثيق" ;
+"fingerdNotActive" = "غير مسجل لكنه موثق" ;
+"activeNotFingerd" = "مفعل و يتطلب توثيق" ;
+"notActiveNotFingerd" = "موثق, ولا يمكن التحقق من حالته فى الوقت الحالي";
+
+
+"activeFingerdDesc" = "الرقم مفعل لدى مقدم الخدمة, وتم توثيقه";
+"activeNotNeedFingerdDesc" = "الرقم مفعل لدى مقدم الخدمة ولا يتطلب توثيق لأرقام الخدمات الثابتة" ;
+"fingerdNotActiveDesc" = "الرقم غير مسجل لدى مقدم الخدمة ولكنه موثق, يرجى مراجعة مقدم الخدمة لإلغاء الرقم من أنظمة التوثيق.(قد تظهر هذه الحالة عند تقديم طلب نقل رقم من مقدم خدمة إلى مقدم خدمة آخر, ولكن لم يتم تفعيل الرقم لدى مقدم الخدمة المراد الانتقال إليه حتى الأن)" ;
+"activeNotFingerdDesc" = "الرقم مفعل لدى مقدم الخدمة ولكن غير موثق. يرجى مراجعة مقدم الخدمة لتوثيق الرقم تفادياَ لإلغاء الخدمة عنه" ;
+"notActiveNotFingerdDesc" = "موثق, ولخلل فى الإتصال مع مقدم الخدمة فإنه لايمكن التحقق من حالة الرقم فى الوقت الحالي, الرجاء المحاولة مرة أخرى";
+
+
+"commCom" = "هيئة الاتصلات";
+
+"rateService" = "تقييم مستوى الخدمة" ;
+"needData" = "هناك حاجة إلى بيانات إضافية" ;
+
+"chooseDate" = "اختر التاريخ" ;
+
+"month" = "شهرياً" ;
+
+"Unavailable" = "غير متاح";
+"BusinessRegistrationSoon_" = "تسجيل الأعمال سيتاح قريباً ويمكن الإستفادة من خدمات الهيئة لقطاع الأعمال عبر تخطى تسجيل الدخول";
+"SkipRegistration" = "تخطى التسجيل";
+
+"confirmEmail" = "تأكيد بريدك الإلكترونى  *";
+"confirmEmailRequired" = "حقل تأكيد البريد الإلكترونى فارغ";
+
+"emailNotMatched" = "البريد الإلكترونى غير متطابق";
+
+"pickFromYourNumbers" = "اختر من قائمة أرقامك" ;
+
+"phoneNotConnectedToNationalID" = "عزيزى الشاكي,لضمان معالجة الشكوى بالطريقة الصحيحة يجب أن يرتبط رقم الخدمة محل الشكوى بالهوية الخاصة بك" ;
+"alert" = "تنبيه هام" ;
+"notFound" = "لا يوجد";
+"notFoundDevices" = "لا يوجد اجهزة";
+
+"Complaier_phoneNumber" = "أدخل الرقم محل الشكوى *";
+ "attachments_isRequired" = "من فضلك أدخل المعلومات كاملة" ;
+// "من فضلك اختر من المرفقات";
+"please_enterFullData" = "من فضلك أدخل المعلومات كاملة";
+"loading_thatMightTakeTime" = "جارى استرجاع البيانات من مقدمى الخدمة قد يستغرق ذلك بعض الوقت " ;
+
+"loading_thatMightTakeTimeReg" = "جارى التحقق من بيانات الهوية"  ;
+
+//MARK: ComplaintDEtails
+"ComplaintId" = "رقم الشكوى" ;
+"RequestId" = "رقم الطلب";
+"ServiceProvider" = "مقدم الخدمة";
+
+"SubscriptionType" = "نوع الإشتراك";
+"ComplaintType" = "نوع الشكوى الرئيسية";
+"ComplaintSubType" = "نوع الشكوى الفرعية";
+"IncorrectAmount" = "المبلغ المعترض عليه";
+"ObjectionReason" = "سبب الاعتراض";
+"BillDate" = "تاريخ  الفاتورة";
+"SIMAHUserStatus" =  "هل تم قيد المبلغ كمتعثرات فى سمه";
+"PaymentMethod" = "طريقة السداد";
+"PaymentDate" = "ServiceProvider";
+"PaymentAmount" = "مبلغ السداد";
+"AmountToBeReturned" = "المبلغ المالى المطلوب إعادته";
+"AmountClaimingReason" = "سبب المطالبة";
+"DeductionAmount" = "Discount amount";
+"DeductionDate" = "تاريخ الخصم";
+"RechargeType" = "نوع الشحن";
+"RechargeAmount" = "مبلغ الشحن";
+"RechargeDate" = "تاريخ الشحن";
+"LocationX" = "احداثيات الموقع";
+"LocationY" = "احداثيات الموقع";
+"AccountNumber" = "رقم الحساب";
+"NotRequestedService" = "خدمة لم تطلبها";
+"ServiceNumber" = "رقم الخدمة";
+"Servicetype" = "نوع الخدمة";
+"Definingproblem" = "تحديد المشكلة";
+"Region" = "المنطقة";
+"Governorate" = "المحافظة";
+"SubGovernorate" = "المركز";
+"Neighbourhood" = "التجمع السكاني/المدينة";
+"LocationDescription" = "وصف الموقع";
+"AbuserNumber" = "الرقم المزعج";
+"AbuseType" = "نوع الإزعاج";
+"AbuseDateFrom" = "بدأ الإزعاج من";
+"AbuseDateTo" = "بدأ الإزعاج إلي";
+"SpamInfo" = "معلومات الإزعاج";
+"TowerLocation" = "موقع البرج";
+"TowerNo" = "رقم البرج";
+"TowerServiceProvider" = "صاحب البرج";
+"RequestedServiceType" = "نوع الخدمة المطلوبة";
+"ServiceBlackoutFrom" = "فترة الانقطاع من";
+"ServiceBlackoutTo" = "فترة الانقطاع إلي";
+"ServiceName" = "اسم الخدمة";
+"ComplaintZone" = "نطاق الشكوى";
+"NotActivatedServicetype" = " الخدمة محل الشكوى";
+"ApplicationDate" = "تاريخ تقديم الطلب";
+"ApplicationMethod" = "آلية تقديم الطلب";
+"NotProvidedService" = "الميزة التى لم تتم الاستفادة منها";
+"ComplaintDescription" = "تفاصيل الشكوى";
+"ExposeInfoType" = "توضيح نوع المعلومات";
+"ExposeInfoProve" = "توضيح معلومات مثبتة";
+"RequestStatusEServicesName" = "طلب خدمات الحالة";
+"ComplaintTypeName" = "نوع الشكوى";
+"ComplaintTypeSubName" = "نوع الشكوى الفرعي";
+"ComplaintChannelName" = "اسم قناة الشكوى";
+"ActorServiceProviderName" = " مقدم خدمة الممثل";
+"ComplaintServiceTypeName" = "نوع الخدمة الفرعي";
+"ComplaintReasonName" = "اسم سبب الشكوى";
+"ComplaintObjectionTypeName" = " نوع اعتراض الشكوى";
+"ComplaintProblemTypeName" = " نوع مشكلة الشكوى";
+"ComplaintScopeName" = " نطاق الشكوى";
+"ComplaintCloseReasonName" = " سبب إغلاق الشكوى";
+"ConfigRegionName" = "تكوين اسم المنطقة";
+"ConfigMainCityName" = "تكوين اسم المدينة الرئيسية";
+"ConfigMainTownName" = "تكوين اسم المدينة الرئيسية";
+"ConfigMainLocalitiesName" = "تكوين اسم المواقع الرئيسية";
+"ComplaintCloseReasonForComplainerName" = "سبب إغلاق الشكوى لاسم المشتكي";
+"ComplaintServiceSubscriptionTypeName" = "اشتراك خدمة الشكوى";
+"ComplaintPaymentMethodName" = "اسم طريقة دفع الشكوى";
+"SubmissionDate" = "تاريخ التقديم";
+"ServiceProviderLogo" = "شعار مزود الخدمة";
+ 
+"invalidCode_askFornewPassCode" = "إنتهت صلاحية رمز التحقق يرجى طلب رمز جديد";
+"IdentityUnderVerification" = "جارى التحقق من الهوية" ;
+
+"saveComp" = "حفظ الشكوى";
+"number" = " أرقام ";
+
+"saveComp_" = "سيتم حفظ الشكوى كمسودة فى قائمة الشكاوى,يمكنك إستكمالها فى الوقت المناسب لك" ;
+"doneSaveComp" = "تم حفظ الشكوى بنجاح";
+"PersonComplainerInfo" = "PersonComplainerInfo";
+"Nationality" = "الهوية" ;
+"IDType" = "نوع الهوية";
+"IDNumber" =  "رقم الهوية";
+"FirstName" =  "الاسم الاول";
+"SecondName" =  "الاسم الثاني";
+"ThirdName" = "الاسم الثالث" ;
+"FourthName" = "الاسم الرابع";
+"IDExpiryDate" = "تاريخ الانتهاء";
+"Birthdate" = "تاريخ الميلاد";
+"Address" = "العنوان";
+"EMail" = "الايميل" ;
+"Mobile" = "رقم الجوال";
+"City"= "المدينة";
+"IsHaveProcuration" = "بموجب وكالة";
+
+"visitorWantAddComp" = "يرجى زيارة الموقع الإلكترونى لتقديم شكوى قطاع الأعمال";
+"loginRequired" = "برجاء تسجيل الدخول";
+
+"error500" = "خطأ فى السيرفر"; 
+"InvoicesAndFinancial" = "فواتير والتزامات مالية" ;
+
+"state" = "المنطقة" ; 
+
+///////////////////////////////////////////////////////////
+"enterCurrentPassword" = "فضلا ادخل كلمة المرور الحاليه";
+"enterPassword" = "فضلا ادخل كلمة المرور";
+"confirmPassword" = "فضلا ادخل تأكيد كلمة المرور";
+"passwordValidation" = "كلمة المرور تتكون من ٨ الي ١٥ حرف او رقم" ;
+"selectClint" = "فضلا اختر نوع العميل";
+"selectBuildingName" = "فضلا إختر إسم العمارة";
+"selectFlateNumber" = "فضلا إختر رقم الشقة" ;
+"passwordDontMatch" = "كلمة المرور غير متطابقتان" ;
+"confirmMobile" = "تأكيد رقم الهاتف";
+"enterRightCode" = "فضلا ادخل الكود الصحيح";
+"second" = "ثانية";
+"thanks" = "شكرا لك";
+"welcomToSayen" = "مرحبا بك في صاين";
+
+"requestRecived" = "تم إستلام الطلب";
+"youWillGetVerificationMessage" = "ستصلك رسالة لدي تفعيل الحساب";
+"hi" = "اهلا";
+"enterCodeFirst" = "من فضلك قم بإدخال الكود أولا";
+"Rial" = "ريال";
+"request" = "طلب خدمة ";
+
+"uploadProblemImage" = " من فضلك  قم برفع صورة للمشكلة";
+"enterProblemDetails" = "من فضلك أدخل تفاصيل المشكلة";
+"selectAddress" = " من فضلك قم بتحديد العنوان";
+"selectVisitDateTime" =  "من فضلك قم بإختيار تاريخ وموعد الزيارة";
+
+"selectOnMap" = "إختر من الخريطة";
+"select" = "إختر";
+
+
+"requestSentSuccessfully" = "تم ارسال الطلب بنجاح";
+"requestCanceled" =  "تم إلغاء الطلب";
+"selectImagesFrom" =  "إختيار الصوره من ";
+"close" =  "اغلاق";
+"photos" = "الصور";
+"camira" =  "الكاميرا";
+"camActivactionMsg" =  "تفعيل الكاميرا سوف يقوم بإعاده تشغيل الجهاز";
+"camiraNotPermitted" =  "ذلك البرنامج غير مصرح له باستخدام الكاميرا,تفقد الاعدادات";
+"settings" =  "الإعدادات";
+"noCamiraFound" =  "لا توجد كاميرا";
+"deviceNoCamira" =  "الجهاز لا يحتوي علي كاميرا";
+"addressAdded" =  "تم إضافة العنوان بنجاح";
+"selectRightTime" = "فضلا اختر الوقت الصحيح,الوقت الادنى لحجز الخدمه ساعتين من الآن";
+
+
+"disabledLocationService" = " خدمة تحديد المواقع غير مفعلة , برجاء التفعيل لتحديد موقعك ";
+"openLocationService" =  "فتح خدمات الموقع";
+"enterFloorNum" = "من فضلك قم بإدخال رقم الدور";
+"enterAddress" = "من فضلك قم بإدخال العنوان";
+"floor" = "الدور";
+"other" = "آخر";
+"special" = "تمييز";
+"client" = "عميل";
+"owner" = "مالك";
+"canceled" = "تم الالغاء";
+"unpaid" = "غير مدفوع";
+"noCurrentRequest" = "ليس لديك طلبات حالية";
+"noInternetConnection" = "تأكد من اتصالك بالانترنت اولا";
+"noCompeleteRequests" = "ليس لديك طلبات مكتملة";
+"rateRequestMsg" = "من فضلك قم بتقييم الطلب ";
+"payOnline" = "الدفع أون لاين";
+"paid"  = " مدفوع";
+"PayCash" = "الدفع كاش";
+"done" = "تم";
+"fanii" = "الفني :";
+"TheRequestDone" = "تم أنهاء الطلب ";
+"continueAndCall" = " الاستمرار والاتصال بذلك الرقم ";
+
+"commonQuestion" = "الاسئله الشائعه";
+"aboutSayen" = "عن صاين";
+"contactUs"  = "تواصل معنا";
+"shareApp" = "شارك التطبيق";
+"rateApp" = "قيم التطبيق";
+"changeLanguage" = "تغيير اللغة";
+"signOut" = "تسجيل خروج";
+
+"passwordChanged" = "تم تغيير كلمه المرور بنجاح";
+
+"changePersonalInfo" = "تعديل البيانات الشخصية";
+"chagneMobile" = "تعديل رقم الجوال";
+"changePassw" = "تغيير كلمة المرور";
+
+"accountSaspended" = "تم إيقاف الحساب من قبل الإدارة";
+"NoInternetConnection" = "مشكلة في الاتصال";
+"connectToInternet" = "تأكد من اتصالك بالانترنت أولا";
+
+"enterName" = "فضلا ادخل الاسم";
+"enterMassage" = "فضلا اكتب رسالتك";
+"infoChanged" = "تم تعديل البيانات بنجاح";
+
+"alert" = "تنبية";
+"accountInactive" = " حسابك غير مفعل";
+"activate" = "تفعيل";
+
+"setProblem" = "فضلا قم بإختيار المشكلة";
+"workDone" = "تم إنهاء العمل بنجاح";
+
+"confirmReceipt" = "يجب التأكيد علي إستلام تكلفة الطلب ";
+
+"rateWorker" = "من فضلك قم بتقييم العامل وإضافة تعليقك";
+"rateDone" = "تم التقييم بنجاح";
+
+"requestDone" = "تم إنهاء الطلب بنجاح";
+"writeName" = "من فضلك اكتب الاسم";
+"wrongEmial" = "البريد الإلكتروني غير صحيح";
+"startWork" = "بدء العمل";
+"inMyWay" = "التوجة للعميل";
+"paymentError" = "خطأ في عملية الدفع ، من فضلك حاول لاحقا";
+"paymentSuccess" = "تم الدفع بنجاح";

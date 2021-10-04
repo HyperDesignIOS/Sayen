@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "حفظ التغييرات"; ObjectID = "3sD-vg-glg"; */
+"3sD-vg-glg.normalTitle" = "حفظ التغييرات";
+
+/* Class = "UILabel"; text = "سيتم ارسال كود تفعيلي اذا تم تغيير الجوال"; ObjectID = "Hlu-lx-nRs"; */
+"Hlu-lx-nRs.text" = "سيتم ارسال كود تفعيلي اذا تم تغيير الجوال";
+
+/* Class = "UILabel"; text = "تعديل رقم الجوال"; ObjectID = "SPe-Tl-AQL"; */
+"SPe-Tl-AQL.text" = "تعديل رقم الجوال";
+
+/* Class = "UILabel"; text = "رقم الجوال"; ObjectID = "lxl-bL-F9B"; */
+"lxl-bL-F9B.text" = "رقم الجوال";

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Medium.ttf">
+            <string>Tajawal-Medium</string>
+        </array>
+        <array key="Tajawal-Regular.ttf">
+            <string>Tajawal-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="صاين" customModuleProvider="target">
+            <connections>
+                <outlet property="passTF" destination="467-C7-dkx" id="B5v-Lq-9EP"/>
+                <outlet property="phoneTF" destination="xCH-KT-aSI" id="cU1-8o-ccO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="u2U-qU-rGI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2-back-login" translatesAutoresizingMaskIntoConstraints="NO" id="5EF-33-QrH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0H-MO-xDb" customClass="CardView" customModule="صاين" customModuleProvider="target">
+                    <rect key="frame" x="30" y="170" width="315" height="452"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تسجيل الدخول" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-ax-q78">
+                            <rect key="frame" x="106.5" y="20" width="102.5" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="20"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الهاتف" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVz-sk-fzd">
+                            <rect key="frame" x="15" y="70" width="63" height="20"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="17"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9C-aQ-Dbq" customClass="CardView" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="8" y="98" width="299" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0000000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xCH-KT-aSI">
+                                    <rect key="frame" x="8" y="0.0" width="283" height="50"/>
+                                    <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="ASCIICapableNumberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="xCH-KT-aSI" firstAttribute="leading" secondItem="h9C-aQ-Dbq" secondAttribute="leading" constant="8" id="3MV-id-NMH"/>
+                                <constraint firstAttribute="trailing" secondItem="xCH-KT-aSI" secondAttribute="trailing" constant="8" id="ISu-q5-guu"/>
+                                <constraint firstItem="xCH-KT-aSI" firstAttribute="top" secondItem="h9C-aQ-Dbq" secondAttribute="top" id="Qog-2R-TdC"/>
+                                <constraint firstAttribute="height" constant="50" id="b50-tW-5Jd"/>
+                                <constraint firstAttribute="bottom" secondItem="xCH-KT-aSI" secondAttribute="bottom" id="fBw-s4-Tmg"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="كلمة المرور" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2t-va-Lx2">
+                            <rect key="frame" x="15" y="164" width="60.5" height="20"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="17"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x15-YN-UYN" customClass="CardView" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="8" y="192" width="299" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="********" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="467-C7-dkx" customClass="NMTextField" customModule="صاين" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="0.0" width="283" height="48"/>
+                                    <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="26"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                            <integer key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="467-C7-dkx" firstAttribute="top" secondItem="x15-YN-UYN" secondAttribute="top" id="5Eg-xE-715"/>
+                                <constraint firstItem="467-C7-dkx" firstAttribute="leading" secondItem="x15-YN-UYN" secondAttribute="leading" constant="8" id="8AN-z5-gYY"/>
+                                <constraint firstAttribute="trailing" secondItem="467-C7-dkx" secondAttribute="trailing" constant="8" id="8Vb-dh-1EE"/>
+                                <constraint firstAttribute="height" constant="50" id="JeO-s1-Llc"/>
+                                <constraint firstAttribute="bottom" secondItem="467-C7-dkx" secondAttribute="bottom" constant="2" id="RWI-mj-KEB"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="722-g0-zkk" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="8" y="314" width="299" height="40"/>
+                            <color key="backgroundColor" red="0.019607843137254902" green="0.20000000000000001" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Cj9-n6-Zhj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                            <state key="normal" title="تسجيل الدخول">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="BwI-hE-GyR"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ليس لديك حساب؟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXI-vP-d2u">
+                            <rect key="frame" x="8" y="362" width="299" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="evL-xH-1Lp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                            <color key="textColor" red="0.60534828901290894" green="0.67665320634841919" blue="0.78477412462234497" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ces-5N-mUi" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="8" y="410" width="299" height="40"/>
+                            <color key="backgroundColor" red="0.60784313725490191" green="0.67843137254901964" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="m1r-fC-VEo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                            <state key="normal" title="انشاء حساب جديد">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="zI5-zy-Fii"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpz-BF-p49">
+                            <rect key="frame" x="202" y="252" width="105" height="32"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                            <state key="normal" title="نسيت كلمة المرور؟">
+                                <color key="titleColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="forgetPass:" destination="-1" eventType="touchUpInside" id="c2c-n4-DFr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="x15-YN-UYN" firstAttribute="leading" secondItem="r0H-MO-xDb" secondAttribute="leading" constant="8" id="5Af-sl-1GF"/>
+                        <constraint firstItem="722-g0-zkk" firstAttribute="top" secondItem="hpz-BF-p49" secondAttribute="bottom" constant="30" id="6PW-e9-j0k"/>
+                        <constraint firstAttribute="height" constant="452" id="8eQ-Hf-VbD"/>
+                        <constraint firstAttribute="trailing" secondItem="722-g0-zkk" secondAttribute="trailing" constant="8" id="8ma-dX-JDh"/>
+                        <constraint firstItem="NVz-sk-fzd" firstAttribute="leading" secondItem="r0H-MO-xDb" secondAttribute="leading" constant="15" id="ABH-te-Y4t"/>
+                        <constraint firstItem="sXI-vP-d2u" firstAttribute="leading" secondItem="r0H-MO-xDb" secondAttribute="leading" constant="8" id="D6m-MD-kdi"/>
+                        <constraint firstAttribute="trailing" secondItem="ces-5N-mUi" secondAttribute="trailing" constant="8" id="DLp-Wj-k3q"/>
+                        <constraint firstItem="3LT-ax-q78" firstAttribute="top" secondItem="r0H-MO-xDb" secondAttribute="top" constant="20" id="Jw8-rf-OgA"/>
+                        <constraint firstItem="ces-5N-mUi" firstAttribute="top" secondItem="sXI-vP-d2u" secondAttribute="bottom" constant="8" id="Kmu-vR-PG1"/>
+                        <constraint firstAttribute="trailing" secondItem="x15-YN-UYN" secondAttribute="trailing" constant="8" id="T1W-jv-Qtw"/>
+                        <constraint firstItem="hpz-BF-p49" firstAttribute="top" secondItem="x15-YN-UYN" secondAttribute="bottom" constant="10" id="Ucf-fI-BsP"/>
+                        <constraint firstItem="x15-YN-UYN" firstAttribute="top" secondItem="J2t-va-Lx2" secondAttribute="bottom" constant="8" id="Vpi-pG-8eO"/>
+                        <constraint firstItem="J2t-va-Lx2" firstAttribute="leading" secondItem="r0H-MO-xDb" secondAttribute="leading" constant="15" id="WdK-m8-KNR"/>
+                        <constraint firstItem="3LT-ax-q78" firstAttribute="centerX" secondItem="r0H-MO-xDb" secondAttribute="centerX" id="Y11-wJ-VGA"/>
+                        <constraint firstItem="722-g0-zkk" firstAttribute="leading" secondItem="r0H-MO-xDb" secondAttribute="leading" constant="8" id="dhY-Lp-kgf"/>
+                        <constraint firstAttribute="trailing" secondItem="hpz-BF-p49" secondAttribute="trailing" constant="8" id="giC-zZ-fxZ"/>
+                        <constraint firstItem="sXI-vP-d2u" firstAttribute="top" secondItem="722-g0-zkk" secondAttribute="bottom" constant="8" id="hK8-Dv-lGN"/>
+                        <constraint firstItem="ces-5N-mUi" firstAttribute="leading" secondItem="r0H-MO-xDb" secondAttribute="leading" constant="8" id="jd5-GR-EBE"/>
+                        <constraint firstAttribute="trailing" secondItem="h9C-aQ-Dbq" secondAttribute="trailing" constant="8" id="kfu-a0-LlV"/>
+                        <constraint firstAttribute="trailing" secondItem="sXI-vP-d2u" secondAttribute="trailing" constant="8" id="mNb-xr-Rpf"/>
+                        <constraint firstItem="h9C-aQ-Dbq" firstAttribute="leading" secondItem="r0H-MO-xDb" secondAttribute="leading" constant="8" id="wOo-lX-sml"/>
+                        <constraint firstItem="h9C-aQ-Dbq" firstAttribute="top" secondItem="NVz-sk-fzd" secondAttribute="bottom" constant="8" id="wRe-Zc-FIa"/>
+                        <constraint firstItem="J2t-va-Lx2" firstAttribute="top" secondItem="h9C-aQ-Dbq" secondAttribute="bottom" constant="16" id="ws9-Rz-OAx"/>
+                        <constraint firstItem="NVz-sk-fzd" firstAttribute="top" secondItem="r0H-MO-xDb" secondAttribute="top" constant="70" id="zbp-cf-D9b"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3-logo-login" translatesAutoresizingMaskIntoConstraints="NO" id="duz-Lc-W2Q">
+                    <rect key="frame" x="132.5" y="40" width="110" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="Gl5-mD-BfE"/>
+                        <constraint firstAttribute="width" constant="110" id="K3K-GT-ktc"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="r0H-MO-xDb" firstAttribute="top" secondItem="duz-Lc-W2Q" secondAttribute="bottom" constant="20" id="6Ik-Sc-Iom"/>
+                <constraint firstItem="duz-Lc-W2Q" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="H4N-nI-fP6"/>
+                <constraint firstItem="5EF-33-QrH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HBp-C9-SST"/>
+                <constraint firstAttribute="bottom" secondItem="5EF-33-QrH" secondAttribute="bottom" id="RHS-Ib-044"/>
+                <constraint firstItem="duz-Lc-W2Q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="aXe-Ok-R0i"/>
+                <constraint firstItem="r0H-MO-xDb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="akf-wk-YGa"/>
+                <constraint firstItem="5EF-33-QrH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bqS-gd-Z3J"/>
+                <constraint firstItem="5EF-33-QrH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cFN-s2-MD7"/>
+                <constraint firstItem="5EF-33-QrH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f6I-Q4-Tfk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5EF-33-QrH" secondAttribute="trailing" id="fdl-Ty-D7C"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r0H-MO-xDb" secondAttribute="trailing" constant="30" id="qDW-wo-cVQ"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="131.25"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="722-g0-zkk">
+            <size key="intrinsicContentSize" width="87" height="32"/>
+        </designable>
+        <designable name="ces-5N-mUi">
+            <size key="intrinsicContentSize" width="111" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="2-back-login" width="360.5" height="450.5"/>
+        <image name="3-logo-login" width="116" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

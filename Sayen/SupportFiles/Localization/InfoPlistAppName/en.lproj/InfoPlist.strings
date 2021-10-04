@@ -1,0 +1,16 @@
+/* 
+  InfoPlist.strings
+  Sreer
+
+  Created by emad ios on 5/4/19.
+  Copyright © 2019 emad ios. All rights reserved.
+*/
+/*
+"CFBundleDisplayName" = "CITC";
+"NSCameraUsageDescription"="This app requires access to the camera, to Capture your Profile Picture";
+"NSMicrophoneUsageDescription"="This app requires access to the microphone to record voice";
+"NSPhotoLibraryAddUsageDescription"="This app requires access to the photo library, to Capture your Profile Picture and upload images";
+"NSPhotoLibraryUsageDescription"="This app requires access to the photo library, to Capture your Profile Picture and upload images";
+
+*/
+

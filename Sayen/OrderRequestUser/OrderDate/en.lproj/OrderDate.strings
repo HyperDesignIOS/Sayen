@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "مايو"; ObjectID = "5tE-W6-n2C"; */
+"5tE-W6-n2C.text" = "مايو";
+
+/* Class = "UILabel"; text = "التاريخ"; ObjectID = "7LV-Oj-17x"; */
+"7LV-Oj-17x.text" = "Date";
+
+/* Class = "UILabel"; text = "الوقت"; ObjectID = "Ebo-Ar-9SQ"; */
+"Ebo-Ar-9SQ.text" = "Time";
+
+/* Class = "UIButton"; normalTitle = "done".localized ; ObjectID = "I1z-mu-Q1m"; */
+"I1z-mu-Q1m.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "تاريخ وموعد الزيارة"; ObjectID = "yd7-kW-ytu"; */
+"yd7-kW-ytu.text" = "Visit Date, Time";

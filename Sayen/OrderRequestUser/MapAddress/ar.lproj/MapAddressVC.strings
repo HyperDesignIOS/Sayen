@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "إختيار العنوان"; ObjectID = "D1i-Zi-pIG"; */
+"D1i-Zi-pIG.text" = "إختيار العنوان";
+
+/* Class = "UILabel"; text = "العنوان"; ObjectID = "EHs-vg-LmZ"; */
+"EHs-vg-LmZ.text" = "العنوان";
+
+/* Class = "UILabel"; text = "الدور"; ObjectID = "PCM-jp-tos"; */
+"PCM-jp-tos.text" = "الدور";
+
+/* Class = "UITextField"; placeholder = "اكتب هنا"; ObjectID = "R4e-Tf-gk4"; */
+"R4e-Tf-gk4.placeholder" = "اكتب هنا";
+
+/* Class = "UIButton"; normalTitle = "إستخدام الموقع الحالى"; ObjectID = "Tn7-3W-zxi"; */
+"Tn7-3W-zxi.normalTitle" = "إستخدام الموقع الحالى";
+
+/* Class = "UIButton"; normalTitle = "حفظ العنوان"; ObjectID = "xO3-Iy-aaJ"; */
+"xO3-Iy-aaJ.normalTitle" = "حفظ العنوان";

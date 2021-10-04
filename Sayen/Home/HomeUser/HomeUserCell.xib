@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Medium.ttf">
+            <string>Tajawal-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeUserCell" id="gTV-IL-0wX" customClass="HomeUserCell" customModule="صاين" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="111" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="111" height="117"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pa1-Iz-S80" customClass="CardView" customModule="صاين" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="111" height="117"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1059" translatesAutoresizingMaskIntoConstraints="NO" id="bix-Yi-MG6">
+                                <rect key="frame" x="25.5" y="16" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="fxa-K8-7dE"/>
+                                    <constraint firstAttribute="height" constant="60" id="nAf-ca-LAQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سباكه" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cQ-Kj-PPl">
+                                <rect key="frame" x="20" y="86" width="71" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="aPD-r7-yAl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="15"/>
+                                <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8cQ-Kj-PPl" firstAttribute="leading" secondItem="Pa1-Iz-S80" secondAttribute="leading" constant="20" id="74E-D3-Oex"/>
+                            <constraint firstAttribute="trailing" secondItem="8cQ-Kj-PPl" secondAttribute="trailing" constant="20" id="8C0-lf-wTf"/>
+                            <constraint firstItem="8cQ-Kj-PPl" firstAttribute="top" secondItem="bix-Yi-MG6" secondAttribute="bottom" constant="10" id="A1k-uH-bKb"/>
+                            <constraint firstItem="bix-Yi-MG6" firstAttribute="centerX" secondItem="Pa1-Iz-S80" secondAttribute="centerX" id="Xhg-lB-Dr2"/>
+                            <constraint firstItem="bix-Yi-MG6" firstAttribute="top" secondItem="Pa1-Iz-S80" secondAttribute="top" constant="16" id="eRF-11-PIQ"/>
+                            <constraint firstAttribute="bottom" secondItem="8cQ-Kj-PPl" secondAttribute="bottom" constant="16" id="rc7-gJ-o2y"/>
+                            <constraint firstItem="8cQ-Kj-PPl" firstAttribute="centerX" secondItem="Pa1-Iz-S80" secondAttribute="centerX" id="zfg-vd-s0Z"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Pa1-Iz-S80" secondAttribute="trailing" id="2bH-2Q-8JR"/>
+                <constraint firstItem="Pa1-Iz-S80" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TkB-xw-Yeu"/>
+                <constraint firstItem="Pa1-Iz-S80" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="c1B-jp-Jcq"/>
+                <constraint firstAttribute="bottom" secondItem="Pa1-Iz-S80" secondAttribute="bottom" id="fEV-IU-FUp"/>
+            </constraints>
+            <size key="customSize" width="111" height="117"/>
+            <connections>
+                <outlet property="image" destination="bix-Yi-MG6" id="uOi-6c-6mn"/>
+                <outlet property="labelCell" destination="8cQ-Kj-PPl" id="O74-wS-vcd"/>
+                <outlet property="mainView" destination="Pa1-Iz-S80" id="kcc-Xw-Bdk"/>
+            </connections>
+            <point key="canvasLocation" x="181.8840579710145" y="155.02232142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Group 1059" width="39" height="39"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

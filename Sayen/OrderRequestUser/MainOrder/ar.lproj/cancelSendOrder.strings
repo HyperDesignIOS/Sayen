@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "لا"; ObjectID = "0e6-0f-hkv"; */
+"0e6-0f-hkv.normalTitle" = "لا";
+
+/* Class = "UIButton"; normalTitle = "نعم"; ObjectID = "75p-64-Iqb"; */
+"75p-64-Iqb.normalTitle" = "نعم";
+
+/* Class = "UILabel"; text = "هل تريد إلغاء الطلب؟"; ObjectID = "ezj-Yl-noe"; */
+"ezj-Yl-noe.text" = "هل تريد إلغاء الطلب؟";

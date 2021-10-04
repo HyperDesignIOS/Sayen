@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "تقييم الخدمه"; ObjectID = "A8f-ft-Wwl"; */
+"A8f-ft-Wwl.text" = "تقييم الخدمه";
+
+/* Class = "UILabel"; text = "اكتب تعليقك"; ObjectID = "AY5-cd-IIK"; */
+"AY5-cd-IIK.text" = "اكتب تعليقك";
+
+/* Class = "UILabel"; text = "اكتب تعليقك"; ObjectID = "JmR-1n-ut5"; */
+"JmR-1n-ut5.text" = "اكتب تعليقك";
+
+/* Class = "UIButton"; normalTitle = "تم"; ObjectID = "XvH-YT-d54"; */
+"XvH-YT-d54.normalTitle" = "تم";
+
+/* Class = "UILabel"; text = "تقييم العامل"; ObjectID = "pcg-J3-zeB"; */
+"pcg-J3-zeB.text" = "تقييم العامل";

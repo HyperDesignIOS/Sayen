@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "لا"; ObjectID = "0e6-0f-hkv"; */
+"0e6-0f-hkv.normalTitle" = "No";
+
+/* Class = "UIButton"; normalTitle = "نعم"; ObjectID = "75p-64-Iqb"; */
+"75p-64-Iqb.normalTitle" = "Yes";
+
+/* Class = "UILabel"; text = "هل تريد إلغاء الطلب؟"; ObjectID = "ezj-Yl-noe"; */
+"ezj-Yl-noe.text" = "Do you want to cancel request?";

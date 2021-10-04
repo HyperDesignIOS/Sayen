@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Bold.ttf">
+            <string>Tajawal-Bold</string>
+        </array>
+        <array key="Tajawal-Regular.ttf">
+            <string>Tajawal-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PubLicQuCell" id="gTV-IL-0wX" customClass="PubLicQuCell" customModule="Sayen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="503"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="503"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A8-pv-F3y" customClass="CardView" customModule="Sayen" customModuleProvider="target">
+                        <rect key="frame" x="20" y="8" width="280" height="487"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="السؤال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niD-PU-fcC">
+                                <rect key="frame" x="204" y="40" width="56" height="17"/>
+                                <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="17"/>
+                                <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الجواب" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIy-10-avD">
+                                <rect key="frame" x="208" y="167" width="52" height="17"/>
+                                <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="17"/>
+                                <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="8ZY-27-xs1">
+                                <rect key="frame" x="20" y="67" width="240" height="90"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="gI2-XP-DE0"/>
+                                </constraints>
+                                <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="IXo-py-xar">
+                                <rect key="frame" x="20" y="194" width="240" height="263"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8ZY-27-xs1" firstAttribute="leading" secondItem="7A8-pv-F3y" secondAttribute="leading" constant="20" id="3xP-K8-Rzd"/>
+                            <constraint firstItem="IXo-py-xar" firstAttribute="top" secondItem="KIy-10-avD" secondAttribute="bottom" constant="10" id="8CY-kD-d6o"/>
+                            <constraint firstAttribute="trailing" secondItem="IXo-py-xar" secondAttribute="trailing" constant="20" id="9b7-fn-omu"/>
+                            <constraint firstAttribute="trailing" secondItem="KIy-10-avD" secondAttribute="trailing" constant="20" id="LNU-Yd-GJG"/>
+                            <constraint firstItem="8ZY-27-xs1" firstAttribute="top" secondItem="niD-PU-fcC" secondAttribute="bottom" constant="10" id="VBR-cd-WIk"/>
+                            <constraint firstAttribute="bottom" secondItem="IXo-py-xar" secondAttribute="bottom" constant="30" id="cpM-AV-qwo"/>
+                            <constraint firstItem="niD-PU-fcC" firstAttribute="top" secondItem="7A8-pv-F3y" secondAttribute="top" constant="40" id="dkZ-e8-Rwg"/>
+                            <constraint firstAttribute="trailing" secondItem="8ZY-27-xs1" secondAttribute="trailing" constant="20" id="hJn-XQ-QH2"/>
+                            <constraint firstItem="IXo-py-xar" firstAttribute="leading" secondItem="7A8-pv-F3y" secondAttribute="leading" constant="20" id="noy-eF-IHW"/>
+                            <constraint firstItem="KIy-10-avD" firstAttribute="top" secondItem="8ZY-27-xs1" secondAttribute="bottom" constant="10" id="qRH-Zt-DjX"/>
+                            <constraint firstAttribute="trailing" secondItem="niD-PU-fcC" secondAttribute="trailing" constant="20" id="ttG-MP-BUH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="7A8-pv-F3y" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="VB7-7w-ctY"/>
+                <constraint firstAttribute="trailing" secondItem="7A8-pv-F3y" secondAttribute="trailing" constant="20" id="Xnw-wH-BFW"/>
+                <constraint firstAttribute="bottom" secondItem="7A8-pv-F3y" secondAttribute="bottom" constant="8" id="ff6-0P-Tvw"/>
+                <constraint firstItem="7A8-pv-F3y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="slH-sA-5h6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="320" height="503"/>
+            <connections>
+                <outlet property="answerText" destination="IXo-py-xar" id="HVX-AN-nQW"/>
+                <outlet property="qusionText" destination="8ZY-27-xs1" id="bZp-cj-PfJ"/>
+            </connections>
+            <point key="canvasLocation" x="331.8840579710145" y="283.59375"/>
+        </collectionViewCell>
+    </objects>
+</document>

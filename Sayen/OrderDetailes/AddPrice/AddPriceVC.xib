@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Bold.ttf">
+            <string>Tajawal-Bold</string>
+        </array>
+        <array key="Tajawal-Medium.ttf">
+            <string>Tajawal-Medium</string>
+        </array>
+        <array key="Tajawal-Regular.ttf">
+            <string>Tajawal-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPriceVC" customModule="Sayen" customModuleProvider="target">
+            <connections>
+                <outlet property="allhieghtCons" destination="NVh-hv-xHE" id="Kfn-g5-83p"/>
+                <outlet property="btnsStack" destination="HB2-rZ-rEP" id="7ZS-MW-aNO"/>
+                <outlet property="copnPrice" destination="kML-Cz-dXa" id="tL5-BZ-Qel"/>
+                <outlet property="copnTitle" destination="5zx-e6-lp1" id="VIB-SL-3CO"/>
+                <outlet property="coponView" destination="rl0-8E-P01" id="lZO-A1-K9s"/>
+                <outlet property="endPriceCon" destination="8Mh-yG-aSL" id="Ahx-19-Lak"/>
+                <outlet property="newPrice" destination="zlk-C9-ff5" id="dSS-Ue-RYW"/>
+                <outlet property="tableView" destination="Lxl-DO-EFA" id="1JC-JO-KkY"/>
+                <outlet property="tableViewHight" destination="vVH-0D-c65" id="be4-L9-5Z4"/>
+                <outlet property="totPrice" destination="5Mo-2X-GDY" id="j8i-vh-oJ5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltC-fc-CFg" customClass="CardView" customModule="Sayen" customModuleProvider="target">
+                    <rect key="frame" x="30" y="198" width="354" height="500"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-l8-g5T">
+                            <rect key="frame" x="306" y="8" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="C0Y-hR-CYF"/>
+                                <constraint firstAttribute="height" constant="40" id="px9-yQ-VRD"/>
+                            </constraints>
+                            <state key="normal" image="interface (8)"/>
+                            <connections>
+                                <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="g6m-dN-2Ia"/>
+                            </connections>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lxl-DO-EFA">
+                            <rect key="frame" x="15" y="56" width="324" height="240"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="240" id="vVH-0D-c65"/>
+                            </constraints>
+                        </tableView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="القيمه الجديده" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziT-bl-Gok">
+                            <rect key="frame" x="247" y="316" width="87" height="21"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="18"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="700 ريال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-C9-ff5">
+                            <rect key="frame" x="20" y="316" width="62" height="21"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="18"/>
+                            <color key="textColor" red="0.60784313729999995" green="0.67843137249999996" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rl0-8E-P01">
+                            <rect key="frame" x="0.0" y="337" width="354" height="58"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="قيمه الخصم" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zx-e6-lp1">
+                                    <rect key="frame" x="258.5" y="18.5" width="75.5" height="21"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="18"/>
+                                    <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="700 ريال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kML-Cz-dXa">
+                                    <rect key="frame" x="20" y="18.5" width="62" height="21"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="18"/>
+                                    <color key="textColor" red="0.60784313729999995" green="0.67843137249999996" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="5zx-e6-lp1" secondAttribute="trailing" constant="20" id="VsE-cC-UOk"/>
+                                <constraint firstItem="kML-Cz-dXa" firstAttribute="centerY" secondItem="5zx-e6-lp1" secondAttribute="centerY" id="agC-pV-hJV"/>
+                                <constraint firstItem="5zx-e6-lp1" firstAttribute="centerY" secondItem="rl0-8E-P01" secondAttribute="centerY" id="u3a-ax-cBC"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التكلفه النهائية" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ1-G9-Cmg">
+                            <rect key="frame" x="235.5" y="395" width="98.5" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="20"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="700 ريال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mo-2X-GDY">
+                            <rect key="frame" x="20" y="396.5" width="62" height="21"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="18"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HB2-rZ-rEP">
+                            <rect key="frame" x="20" y="444" width="314" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unh-GE-c4V" customClass="UIButtonX" customModule="Sayen" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="152" height="40"/>
+                                    <color key="backgroundColor" red="0.60784313729999995" green="0.67843137249999996" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                    <state key="normal" title="رفض">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="cancelPrice:" destination="-1" eventType="touchUpInside" id="PwL-F5-o53"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yc-bZ-EpL" customClass="UIButtonX" customModule="Sayen" customModuleProvider="target">
+                                    <rect key="frame" x="162" y="0.0" width="152" height="40"/>
+                                    <color key="backgroundColor" red="0.41960784313725491" green="0.65490196078431373" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                    <state key="normal" title="قبول">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="acceptPrice:" destination="-1" eventType="touchUpInside" id="hgD-fr-8VT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="fd7-mw-r7f"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Lxl-DO-EFA" firstAttribute="leading" secondItem="ltC-fc-CFg" secondAttribute="leading" constant="15" id="0gR-oh-ZgG"/>
+                        <constraint firstAttribute="bottom" secondItem="HB2-rZ-rEP" secondAttribute="bottom" constant="16" id="1gw-P3-PBm"/>
+                        <constraint firstAttribute="trailing" secondItem="XnO-l8-g5T" secondAttribute="trailing" constant="8" id="4rC-hI-ft7"/>
+                        <constraint firstItem="HB2-rZ-rEP" firstAttribute="leading" secondItem="ltC-fc-CFg" secondAttribute="leading" constant="20" id="5ZS-zH-1MT"/>
+                        <constraint firstItem="IZ1-G9-Cmg" firstAttribute="top" secondItem="ziT-bl-Gok" secondAttribute="bottom" constant="58" id="8Mh-yG-aSL"/>
+                        <constraint firstAttribute="trailing" secondItem="ziT-bl-Gok" secondAttribute="trailing" constant="20" id="BCj-ko-bfX"/>
+                        <constraint firstItem="rl0-8E-P01" firstAttribute="leading" secondItem="ltC-fc-CFg" secondAttribute="leading" id="CVt-lU-ss5"/>
+                        <constraint firstItem="kML-Cz-dXa" firstAttribute="leading" secondItem="zlk-C9-ff5" secondAttribute="leading" id="M5P-NT-tu8"/>
+                        <constraint firstAttribute="height" constant="500" id="NVh-hv-xHE"/>
+                        <constraint firstAttribute="trailing" secondItem="rl0-8E-P01" secondAttribute="trailing" id="NtQ-FL-HEp"/>
+                        <constraint firstItem="Lxl-DO-EFA" firstAttribute="top" secondItem="XnO-l8-g5T" secondAttribute="bottom" constant="8" id="Obk-fi-Ya7"/>
+                        <constraint firstItem="ziT-bl-Gok" firstAttribute="top" secondItem="Lxl-DO-EFA" secondAttribute="bottom" constant="20" id="QzS-qc-5Qt"/>
+                        <constraint firstItem="rl0-8E-P01" firstAttribute="top" secondItem="ziT-bl-Gok" secondAttribute="bottom" id="Tad-1T-Pfr"/>
+                        <constraint firstItem="zlk-C9-ff5" firstAttribute="centerY" secondItem="ziT-bl-Gok" secondAttribute="centerY" id="Y5c-lt-jLW"/>
+                        <constraint firstItem="XnO-l8-g5T" firstAttribute="top" secondItem="ltC-fc-CFg" secondAttribute="top" constant="8" id="aeO-QU-ZfL"/>
+                        <constraint firstItem="IZ1-G9-Cmg" firstAttribute="top" secondItem="rl0-8E-P01" secondAttribute="bottom" id="eT9-18-fJU"/>
+                        <constraint firstItem="5Mo-2X-GDY" firstAttribute="leading" secondItem="zlk-C9-ff5" secondAttribute="leading" id="ewJ-6W-gu2"/>
+                        <constraint firstAttribute="trailing" secondItem="IZ1-G9-Cmg" secondAttribute="trailing" constant="20" id="rBe-EM-hph"/>
+                        <constraint firstAttribute="trailing" secondItem="Lxl-DO-EFA" secondAttribute="trailing" constant="15" id="sD9-32-Taw"/>
+                        <constraint firstItem="5Mo-2X-GDY" firstAttribute="centerY" secondItem="IZ1-G9-Cmg" secondAttribute="centerY" id="tNw-bA-Ywr"/>
+                        <constraint firstItem="zlk-C9-ff5" firstAttribute="leading" secondItem="ltC-fc-CFg" secondAttribute="leading" constant="20" id="vLd-4l-hwa"/>
+                        <constraint firstAttribute="trailing" secondItem="HB2-rZ-rEP" secondAttribute="trailing" constant="20" id="xAC-SE-823"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="0.5963853169856459" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ltC-fc-CFg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QZc-ig-uAt"/>
+                <constraint firstItem="ltC-fc-CFg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hOB-aM-mi8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ltC-fc-CFg" secondAttribute="trailing" constant="30" id="olC-iS-EKW"/>
+                <constraint firstItem="ltC-fc-CFg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="uDA-Wk-qou"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="interface (8)" width="25.5" height="25.5"/>
+    </resources>
+</document>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Bold.ttf">
+            <string>Tajawal-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowimagesVC" customModule="Sayen" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="HiD-45-xSS" id="GLG-fe-h1W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBX-c6-tai">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="صور المشكله" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjI-at-M4Q">
+                            <rect key="frame" x="167.5" y="22" width="79.5" height="21"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="18"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INV-11-eEW">
+                            <rect key="frame" x="366" y="12.5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="ZGg-Ip-Ehd"/>
+                                <constraint firstAttribute="height" constant="40" id="wVs-v1-NOc"/>
+                            </constraints>
+                            <state key="normal" image="backArrow"/>
+                            <connections>
+                                <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="qSg-0G-nTJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="65" id="APg-Kb-bra"/>
+                        <constraint firstItem="INV-11-eEW" firstAttribute="centerY" secondItem="MjI-at-M4Q" secondAttribute="centerY" id="AzS-zx-pRb"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="65" id="K0M-hg-gbN"/>
+                        <constraint firstItem="MjI-at-M4Q" firstAttribute="centerX" secondItem="EBX-c6-tai" secondAttribute="centerX" id="MVo-k5-NYr"/>
+                        <constraint firstItem="MjI-at-M4Q" firstAttribute="centerY" secondItem="EBX-c6-tai" secondAttribute="centerY" id="ZJ9-Sl-7XT"/>
+                        <constraint firstAttribute="height" constant="65" id="e3P-su-Iz2"/>
+                        <constraint firstAttribute="trailing" secondItem="INV-11-eEW" secondAttribute="trailing" constant="8" id="h6S-kf-EWh"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="jBY-ov-wH3"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="65" id="vV9-8j-B8G"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HiD-45-xSS">
+                    <rect key="frame" x="0.0" y="65" width="414" height="831"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dXg-Au-tGZ">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.94901960780000005" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HiD-45-xSS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4VJ-we-3H3"/>
+                <constraint firstItem="EBX-c6-tai" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9vC-bp-eQJ"/>
+                <constraint firstItem="HiD-45-xSS" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GFT-6i-oQm"/>
+                <constraint firstAttribute="bottom" secondItem="HiD-45-xSS" secondAttribute="bottom" id="XpQ-hI-ZHd"/>
+                <constraint firstItem="HiD-45-xSS" firstAttribute="top" secondItem="EBX-c6-tai" secondAttribute="bottom" id="d7U-f4-GEa"/>
+                <constraint firstItem="EBX-c6-tai" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hvN-fU-n7e"/>
+                <constraint firstItem="EBX-c6-tai" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ky9-Gj-ID4"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backArrow" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "إختر وسيلة الدفع"; ObjectID = "ADI-YP-ykU"; */
+"ADI-YP-ykU.text" = "Choose Payment Method";
+
+/* Class = "UIButton"; normalTitle = "عن طريق آبل"; ObjectID = "VXh-Wg-cVq"; */
+"VXh-Wg-cVq.normalTitle" = "Use Apple Pay";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "Yqb-hh-BDk"; */
+"Yqb-hh-BDk.text" = "700 ريال";
+
+/* Class = "UIButton"; normalTitle = "إرسال الطلب"; ObjectID = "blO-YV-mZb"; */
+"blO-YV-mZb.normalTitle" = "Send Request";
+
+/* Class = "UIButton"; normalTitle = "الدفع اثناء الزيارة"; ObjectID = "dsd-1A-4q1"; */
+"dsd-1A-4q1.normalTitle" = "Pay During Visit";
+
+/* Class = "UILabel"; text = "إستكمال الطلب"; ObjectID = "fgT-Qe-QgB"; */
+"fgT-Qe-QgB.text" = "Continue Request";
+
+/* Class = "UILabel"; text = "التكلفة بعد الخصم"; ObjectID = "l2C-SC-Gxs"; */
+"l2C-SC-Gxs.text" = "";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "nmB-vg-jfN"; */
+"nmB-vg-jfN.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "يتم احتساب قيمة  الفحص و الزيارة من التكلفة الكاملة للخدمة"; ObjectID = "qjv-ub-Xu4"; */
+"qjv-ub-Xu4.text" = "Visit and examining fee are calculated from examining fee";
+
+/* Class = "UIButton"; normalTitle = "بطاقات الدفع"; ObjectID = "u2U-SF-rBg"; */
+"u2U-SF-rBg.normalTitle" = "Credit card";
+
+/* Class = "UILabel"; text = "رسوم الفحص و الزيارة"; ObjectID = "xB5-rc-hXu"; */
+"xB5-rc-hXu.text" = "Visit and examining fees";

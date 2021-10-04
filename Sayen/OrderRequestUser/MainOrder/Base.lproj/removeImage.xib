@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Bold.ttf">
+            <string>Tajawal-Bold</string>
+        </array>
+        <array key="Tajawal-Regular.ttf">
+            <string>Tajawal-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="removeImage" customModule="صاين" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="RDT-fd-ffB" id="WaK-xX-MW0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="RDT-fd-ffB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEC-yD-Yos" customClass="CardView" customModule="صاين" customModuleProvider="target">
+                    <rect key="frame" x="30" y="313" width="354" height="270"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" هل تريد حذف الصورة؟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6p-4e-33W">
+                            <rect key="frame" x="20" y="35" width="314" height="19"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="19"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x35-J6-L18">
+                            <rect key="frame" x="20" y="205" width="314" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAD-uX-G4F" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="152" height="45"/>
+                                    <color key="backgroundColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="18"/>
+                                    <state key="normal" title="نعم">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="yesAction:" destination="-1" eventType="touchUpInside" id="wyR-ns-m9N"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qs-gU-kYT" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
+                                    <rect key="frame" x="162" y="0.0" width="152" height="45"/>
+                                    <color key="backgroundColor" red="0.88235294119999996" green="0.89019607840000003" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="18"/>
+                                    <state key="normal" title="لا">
+                                        <color key="titleColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="noAction:" destination="-1" eventType="touchUpInside" id="8xj-gn-d63"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="daR-88-0Cf"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugd-Xt-OQq">
+                            <rect key="frame" x="20" y="74" width="314" height="94"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="94" id="mVQ-mn-ILP"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="علماً أنه سيتم خصم رسوم الفحص و الزيارة كرسوم الالغاء">
+                                    <attributes>
+                                        <color key="NSColor" red="0.88132643700000002" green="0.24046999220000001" blue="0.29855620859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="system" size="27"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1095" translatesAutoresizingMaskIntoConstraints="NO" id="EVJ-5N-AlK">
+                            <rect key="frame" x="74.5" y="84" width="205" height="101"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="101" id="jO7-A9-HjG"/>
+                                <constraint firstAttribute="width" constant="205" id="sVe-7Q-djc"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="x35-J6-L18" secondAttribute="bottom" constant="20" id="12h-JN-qKg"/>
+                        <constraint firstItem="x35-J6-L18" firstAttribute="top" secondItem="EVJ-5N-AlK" secondAttribute="bottom" constant="20" id="CXl-dN-JOy"/>
+                        <constraint firstAttribute="trailing" secondItem="ugd-Xt-OQq" secondAttribute="trailing" constant="20" id="Not-OX-ZQV"/>
+                        <constraint firstItem="EVJ-5N-AlK" firstAttribute="top" secondItem="j6p-4e-33W" secondAttribute="bottom" constant="30" id="P3u-Ce-nOQ"/>
+                        <constraint firstAttribute="trailing" secondItem="j6p-4e-33W" secondAttribute="trailing" constant="20" id="P9a-BZ-IYN"/>
+                        <constraint firstItem="x35-J6-L18" firstAttribute="leading" secondItem="EEC-yD-Yos" secondAttribute="leading" constant="20" id="Sbl-ZV-bBo"/>
+                        <constraint firstItem="j6p-4e-33W" firstAttribute="centerX" secondItem="EEC-yD-Yos" secondAttribute="centerX" id="TNt-wO-D4I"/>
+                        <constraint firstItem="EVJ-5N-AlK" firstAttribute="centerX" secondItem="j6p-4e-33W" secondAttribute="centerX" id="Uau-ix-Rw7"/>
+                        <constraint firstItem="ugd-Xt-OQq" firstAttribute="top" secondItem="j6p-4e-33W" secondAttribute="bottom" constant="20" id="UdV-kJ-iBu"/>
+                        <constraint firstAttribute="trailing" secondItem="x35-J6-L18" secondAttribute="trailing" constant="20" id="XdB-ib-QzP"/>
+                        <constraint firstItem="j6p-4e-33W" firstAttribute="top" secondItem="EEC-yD-Yos" secondAttribute="top" constant="35" id="eev-nv-Q81"/>
+                        <constraint firstAttribute="height" constant="270" id="egs-7x-cqu"/>
+                        <constraint firstItem="x35-J6-L18" firstAttribute="centerX" secondItem="EEC-yD-Yos" secondAttribute="centerX" id="l94-IG-9Xr"/>
+                        <constraint firstItem="ugd-Xt-OQq" firstAttribute="leading" secondItem="EEC-yD-Yos" secondAttribute="leading" constant="20" id="xtW-ga-TWe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="jCz-sG-y4s"/>
+            <color key="backgroundColor" white="0.66666666669999997" alpha="0.84687126199999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="jCz-sG-y4s" firstAttribute="trailing" secondItem="EEC-yD-Yos" secondAttribute="trailing" constant="30" id="7tf-9t-q0L"/>
+                <constraint firstItem="EEC-yD-Yos" firstAttribute="centerX" secondItem="RDT-fd-ffB" secondAttribute="centerX" id="9oj-cv-gVq"/>
+                <constraint firstItem="EEC-yD-Yos" firstAttribute="leading" secondItem="jCz-sG-y4s" secondAttribute="leading" constant="30" id="SVE-3o-gYr"/>
+                <constraint firstItem="EEC-yD-Yos" firstAttribute="centerY" secondItem="RDT-fd-ffB" secondAttribute="centerY" id="UPS-Vh-usF"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="131.91964285714286"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="4qs-gU-kYT">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="lAD-uX-G4F">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Group 1095" width="154" height="154"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

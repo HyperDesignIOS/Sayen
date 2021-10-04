@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "هل تريد تسجيل الخروج؟"; ObjectID = "Eun-Hq-WVo"; */
+"Eun-Hq-WVo.text" = "Do you want to Sign out?";
+
+/* Class = "UIButton"; normalTitle = "العودة"; ObjectID = "TvH-hx-UDo"; */
+"TvH-hx-UDo.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "تسجيل الخروج"; ObjectID = "a2X-fi-1I4"; */
+"a2X-fi-1I4.normalTitle" = "Sign out";

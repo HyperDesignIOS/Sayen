@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "تفاصيل الفاتورة"; ObjectID = "4rZ-Wf-DCU"; */
+"4rZ-Wf-DCU.text" = "تفاصيل الفاتورة";
+
+/* Class = "UILabel"; text = "التكلفة بعد الخصم"; ObjectID = "6Ed-JC-Cei"; */
+"6Ed-JC-Cei.text" = "التكلفة بعد الخصم";
+
+/* Class = "UILabel"; text = "التكلفه النهائية"; ObjectID = "G6O-Sp-0Ax"; */
+"G6O-Sp-0Ax.text" = "التكلفه النهائية";
+
+/* Class = "UILabel"; text = "التوجة للعميل"; ObjectID = "X4t-bO-ZjD"; */
+"X4t-bO-ZjD.text" = "التوجة للعميل";
+
+/* Class = "UILabel"; text = "قيد الاجراء"; ObjectID = "XcL-Fe-Ubf"; */
+"XcL-Fe-Ubf.text" = "قيد الاجراء";
+
+/* Class = "UILabel"; text = "نوع العميل"; ObjectID = "cao-9E-PKi"; */
+"cao-9E-PKi.text" = "نوع العميل";
+
+/* Class = "UILabel"; text = "جهة الدفع"; ObjectID = "dmg-cM-kdN"; */
+"dmg-cM-kdN.text" = "جهة الدفع";
+
+/* Class = "UILabel"; text = "الدفع كاش"; ObjectID = "duM-IG-PYp"; */
+"duM-IG-PYp.text" = "الدفع كاش";
+
+/* Class = "UILabel"; text = "تم التفيذ"; ObjectID = "jNy-Yw-fy2"; */
+"jNy-Yw-fy2.text" = "تم التفيذ";
+
+/* Class = "UILabel"; text = "جديد"; ObjectID = "qIQ-xu-Iri"; */
+"qIQ-xu-Iri.text" = "جديد";
+
+/* Class = "UILabel"; text = "مدفوع"; ObjectID = "uBV-2J-GTq"; */
+"uBV-2J-GTq.text" = "مدفوع";
+
+/* Class = "UILabel"; text = "رسوم الفحص و الزيارة"; ObjectID = "vy8-gp-0pN"; */
+"vy8-gp-0pN.text" = "رسوم الفحص و الزيارة";
+
+
+

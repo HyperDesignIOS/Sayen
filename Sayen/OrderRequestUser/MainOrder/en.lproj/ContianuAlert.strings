@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = " هل تقبل التكلفة التقديريه؟"; ObjectID = "283-mQ-2fD"; */
+"283-mQ-2fD.text" = "Do you accept examining fees?";
+
+/* Class = "UIButton"; normalTitle = "لا"; ObjectID = "L8g-6H-dGp"; */
+"L8g-6H-dGp.normalTitle" = "No";
+
+/* Class = "UIButton"; normalTitle = "نعم"; ObjectID = "MbR-25-Vsp"; */
+"MbR-25-Vsp.normalTitle" = "Yes";

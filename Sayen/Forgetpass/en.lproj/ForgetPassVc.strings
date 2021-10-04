@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "ارسال الكود"; ObjectID = "BLv-0X-8qr"; */
+"BLv-0X-8qr.normalTitle" = "Send Verification Code";
+
+/* Class = "UILabel"; text = "نسيت كلمة المرور"; ObjectID = "Bdc-KH-eRO"; */
+"Bdc-KH-eRO.text" = "Forget Password";
+
+/* Class = "UITextField"; placeholder = "0000000"; ObjectID = "uUn-e8-kZe"; */
+"uUn-e8-kZe.placeholder" = "0000000";
+
+/* Class = "UILabel"; text = "رقم الهاتف"; ObjectID = "y6F-ou-6iX"; */
+"y6F-ou-6iX.text" = "Mobile Number";

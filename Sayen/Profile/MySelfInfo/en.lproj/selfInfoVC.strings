@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "البريد الالكتروني"; ObjectID = "6Ly-gz-PQc"; */
+"6Ly-gz-PQc.text" = "E-mail Address";
+
+/* Class = "UILabel"; text = "النوع"; ObjectID = "9or-23-FwF"; */
+"9or-23-FwF.text" = "Type";
+
+/* Class = "UIButton"; normalTitle = "عميل اخر"; ObjectID = "EVs-U9-1zg"; */
+"EVs-U9-1zg.normalTitle" = "Other Client";
+
+/* Class = "UITextField"; placeholder = "اكتب هنا"; ObjectID = "F64-EZ-Fk4"; */
+"F64-EZ-Fk4.placeholder" = "Write here";
+
+/* Class = "UITextField"; placeholder = "الإسم"; ObjectID = "MR3-ZR-plw"; */
+"MR3-ZR-plw.placeholder" = "Name";
+
+/* Class = "UITextField"; placeholder = "الرقم"; ObjectID = "PG4-7L-UPV"; */
+"PG4-7L-UPV.placeholder" = "Number";
+
+/* Class = "UILabel"; text = "رقم الشقة"; ObjectID = "RCk-MW-E8C"; */
+"RCk-MW-E8C.text" = "Flat Number";
+
+/* Class = "UITextField"; placeholder = "اكتب هنا"; ObjectID = "V2j-8j-zak"; */
+"V2j-8j-zak.placeholder" = "Write here";
+
+/* Class = "UIButton"; normalTitle = "عميل التميز"; ObjectID = "fhJ-UK-twA"; */
+"fhJ-UK-twA.normalTitle" = "Specail Client";
+
+/* Class = "UIButton"; normalTitle = "حفظ التغييرات"; ObjectID = "gW1-Py-7pK"; */
+"gW1-Py-7pK.normalTitle" = "Save Changes";
+
+/* Class = "UILabel"; text = "الاسم"; ObjectID = "qu3-Bh-JTG"; */
+"qu3-Bh-JTG.text" = "Name";
+
+/* Class = "UILabel"; text = "إسم العمارة"; ObjectID = "v9J-Nr-1GC"; */
+"v9J-Nr-1GC.text" = "Building Number";
+
+/* Class = "UILabel"; text = "تعديل البيانات الشخصية"; ObjectID = "ztB-BG-ilD"; */
+"ztB-BG-ilD.text" = "Edit Personal Info";

@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "كلمة المرور الجديدة "; ObjectID = "7kv-ih-KHF"; */
+"7kv-ih-KHF.text" = "كلمة المرور الجديدة ";
+
+/* Class = "UITextField"; placeholder = "********"; ObjectID = "8cy-hy-uka"; */
+"8cy-hy-uka.placeholder" = "********";
+
+/* Class = "UITextField"; placeholder = "********"; ObjectID = "EfR-M4-EfI"; */
+"EfR-M4-EfI.placeholder" = "********";
+
+/* Class = "UILabel"; text = "كلمة المرور الحاليه"; ObjectID = "Fmy-QM-096"; */
+"Fmy-QM-096.text" = "كلمة المرور الحاليه";
+
+/* Class = "UILabel"; text = "تعديل كلمة المرور"; ObjectID = "MzH-OW-9FN"; */
+"MzH-OW-9FN.text" = "تعديل كلمة المرور";
+
+/* Class = "UILabel"; text = " تأكيد كلمة المرور "; ObjectID = "O9F-qD-QMn"; */
+"O9F-qD-QMn.text" = " تأكيد كلمة المرور ";
+
+/* Class = "UIButton"; normalTitle = "حفظ التغييرات"; ObjectID = "X0Q-lt-oxN"; */
+"X0Q-lt-oxN.normalTitle" = "حفظ التغييرات";
+
+/* Class = "UITextField"; placeholder = "********"; ObjectID = "vav-Nk-jOk"; */
+"vav-Nk-jOk.placeholder" = "********";

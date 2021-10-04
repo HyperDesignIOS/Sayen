@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "إختر وسيلة الدفع"; ObjectID = "ADI-YP-ykU"; */
+"ADI-YP-ykU.text" = "إختر وسيلة الدفع";
+
+/* Class = "UIButton"; normalTitle = "عن طريق آبل"; ObjectID = "VXh-Wg-cVq"; */
+"VXh-Wg-cVq.normalTitle" = "عن طريق آبل";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "Yqb-hh-BDk"; */
+"Yqb-hh-BDk.text" = "700 ريال";
+
+/* Class = "UIButton"; normalTitle = "إرسال الطلب"; ObjectID = "blO-YV-mZb"; */
+"blO-YV-mZb.normalTitle" = "إرسال الطلب";
+
+/* Class = "UIButton"; normalTitle = "الدفع اثناء الزيارة"; ObjectID = "dsd-1A-4q1"; */
+"dsd-1A-4q1.normalTitle" = "الدفع اثناء الزيارة";
+
+/* Class = "UILabel"; text = "إستكمال الطلب"; ObjectID = "fgT-Qe-QgB"; */
+"fgT-Qe-QgB.text" = "إستكمال الطلب";
+
+/* Class = "UILabel"; text = "التكلفة بعد الخصم"; ObjectID = "l2C-SC-Gxs"; */
+"l2C-SC-Gxs.text" = "التكلفة بعد الخصم";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "nmB-vg-jfN"; */
+"nmB-vg-jfN.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "يتم احتساب قيمة  الفحص و الزيارة من التكلفة الكاملة للخدمة"; ObjectID = "qjv-ub-Xu4"; */
+"qjv-ub-Xu4.text" = "يتم احتساب قيمة  الفحص و الزيارة من التكلفة الكاملة للخدمة";
+
+/* Class = "UIButton"; normalTitle = "بطاقات الدفع"; ObjectID = "u2U-SF-rBg"; */
+"u2U-SF-rBg.normalTitle" = "بطاقات الدفع";
+
+/* Class = "UILabel"; text = "رسوم الفحص و الزيارة"; ObjectID = "xB5-rc-hXu"; */
+"xB5-rc-hXu.text" = "رسوم الفحص و الزيارة";

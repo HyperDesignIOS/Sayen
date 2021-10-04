@@ -1,0 +1,36 @@
+
+/* Class = "UITabBarItem"; title = "طلباتي"; ObjectID = "1Ex-U9-Wcd"; */
+"1Ex-U9-Wcd.title" = "Requests";
+
+/* Class = "UITabBarItem"; title = "حسابي"; ObjectID = "H2N-G8-Mdd"; */
+"H2N-G8-Mdd.title" = "Profile";
+
+/* Class = "UILabel"; text = "الإشعارات "; ObjectID = "IPh-58-IOa"; */
+"IPh-58-IOa.text" = "Notifications ";
+
+/* Class = "UIButton"; normalTitle = "حسابي"; ObjectID = "VeH-Mk-hn3"; */
+"VeH-Mk-hn3.normalTitle" = "Profile";
+
+/* Class = "UITabBarItem"; title = "الاشعارات"; ObjectID = "YWE-vB-x2d"; */
+"YWE-vB-x2d.title" = "Notifications";
+
+/* Class = "UISegmentedControl"; as2-Xm-xqG.segmentTitles[0] = "حاليه"; ObjectID = "as2-Xm-xqG"; */
+"as2-Xm-xqG.segmentTitles[0]" = "Current";
+
+/* Class = "UISegmentedControl"; as2-Xm-xqG.segmentTitles[1] = "سابقه"; ObjectID = "as2-Xm-xqG"; */
+"as2-Xm-xqG.segmentTitles[1]" = "Last";
+
+/* Class = "UILabel"; text = "طلباتي"; ObjectID = "cdp-Sd-4jg"; */
+"cdp-Sd-4jg.text" = "Requests";
+
+/* Class = "UITabBarItem"; title = "الرئيسية"; ObjectID = "jHT-OP-krh"; */
+"jHT-OP-krh.title" = "Main";
+
+/* Class = "UILabel"; text = "لا توجد طلبات"; ObjectID = "lBt-W1-dRM"; */
+"lBt-W1-dRM.text" = "No Request ,yet!";
+
+/* Class = "UILabel"; text = "جاري اضافه خدمات للتطبيق"; ObjectID = "qpb-dk-0TK"; */
+"qpb-dk-0TK.text" = "Loading Requests";
+
+/* Class = "UILabel"; text = "لا توجد إشعارات"; ObjectID = "rWO-pB-0x7"; */
+"rWO-pB-0x7.text" = "No Notifications ,yet!";

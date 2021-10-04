@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Regular.ttf">
+            <string>Tajawal-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddedPriceCell" rowHeight="113" id="KGk-i7-Jjw" customClass="AddedPriceCell" customModule="Sayen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="113"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MtN-hG-jI8" customClass="CardView" customModule="Sayen" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="325" height="103"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0d-Dr-4an">
+                                <rect key="frame" x="20" y="18" width="38" height="17"/>
+                                <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                <color key="textColor" white="0.6592591208133971" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تم إضافة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ty9-um-S2u">
+                                <rect key="frame" x="241.5" y="18" width="63.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                <color key="textColor" red="0.6588235294117647" green="0.6588235294117647" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="IFW-JH-ZID">
+                                <rect key="frame" x="20" y="47" width="285" height="54"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.6588235294117647" green="0.6588235294117647" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IFW-JH-ZID" firstAttribute="top" secondItem="A0d-Dr-4an" secondAttribute="bottom" constant="12" id="Cku-s9-yLJ"/>
+                            <constraint firstItem="IFW-JH-ZID" firstAttribute="leading" secondItem="MtN-hG-jI8" secondAttribute="leading" constant="20" id="VND-5K-cgY"/>
+                            <constraint firstItem="A0d-Dr-4an" firstAttribute="centerY" secondItem="Ty9-um-S2u" secondAttribute="centerY" id="XIc-8k-m4t"/>
+                            <constraint firstAttribute="trailing" secondItem="IFW-JH-ZID" secondAttribute="trailing" constant="20" id="eB9-8h-2KD"/>
+                            <constraint firstAttribute="trailing" secondItem="Ty9-um-S2u" secondAttribute="trailing" constant="20" id="jg9-Kf-EgY"/>
+                            <constraint firstAttribute="bottom" secondItem="IFW-JH-ZID" secondAttribute="bottom" constant="2" id="lcV-Dn-SOf"/>
+                            <constraint firstItem="A0d-Dr-4an" firstAttribute="leading" secondItem="MtN-hG-jI8" secondAttribute="leading" constant="20" id="mov-8P-0R2"/>
+                            <constraint firstItem="Ty9-um-S2u" firstAttribute="top" secondItem="MtN-hG-jI8" secondAttribute="top" constant="18" id="xAX-Hf-lgZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="MtN-hG-jI8" secondAttribute="trailing" constant="5" id="LHg-g5-EXA"/>
+                    <constraint firstItem="MtN-hG-jI8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="PwK-mO-eei"/>
+                    <constraint firstAttribute="bottom" secondItem="MtN-hG-jI8" secondAttribute="bottom" constant="5" id="pVR-cW-eqX"/>
+                    <constraint firstItem="MtN-hG-jI8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="tIO-mf-Lrk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="price" destination="A0d-Dr-4an" id="TY2-Tl-abN"/>
+                <outlet property="priceDesc" destination="IFW-JH-ZID" id="teP-l7-gWU"/>
+            </connections>
+            <point key="canvasLocation" x="148.55072463768118" y="150.33482142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

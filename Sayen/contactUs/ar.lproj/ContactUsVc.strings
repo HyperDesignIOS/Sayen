@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "تواصل معنا"; ObjectID = "7ZJ-6j-raJ"; */
+"7ZJ-6j-raJ.text" = "تواصل معنا";
+
+/* Class = "UILabel"; text = "اكتب هنا"; ObjectID = "EZJ-Er-UCD"; */
+"EZJ-Er-UCD.text" = "اكتب هنا";
+
+/* Class = "UILabel"; text = "الاسم"; ObjectID = "F0M-bv-KPr"; */
+"F0M-bv-KPr.text" = "الاسم";
+
+/* Class = "UITextField"; placeholder = "اكتب هنا"; ObjectID = "G4v-TA-kZs"; */
+"G4v-TA-kZs.placeholder" = "اكتب هنا";
+
+/* Class = "UILabel"; text = "رسالتك"; ObjectID = "Rt5-fV-SuU"; */
+"Rt5-fV-SuU.text" = "رسالتك";
+
+/* Class = "UIButton"; normalTitle = "إرسال"; ObjectID = "dza-g3-RWa"; */
+"dza-g3-RWa.normalTitle" = "إرسال";

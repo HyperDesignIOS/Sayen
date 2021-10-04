@@ -1,0 +1,60 @@
+
+/* Class = "UIButton"; normalTitle = "تحقق"; ObjectID = "0bF-S5-Zu9"; */
+"0bF-S5-Zu9.normalTitle" = "تحقق";
+
+/* Class = "UILabel"; text = "طلب خدمه سباكه"; ObjectID = "5jr-Bt-amH"; */
+"5jr-Bt-amH.text" = "طلب خدمه سباكه";
+
+/* Class = "UILabel"; text = "يتم احتساب قيمة  الفحص و الزيارة من التكلفة الكاملة للخدمة"; ObjectID = "74V-9Z-Ody"; */
+"74V-9Z-Ody.text" = "يتم احتساب قيمة  الفحص و الزيارة من التكلفة الكاملة للخدمة";
+
+/* Class = "UILabel"; text = "اكتب هنا"; ObjectID = "J1O-Rs-NW3"; */
+"J1O-Rs-NW3.text" = "اكتب هنا";
+
+/* Class = "UILabel"; text = "إختر"; ObjectID = "OOr-Ji-KWh"; */
+"OOr-Ji-KWh.text" = "إختر";
+
+/* Class = "UILabel"; text = "كود الخصم"; ObjectID = "OQf-DC-02z"; */
+"OQf-DC-02z.text" = "كود الخصم";
+
+/* Class = "UILabel"; text = "العنوان"; ObjectID = "OWc-Iy-DnA"; */
+"OWc-Iy-DnA.text" = "العنوان";
+
+/* Class = "UILabel"; text = "الكوبون غير صحيح"; ObjectID = "Og8-H9-TUU"; */
+"Og8-H9-TUU.text" = "الكوبون غير صحيح";
+
+/* Class = "UILabel"; text = "تاريخ وموعد الزيارة"; ObjectID = "Qvp-1T-bnc"; */
+"Qvp-1T-bnc.text" = "تاريخ وموعد الزيارة";
+
+/* Class = "UILabel"; text = "ملاحظات"; ObjectID = "XxO-LC-Y1V"; */
+"XxO-LC-Y1V.text" = "ملاحظات";
+
+/* Class = "UILabel"; text = "صور للمشكلة"; ObjectID = "Xyp-qW-nef"; */
+"Xyp-qW-nef.text" = "صور للمشكلة";
+
+/* Class = "UILabel"; text = "إختر من الخريطة"; ObjectID = "ZsB-zs-fgM"; */
+"ZsB-zs-fgM.text" = "إختر من الخريطة";
+
+/* Class = "UILabel"; text = "700 " + "Rial".localized; ObjectID = "cIY-wz-cxc"; */
+"cIY-wz-cxc.text" = "700 ";
+
+/* Class = "UILabel"; text = "50 " + "Rial".localized; ObjectID = "cjX-C2-3dx"; */
+"cjX-C2-3dx.text" = "50 ";
+
+/* Class = "UITextField"; placeholder = "0000"; ObjectID = "drz-E7-hoh"; */
+"drz-E7-hoh.placeholder" = "0000";
+
+/* Class = "UIButton"; normalTitle = "إلغاء"; ObjectID = "gjZ-WH-7w6"; */
+"gjZ-WH-7w6.normalTitle" = "إلغاء";
+
+/* Class = "UILabel"; text = "رسوم الفحص و الزيارة"; ObjectID = "n1d-io-qbn"; */
+"n1d-io-qbn.text" = "رسوم الفحص و الزيارة";
+
+/* Class = "UILabel"; text = "حد أقصى 5 صور"; ObjectID = "nLF-N8-E85"; */
+"nLF-N8-E85.text" = "حد أقصى 5 صور";
+
+/* Class = "UILabel"; text = "قيمه كوبون الخصم"; ObjectID = "rHI-0Q-dJo"; */
+"rHI-0Q-dJo.text" = "قيمه كوبون الخصم";
+
+/* Class = "UIButton"; normalTitle = "المتابعة"; ObjectID = "vIl-BL-bY1"; */
+"vIl-BL-bY1.normalTitle" = "المتابعة";

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DIN Next LT Arabic Regular.ttf">
+            <string>DINNextLTArabic-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UITextField_Main" customModule="Takaful" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="aGI-Of-CRW" id="Zig-A2-yRd"/>
+                <outlet property="phoneKeyContainerV" destination="dqC-Pe-dJp" id="GRf-Uv-0Ec"/>
+                <outlet property="phoneKeyLbl" destination="Lxo-ns-F3C" id="PHS-ap-dDw"/>
+                <outlet property="textField" destination="cYl-mK-DFR" id="fbO-ic-Ogb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aGI-Of-CRW">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2Hs-LR-GH7">
+                    <rect key="frame" x="10" y="3" width="394" height="29"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqC-Pe-dJp">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="29"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Lxo-ns-F3C">
+                                    <rect key="frame" x="5" y="0.0" width="28" height="29"/>
+                                    <fontDescription key="fontDescription" name="DINNextLTArabic-Regular" family="DIN Next LT Arabic" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xzD-Oz-aTe">
+                                    <rect key="frame" x="38" y="2" width="1" height="25"/>
+                                    <color key="backgroundColor" red="0.81115180249999996" green="0.82240182159999997" blue="0.88875228169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="1" id="xR9-UL-gG2"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="xzD-Oz-aTe" firstAttribute="leading" secondItem="Lxo-ns-F3C" secondAttribute="trailing" constant="5" id="1cG-a9-dFZ"/>
+                                <constraint firstAttribute="trailing" secondItem="xzD-Oz-aTe" secondAttribute="trailing" constant="1" id="BRf-LH-Qz4"/>
+                                <constraint firstItem="Lxo-ns-F3C" firstAttribute="top" secondItem="dqC-Pe-dJp" secondAttribute="top" id="JE1-Ql-EAl"/>
+                                <constraint firstAttribute="width" constant="40" id="g65-1i-2RI"/>
+                                <constraint firstAttribute="bottom" secondItem="xzD-Oz-aTe" secondAttribute="bottom" constant="2" id="hRd-xr-vDT"/>
+                                <constraint firstItem="xzD-Oz-aTe" firstAttribute="top" secondItem="dqC-Pe-dJp" secondAttribute="top" constant="2" id="oLz-3h-asF"/>
+                                <constraint firstItem="Lxo-ns-F3C" firstAttribute="leading" secondItem="dqC-Pe-dJp" secondAttribute="leading" constant="5" id="piu-20-Jtx"/>
+                                <constraint firstAttribute="bottom" secondItem="Lxo-ns-F3C" secondAttribute="bottom" id="r4X-XV-xlr"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cYl-mK-DFR">
+                            <rect key="frame" x="45" y="0.0" width="349" height="29"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" name="d_darkBlue"/>
+                            <fontDescription key="fontDescription" name="DINNextLTArabic-Regular" family="DIN Next LT Arabic" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2Hs-LR-GH7" secondAttribute="bottom" constant="3" id="0U8-eb-fA4"/>
+                <constraint firstItem="2Hs-LR-GH7" firstAttribute="top" secondItem="aGI-Of-CRW" secondAttribute="top" constant="3" id="Ds5-zo-dp9"/>
+                <constraint firstAttribute="trailing" secondItem="2Hs-LR-GH7" secondAttribute="trailing" constant="10" id="IDd-Ab-ZXJ"/>
+                <constraint firstItem="2Hs-LR-GH7" firstAttribute="top" secondItem="aGI-Of-CRW" secondAttribute="top" constant="3" id="Ki5-hJ-hP5"/>
+                <constraint firstItem="2Hs-LR-GH7" firstAttribute="leading" secondItem="aGI-Of-CRW" secondAttribute="leading" constant="10" id="Vdq-y8-Ob1"/>
+                <constraint firstAttribute="bottom" secondItem="2Hs-LR-GH7" secondAttribute="bottom" constant="3" id="WpX-06-HC6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="124.6376811594203" y="-298.99553571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="d_darkBlue">
+            <color red="0.16899999976158142" green="0.21199999749660492" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

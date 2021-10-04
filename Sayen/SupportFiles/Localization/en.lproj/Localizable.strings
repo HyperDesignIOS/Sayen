@@ -1,0 +1,730 @@
+/* 
+  Localizable.strings
+  Sreer
+
+  Created by admin on 4/9/19.
+ */
+
+
+"Error" = "Error";
+"tryAgain" = "Try again";
+"email_empty" = "Email is required";
+"email_invalid" = "Error in email field";
+"pw_empty" = "Password is required";
+"pw_invalid" = "Password wrong";
+"emptyPhoneNum" = "Phone is required";
+"phone" = "Phone number *" ;
+"forgetPassword" = "Forget Password";
+"phoneVaildationMsg" = "Moblie Number must be 05xxxxxxxx";
+"invalidPhone" = "Phone is not valid , should start with 009665xxxxxxxx or 9665xxxxxxxx or 5xxxxxxxx or 05xxxxxxxx";
+"invalidPhoneNum" = "Phone is not valid , should start with 5xxxxxxxx or 05xxxxxxxx or 9665xxxxxxxx";
+"requiredPassword" = "You shoud enter";
+"success" = "Successed";
+"activeAccount" = "Please";
+"activeAccountMessage" = "Active your acount";
+"emailSent" = "Check your email";
+"emailSentMessage" = "Message sent to email";
+
+"failed" = "Failed";
+"cancel" = "Cancel";
+"agree" = "Agree";
+"ok_" = "Ok";
+
+"newArrival" = "New Arrival";
+"bestSeller" = "Best Sellers";
+
+"pleaseAddAnotherShippingAddress" = "Please add another Shipping Address";
+
+"applyPromoCode" = "Apply promo code";
+
+"cartHasBeenUpdated" = "Cart has been updated";
+"cartIsEmpty" = "Cart is Empty" ;
+"stockNotAva" = "stock doesn't support the quantity selected for this product";
+"logout" = "You wan't to logout?";
+"You can't add more than " = "لا يمكنك إضافة أكثر من " ;
+"hotels" = "فنادق";
+"your_address" = "عنوانك" ; 
+"you_have_to_select_time_range" = "يجب أن تقوم بإختيار فترة الحجز";
+"closetToHarm" = "البعد عن الحرم-أقرب أولاً" ;
+"awayFromHarm" = "تصنيف النجوم-الأعلى أولاً" ;
+"lessRating" = "تصنيف النجوم-الأقل أولاً" ;
+"offersFirst" = "العروض أولاً" ;
+"favFirst" = "الأفضل تقييما أولاً" ;
+"lessPriceFirst" = "السعر-الأقل أولاً" ;
+"recentAdded" = "المضافة مؤخراً" ;
+"you_have_to_select_IndividualsCount" = "يجب ان تقوم بإختيار عدد الأفراد والغرف" ; 
+"selection" = "إختيار" ;
+"howWasYourStay_" = "نرجو تقييم رضائك عن إقامتك";
+"postive_required"= "حقل الإيجابيات مطلوب" ;
+"negativeTxtF_required"= "حقل السلبيات مطلوب" ;
+"postive_requiredMore15"= "يجب ان لا يقل حقل الإيجابيات عن ١٥ حرف " ;
+"negativeTxtF_requiredMore15"= "يجب ان لا يقل حقل السلبيات عن ١٠ أحرف " ;
+"one_am"="1 صباحاً";
+"two_am"="2 صباحاً";
+"three_am"="3 صباحاً";
+"four_am"="4 صباحاً";
+"five_am"="5 صباحاً";
+"six_am"="6 صباحاً";
+"seven_am"="7 صباحاً";
+"one_pm"="1 مساءً";
+"two_pm"="2 مساءً";
+"three_pm"="3 مساءً";
+"four_pm"="4 مساءً";
+"five_pm"="5 مساءً";
+"six_pm"="6 مساءً";
+"seven_pm"="7 مساءً";
+ "only_1_roomAva" = "متوفر غرفة واحدة";
+"most_popular_hotels_first" = "أكثر الفنادق حجزاً أولاً";
+"_1_star" = "١ نجوم" ;
+"_2_star" = "٢ نجوم" ;
+"_3_star" = "٣ نجوم" ;
+"_4_star" = "٤ نجوم" ;
+"_5_star" = "٥ نجوم" ;
+
+"national_id" = "National identity" ;
+"national_placed" = "Resident identity" ;
+"national_pas" = "Passport" ;
+"national_sar" = "GCC Identity" ;
+"numberOfLines" = "Border number" ;
+"national1" = "Residence / Identity of Resident" ;
+"national2" = "Passport/ GCC Identity" ;
+"myNumbers"= "Argami";
+"offers"= "Approved offers" ;
+"complaints"= " Complaints Services";
+"mkyas"="Meqyas";
+"searchProcess"= "Querying approved devices";
+"otherServices"= "Reports";
+"code_pin_empty"="You should enter full code";
+
+"fllowUpVisitorAlert" = "Dear visitor, you can follow up the complaint by login";
+"reportsVisitorAlert" = "Dear visitor, you can follow reports by login";
+"myNumbersDesc" = "Argami service allows users to know details about all telephone numbers and data SIM registered with their IDs in Telecom Service Providers systems";
+"offersDesc" = "The Approved Offers service allows users to know the details of approved offers of all service providers" ;
+"mkyasDesc" = "Meqyas is an initiative by The Communications and Information Technology Commission (CITC) to establish Internet Quality of Experience Measurement Platform in the Kingdom of Saudia Arabia" ;
+"searchService" = "CITC provides number of services related to ICT equipment to enable equipment manufacturers and importers verifying the conformity of their equipment with CITC technical specifications" ;
+
+"otherService" = "It is a service that allows users to submit reports that belonging to the ICT sector which fall within the mandate and roles of  CITC" ;
+
+//MARK: Login
+"user_Name" = "identiy number *" ;
+"password" = "Password" ;
+"phoneNum" =  "Phone number *";
+"email" = "Your email *" ;
+"address" = "Address" ;
+"address_" = "Address has been added to your profile" ;
+"consPass" = "Confirm password *" ;
+"industName" = "Commerical name";
+"modelName" = "Industrial model";
+"manuf" = "Manufacturer" ;
+
+//MARK: Reg
+"nationalType" = "Identity type*" ;
+"borderLineNumber" = "Border line number *" ;
+"passportNumber" = "Passport number *" ;
+"fullName" = "Full name *" ;
+//MARK: main home
+"serviceDesc" = "Sample" ;
+
+//MARK:Complaint
+"complaintMissingFIleDesc" = "Dear user there is missing data please complete it. You have 2 days to complete the required information starting from the date of day"  ;
+"at_date" = " since ";
+"at_hour" = "At hour";
+"select_your_image_from_" = "Choose files from";
+"photoGallery" = "Studio" ;
+"camera" = "Camera" ;
+"this_app_isnot_authorized_to_use_Camera" = "This app is not authorized to use the camera" ;
+
+"no_Camera" = "There's no camera" ;
+"files" = "Files" ;
+"attachType_isRequired" = "Attachment type must be selected first" ;
+"attachments_isRequired" = "Please fill in all data" ;
+//"Attachment is Required" ;
+
+"compType" = "Main complaint type *";
+"mainCompTypeRequired" = "The main complaint type is a required field";
+
+"serviceProvider" = "Service Provider *" ;
+"serviceProviderIsRequired" = "Service Provider Required Field" ;
+"error" = "Error";
+
+
+"name" = "Name" ;
+"nationalityType" = "Type of Identity *" ;
+"nationalityID" = "ID Number *" ;
+"phoneNumber" = "Contact mobile number" ;
+"email_" = "E-mail";
+"hasOrganization" = "By Agency *" ;
+"organizationNum" = "Agency Number *" ;
+"itsDate" = "History *" ;
+"sourceOf" = "coming from*" ;
+"pertisName" = "Subscriber Name *" ;
+"MultiID" = "Shared Identification Number *" ;
+"UserRequest" = "The complainant's request";
+"complaintNumUnder" = "Service number subject to complaint" ;
+"enterNumber" = "Enter the number" ;
+"or" = "Or";
+"pickFromPhoneNumList" = "Choose from your list of numbers" ;
+"ComplainterType" = "Sub-complaint type *" ;
+"complaintEscalation" = "Escalation of Complaint";
+"complaintBody" = "If you want to escalate the complaint and want to inquire about its status you can, this service is available to all users" ;
+"followComplaint" = "Follow-up Complaint";
+"enter_compl_num" = "Please enter complaint number" ;
+"enter_serv_num" = "Enter service number" ;
+"select_serv_provider" = "Select service provider" ;
+
+//main Problems
+"payment_main" = "Invoices and financial obligations";
+"lowServiceQuality_main" = "Low or no service" ;
+"registerServiceNum_main" = "Establishment (number - service) without user request" ;
+"changeOrNotNum_main"  = "Transfer a number or not transfer a number from one operator to another" ;
+"cancelNum_main" = "Cancellation or suspension (number - service)" ;
+"notActiveServ_main" = "Do not activate a service or apply its benefits" ;
+"annoying_main" = "Disturbance" ;
+"humanHarmingWaves_main" = "Human exposure to electromagnetic fields of radio frequencies" ;
+"notSecretive_main" = "Non-compliance with the confidentiality of user information" ;
+//Sub Problems
+"addAddress" = "Add Address" ;
+"editAddress" = "Edit Address";
+"Sale" = "Sale" ;
+"from" = "From";
+"to" = "To";
+"sorry" = "Sorry";
+"piece" = "PCS";
+"notes" = "Notes" ; 
+"thisProductDoesntHaveUnits" = "This Product Doesn't have Product Units";
+"exceptDay" = "except";
+"directionNotAva" = "Direction isn't available for this branchs";
+"home" = "Home";
+"terms" = "Terms & conditions" ;
+"privacyPolicy" = "Privacy policy" ;
+"ourBranches" = "Our Branches" ;
+"changeLang" = "Change Language" ;
+"ContactUs" = "Contact Us";
+"Cart" = "Cart";
+"aboutUs" = "About Us";
+"Profile" = "Profile";
+"Gender" = "Gender";
+"removedItemFromCart" = "Removed Item from your cart";
+"missCalc_sub" = "Invoice Error" ;
+"notPaying_sub" = "Non-payment of funds in service provider systems" ;
+"notReturn_sub" = "No refund" ;
+"dualPayment_sub" = "Balance deduction (prepaid)" ;
+"creaditAddingProb_sub" = "Don't add credit (prepaid)" ;
+"receiptProb_sub" = "Failure to provide the user with invoice details" ;
+//
+"addedItemToCart" = "The item has been added to your cart";
+"addedToYourWishList" = "The item has been added to your Wish list";
+"removedFromYourWishList" = "The item has been removed from your Wish list";
+"youDidnotAddAddress" = "You didn't have any Shipping Address, please add one and try again.";
+"pleaseSelectShippingAddress" = "Please select a Shipping address";
+"WishList" = "Wish list";
+"addToWishList" = "Add to Wishlist" ;
+"removeFromWishList" = "Remove from Wishlist" ;
+"stockOutOFStock" = "Item is out of stock";
+"left_in_stock" = "left in stock";
+"Categories" = "Categories";
+"lowServ_sub" = "Low service" ;
+"Edit" = "Edit";
+"disconnection_sub" = "outage" ;
+"establishment_sub" = "Establish a number without user request" ;
+"addServWithoutOrd_sub" = "Add service without user request" ;
+"transferWithout_sub" = "Transfer number without user request" ;
+"disableTransfer_sub" = "Do not execute transfer request number" ;
+"smsProblems_sub" = "Do not receive calls and messages after the number has been transferred to another operator" ;
+"onHoldServNum_sub" = "Cancellation or suspension (number - service) without user request" ;
+"notFunctionOnHoldServ_sub" = "User request for cancellation or suspension (number-service) is not executed" ;
+
+"cantAddComment" = "Not Enable To add comment" ;
+"comment" =  "Comment*" ;
+"commentRequired" = "Comment field is required" ;
+"servNotAction_sub" = "Do not activate the service" ;
+"benefits_notAction_sub" = "Non-application of service benefits" ;
+"servNotReceived_sub" = "Not providing service" ;
+"annoying_sub" = "Disturbance" ;
+"spam_sub" = "Damage to Spam" ;
+"secretiveLess_sub" = "(The complaint document must be attached - the reason why the company is accused of non-compliance with the confidentiality of information)" ;
+
+//Stage 3
+"subscriptionType" = "Subtype*";
+"servType" = "service type*" ;
+"serNum" = "Service number subject to complaint *" ;
+"subCompType" = "Sub-complaint type *" ;
+"EnterPhone" = "Enter phone";
+"errorEscaleComplaint"= "Error in escalation complaint";
+"successEscaleComplaint"= "Complaint data retrieved successfully";
+
+//Visitor
+"ComplainerType" = "Complaint Recipe" ;
+"crNumber" = "Commercial Registration No*" ;
+"crValidateDate" = "Commercial Registration Expiry Date *" ;
+"companyName" = "The Company's name*" ;
+//Stage2
+"complainerStateType" = "Provider status" ;
+"complainer" = "Complainant *" ;
+"mandateNum" = "Authorization number *" ;
+"mandateDate" = "Authorization date *" ;
+"agencyNum" = "Agency Number *" ;
+"agencyDate" = "History *" ;
+"agencyOrigin" = "coming from*" ;
+"under_mandate" = "By authorization" ;
+"under_agency" = "Under an agency";
+"complaintNum" = "Complaint Number *" ;
+"enterValue" = "Please enter data" ;
+"enterYourPhone" = "Enter your phone saved on your nationality";
+"noData" = "No data" ;
+
+"birthDate" = "Date of Birth *" ;
+"mobileToConnect" = "Contact mobile number *" ;
+"city" = "City *" ;
+"address" = "Address *" ;
+"expirDate" = "Expiry date *" ;
+"nationality" = "Nationality *" ;
+"receiptable" = "Billed" ;
+"prePaid" = "prepaid" ;
+
+ "landLine" = "Fixed" ;
+"mobile" = "mobile" ;
+"InternetLandLine" = "Fixed Internet" ;
+"InternetMobile" = "Mobile Internet" ;
+
+"isRequired" = " is a Required field " ;
+
+"AddressDescription" = "Address Description";
+"street" = "Street";
+"country" = "Country";
+"canotBeLessTHan" = " You should at least " ;
+"Words" = " Characters " ;
+"word" = " Letter ";
+"field" = " Field ";
+"invalidEmail" = "Email is not correct" ;
+"passNotValid" = "Password must contain lower case,upper case,numeric character and special character" ;
+"newPassNotValid" = "New Password must contain lower case,upper case,numeric character and special character" ;
+"Saudi" = "Saudi" ;
+"Egyption" = "Egyption" ;
+"Kwity" = "Kuwaiti" ;
+"pleaseCheckYourEMail" = "Please Check Your E-mail";
+
+"pickFileType" = "Choose File Type";
+"file_msg_error" = "Error in uploading file";
+
+"successRate" = "Success rating complaint";
+"successSaveFile" = "File saved successefully";
+
+
+
+
+
+
+"file" = "File";
+"actionFileTypeHeading" = "Add a File";
+"actionFileTypeDescription" = "Choose a filetype to add..." ;
+"camera" = "Camera" ;
+"phoneLibrary" =  "Phone Library" ;
+"video" = "Video" ;
+"file" = "File" ;
+"voice" = "Voice" ;
+"" = "" ;
+"" = "" ;
+"descAbout" = "CITC is responsible for regulating the ICT sector in the Kingdom of Saudi Arabia. The Telecommunications Act, issued by Royal Decree No. M/12, dated 5/3/1422H and its Bylaws, issued in 1423 H, provide the legal framework for organizing this sector. This Act involves a number of objectives such as: Providing advanced and adequate telecommunication services with affordable prices, creating an appropriate atmosphere to encourage fair competition, using frequencies effectively, localization of telecommunication technology and managing recent advancements, clarity and transparency in procedures, equality and neutrality, protection of the public interest as well as the interest of users and investors.The CITC Ordinance issued pursuant to the Council of Ministers Resolution No. (74), dated 5/3/1422H (corresponding to 27/5/2001) and amended pursuant to the Council of Ministers Resolution No. (133), dated 21/5/1424H (corresponding to 21/7/2003), defines CITCs mandate, functions, governance, and financing as the ICT regulator, having a legal personality, administratively and financially independent." ;
+
+"oldPassword" =  "Old password" ;
+"confirmPassword" = "Confirm password";
+"newPassword" = "New password" ;
+"errorMsgOldPassword" = "Please enter old password" ;
+"oldMessageNotTrue" = "Old password non-valid it" ;
+"pleaseEnterNewPassword" = "Please enter new password" ;
+"newMsgNotTrue" = "New password not true" ;
+"pleaseEnterConfirm" = "Confirm password can't be empty" ;
+"confirmPasswordNotTrue" = "Passwords don't match" ;
+"EditProfile" = "Edit Profile";
+"passwordNotMatch" = "Password not matchs" ;
+"changePasswordSuccess" = "Success change password";
+"changePasswordNotSuccess" = "Old password not true";
+"SAR" = "SAR" ;
+"successLogin" = "Successeful login" ;
+"enterValidData" = "Please enter valid data" ;
+"networkRes" =  "There is no internet connection" ;
+"resetSuccess" = "success reset setting" ;
+"reOrderedSuccess" = "success reOrder services" ;
+"changeLang_" = "You'r about to Change App langauge";
+"logout_" = "Are you sure that you want to logout?";
+
+"enterEmail" = "Please enter your email " ;
+"enterValidEmail" = "Please enter valid email " ;
+"enterPhone" = "Please enter phone" ;
+"errorUpdateProfile" = "Update profile failed , please try again" ;
+"successUpdatePhoto" = "The profile pic changed" ;
+"errorCode" =  "Not valid code" ;
+"successUpdateProfile" = "Update profile success" ;
+"codeSendToPhone" = "The verification code sent to your phone" ;
+"fieldSendCodeToPhone" = "Field send code to phone" ;
+"chooseTypeOfIdentity" = "Please choose type of identity" ;
+"pleaseChooseIdentityNumber" = "Please enter identity number" ;
+"sendCodeOnPhone" = "The verification code sent to your phone" ;
+"invalidIdinty" = "Not valid identinty for user" ;
+"phoneVlaid" = "Your phone is valid" ;
+"sendCodeOnEmail" =  "The verification code sent to your email" ;
+"couldnotValidIdentity" = "Identity couldn't checked" ;
+"enterValidIdentity" = "Please enter valid Identity" ;
+"codeSentagain" = "Resend code to your phone" ;
+"notification_size" = "Important notification area" ;
+
+"user_hint_limited" = "Your mobile number is not verified. Check your profile and update the number →";
+
+"user_hint_visitor" = "login";
+
+
+//
+
+"idCheck" = "Identity is valid" ;
+"invalidId" = "Identity not valid" ;
+"invalidNationalId" = "Nationality ID not valid" ;
+
+"enterId" = "Please enter valid identity number" ;
+"enterValidId" = "Please enter validated identity number" ;
+"enterExpDate" = "Please enter expire date" ;
+"pickNationality" = "Please choose nationality" ;
+"enterName" = "Please enter name" ;
+"nameLessThan3Chr" = "Name is less than 3 char" ;
+"addProfileImg" = "Please add identity image";
+"idChecked" = "Identity is valid" ;
+"invalidIdDetails" = "Idnetity not valid" ;
+"enterPassPortNum" = "Please enter passport number" ;
+"enterValidPasspNum" = "Please enter valid passport number" ;
+"addPhoto" = "Please add identity image" ;
+"idMore7Num" = "Identity numbr should more than 7 char" ;
+"enterBirthDate" = "Please enter birth date" ;
+"enterValidPhone" = "The verification code has been sent to the requested number";
+"notverified" = "Not verified code";
+"emilIsEmpty" = "Email is empty";
+"loginSuccess" = "Login is succeeded" ;
+"notCompletData" = "Couldn't complet data" ;
+"enterRequiredData" = "Please enter required data" ;
+
+"indv" = "Individuals";
+"comp" = "Business" ;
+"setting_faceID" = "The property must be enabled from the application settings";
+"faceId_unauth" = "There is no data for this user please log in";
+
+"newUser" = "New User";
+"userName" = "Name";
+"login" = "Login" ;
+
+"newOffer" = "New offer from zain" ;
+"newwwOffer" = "New offer New offer New offer New offer New offer New offer New offer New offer New offer New offer New offer New offer New offer New offer New offer New offer New offer";
+
+"loginWithFace" =  "Facedetection access" ;
+"loginWithFaceDesc" = "Sign in with your fingerprint used to unlock your phone";
+"loginwithFinger" = "Fingerprint access";
+"loginWithFingerDesc" = "Sign in with your faceID to unlock your phone";
+"saveFingerSuccess" = "Success save FaceID" ;
+"error_finger_setting" = "You should set FaceID setting previously" ;
+
+
+
+
+//MARK: Dynamic #Stage 3
+"region" = "Region";
+"city" = "City ";
+"town" = "Town";
+"locality" = "Locality";
+
+"no3gServ" = "No 3G coverage";
+"no4gServ" = "No 4G coverage";
+"noInteriorsAreCovered" = "No interiors are covered";
+"notActivatChip" = "The service is not activated on the chip";
+"lowInternetSpeed" = "The required internet speed is not available";
+"serviceNotActive" = "The service is not activated despite its request";
+"DSLNotAvailable" = "DSL service is not available";
+"noFiberServiceAvailable" = "No fiber service available";
+"definingProblem" = "Defining the problem";
+"youhaveToPickLocation" = "You have to pick a location.";
+"attachmentsType" = "Attachments Type";
+"pickFile" = "pick File";
+
+"packagePeriod" = "Package period " ;
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"yes" = "Yes" ;
+"no" = "No" ;
+"day" = "Day" ;
+
+"yourLocation" = "Your current location" ;
+
+"approveForSaveFile" = "Are you approve to save file in your local files ?" ;
+
+"xmlFormatError" = "Error in format of xml";
+
+"activeFingerd" = "Activated and documented" ;
+"activeNotNeedFingerd" = "Activated and don\'t requires documentation" ;
+"fingerdNotActive" = "Not registered but documented" ;
+"activeNotFingerd" = "Activated and requires documentation" ;
+"notActiveNotFingerd" = "Documented and its status can\'t be checked currently";
+
+
+"activeFingerdDesc" = "The number is activated by the service provider and authenticated";
+"activeNotNeedFingerdDesc" = "The number is activated by the service provider but don\'t needs to be authenticated" ;
+"fingerdNotActiveDesc" = "The number not registered with the service provider but documented, please see the service provider to cancel the number of regulations documentalist. (it may show the situation when applying for the transfer of number from the service provider to the provider of one another, but had not been activated figure in the service provider al-murad move to date)" ;
+"activeNotFingerdDesc" = "No time for the service, but undocumented. Please review the service provider to document the figure to avoid cancellation of the" ;
+"notActiveNotFingerdDesc" = "Documented, and of miscommunication with the service provider, it can\'t check the status of the figure at the moment, please try again";
+
+"commCom" = "Communications Commission";
+"rateService" = "Rate service level" ;
+"needData" = "Need additional data" ;
+"chooseDate" = "Choose date" ;
+
+"month" = "a month" ;
+
+"Unavailable" = "Unavailable";
+"BusinessRegistrationSoon_" = "Business Registration will be available shortly and TRA services can be utilized by skipping the login";
+
+"SkipRegistration" = "Skip registration";
+
+"confirmEmail" = "Confirm Email *";
+
+"confirmEmailRequired" = "Confirm Email is empty";
+
+"emailNotMatched" = "Email and confirm Email mismatch";
+
+"pickFromYourNumbers" = "Pick from your numbers List"; 
+
+"phoneNotConnectedToNationalID" = "Dear Complainant, To ensure that the complaint is properly handled, the service number in question should be associated with your identity" ;
+
+"alert" = "Alert" ; 
+"notFound" = "No Data avaiable";
+"notFoundDevices" = "No found devices" ;
+
+"Complaier_phoneNumber" = "Service Number"; 
+
+"please_enterFullData" = "Please enter All Data To submit Complaint" ; 
+
+"loading_thatMightTakeTime" = "Loading Data,That might take some time";
+
+"loading_thatMightTakeTimeReg" =" Verification of identity data";
+
+//MARK: ComplaintDEtails
+"Complaint Id" = "Complaint Id" ;
+"RequestId" = "Request Id";
+
+"Service Provider" = "Service Provider";
+
+"SubscriptionType" = "Subscription Type";
+"ComplaintType" = "Complaint Type";
+"ComplaintSubType" = "Complaint SubType";
+"IncorrectAmount" = "objected Amount";
+"ObjectionReason" = "Reason for objection";
+"BillDate" = "Bill Date";
+"SIMAHUserStatus" = "Has the amount been recorded as defaulters in SMH";
+"PaymentMethod" = "Method of Payment";
+"PaymentDate" = "Date of payment";
+"PaymentAmount" = "Payment Amount";
+"AmountToBeReturned" = "Amount to be returned";
+"AmountClaimingReason" = "Reason for claim";
+"DeductionAmount" = "Discount amount";
+"DeductionDate" = "Discount History";
+"RechargeType" = "Shipping Amount";
+"RechargeAmount" = "Shipping Amount";
+"RechargeDate" = "Date of shipment";
+"LocationX" = "the location coordinates";
+"LocationY" = "the location coordinates";
+"AccountNumber" = "account number";
+"NotRequestedService" = "Not Requested Service";
+"ServiceNumber" = "Service Number";
+"Servicetype" = "Service type";
+"Definingproblem" = "Defining problem";
+"Region" = "Region";
+"Governorate" = "Governorate";
+"SubGovernorate" = "Sub Governorate";
+"Neighbourhood" = "Community/City";
+"LocationDescription" = "Site Description";
+"AbuserNumber" = "Abuser Number";
+"AbuseType" = "Annoyance type";
+"AbuseDateFrom" = "Abuse From";
+"AbuseDateTo" = "Abuse to";
+"SpamInfo" = "Spam Info";
+"TowerLocation" = "Tower Location";
+"TowerNo" = "Tower Number";
+"TowerServiceProvider" = "Tower Owner";
+"RequestedServiceType" = "Type of service required";
+"ServiceBlackoutFrom" = "Outage period from";
+"ServiceBlackoutTo" = "Interruption Period to";
+"ServiceName" = "Service Name";
+"ComplaintZone" = "Scope of Complaint";
+"NotActivatedServicetype" = "Name of service in question";
+"ApplicationDate" = "The date of application";
+"ApplicationMethod" = "آلية تقديم الطلب";
+"NotProvidedService" = "Untapped feature";
+"ComplaintDescription" = "Complaint Description";
+"ExposeInfoType" = "Expose Info Type";
+"ExposeInfoProve" = "Expose Info Prove";
+"RequestStatusEServicesName" = "Request Status EServices";
+"ComplaintTypeName" = "Complaint Type";
+"ComplaintTypeSubName" = "Complaint Type SubName";
+"ComplaintChannelName" = "Complaint Channel ";
+"ActorServiceProviderName" = "Actor Service Provider";
+"ComplaintServiceTypeName" = "Complaint Service Type";
+"ComplaintReasonName" = "Complaint Reason";
+"ComplaintObjectionTypeName" = "Complaint Objection Type ";
+"ComplaintProblemTypeName" = "Complaint Problem Type";
+"ComplaintScopeName" = "Complaint Scope ";
+"ComplaintCloseReasonName" = "Complaint Close Reason Name";
+"ConfigRegionName" = "Config Region Name";
+"ConfigMainCityName" = "Config Main City ";
+"ConfigMainTownName" = "Config Main Town ";
+"ConfigMainLocalitiesName" = "Config Main Localities Name";
+"ComplaintCloseReasonForComplainerName" = "Complaint Close Reason For Complainer ";
+"ComplaintServiceSubscriptionTypeName" = "Complaint Service Subscription Type ";
+"ComplaintPaymentMethodName" = "Complaint Payment Method ";
+"SubmissionDate" = "Submission Date";
+"ServiceProviderLogo" = "Service Provider Logo";
+"invalidCode_askFornewPassCode" = "Your verification code has expired Please request a new one"; 
+"IdentityUnderVerification" = "Identity under verification" ;
+
+
+"signout" = "Logout";
+"saveComp" = "save Complaint";
+"saveComp_" = "The complaint will be saved as a draft in the list of complaints, you can complete it in time for you";
+"doneSaveComp" = "Complaint Saved Succesfully";
+"PersonComplainerInfo" = "PersonComplainerInfo";
+"Nationality" = "Nationality" ;
+"IDType" = "IDType";
+"IDNumber" =  "IDNumber";
+"FirstName" =  "FirstName";
+"SecondName" =  "SecondName";
+"ThirdName" = "ThirdName" ;
+"FourthName" = "FourthName";
+"IDExpiryDate" = "IDExpiryDate";
+"Birthdate" = "Birthdate *";
+"Address" = "Address *";
+"EMail" = "Email" ;
+"Search" = "Search" ;
+"Mobile" = "Mobile";
+"City"= "City ";
+"ZipCode" = "ZipCode";
+"IsHaveProcuration" = "IsHaveProcuration";
+"number" = " Number ";
+"visitorWantAddComp" = "Please visit the business complaint website";
+"loginRequired" = "login is Required";
+
+"error500" = "Internal Server Error";
+
+"InvoicesAndFinancial" = "Invoices and financial obligations" ;
+
+"state" = "State";
+//////////////////////////////////////////////////////////////////
+"enterCurrentPassword" =  "Please, Enter Current password";
+"enterPassword" = "Please, Enter your password";
+"confirmPassword" = "Please, Confirm your password";
+"passwordValidation" = "Password should be 8-15 letter or number";
+"selectClint" = "Select Clint";
+"selectBuildingName" = "Select Building Name" ;
+"selectFlateNumber" = "Select Flate Number" ;
+"passwordDontMatch" = "Password Don't Match" ;
+"confirmMobile" = "Confirm Mobile Number"; 
+"enterRightCode" = "Enter right verification code";
+"second" = "Second" ;
+
+"thanks" = "Thanks a lot";
+"welcomToSayen" = "Welcom To Sayen";
+
+"requestRecived" = "Request Recived" ;
+"youWillGetVerificationMessage" = "You will get verification message" ;
+"hi" = "Hi ";
+"enterCodeFirst" = "Please, Enter Code First";
+"Rial" = " SR";
+"request" =  "Request ";
+
+"uploadProblemImage" = "Please, Upload problem images";
+"enterProblemDetails" = "Please, Enter problem details";
+"selectAddress" = "Please, Enter address";
+"selectVisitDateTime" = "Please, Select visit date and time";
+"select" = "Select";
+"selectOnMap" = "Select on map";
+
+
+
+"requestSentSuccessfully" = "Request sent successfully";
+"requestCanceled" = "Request canceled!";
+"selectImagesFrom" = "select images from";
+"close" = "Close";
+"photos" = "Photos";
+"camira" = "Camira";
+"camActivactionMsg" = "Camira Activation will restart your device";
+"camiraNotPermitted" = "Sayen App Doesn't have permition to access Camira, Check Settings";
+"settings" = "Settings";
+"noCamiraFound" = "No Camira Found!";
+"deviceNoCamira" = "This device Doesn'r have Camira";
+"addressAdded" = "Address Added Successfully";
+"selectRightTime" = "Please, Selet right Time (Time should be at least 2 hours from now)";
+
+"disabledLocationService" = "Location services is disabled , please turn it on to detect your location";
+"openLocationService" = "Open Location Services" ;
+"enterFloorNum" = "Please, Enter Floor Number";
+"enterAddress" = "Please, Enter your address";
+"floor" = "Floor";
+"other" = "Other";
+"special" = "Special";
+"client" = "Client";
+"owner" = "Owner";
+
+"canceled" = "Canceled";
+"unpaid" = "Unpaid";
+
+"noCurrentRequest" = "Sorry, you don't have current requests";
+"noInternetConnection" = "No internet connect, please make sure to connect with internet";
+"noCompeleteRequests" = "Sorry, you don't have complete requests";
+"rateRequestMsg" = "Please, rate the request";
+"payOnline" = "Pay Online";
+"paid" = "Paid";
+"PayCash" = "Pay Cash";
+"fanii" = "Technical :";
+"done" = "Done";
+"TheRequestDone" = "Request has been completed";
+"continueAndCall" = "Continue and call this number";
+
+"commonQuestion" = "Common Question";
+"aboutSayen" = "About Sayen";
+"contactUs"  ="Contact Us";
+"shareApp" = "Share App";
+"rateApp" = "Rate App";
+"changeLanguage" = "Change Language";
+"signOut" = "Sign out";
+
+"passwordChanged" = "Password Changed Successfully";
+
+"changePersonalInfo" =  "Edit Personal Information";
+"chagneMobile" =  "Change Mobile Number";
+"changePassw"  = "Change Password";
+
+"accountSaspended" = "The account has been suspended by the administration";
+
+"NoInternetConnection" = "No Internet Connection";
+"connectToInternet" = "Please make sure from your internet connection";
+
+"NoInternetConnection" = "No Internet Connection";
+"connectToInternet" = "Please make sure from your internet connection";
+
+"enterName" = "Please, Enter Name";
+"enterMassage" = "Please, Enter Message";
+
+"alert" = "Alert";
+"accountInactive" = "Your account is inactive";
+"activate" = "Activate";
+
+"setProblem" = "Please, Identify your problem";
+"workDone" = "Work completed successfully";
+
+"confirmReceipt" = "You must confirm receipt of the cost of the application";
+
+"rateWorker" = "Please, rate the worker and add your comment";
+"rateDone" = "Successfully evaluated";
+
+"requestDone" = "The request has been completed successfully";
+"writeName" = "Please, Write Name";
+"wrongEmial" = "Wrong Email Address";
+"startWork" = "Start Work";
+"inMyWay" = "in my way";
+"paymentError" = "something went wrong please try again later";
+"paymentSuccess" = "Payment Successful!";

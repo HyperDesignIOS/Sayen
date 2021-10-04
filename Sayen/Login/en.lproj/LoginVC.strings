@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "تسجيل الدخول"; ObjectID = "3LT-ax-q78"; */
+"3LT-ax-q78.text" = "Sign In";
+
+/* Class = "UITextField"; placeholder = "********"; ObjectID = "467-C7-dkx"; */
+"467-C7-dkx.placeholder" = "********";
+
+/* Class = "UIButton"; normalTitle = "تسجيل الدخول"; ObjectID = "722-g0-zkk"; */
+"722-g0-zkk.normalTitle"= "Sign In";
+
+/* Class = "UILabel"; text = "كلمة المرور"; ObjectID = "J2t-va-Lx2"; */
+"J2t-va-Lx2.text" = "Password";
+
+/* Class = "UILabel"; text = "رقم الهاتف"; ObjectID = "NVz-sk-fzd"; */
+"NVz-sk-fzd.text" = "Phone Number";
+
+/* Class = "UIButton"; normalTitle = "انشاء حساب جديد"; ObjectID = "ces-5N-mUi"; */
+"ces-5N-mUi.normalTitle" = "Create New Account";
+
+/* Class = "UIButton"; normalTitle = "نسيت كلمة المرور؟"; ObjectID = "hpz-BF-p49"; */
+"hpz-BF-p49.normalTitle" = "Forget password?";
+
+/* Class = "UILabel"; text = "ليس لديك حساب؟"; ObjectID = "sXI-vP-d2u"; */
+"sXI-vP-d2u.text" = "Don't have account?";
+
+/* Class = "UITextField"; placeholder = "0000000"; ObjectID = "xCH-KT-aSI"; */
+"xCH-KT-aSI.placeholder" = "0000000";

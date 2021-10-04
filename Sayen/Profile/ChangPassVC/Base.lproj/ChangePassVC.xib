@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Bold.ttf">
+            <string>Tajawal-Bold</string>
+        </array>
+        <array key="Tajawal-Regular.ttf">
+            <string>Tajawal-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangePassVC" customModule="صاين" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmPassTF" destination="8cy-hy-uka" id="tRe-tw-tr0"/>
+                <outlet property="newPassTf" destination="EfR-M4-EfI" id="0w7-TU-tEJ"/>
+                <outlet property="oldPassTF" destination="vav-Nk-jOk" id="Emi-PW-Asj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71h-zU-mAD">
+                    <rect key="frame" x="0.0" y="131" width="414" height="765"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="كلمة المرور الجديدة " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kv-ih-KHF">
+                            <rect key="frame" x="35" y="144" width="114" height="20"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JiN-ma-Upk" customClass="CardView" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="35" y="172" width="344" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EfR-M4-EfI">
+                                    <rect key="frame" x="8" y="0.0" width="328" height="48"/>
+                                    <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="26"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                            <integer key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="EfR-M4-EfI" secondAttribute="trailing" constant="8" id="8fd-ux-I8A"/>
+                                <constraint firstItem="EfR-M4-EfI" firstAttribute="top" secondItem="JiN-ma-Upk" secondAttribute="top" id="CkZ-pJ-ROs"/>
+                                <constraint firstItem="EfR-M4-EfI" firstAttribute="leading" secondItem="JiN-ma-Upk" secondAttribute="leading" constant="8" id="KWY-5b-SvV"/>
+                                <constraint firstAttribute="height" constant="50" id="gJ1-Aj-5iH"/>
+                                <constraint firstAttribute="bottom" secondItem="EfR-M4-EfI" secondAttribute="bottom" constant="2" id="hJR-If-Sew"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYl-hr-iEV" customClass="CardView" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="35" y="278" width="344" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8cy-hy-uka">
+                                    <rect key="frame" x="8" y="0.0" width="328" height="48"/>
+                                    <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="26"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                            <integer key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="8cy-hy-uka" firstAttribute="leading" secondItem="XYl-hr-iEV" secondAttribute="leading" constant="8" id="Ctb-be-x79"/>
+                                <constraint firstItem="8cy-hy-uka" firstAttribute="top" secondItem="XYl-hr-iEV" secondAttribute="top" id="Mqw-tT-euN"/>
+                                <constraint firstAttribute="trailing" secondItem="8cy-hy-uka" secondAttribute="trailing" constant="8" id="Y7u-Pk-Heg"/>
+                                <constraint firstAttribute="bottom" secondItem="8cy-hy-uka" secondAttribute="bottom" constant="2" id="dVF-1g-0Pp"/>
+                                <constraint firstAttribute="height" constant="50" id="hX8-46-Lxw"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="كلمة المرور الحاليه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmy-QM-096">
+                            <rect key="frame" x="35" y="40" width="344" height="20"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lea-2V-Sog" customClass="CardView" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="35" y="68" width="344" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vav-Nk-jOk">
+                                    <rect key="frame" x="8" y="0.0" width="328" height="48"/>
+                                    <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="26"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                            <integer key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="AXo-4c-7pT"/>
+                                <constraint firstAttribute="bottom" secondItem="vav-Nk-jOk" secondAttribute="bottom" constant="2" id="WxL-SJ-700"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ffk-1m-Kuo"/>
+                                <constraint firstAttribute="trailing" secondItem="vav-Nk-jOk" secondAttribute="trailing" constant="8" id="neq-am-qnJ"/>
+                                <constraint firstAttribute="height" constant="50" id="sjE-f5-o65"/>
+                                <constraint firstItem="vav-Nk-jOk" firstAttribute="top" secondItem="lea-2V-Sog" secondAttribute="top" id="srg-lA-ZYc"/>
+                                <constraint firstItem="vav-Nk-jOk" firstAttribute="leading" secondItem="lea-2V-Sog" secondAttribute="leading" constant="8" id="xrT-Y3-604"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" تأكيد كلمة المرور " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9F-qD-QMn">
+                            <rect key="frame" x="35" y="248" width="104" height="20"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0Q-lt-oxN" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="35" y="665" width="344" height="40"/>
+                            <color key="backgroundColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="FAc-sn-Smg"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="gUi-sI-T9g"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                            <state key="normal" title="حفظ التغييرات">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="saveChange:" destination="-1" eventType="touchUpInside" id="S99-w3-6qw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="lea-2V-Sog" firstAttribute="top" secondItem="Fmy-QM-096" secondAttribute="bottom" constant="8" id="1id-4T-ydy"/>
+                        <constraint firstItem="X0Q-lt-oxN" firstAttribute="trailing" secondItem="XYl-hr-iEV" secondAttribute="trailing" id="51v-cP-aJb"/>
+                        <constraint firstItem="JiN-ma-Upk" firstAttribute="trailing" secondItem="lea-2V-Sog" secondAttribute="trailing" id="CQC-jq-qsP"/>
+                        <constraint firstItem="lea-2V-Sog" firstAttribute="leading" secondItem="71h-zU-mAD" secondAttribute="leading" constant="35" id="GCS-dK-BJC"/>
+                        <constraint firstItem="lea-2V-Sog" firstAttribute="trailing" secondItem="Fmy-QM-096" secondAttribute="trailing" id="IZn-yg-Xiw"/>
+                        <constraint firstAttribute="trailing" secondItem="Fmy-QM-096" secondAttribute="trailing" constant="35" id="L4T-j6-OPM"/>
+                        <constraint firstItem="JiN-ma-Upk" firstAttribute="leading" secondItem="lea-2V-Sog" secondAttribute="leading" id="LS7-8u-WKa"/>
+                        <constraint firstItem="JiN-ma-Upk" firstAttribute="top" secondItem="7kv-ih-KHF" secondAttribute="bottom" constant="8" id="LiG-G1-PMb"/>
+                        <constraint firstItem="Fmy-QM-096" firstAttribute="top" secondItem="71h-zU-mAD" secondAttribute="top" constant="40" id="TJc-S9-4sT"/>
+                        <constraint firstItem="XYl-hr-iEV" firstAttribute="top" secondItem="O9F-qD-QMn" secondAttribute="bottom" constant="10" id="Tui-8d-BhL"/>
+                        <constraint firstItem="7kv-ih-KHF" firstAttribute="top" secondItem="lea-2V-Sog" secondAttribute="bottom" constant="26" id="UcA-KG-Zwh"/>
+                        <constraint firstItem="7kv-ih-KHF" firstAttribute="leading" secondItem="71h-zU-mAD" secondAttribute="leading" constant="35" id="XCq-7u-UeE"/>
+                        <constraint firstAttribute="bottom" secondItem="X0Q-lt-oxN" secondAttribute="bottom" constant="60" id="ZDR-j5-EnG"/>
+                        <constraint firstItem="X0Q-lt-oxN" firstAttribute="leading" secondItem="XYl-hr-iEV" secondAttribute="leading" id="ZeE-0b-nN0"/>
+                        <constraint firstItem="XYl-hr-iEV" firstAttribute="trailing" secondItem="JiN-ma-Upk" secondAttribute="trailing" id="emg-41-FTB"/>
+                        <constraint firstItem="Fmy-QM-096" firstAttribute="leading" secondItem="71h-zU-mAD" secondAttribute="leading" constant="35" id="nJm-Kb-s1F"/>
+                        <constraint firstItem="O9F-qD-QMn" firstAttribute="leading" secondItem="71h-zU-mAD" secondAttribute="leading" constant="35" id="ogV-FG-NCf"/>
+                        <constraint firstItem="XYl-hr-iEV" firstAttribute="leading" secondItem="JiN-ma-Upk" secondAttribute="leading" id="qrf-qR-4KG"/>
+                        <constraint firstItem="O9F-qD-QMn" firstAttribute="top" secondItem="JiN-ma-Upk" secondAttribute="bottom" constant="26" id="yLJ-me-wYV"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYp-Rj-DzI">
+                    <rect key="frame" x="0.0" y="44" width="414" height="65"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تعديل كلمة المرور" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzH-OW-9FN">
+                            <rect key="frame" x="152.5" y="21.5" width="109" height="22.5"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="19"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcA-Rs-vvl">
+                            <rect key="frame" x="8" y="12.5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="RRJ-tM-ElQ"/>
+                                <constraint firstAttribute="width" constant="40" id="jff-M6-0UV"/>
+                            </constraints>
+                            <state key="normal" image="backArrow"/>
+                            <connections>
+                                <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="sOO-rj-IuW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="hcA-Rs-vvl" firstAttribute="leading" secondItem="tYp-Rj-DzI" secondAttribute="leading" constant="8" id="LO8-w5-UlK"/>
+                        <constraint firstItem="hcA-Rs-vvl" firstAttribute="centerY" secondItem="MzH-OW-9FN" secondAttribute="centerY" id="Xtz-dR-3L2"/>
+                        <constraint firstAttribute="height" constant="65" id="YiD-Hc-5ps"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="acm-Sy-aw9"/>
+                        <constraint firstItem="MzH-OW-9FN" firstAttribute="centerX" secondItem="tYp-Rj-DzI" secondAttribute="centerX" id="ufK-DW-bpA"/>
+                        <constraint firstItem="MzH-OW-9FN" firstAttribute="centerY" secondItem="tYp-Rj-DzI" secondAttribute="centerY" id="zCw-7b-26U"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="71h-zU-mAD" secondAttribute="bottom" id="CpF-PJ-wV3"/>
+                <constraint firstItem="71h-zU-mAD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OnC-8e-YXS"/>
+                <constraint firstItem="tYp-Rj-DzI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WZg-Yd-hgD"/>
+                <constraint firstItem="tYp-Rj-DzI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ccs-d1-Vdx"/>
+                <constraint firstItem="tYp-Rj-DzI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fYJ-tK-Tza"/>
+                <constraint firstItem="71h-zU-mAD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jcZ-Uw-mD6"/>
+                <constraint firstItem="71h-zU-mAD" firstAttribute="top" secondItem="tYp-Rj-DzI" secondAttribute="bottom" constant="22" id="qZT-2u-2R7"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="X0Q-lt-oxN">
+            <size key="intrinsicContentSize" width="84" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="backArrow" width="13.5" height="12"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

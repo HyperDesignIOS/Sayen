@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "سيتم الارسال خلال "; ObjectID = "0ij-5R-Rez"; */
+"0ij-5R-Rez.text" = "To Resend Verification Code";
+
+/* Class = "UILabel"; text = "30 ثانيه"; ObjectID = "HGI-Vc-jz3"; */
+"HGI-Vc-jz3.text" = "30 second";
+
+/* Class = "UIButton"; normalTitle = "لم يتم الارسال"; ObjectID = "IJ4-Rp-MyS"; */
+"IJ4-Rp-MyS.normalTitle" = "Didn't send ?";
+
+/* Class = "UILabel"; text = "نسيت كلمة المرور"; ObjectID = "JGn-4m-TzJ"; */
+"JGn-4m-TzJ.text" = "Forget Password";
+
+/* Class = "UILabel"; text = "الكود"; ObjectID = "fkf-Qx-wam"; */
+"fkf-Qx-wam.text" = "Code";
+
+/* Class = "UIButton"; normalTitle = "إرسال مرة أخرى"; ObjectID = "jMW-bl-1b3"; */
+"jMW-bl-1b3.normalTitle" = "Resend Verification Code";
+
+/* Class = "UIButton"; normalTitle = "تحقق"; ObjectID = "ol6-nG-r2i"; */
+"ol6-nG-r2i.normalTitle" = "Verify";

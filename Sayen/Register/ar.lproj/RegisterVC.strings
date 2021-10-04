@@ -1,0 +1,42 @@
+
+/* Class = "UIButton"; normalTitle = "عميل اخر"; ObjectID = "0pQ-tn-mo3"; */
+"0pQ-tn-mo3.normalTitle" = "عميل اخر";
+
+/* Class = "UILabel"; text = "تأكيد كلمة المرور"; ObjectID = "8sd-Wc-j9o"; */
+"8sd-Wc-j9o.text" = "تأكيد كلمة المرور";
+
+/* Class = "UIButton"; normalTitle = "إنشاء"; ObjectID = "Aeb-Kn-5uj"; */
+"Aeb-Kn-5uj.normalTitle" = "إنشاء";
+
+/* Class = "UITextField"; placeholder = "********"; ObjectID = "D0K-6h-nPo"; */
+"D0K-6h-nPo.placeholder" = "********";
+
+/* Class = "UITextField"; placeholder = "********"; ObjectID = "KLA-R2-JpX"; */
+"KLA-R2-JpX.placeholder" = "********";
+
+/* Class = "UILabel"; text = "إسم العمارة"; ObjectID = "Rz2-bt-y1Q"; */
+"Rz2-bt-y1Q.text" = "إسم العمارة";
+
+/* Class = "UILabel"; text = "كلمة المرور"; ObjectID = "TLm-I4-QdU"; */
+"TLm-I4-QdU.text" = "كلمة المرور";
+
+/* Class = "UITextField"; placeholder = "0000000"; ObjectID = "W8O-oX-i8h"; */
+"W8O-oX-i8h.placeholder" = "0000000";
+
+/* Class = "UITextField"; placeholder = "الإسم"; ObjectID = "XeR-Vn-oSQ"; */
+"XeR-Vn-oSQ.placeholder" = "الإسم";
+
+/* Class = "UIButton"; normalTitle = "عميل التميز"; ObjectID = "Xmv-z2-fX1"; */
+"Xmv-z2-fX1.normalTitle" = "عميل التميز";
+
+/* Class = "UITextField"; placeholder = "الرقم"; ObjectID = "l2D-gg-uMf"; */
+"l2D-gg-uMf.placeholder" = "الرقم";
+
+/* Class = "UILabel"; text = "رقم الشقة"; ObjectID = "t8o-aq-9qi"; */
+"t8o-aq-9qi.text" = "رقم الشقة";
+
+/* Class = "UILabel"; text = "انشاء حساب"; ObjectID = "vR5-MG-N0z"; */
+"vR5-MG-N0z.text" = "انشاء حساب";
+
+/* Class = "UILabel"; text = "رقم الهاتف"; ObjectID = "vkm-sF-Uuc"; */
+"vkm-sF-Uuc.text" = "رقم الهاتف";

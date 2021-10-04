@@ -1,0 +1,69 @@
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "6bd-oD-DLD"; */
+"6bd-oD-DLD.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "تفاصيل الطلب"; ObjectID = "9hm-Wu-Zfy"; */
+"9hm-Wu-Zfy.text" = "Request Details";
+
+/* Class = "UILabel"; text = "fdsfd"; ObjectID = "ANV-rP-ogM"; */
+"ANV-rP-ogM.text" = "fdsfd";
+
+/* Class = "UILabel"; text = "ملاحظات"; ObjectID = "G6y-KQ-pSY"; */
+"G6y-KQ-pSY.text" = "Notes";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "Gko-fM-Nxd"; */
+"Gko-fM-Nxd.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "لم يتم قبول الطلب"; ObjectID = "IbV-Be-c3d"; */
+"IbV-Be-c3d.text" = "Request has been rejected";
+
+/* Class = "UILabel"; text = "قيد الاجراء"; ObjectID = "OCU-k9-C9K"; */
+"OCU-k9-C9K.text" = "in progress";
+
+/* Class = "UIButton"; normalTitle = "تم تغيير التكلفه"; ObjectID = "QEX-XK-yZ4"; */
+"QEX-XK-yZ4.normalTitle" = "Cost has been changed";
+
+/* Class = "UILabel"; text = "جديد"; ObjectID = "RXG-Qa-mJG"; */
+"RXG-Qa-mJG.text" = "New";
+
+/* Class = "UILabel"; text = "الدفع كاش"; ObjectID = "YNX-Hm-8tR"; */
+"YNX-Hm-8tR.text" = "Pay Cash";
+
+/* Class = "UILabel"; text = "التكلفة بعد الخصم"; ObjectID = "YOS-Nl-oCz"; */
+"YOS-Nl-oCz.text" = "Cost after discount";
+
+/* Class = "UILabel"; text = "غير مدفوع"; ObjectID = "dR8-fu-LDk"; */
+"dR8-fu-LDk.text" = "Unpaid";
+
+/* Class = "UILabel"; text = "التوجة للعميل"; ObjectID = "f1H-F2-kFC"; */
+"f1H-F2-kFC.text" = "in my way";
+
+/* Class = "UILabel"; text = "رسوم الفحص و الزيارة"; ObjectID = "fJP-hV-SfR"; */
+"fJP-hV-SfR.text" = "Examination and visit fees";
+
+/* Class = "UILabel"; text = "جهة الدفع"; ObjectID = "gfd-2a-BCT"; */
+"gfd-2a-BCT.text" = "Payment method";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "hcw-Vl-1JA"; */
+"hcw-Vl-1JA.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "التكلفه النهائية"; ObjectID = "huY-6W-WnC"; */
+"huY-6W-WnC.text" = "Total Cost";
+
+/* Class = "UIButton"; normalTitle = "تقييم الخدمه"; ObjectID = "pmg-hg-4y0"; */
+"pmg-hg-4y0.normalTitle" = "Service Rating";
+
+/* Class = "UILabel"; text = "صور المشكلة"; ObjectID = "q9W-Bf-FTh"; */
+"q9W-Bf-FTh.text" = "Problem Images";
+
+/* Class = "UIButton"; normalTitle = "عرض التكلفه الجديده"; ObjectID = "qER-U8-MqM"; */
+"qER-U8-MqM.normalTitle" = "Show New Cost";
+
+/* Class = "UIButton"; normalTitle = "إلغاء الطلب"; ObjectID = "qpr-be-axL"; */
+"qpr-be-axL.normalTitle" = "Cancel Request";
+
+/* Class = "UILabel"; text = "نوع العميل"; ObjectID = "v73-vV-55N"; */
+"v73-vV-55N.text" = "Client Type";
+
+/* Class = "UILabel"; text = "تم التفيذ"; ObjectID = "viD-ot-l3o"; */
+"viD-ot-l3o.text" = "Done";

@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "لا"; ObjectID = "4qs-gU-kYT"; */
+"4qs-gU-kYT.normalTitle" = "لا";
+
+/* Class = "UILabel"; text = " هل تريد حذف الصورة؟"; ObjectID = "j6p-4e-33W"; */
+"j6p-4e-33W.text" = " هل تريد حذف الصورة؟";
+
+/* Class = "UIButton"; normalTitle = "نعم"; ObjectID = "lAD-uX-G4F"; */
+"lAD-uX-G4F.normalTitle" = "نعم";

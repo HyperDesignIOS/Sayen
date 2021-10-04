@@ -1,0 +1,69 @@
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "6bd-oD-DLD"; */
+"6bd-oD-DLD.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "تفاصيل الطلب"; ObjectID = "9hm-Wu-Zfy"; */
+"9hm-Wu-Zfy.text" = "تفاصيل الطلب";
+
+/* Class = "UILabel"; text = "fdsfd"; ObjectID = "ANV-rP-ogM"; */
+"ANV-rP-ogM.text" = "fdsfd";
+
+/* Class = "UILabel"; text = "ملاحظات"; ObjectID = "G6y-KQ-pSY"; */
+"G6y-KQ-pSY.text" = "ملاحظات";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "Gko-fM-Nxd"; */
+"Gko-fM-Nxd.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "لم يتم قبول الطلب"; ObjectID = "IbV-Be-c3d"; */
+"IbV-Be-c3d.text" = "لم يتم قبول الطلب";
+
+/* Class = "UILabel"; text = "قيد الاجراء"; ObjectID = "OCU-k9-C9K"; */
+"OCU-k9-C9K.text" = "قيد الاجراء";
+
+/* Class = "UIButton"; normalTitle = "تم تغيير التكلفه"; ObjectID = "QEX-XK-yZ4"; */
+"QEX-XK-yZ4.normalTitle" = "تم تغيير التكلفه";
+
+/* Class = "UILabel"; text = "جديد"; ObjectID = "RXG-Qa-mJG"; */
+"RXG-Qa-mJG.text" = "جديد";
+
+/* Class = "UILabel"; text = "الدفع كاش"; ObjectID = "YNX-Hm-8tR"; */
+"YNX-Hm-8tR.text" = "الدفع كاش";
+
+/* Class = "UILabel"; text = "التكلفة بعد الخصم"; ObjectID = "YOS-Nl-oCz"; */
+"YOS-Nl-oCz.text" = "التكلفة بعد الخصم";
+
+/* Class = "UILabel"; text = "غير مدفوع"; ObjectID = "dR8-fu-LDk"; */
+"dR8-fu-LDk.text" = "غير مدفوع";
+
+/* Class = "UILabel"; text = "التوجة للعميل"; ObjectID = "f1H-F2-kFC"; */
+"f1H-F2-kFC.text" = "التوجة للعميل";
+
+/* Class = "UILabel"; text = "رسوم الفحص و الزيارة"; ObjectID = "fJP-hV-SfR"; */
+"fJP-hV-SfR.text" = "رسوم الفحص و الزيارة";
+
+/* Class = "UILabel"; text = "جهة الدفع"; ObjectID = "gfd-2a-BCT"; */
+"gfd-2a-BCT.text" = "جهة الدفع";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "hcw-Vl-1JA"; */
+"hcw-Vl-1JA.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "التكلفه النهائية"; ObjectID = "huY-6W-WnC"; */
+"huY-6W-WnC.text" = "التكلفه النهائية";
+
+/* Class = "UIButton"; normalTitle = "تقييم الخدمه"; ObjectID = "pmg-hg-4y0"; */
+"pmg-hg-4y0.normalTitle" = "تقييم الخدمه";
+
+/* Class = "UILabel"; text = "صور المشكلة"; ObjectID = "q9W-Bf-FTh"; */
+"q9W-Bf-FTh.text" = "صور المشكلة";
+
+/* Class = "UIButton"; normalTitle = "عرض التكلفه الجديده"; ObjectID = "qER-U8-MqM"; */
+"qER-U8-MqM.normalTitle" = "عرض التكلفه الجديده";
+
+/* Class = "UIButton"; normalTitle = "إلغاء الطلب"; ObjectID = "qpr-be-axL"; */
+"qpr-be-axL.normalTitle" = "إلغاء الطلب";
+
+/* Class = "UILabel"; text = "نوع العميل"; ObjectID = "v73-vV-55N"; */
+"v73-vV-55N.text" = "نوع العميل";
+
+/* Class = "UILabel"; text = "تم التفيذ"; ObjectID = "viD-ot-l3o"; */
+"viD-ot-l3o.text" = "تم التفيذ";

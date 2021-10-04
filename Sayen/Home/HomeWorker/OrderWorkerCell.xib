@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Bold.ttf">
+            <string>Tajawal-Bold</string>
+        </array>
+        <array key="Tajawal-Regular.ttf">
+            <string>Tajawal-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="OrderWorkerCell" rowHeight="71" id="KGk-i7-Jjw" customClass="OrderWorkerCell" customModule="Sayen_Team" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Mv-e6-Fjy" customClass="CardView" customModule="Sayen_Team" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="332" height="61"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vo8-Lt-pQT">
+                                <rect key="frame" x="272.5" y="9.5" width="39.5" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BI9-js-lUs">
+                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="17"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="17"/>
+                                        <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKK-F9-DPo">
+                                        <rect key="frame" x="0.0" y="25" width="39.5" height="17"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                        <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ned-QX-m6V">
+                                <rect key="frame" x="0.0" y="10.5" width="80" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zc-5N-sdL">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <state key="normal" image="Group 1008"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trn-AD-vfN">
+                                        <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                        <state key="normal" image="Group 1038"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7j1-xr-AGw"/>
+                                    <constraint firstAttribute="width" constant="80" id="XQ8-Nz-lQ2"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vo8-Lt-pQT" secondAttribute="trailing" constant="20" id="053-zC-nmX"/>
+                            <constraint firstItem="ned-QX-m6V" firstAttribute="centerY" secondItem="3Mv-e6-Fjy" secondAttribute="centerY" id="31H-fr-06a"/>
+                            <constraint firstItem="ned-QX-m6V" firstAttribute="leading" secondItem="3Mv-e6-Fjy" secondAttribute="leading" id="4cZ-TC-3qo"/>
+                            <constraint firstItem="Vo8-Lt-pQT" firstAttribute="centerY" secondItem="3Mv-e6-Fjy" secondAttribute="centerY" id="jpo-I5-vWx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3Mv-e6-Fjy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="58F-Da-bBf"/>
+                    <constraint firstItem="3Mv-e6-Fjy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="5Ba-RV-qQi"/>
+                    <constraint firstAttribute="bottom" secondItem="3Mv-e6-Fjy" secondAttribute="bottom" constant="5" id="KnO-Ss-S7h"/>
+                    <constraint firstAttribute="trailing" secondItem="3Mv-e6-Fjy" secondAttribute="trailing" constant="5" id="nKb-oi-YHY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="callBtn" destination="4zc-5N-sdL" id="Nw9-b7-wum"/>
+                <outlet property="kindWork" destination="RKK-F9-DPo" id="DHX-zy-wZ4"/>
+                <outlet property="mapbtn" destination="Trn-AD-vfN" id="Rgw-P4-BgL"/>
+                <outlet property="timeLbl" destination="BI9-js-lUs" id="wme-Vk-NTz"/>
+            </connections>
+            <point key="canvasLocation" x="153.62318840579712" y="140.95982142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Group 1008" width="23.5" height="23.5"/>
+        <image name="Group 1038" width="23.5" height="23.5"/>
+    </resources>
+</document>

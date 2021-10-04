@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "إختيار العنوان"; ObjectID = "D1i-Zi-pIG"; */
+"D1i-Zi-pIG.text" = "Add Address";
+
+/* Class = "UILabel"; text = "العنوان"; ObjectID = "EHs-vg-LmZ"; */
+"EHs-vg-LmZ.text" = "Address";
+
+/* Class = "UILabel"; text = "الدور"; ObjectID = "PCM-jp-tos"; */
+"PCM-jp-tos.text" = "Floor";
+
+/* Class = "UITextField"; placeholder = "اكتب هنا"; ObjectID = "R4e-Tf-gk4"; */
+"R4e-Tf-gk4.placeholder" = "Write here";
+
+/* Class = "UIButton"; normalTitle = "إستخدام الموقع الحالى"; ObjectID = "Tn7-3W-zxi"; */
+"Tn7-3W-zxi.normalTitle" = "Use Current Location";
+
+/* Class = "UIButton"; normalTitle = "حفظ العنوان"; ObjectID = "xO3-Iy-aaJ"; */
+"xO3-Iy-aaJ.normalTitle" = "Save Address";

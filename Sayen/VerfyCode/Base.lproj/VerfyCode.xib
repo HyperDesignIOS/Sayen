@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tajawal-Regular.ttf">
+            <string>Tajawal-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerfyCode" customModule="صاين" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonsStack" destination="i2T-zN-4eJ" id="7ou-ey-uAi"/>
+                <outlet property="counterLbl" destination="HGI-Vc-jz3" id="fkW-HE-KF4"/>
+                <outlet property="counterStack" destination="8R4-Ka-QIh" id="aQg-QA-QuN"/>
+                <outlet property="pinView" destination="chG-9R-UIu" id="bcD-Ev-ToC"/>
+                <outlet property="titleLBl" destination="JGn-4m-TzJ" id="H8o-gE-moO"/>
+                <outlet property="view" destination="3cO-Cw-YdD" id="YCu-dk-v9M"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3cO-Cw-YdD">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2-back-login" translatesAutoresizingMaskIntoConstraints="NO" id="WUP-C3-IKU">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6l7-l6-Av8" customClass="CardView" customModule="صاين" customModuleProvider="target">
+                    <rect key="frame" x="30" y="194" width="354" height="633"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسيت كلمة المرور" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGn-4m-TzJ">
+                            <rect key="frame" x="116" y="15" width="122" height="24.5"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="21"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الكود" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkf-Qx-wam">
+                            <rect key="frame" x="8" y="70" width="29" height="20"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chG-9R-UIu" customClass="VKPinCodeView" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="20" y="98" width="314" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="BAN-ga-cmC"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ol6-nG-r2i" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="8" y="227" width="338" height="40"/>
+                            <color key="backgroundColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="t9D-Vm-uDt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                            <state key="normal" title="تحقق">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="verfyCode:" destination="-1" eventType="touchUpInside" id="0UJ-zF-7uf"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i2T-zN-4eJ">
+                            <rect key="frame" x="57" y="170" width="240" height="35"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMW-bl-1b3" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="116" height="35"/>
+                                    <color key="backgroundColor" red="0.60784313729999995" green="0.67843137249999996" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                    <state key="normal" title="إرسال مرة أخرى">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="sendAgain:" destination="-1" eventType="touchUpInside" id="tZX-v9-qhB"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJ4-Rp-MyS">
+                                    <rect key="frame" x="124" y="0.0" width="116" height="35"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                    <state key="normal" title="لم يتم الارسال">
+                                        <color key="titleColor" red="0.60784313729999995" green="0.67843137249999996" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="240" id="hWN-Yq-PCf"/>
+                                <constraint firstAttribute="height" constant="35" id="kgf-YT-DI4"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="8R4-Ka-QIh">
+                            <rect key="frame" x="108" y="175" width="138.5" height="16.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 ثانيه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGI-Vc-jz3">
+                                    <rect key="frame" x="0.0" y="0.0" width="41" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                    <color key="textColor" red="0.60784313729999995" green="0.67843137249999996" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سيتم الارسال خلال " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ij-5R-Rez">
+                                    <rect key="frame" x="42" y="0.0" width="96.5" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                    <color key="textColor" red="0.60784313729999995" green="0.67843137249999996" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="ol6-nG-r2i" firstAttribute="leading" secondItem="6l7-l6-Av8" secondAttribute="leading" constant="8" id="1BY-2B-vF3"/>
+                        <constraint firstItem="chG-9R-UIu" firstAttribute="top" secondItem="fkf-Qx-wam" secondAttribute="bottom" constant="8" id="1bR-dM-T09"/>
+                        <constraint firstItem="JGn-4m-TzJ" firstAttribute="centerX" secondItem="6l7-l6-Av8" secondAttribute="centerX" id="61M-d0-kWK"/>
+                        <constraint firstItem="i2T-zN-4eJ" firstAttribute="top" secondItem="chG-9R-UIu" secondAttribute="bottom" constant="22" id="6AF-vY-q41"/>
+                        <constraint firstItem="chG-9R-UIu" firstAttribute="leading" secondItem="6l7-l6-Av8" secondAttribute="leading" constant="20" id="8k8-6k-5oh"/>
+                        <constraint firstItem="8R4-Ka-QIh" firstAttribute="centerX" secondItem="6l7-l6-Av8" secondAttribute="centerX" id="8un-ep-OgD"/>
+                        <constraint firstItem="i2T-zN-4eJ" firstAttribute="centerX" secondItem="6l7-l6-Av8" secondAttribute="centerX" id="Hdu-Rc-ogi"/>
+                        <constraint firstItem="fkf-Qx-wam" firstAttribute="top" secondItem="6l7-l6-Av8" secondAttribute="top" constant="70" id="ICn-6t-qPV"/>
+                        <constraint firstAttribute="trailing" secondItem="chG-9R-UIu" secondAttribute="trailing" constant="20" id="JFD-JO-vZV"/>
+                        <constraint firstItem="fkf-Qx-wam" firstAttribute="leading" secondItem="6l7-l6-Av8" secondAttribute="leading" constant="8" id="Q8Z-Fu-2GK"/>
+                        <constraint firstItem="8R4-Ka-QIh" firstAttribute="top" secondItem="chG-9R-UIu" secondAttribute="bottom" constant="27" id="R7b-uV-y0E"/>
+                        <constraint firstItem="ol6-nG-r2i" firstAttribute="top" secondItem="i2T-zN-4eJ" secondAttribute="bottom" constant="22" id="kvH-ZJ-wXF"/>
+                        <constraint firstAttribute="trailing" secondItem="ol6-nG-r2i" secondAttribute="trailing" constant="8" id="xj9-EJ-dhM"/>
+                        <constraint firstItem="JGn-4m-TzJ" firstAttribute="top" secondItem="6l7-l6-Av8" secondAttribute="top" constant="15" id="zju-oe-Gnc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3-logo-login" translatesAutoresizingMaskIntoConstraints="NO" id="cU8-r5-6wP">
+                    <rect key="frame" x="120" y="74" width="174" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Og5-Mf-Jo1"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyv-JC-BhU">
+                    <rect key="frame" x="354" y="64" width="40" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="IxY-zx-IFm"/>
+                        <constraint firstAttribute="height" constant="30" id="qTB-G2-LSk"/>
+                    </constraints>
+                    <state key="normal" image="back-white"/>
+                    <connections>
+                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="BZZ-v0-stw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="HQb-a4-yZS"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6l7-l6-Av8" firstAttribute="top" secondItem="cU8-r5-6wP" secondAttribute="bottom" constant="20" id="2e4-ec-aiF"/>
+                <constraint firstItem="HQb-a4-yZS" firstAttribute="trailing" secondItem="6l7-l6-Av8" secondAttribute="trailing" constant="30" id="63R-Yw-s8q"/>
+                <constraint firstItem="HQb-a4-yZS" firstAttribute="trailing" secondItem="tyv-JC-BhU" secondAttribute="trailing" constant="20" id="6rJ-0X-una"/>
+                <constraint firstItem="WUP-C3-IKU" firstAttribute="leading" secondItem="HQb-a4-yZS" secondAttribute="leading" id="7BC-lz-kfF"/>
+                <constraint firstItem="cU8-r5-6wP" firstAttribute="leading" secondItem="HQb-a4-yZS" secondAttribute="leading" constant="120" id="ASt-Jl-rgI"/>
+                <constraint firstItem="cU8-r5-6wP" firstAttribute="top" secondItem="HQb-a4-yZS" secondAttribute="top" constant="30" id="DLG-iZ-Eus"/>
+                <constraint firstItem="WUP-C3-IKU" firstAttribute="trailing" secondItem="HQb-a4-yZS" secondAttribute="trailing" id="Rr0-Yi-QPQ"/>
+                <constraint firstItem="WUP-C3-IKU" firstAttribute="top" secondItem="3cO-Cw-YdD" secondAttribute="top" id="Sq1-fe-AiS"/>
+                <constraint firstItem="tyv-JC-BhU" firstAttribute="top" secondItem="HQb-a4-yZS" secondAttribute="top" constant="20" id="UEU-bg-Tot"/>
+                <constraint firstItem="HQb-a4-yZS" firstAttribute="bottom" secondItem="6l7-l6-Av8" secondAttribute="bottom" constant="35" id="guL-ge-sGa"/>
+                <constraint firstAttribute="bottom" secondItem="WUP-C3-IKU" secondAttribute="bottom" id="jsH-nx-i9U"/>
+                <constraint firstItem="HQb-a4-yZS" firstAttribute="trailing" secondItem="cU8-r5-6wP" secondAttribute="trailing" constant="120" id="nzV-eB-Mrp"/>
+                <constraint firstItem="6l7-l6-Av8" firstAttribute="leading" secondItem="HQb-a4-yZS" secondAttribute="leading" constant="30" id="veO-FF-cBz"/>
+            </constraints>
+            <point key="canvasLocation" x="136.23188405797103" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="jMW-bl-1b3">
+            <size key="intrinsicContentSize" width="81" height="29"/>
+        </designable>
+        <designable name="ol6-nG-r2i">
+            <size key="intrinsicContentSize" width="31" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="2-back-login" width="360.5" height="450.5"/>
+        <image name="3-logo-login" width="116" height="110"/>
+        <image name="back-white" width="13.5" height="12"/>
+    </resources>
+</document>
