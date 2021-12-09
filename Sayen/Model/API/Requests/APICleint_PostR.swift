@@ -70,8 +70,8 @@ extension APIClient {
        "status_code" : 200
      }
      */
-    static func registerRequest(mobile : String ,password:String,country_code:String,excellence_client : Int,building_id : Int,flat:String, completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
-        performSwiftyRequest(route: .register(mobile: mobile, password: password, country_code: country_code, excellence_client: excellence_client,building_id:building_id,flat:flat),headers: ["lang":"\(Constants.current_Language)"] ,  { (jsonData) in
+    static func registerRequest(name: String, mobile : String ,password:String,country_code:String,excellence_client : Int,building_id : Int,flat:String, completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+        performSwiftyRequest(route: .register(name: name, mobile: mobile, password: password, country_code: country_code, excellence_client: excellence_client,building_id:building_id,flat:flat),headers: ["lang":"\(Constants.current_Language)"] ,  { (jsonData) in
              let json = JSON(jsonData)
             print(json)
             let sms = json["message"].string ?? json["error"].stringValue

@@ -174,14 +174,10 @@ class MapAddressVC: UIViewController {
     }
     
     @IBAction func dismiss(_ sender: Any) {
-        
-        
         self.dismissViewC()
     }
     @IBAction func saveAddress(_ sender: Any) {
-       
-    
-        
+        view.endEditing(true)
         if self.detailesAddress.text == "" ||  self.addressTf.text == "" {
         
             var sms = ""
@@ -195,8 +191,7 @@ class MapAddressVC: UIViewController {
         }
         self.delegate.sendAddress(address: self.addressTf.text!, lat: self.lat, long: self.long, floor: self.detailesAddress.text ?? "")
         self.dismissViewC()
-    
-        
+  
     }
     
 }

@@ -168,11 +168,7 @@ class selfInfoVC: UIViewController {
                         }
                     }
                     }
-
-
-
                 }
-
             }
         })  { (err) in
             ad.killLoading()
@@ -193,7 +189,7 @@ class selfInfoVC: UIViewController {
             
             self.photoFromLibrary()
         }
-        let camera :UIAlertAction = UIAlertAction(title: "camira".localized, style: .default) { UIAlertAction in
+        let camera :UIAlertAction = UIAlertAction(title: "Camera".localized, style: .default) { UIAlertAction in
             
             
             self.shootPhoto()
@@ -356,7 +352,7 @@ extension selfInfoVC : UIImagePickerControllerDelegate, UINavigationControllerDe
             {
                 DispatchQueue.main.async {
                     self?.view.showSimpleAlert("", "camActivactionMsg".localized, .warning)
-                    let alert = UIAlertController(title: "" , message:  "camiraNotPermitted".localized, preferredStyle: .alert)
+                    let alert = UIAlertController(title: "" , message:  "cameraNotPermitted".localized, preferredStyle: .alert)
                     
                     alert.addAction(UIAlertAction(title:  "settings".localized, style: .default, handler: { (_) in
                         if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
@@ -392,8 +388,8 @@ extension selfInfoVC : UIImagePickerControllerDelegate, UINavigationControllerDe
     }
     func noCamera(){
         let alertVC = UIAlertController(
-            title:  "noCamiraFound".localized,
-            message:  "deviceNoCamira".localized,
+            title:  "nocameraFound".localized,
+            message:  "deviceNoCamera".localized,
             preferredStyle: .alert)
         let okAction = UIAlertAction(
             title: "OK",

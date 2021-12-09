@@ -12,7 +12,7 @@ enum APIRouter: URLRequestConvertible {
     //user/order?order_type=current&limit={limit}&offset={offset}
     //user/order/{order_id}
     case login(phone : String , password : String , country_code : String)
-    case register(mobile : String ,password:String,country_code:String,excellence_client:Int,building_id:Int,flat:String)
+    case register(name: String, mobile : String ,password:String,country_code:String,excellence_client:Int,building_id:Int,flat:String)
     case registerTeam(name:String,mobile : String ,email:String,password:String,country_code:String)
 
     case verifyCode(phone : String ,country_code : String, code : String ,code_type : String ,user_type : String)
@@ -125,8 +125,8 @@ enum APIRouter: URLRequestConvertible {
             
         case.login(let phone,let password ,let country_code):
             return ["phone":phone,"password":password , "country_code" : country_code]
-        case .register(let mobile, let password,let country_code, let excellence_client,let building_id , let flat ):
-            return ["phone" : mobile , "password" : password , "country_code" : country_code , "excellence_client" : excellence_client , "building_id" : building_id , "flat":flat ]
+        case .register(let name, let mobile, let password,let country_code, let excellence_client,let building_id , let flat ):
+            return ["name" : name, "phone" : mobile , "password" : password , "country_code" : country_code , "excellence_client" : excellence_client , "building_id" : building_id , "flat":flat ]
         case .verifyCode(let phone,let country_code,let code,let code_type , let user_type):
             return ["phone": phone , "country_code" : country_code , "code" : code ,"code_type" : code_type ,"user_type" : user_type ]
         case .forgotPass(let mobile,let country_code, let user_type ):

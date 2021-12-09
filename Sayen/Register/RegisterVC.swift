@@ -12,6 +12,7 @@ import DropDown
 
 class RegisterVC: UIViewController {
     
+    @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var passTf: UITextField!
     var passTfS : String = ""
@@ -91,7 +92,8 @@ class RegisterVC: UIViewController {
     func initRegisterVM () {
         viewModel.getDataClosure = {  [weak self] () in
             guard let self = self else {return}
-            self.viewModel.phonenum = self.phoneTF.text!
+            self.viewModel.userName = self.nameTF.text ?? ""
+            self.viewModel.phonenum = self.phoneTF.text ?? ""
             self.viewModel.pass = self.passTfS
             self.viewModel.passConfirme = self.confirmTFS
             

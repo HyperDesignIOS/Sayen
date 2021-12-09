@@ -23,8 +23,8 @@
 /* Class = "UILabel"; text = "الكوبون غير صحيح"; ObjectID = "Og8-H9-TUU"; */
 "Og8-H9-TUU.text" = "الكوبون غير صحيح";
 
-/* Class = "UILabel"; text = "تاريخ وموعد الزيارة"; ObjectID = "Qvp-1T-bnc"; */
-"Qvp-1T-bnc.text" = "تاريخ وموعد الزيارة";
+/* Class = "UILabel"; text = "تاريخ و موعد الزيارة"; ObjectID = "Qvp-1T-bnc"; */
+"Qvp-1T-bnc.text" = "تاريخ و موعد الزيارة";
 
 /* Class = "UILabel"; text = "ملاحظات"; ObjectID = "XxO-LC-Y1V"; */
 "XxO-LC-Y1V.text" = "ملاحظات";

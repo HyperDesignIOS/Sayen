@@ -44,8 +44,7 @@ class ProfileVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    
+     
     
     func getProfileData() {
         ad.isLoading()
@@ -204,8 +203,5 @@ extension ProfileVC : UITableViewDelegate , UITableViewDataSource {
             
         }
     }
-        
-        
-        
-    }
+}
 

@@ -9,7 +9,7 @@ import UIKit
 
 class ContianuAlert: UIViewController {
 
-    var delegate : containuProtocol!
+    var delegate : containuToPaymentProtocol!
 
      override func viewDidLoad() {
          super.viewDidLoad()
@@ -18,13 +18,13 @@ class ContianuAlert: UIViewController {
 
 
      @IBAction func yesAction(_ sender: Any) {
-         self.dismissViewC()
-         delegate.continueFunc()
+         delegate.continueToPaymentFunc()
+        self.dismissViewC()
          
      }
      
      @IBAction func noAction(_ sender: Any) {
-         self.dismiss(animated: false, completion: nil)
+        self.dismissViewC()
      }
      
      
@@ -32,7 +32,7 @@ class ContianuAlert: UIViewController {
  }
 
 
-protocol containuProtocol : class{
-     func continueFunc ()
+protocol containuToPaymentProtocol : class{
+     func continueToPaymentFunc()
  }
 

@@ -100,10 +100,10 @@ class AlertViewC: UIViewController {
         
         
         DispatchQueue.main.async{ [weak self] in
-            
-              self?.dismissViewC()
+            guard let self = self else {return}
+              self.dismissViewC()
 //            self?.dismiss(animated: true, completion: {
-                self?.completionHandler?(success)
+                self.completionHandler?(success)
          
       //        })
         }

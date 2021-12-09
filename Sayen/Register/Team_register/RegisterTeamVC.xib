@@ -45,7 +45,7 @@
                                     <rect key="frame" x="15" y="0.0" width="324" height="663"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="انشاء حساب" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnf-09-C8d">
-                                            <rect key="frame" x="115" y="25" width="94.5" height="21"/>
+                                            <rect key="frame" x="104" y="25" width="116" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="zqv-dR-ztw"/>
                                             </constraints>
@@ -344,7 +344,7 @@
     </objects>
     <designables>
         <designable name="6bH-Og-EKv">
-            <size key="intrinsicContentSize" width="33" height="32"/>
+            <size key="intrinsicContentSize" width="41" height="29"/>
         </designable>
     </designables>
     <resources>

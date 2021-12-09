@@ -33,7 +33,6 @@ class OnlinePaymentVC: UIViewController , WKNavigationDelegate, WKUIDelegate {
         webView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
 
         
-        
         webView.navigationDelegate = self
 
         if let url = URL(string: urlSt) {

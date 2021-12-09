@@ -132,10 +132,10 @@
     </objects>
     <designables>
         <designable name="L8g-6H-dGp">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="30" height="33"/>
         </designable>
         <designable name="MbR-25-Vsp">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="30" height="33"/>
         </designable>
     </designables>
     <resources>

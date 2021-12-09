@@ -32,7 +32,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="65"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تعديل رقم الجوال" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPe-Tl-AQL">
-                            <rect key="frame" x="152" y="21.5" width="110" height="22.5"/>
+                            <rect key="frame" x="134" y="23" width="146" height="19"/>
                             <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="19"/>
                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -60,13 +60,13 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الجوال" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxl-bL-F9B">
-                    <rect key="frame" x="35" y="159" width="61" height="20"/>
+                    <rect key="frame" x="35" y="159" width="74" height="17"/>
                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vvx-JJ-hiG" customClass="CardView" customModule="صاين" customModuleProvider="target">
-                    <rect key="frame" x="35" y="199" width="344" height="50"/>
+                    <rect key="frame" x="35" y="196" width="344" height="50"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uhy-db-ONr">
                             <rect key="frame" x="0.0" y="10" width="334" height="40"/>
@@ -91,7 +91,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سيتم ارسال كود تفعيلي اذا تم تغيير الجوال" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hlu-lx-nRs">
-                    <rect key="frame" x="35" y="269" width="344" height="20"/>
+                    <rect key="frame" x="35" y="266" width="344" height="17"/>
                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                     <color key="textColor" red="0.60534828900000004" green="0.67665320630000003" blue="0.78477412459999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -140,7 +140,7 @@
     </objects>
     <designables>
         <designable name="3sD-vg-glg">
-            <size key="intrinsicContentSize" width="84" height="32"/>
+            <size key="intrinsicContentSize" width="103" height="29"/>
         </designable>
     </designables>
     <resources>

@@ -211,11 +211,10 @@ class OrderDate: UIViewController {
     @IBAction func saveDate(_ sender: Any) {
         let currentday = returnDateM.returnCurrntdateDay()
         if transformeDate == "" {
-            
             self.dateBackEnd = returnDateM.getdateinBackFormate(date12: currentday)
             transformeDate = currentday
-            print(TimeBackEnd)
-            print(returnDateM.getBackTimeCurrent())
+            print("TimeBackEnd \(TimeBackEnd)")
+            print("returnDateM.getBackTimeCurrent() \(returnDateM.getBackTimeCurrent())")
             
         }
         if TransformTime == "" {
@@ -230,20 +229,16 @@ class OrderDate: UIViewController {
         self.TimeBackEnd = (returnDateM.getBackTime(Time: ttt))
         print(transformeDate)
         if self.dateBackEnd == returnDateM.getdateinBackFormate(date12: currentday) {
-            print("ok")
-            let date1 = TimeBackEnd
-            let date2 = returnDateM.getBackTimeCurrent()
+            print("ok \(TimeBackEnd)")
+           
             let formatter = DateFormatter()
-               //   formatter.locale = Locale(identifier: Constants.current_Language)
-                  formatter.timeZone = Calendar.current.timeZone
-                  formatter.dateFormat =  "HH:mm:ss"
-                  //"MM-dd-yyyy"
-            guard let date11 = formatter.date(from: date1) else {return}
-            guard let date22 = formatter.date(from: date2) else{return}
-            var time1Houres = Calendar.current.component(.hour, from: date11)
-            var time2Houres =  Calendar.current.component(.hour, from: date22)
-            print(date1)
-            print(date2)
+            formatter.dateFormat =  "HH:mm:ss"
+            formatter.timeZone = Calendar.current.timeZone
+          
+            guard let date11 = formatter.date(from: TimeBackEnd) else {return}
+            guard let date22 = formatter.date(from:  returnDateM.getBackTimeCurrent()) else{return}
+            let time1Houres = Calendar.current.component(.hour, from: date11)
+            let time2Houres =  Calendar.current.component(.hour, from: date22)
             print(time1Houres)
             print(time2Houres)
  

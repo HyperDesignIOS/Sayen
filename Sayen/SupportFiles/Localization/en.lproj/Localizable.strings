@@ -131,10 +131,10 @@
 "at_hour" = "At hour";
 "select_your_image_from_" = "Choose files from";
 "photoGallery" = "Studio" ;
-"camera" = "Camera" ;
-"this_app_isnot_authorized_to_use_Camera" = "This app is not authorized to use the camera" ;
+"Camera" = "Camera" ;
+"this_app_isnot_authorized_to_use_Camera" = "This app is not authorized to use the Camera" ;
 
-"no_Camera" = "There's no camera" ;
+"no_Camera" = "There's no Camera" ;
 "files" = "Files" ;
 "attachType_isRequired" = "Attachment type must be selected first" ;
 "attachments_isRequired" = "Please fill in all data" ;
@@ -318,7 +318,7 @@
 "file" = "File";
 "actionFileTypeHeading" = "Add a File";
 "actionFileTypeDescription" = "Choose a filetype to add..." ;
-"camera" = "Camera" ;
+"Camera" = "Camera" ;
 "phoneLibrary" =  "Phone Library" ;
 "video" = "Video" ;
 "file" = "File" ;
@@ -650,12 +650,12 @@
 "selectImagesFrom" = "select images from";
 "close" = "Close";
 "photos" = "Photos";
-"camira" = "Camira";
-"camActivactionMsg" = "Camira Activation will restart your device";
-"camiraNotPermitted" = "Sayen App Doesn't have permition to access Camira, Check Settings";
+"Camera" = "Camera";
+"camActivactionMsg" = "camera Activation will restart your device";
+"cameraNotPermitted" = "Sayen App Doesn't have permition to access camera, Check Settings";
 "settings" = "Settings";
-"noCamiraFound" = "No Camira Found!";
-"deviceNoCamira" = "This device Doesn'r have Camira";
+"nocameraFound" = "No camera Found!";
+"deviceNoCamera" = "This device Doesn'r have Camera";
 "addressAdded" = "Address Added Successfully";
 "selectRightTime" = "Please, Selet right Time (Time should be at least 2 hours from now)";
 
@@ -728,3 +728,5 @@
 "inMyWay" = "in my way";
 "paymentError" = "something went wrong please try again later";
 "paymentSuccess" = "Payment Successful!";
+
+"Orders for this service are complete at this hour" = "Orders for this service are complete at this hour";

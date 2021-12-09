@@ -317,6 +317,10 @@
 		F24A855726E1565800E7FAA1 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24A855926E1565800E7FAA1 /* LoginVC.xib */; };
 		F24A856A26E15D9C00E7FAA1 /* ForgetPassVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24A856C26E15D9C00E7FAA1 /* ForgetPassVc.xib */; };
 		F24A857926E3B20100E7FAA1 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24A857B26E3B20100E7FAA1 /* RegisterVC.xib */; };
+		F24FB8C0273D4B9B007566EA /* SendOrder+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24FB8BF273D4B9B007566EA /* SendOrder+ImagePicker.swift */; };
+		F24FB8CA273D4C91007566EA /* SendOrder+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24FB8C9273D4C91007566EA /* SendOrder+CollectionView.swift */; };
+		F24FB8D0273D4CD3007566EA /* SendOrder+Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24FB8CF273D4CD3007566EA /* SendOrder+Address.swift */; };
+		F24FB8D6273D4D51007566EA /* SendOrder+finallySendOrderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24FB8D5273D4D51007566EA /* SendOrder+finallySendOrderDelegate.swift */; };
 		F27278AA26E4AAC600984069 /* VerfyCode.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27278AC26E4AAC600984069 /* VerfyCode.xib */; };
 		F27278B926E4B7DD00984069 /* NewPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27278BB26E4B7DD00984069 /* NewPasswordVC.xib */; };
 		F27278CC26E4E10100984069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27278CE26E4E10100984069 /* Main.storyboard */; };
@@ -594,6 +598,10 @@
 		F24A857A26E3B20100E7FAA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RegisterVC.xib; sourceTree = "<group>"; };
 		F24A858126E3B20600E7FAA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RegisterVC.strings; sourceTree = "<group>"; };
 		F24A858326E3B20800E7FAA1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/RegisterVC.strings; sourceTree = "<group>"; };
+		F24FB8BF273D4B9B007566EA /* SendOrder+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+ImagePicker.swift"; sourceTree = "<group>"; };
+		F24FB8C9273D4C91007566EA /* SendOrder+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+CollectionView.swift"; sourceTree = "<group>"; };
+		F24FB8CF273D4CD3007566EA /* SendOrder+Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+Address.swift"; sourceTree = "<group>"; };
+		F24FB8D5273D4D51007566EA /* SendOrder+finallySendOrderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+finallySendOrderDelegate.swift"; sourceTree = "<group>"; };
 		F27278AB26E4AAC600984069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VerfyCode.xib; sourceTree = "<group>"; };
 		F27278AE26E4AAC800984069 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/VerfyCode.strings; sourceTree = "<group>"; };
 		F27278B426E4AAF800984069 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/VerfyCode.strings; sourceTree = "<group>"; };
@@ -1258,8 +1266,7 @@
 		1C906AE724902AFF00B9855F /* MainOrder */ = {
 			isa = PBXGroup;
 			children = (
-				1C3D78AD248FC42600759C5D /* SendOrder.swift */,
-				F27278E126E4EA8D00984069 /* SendOrder.xib */,
+				F24FB8B8273D4B3F007566EA /* SendOrder */,
 				1CECC2FB24940B2A00354DD7 /* imagesCell.swift */,
 				1CECC2FC24940B2A00354DD7 /* imagesCell.xib */,
 				1CF20A6624B631DA004520A1 /* removeImage.swift */,
@@ -1440,6 +1447,19 @@
 				F24A854326E10F5C00E7FAA1 /* SelectLanguageVC.swift */,
 			);
 			path = SelectLanguage;
+			sourceTree = "<group>";
+		};
+		F24FB8B8273D4B3F007566EA /* SendOrder */ = {
+			isa = PBXGroup;
+			children = (
+				1C3D78AD248FC42600759C5D /* SendOrder.swift */,
+				F24FB8D5273D4D51007566EA /* SendOrder+finallySendOrderDelegate.swift */,
+				F24FB8CF273D4CD3007566EA /* SendOrder+Address.swift */,
+				F24FB8C9273D4C91007566EA /* SendOrder+CollectionView.swift */,
+				F24FB8BF273D4B9B007566EA /* SendOrder+ImagePicker.swift */,
+				F27278E126E4EA8D00984069 /* SendOrder.xib */,
+			);
+			path = SendOrder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1907,6 +1927,7 @@
 				1C309E4524893637002CE4CC /* editProfileCell.swift in Sources */,
 				1C729FB724A921F20070C9D2 /* QuModel.swift in Sources */,
 				1C786CE92486827300BAFC46 /* LoginVC.swift in Sources */,
+				F24FB8C0273D4B9B007566EA /* SendOrder+ImagePicker.swift in Sources */,
 				1C6182EC2489500C0002FFA3 /* ChangePassVC.swift in Sources */,
 				1C786D64248682A300BAFC46 /* ToolbarPickerView.swift in Sources */,
 				1C3D78A6248F98A000759C5D /* HomeUserCell.swift in Sources */,
@@ -1940,6 +1961,7 @@
 				1CBD1D5324A3945500412A5C /* NotiModel.swift in Sources */,
 				1C365BA1249B60A800FFCF7B /* TeamOrderList.swift in Sources */,
 				1C786CCA2486824000BAFC46 /* VerfyVM.swift in Sources */,
+				F24FB8D0273D4CD3007566EA /* SendOrder+Address.swift in Sources */,
 				1C729FAB24A8992D0070C9D2 /* ContactUsVc.swift in Sources */,
 				1CBD1D2C249F75C700412A5C /* TeamAddPriceVC.swift in Sources */,
 				F243593B26F3813E00006D1A /* Configuration.swift in Sources */,
@@ -1996,8 +2018,10 @@
 				84CE28A524E18ACE00A6527C /* OnlinePaymentVC.swift in Sources */,
 				1C3D78AA248FBAFE00759C5D /* HomeHeader.swift in Sources */,
 				1C309E382489262A002CE4CC /* ProfileViewModel.swift in Sources */,
+				F24FB8CA273D4C91007566EA /* SendOrder+CollectionView.swift in Sources */,
 				1C786DB924868F0500BAFC46 /* NewPassVM.swift in Sources */,
 				1C786CB22486819E00BAFC46 /* SceneDelegate.swift in Sources */,
+				F24FB8D6273D4D51007566EA /* SendOrder+finallySendOrderDelegate.swift in Sources */,
 				1C24ED6624A4D61D0048D9E6 /* ProblemCell.swift in Sources */,
 				1C786D78248682A300BAFC46 /* CustomSearchBar.swift in Sources */,
 				1C729FA624A8947F0070C9D2 /* AboutUs.swift in Sources */,
@@ -2598,14 +2622,14 @@
 				CODE_SIGN_ENTITLEMENTS = Sayen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2622,14 +2646,14 @@
 				CODE_SIGN_ENTITLEMENTS = Sayen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";
 				PROVISIONING_PROFILE_SPECIFIER = "";

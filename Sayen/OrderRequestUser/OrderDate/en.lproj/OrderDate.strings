@@ -11,5 +11,5 @@
 /* Class = "UIButton"; normalTitle = "done".localized ; ObjectID = "I1z-mu-Q1m"; */
 "I1z-mu-Q1m.normalTitle" = "Done";
 
-/* Class = "UILabel"; text = "تاريخ وموعد الزيارة"; ObjectID = "yd7-kW-ytu"; */
+/* Class = "UILabel"; text = "تاريخ و موعد الزيارة"; ObjectID = "yd7-kW-ytu"; */
 "yd7-kW-ytu.text" = "Visit Date, Time";

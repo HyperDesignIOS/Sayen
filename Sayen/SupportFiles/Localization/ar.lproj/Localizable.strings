@@ -402,7 +402,7 @@
 "file" = "ملف";
 "actionFileTypeHeading" = "إضافة ملف";
 "actionFileTypeDescription" = "إختر نوع ملف";
-"camera" = "كاميرا" ;
+"Camera" = "كاميرا" ;
 "phoneLibrary" =  "معرض الصور" ;
 "video" = "فيديو" ;
 "voice" = "صوت" ;
@@ -592,7 +592,7 @@
 "uploadProblemImage" = " من فضلك  قم برفع صورة للمشكلة";
 "enterProblemDetails" = "من فضلك أدخل تفاصيل المشكلة";
 "selectAddress" = " من فضلك قم بتحديد العنوان";
-"selectVisitDateTime" =  "من فضلك قم بإختيار تاريخ وموعد الزيارة";
+"selectVisitDateTime" =  "من فضلك قم بإختيار تاريخ و موعد الزيارة";
 
 "selectOnMap" = "إختر من الخريطة";
 "select" = "إختر";
@@ -603,12 +603,12 @@
 "selectImagesFrom" =  "إختيار الصوره من ";
 "close" =  "اغلاق";
 "photos" = "الصور";
-"camira" =  "الكاميرا";
+"Camera" =  "الكاميرا";
 "camActivactionMsg" =  "تفعيل الكاميرا سوف يقوم بإعاده تشغيل الجهاز";
-"camiraNotPermitted" =  "ذلك البرنامج غير مصرح له باستخدام الكاميرا,تفقد الاعدادات";
+"cameraNotPermitted" =  "ذلك البرنامج غير مصرح له باستخدام الكاميرا,تفقد الاعدادات";
 "settings" =  "الإعدادات";
-"noCamiraFound" =  "لا توجد كاميرا";
-"deviceNoCamira" =  "الجهاز لا يحتوي علي كاميرا";
+"nocameraFound" =  "لا توجد كاميرا";
+"deviceNoCamera" =  "الجهاز لا يحتوي علي كاميرا";
 "addressAdded" =  "تم إضافة العنوان بنجاح";
 "selectRightTime" = "فضلا اختر الوقت الصحيح,الوقت الادنى لحجز الخدمه ساعتين من الآن";
 
@@ -677,3 +677,6 @@
 "inMyWay" = "التوجة للعميل";
 "paymentError" = "خطأ في عملية الدفع ، من فضلك حاول لاحقا";
 "paymentSuccess" = "تم الدفع بنجاح";
+
+
+"Orders for this service are complete at this hour" = "عفوا، قم بتحديد وقت اخر للخدمة ، يوجد لدينا طلبات بالفعل في هذا الوقت";
