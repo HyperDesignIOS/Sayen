@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,7 +17,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgetPassVc" customModule="Sayen_Team" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgetPassVc" customModule="فريق_صاين" customModuleProvider="target">
             <connections>
                 <outlet property="phoneTF" destination="baj-6W-SnQ" id="1nD-aP-bf6"/>
                 <outlet property="view" destination="cbv-gp-IaF" id="7kh-Yc-lwc"/>
@@ -27,16 +29,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLD-n6-y4x">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الهاتف" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAz-kM-kbA">
-                            <rect key="frame" x="311" y="92" width="63" height="20"/>
+                            <rect key="frame" x="298" y="92" width="76" height="17"/>
                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9f-sq-VFU" customClass="CardView" customModule="Sayen_Team" customModuleProvider="target">
-                            <rect key="frame" x="40" y="132" width="334" height="50"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9f-sq-VFU" customClass="CardView" customModule="فريق_صاين" customModuleProvider="target">
+                            <rect key="frame" x="40" y="129" width="334" height="50"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0000000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baj-6W-SnQ">
                                     <rect key="frame" x="8" y="0.0" width="318" height="50"/>
@@ -59,8 +61,8 @@
                                 <constraint firstAttribute="bottom" secondItem="baj-6W-SnQ" secondAttribute="bottom" id="uPj-Ai-L20"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaQ-I9-4A3" customClass="UIButtonX" customModule="Sayen_Team" customModuleProvider="target">
-                            <rect key="frame" x="40" y="222" width="334" height="40"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaQ-I9-4A3" customClass="UIButtonX" customModule="فريق_صاين" customModuleProvider="target">
+                            <rect key="frame" x="40" y="219" width="334" height="40"/>
                             <color key="backgroundColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="LGe-33-lGZ"/>
@@ -82,13 +84,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسيت كلمة المرور" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBH-Vd-nKI">
-                                    <rect key="frame" x="155" y="22" width="104.5" height="21"/>
+                                    <rect key="frame" x="135.5" y="23.5" width="143.5" height="18"/>
                                     <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="18"/>
                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYz-ti-8V3">
-                                    <rect key="frame" x="366" y="12.5" width="40" height="40"/>
+                                    <rect key="frame" x="8" y="12.5" width="40" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="40" id="16Y-vO-uOY"/>
                                         <constraint firstAttribute="height" constant="40" id="e2a-lw-1kp"/>
@@ -101,8 +103,8 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="lYz-ti-8V3" secondAttribute="trailing" constant="8" id="PZN-uo-aPb"/>
                                 <constraint firstItem="lYz-ti-8V3" firstAttribute="centerY" secondItem="1Bp-OB-exT" secondAttribute="centerY" id="XMY-Mm-M4v"/>
+                                <constraint firstItem="lYz-ti-8V3" firstAttribute="leading" secondItem="1Bp-OB-exT" secondAttribute="leading" constant="8" id="bGW-9t-bet"/>
                                 <constraint firstItem="UBH-Vd-nKI" firstAttribute="centerX" secondItem="1Bp-OB-exT" secondAttribute="centerX" id="kGy-T0-7oK"/>
                                 <constraint firstAttribute="height" constant="65" id="m2h-n3-4Rv"/>
                                 <constraint firstItem="UBH-Vd-nKI" firstAttribute="centerY" secondItem="1Bp-OB-exT" secondAttribute="centerY" id="yaV-Fy-jN7"/>
@@ -139,8 +141,13 @@
             <point key="canvasLocation" x="136.23188405797103" y="130.58035714285714"/>
         </view>
     </objects>
+    <designables>
+        <designable name="EaQ-I9-4A3">
+            <size key="intrinsicContentSize" width="82" height="29"/>
+        </designable>
+    </designables>
     <resources>
-        <image name="backArrow" width="128" height="128"/>
+        <image name="backArrow" width="13.5" height="12"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

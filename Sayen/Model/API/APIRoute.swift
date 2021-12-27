@@ -18,8 +18,8 @@ enum APIRouter: URLRequestConvertible {
     case verifyCode(phone : String ,country_code : String, code : String ,code_type : String ,user_type : String)
     case forgotPass(mobile:String,country_code:String , user_type: String)
     case resendCode(phone : String ,country_code : String,code_type : String ,user_type : String)
-    case changePassword(password : String , user_type : String)
-    case resetPass(password : String , user_type : String , old_password : String)
+    case resetPass(password : String , user_type : String)
+    case changePassword(password : String , user_type : String , old_password : String)
     case changePhone(phone : String , country_code : String , user_type : String)
     case update_profile(name : String , excellence_client : String , email : String,building_id:Int,flat:String)
     case update_profileT(name : String , email : String)
@@ -133,9 +133,9 @@ enum APIRouter: URLRequestConvertible {
             return ["phone":mobile , "country_code":country_code , "user_type" : user_type]
         case .resendCode(let phone,let country_code,let code_type , let user_type):
             return ["phone": phone , "country_code" : country_code ,"code_type" : code_type ,"user_type" : user_type ]
-        case .changePassword(let password, let user_type ):
+        case .resetPass(let password, let user_type ):
             return ["password":password , "user_type":user_type]
-        case .resetPass(let password, let user_type , let old_password ):
+        case .changePassword(let password, let user_type , let old_password):
             return ["password":password , "user_type":user_type , "old_password" : old_password]
         case .changePhone(let phone , let country_code , let user_type):
             return ["phone":phone,"country_code" : country_code ,"user_type" : user_type]
@@ -220,37 +220,10 @@ enum APIRouter: URLRequestConvertible {
         let url = urlComponents.url!
         var urlRequest = URLRequest(url: url)
         print("URLS REQUEST :\(urlRequest)")
-        
         // HTTP Method
         urlRequest.httpMethod = method.rawValue
-        
- 
         urlRequest.setValue(Constants.ContentType.json.rawValue, forHTTPHeaderField: Constants.HTTPHeaderField.contentType.rawValue)
-     //   urlRequest.setValue("8cSpF5mN", forHTTPHeaderField: "X-ApiKey")
-        if Constants.token2 != "" {
-            switch self {
-            case .changePassword:
-                 urlRequest.setValue("Bearer \(Constants.token2)", forHTTPHeaderField: Constants.HTTPHeaderField.authentication.rawValue)
-            default:
-                print("ok")
-            }
-           
-        }
-        
-        if Constants.user_token != "" {
-            Constants.token2 = ""
-            print("didSetToken:\(Constants.user_token)")
-            //            urlRequest.setValue("bearer \(Constants.user_token)", forHTTPHeaderField: Constants.HTTPHeaderField.authentication.rawValue)
-          
-                
-        
-                urlRequest.setValue("Bearer \(Constants.user_token)", forHTTPHeaderField: Constants.HTTPHeaderField.authentication.rawValue)
-                
-
-            
-        }
-        //        urlRequest.setValue(headers, forHTTPHeaderField: Constants.HTTPHeaderField.authentication.rawValue)
-        //        urlRequest.setValue("ar", forHTTPHeaderField: Constants.HTTPHeaderField.Language.rawValue)
+     
         print(urlRequest.allHTTPHeaderFields)
         // Parameters
         if let parameters = parameters {
@@ -265,3 +238,58 @@ enum APIRouter: URLRequestConvertible {
         return urlRequest as URLRequest
     }
 }
+
+
+
+
+
+//func asURLRequest() throws -> URLRequest {
+//    var main_api_url = ""
+//
+//    main_api_url = Constants.ProductionServer.baseURL_V2 + path
+////        if path == "user/buildings"  ||  path == "team/finish-work" || path == "team/register" {
+////            main_api_url = Constants.ProductionServer.baseURL_V2 + path
+////        }
+//    guard let mainUrl = URLComponents(string: main_api_url) else {
+//        return URLRequest(url: URL(string: Constants.ProductionServer.baseURL)!)
+//
+//    }
+//    let urlComponents = mainUrl
+//    let url = urlComponents.url!
+//    var urlRequest = URLRequest(url: url)
+//    print("URLS REQUEST :\(urlRequest)")
+//    // HTTP Method
+//    urlRequest.httpMethod = method.rawValue
+//    urlRequest.setValue(Constants.ContentType.json.rawValue, forHTTPHeaderField: Constants.HTTPHeaderField.contentType.rawValue)
+// //   urlRequest.setValue("8cSpF5mN", forHTTPHeaderField: "X-ApiKey")
+//    if Constants.token2 != "" {
+//        switch self {
+//        case .changePassword:
+//             urlRequest.setValue("Bearer \(Constants.token2)", forHTTPHeaderField: Constants.HTTPHeaderField.authentication.rawValue)
+//        default:
+//            print("ok")
+//        }
+//
+//    }
+//
+//    if Constants.user_token != "" {
+//        Constants.token2 = ""
+//        print("didSetToken:\(Constants.user_token)")
+//        //            urlRequest.setValue("bearer \(Constants.user_token)", forHTTPHeaderField: Constants.HTTPHeaderField.authentication.rawValue)
+//            urlRequest.setValue("Bearer \(Constants.user_token)", forHTTPHeaderField: Constants.HTTPHeaderField.authentication.rawValue)
+//    }
+//    //        urlRequest.setValue(headers, forHTTPHeaderField: Constants.HTTPHeaderField.authentication.rawValue)
+//    //        urlRequest.setValue("ar", forHTTPHeaderField: Constants.HTTPHeaderField.Language.rawValue)
+//    print(urlRequest.allHTTPHeaderFields)
+//    // Parameters
+//    if let parameters = parameters {
+//        do {
+//            print(parameters)
+//            urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+//        } catch {
+//            throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
+//        }
+//    }
+//
+//    return urlRequest as URLRequest
+//}

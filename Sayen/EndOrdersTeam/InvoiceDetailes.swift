@@ -9,17 +9,12 @@
 import UIKit
 
 class InvoiceDetailes: UIViewController {
-    
     @IBOutlet weak var finalPriceTopCons: NSLayoutConstraint!
-    
     @IBOutlet weak var payState: UILabel!
     //    @IBOutlet weak var mainViewHieght: NSLayoutConstraint!
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var orderNum: UILabel!
     @IBOutlet weak var mainTitle: UILabel!
-    
-    
-    
     @IBOutlet weak var inWayTitle: UILabel!
     @IBOutlet weak var endTitle: UILabel!
     @IBOutlet weak var inProgTitle: UILabel!
@@ -31,18 +26,11 @@ class InvoiceDetailes: UIViewController {
     @IBOutlet weak var inProgV: UIView!
     @IBOutlet weak var inWayV: UIView!
     @IBOutlet weak var gotoEndV: UIView!
-    
-    
     @IBOutlet weak var copounView: UIView!
-    
-    
-    
-    
     @IBOutlet weak var initPrice: UILabel!
     @IBOutlet weak var discountPrice: UILabel!
     @IBOutlet weak var endPrice: UILabel!
     @IBOutlet weak var cashImgeTrue: UIImageView!
-    
     @IBOutlet weak var clientTypeContainerV: UIView!
     @IBOutlet weak var clientTypeLbl: UILabel!
     @IBOutlet weak var paymentSourceContainerV: UIView!
@@ -52,12 +40,9 @@ class InvoiceDetailes: UIViewController {
     var order_status : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let tabbar = self.tabBarController as? TabBarController
         self.clientTypeContainerV.isHidden = true
         self.paymentSourceContainerV.isHidden = true
-        
-        
         tabbar?.hideTab()
         getOrderData ()
     }
@@ -67,8 +52,6 @@ class InvoiceDetailes: UIViewController {
         self.dismissViewC()
         tabbar?.showTab()
     }
-    
-    
     
     
     func getOrderData () {

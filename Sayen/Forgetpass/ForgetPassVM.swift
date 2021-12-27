@@ -27,7 +27,6 @@ class ForgetPassMV {
         }
     
     func validateRows ()->Bool{
-       
            guard let phonenum = phonenum , phonenum != "" , phonenum.count == 10 , phonenum.prefix(2) == "05"  else{
                       print("noooospace")
                       if self.phonenum == "" {
@@ -37,8 +36,6 @@ class ForgetPassMV {
                       }
                       return false
                   }
-          
-           
            return true
        }
 

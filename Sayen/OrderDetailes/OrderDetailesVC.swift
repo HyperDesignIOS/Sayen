@@ -14,7 +14,6 @@ class OrderDetailesVC: UIViewController {
     @IBOutlet weak var maintitle: UILabel!
     @IBOutlet weak var orderNum: UILabel!
     @IBOutlet weak var date: UILabel!
-    
     @IBOutlet weak var inWayTitle: UILabel!
     @IBOutlet weak var endTitle: UILabel!
     @IBOutlet weak var inProgTitle: UILabel!
@@ -26,7 +25,6 @@ class OrderDetailesVC: UIViewController {
     @IBOutlet weak var inProgV: UIView!
     @IBOutlet weak var inWayV: UIView!
     @IBOutlet weak var gotoEndV: UIView!
-    
     @IBOutlet weak var workerView: CardView!
     @IBOutlet weak var workerImage: UIImageView!
     @IBOutlet weak var workerName: UILabel!
@@ -47,11 +45,9 @@ class OrderDetailesVC: UIViewController {
     @IBOutlet weak var rateStack: UIStackView!
     @IBOutlet weak var upGroundView: UIView!
     @IBOutlet weak var waitViewOrder: CardView!
-    
     @IBOutlet weak var cancelOrder: UIButtonX!
     @IBOutlet weak var cancelLbl: UILabel!
     @IBOutlet weak var notesHieght: NSLayoutConstraint!
-    
     @IBOutlet weak var clientContainerV: UIView!
     @IBOutlet weak var clientTypeLbl: UILabel!
     @IBOutlet weak var paymenSourceContainerV: UIView!
@@ -67,6 +63,7 @@ class OrderDetailesVC: UIViewController {
     var team_added_price_desc : [String] = []
     var team_added_price : [String] = []
     var btnsState = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         paymenSourceContainerV.isHidden = true

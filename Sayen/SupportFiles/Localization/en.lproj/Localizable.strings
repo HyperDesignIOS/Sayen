@@ -15,7 +15,7 @@
 "emptyPhoneNum" = "Phone is required";
 "phone" = "Phone number *" ;
 "forgetPassword" = "Forget Password";
-"phoneVaildationMsg" = "Moblie Number must be 05xxxxxxxx";
+"phoneVaildationMsg" = "Moblie Number must be 05xxxxxxxx , should be 10 numbers starting with 05";
 "invalidPhone" = "Phone is not valid , should start with 009665xxxxxxxx or 9665xxxxxxxx or 5xxxxxxxx or 05xxxxxxxx";
 "invalidPhoneNum" = "Phone is not valid , should start with 5xxxxxxxx or 05xxxxxxxx or 9665xxxxxxxx";
 "requiredPassword" = "You shoud enter";
@@ -730,3 +730,5 @@
 "paymentSuccess" = "Payment Successful!";
 
 "Orders for this service are complete at this hour" = "Orders for this service are complete at this hour";
+"clinetType" = "Clinet Type";
+"floorDetails" = "Building Number / Floor / flat Number";

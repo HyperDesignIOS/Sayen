@@ -188,6 +188,7 @@ extension APIClient {
               }
           }
       }
+    
     //MARK: getWorkerOrders
     static func getWorkerOrders(date : String,completionHandler:@escaping (Bool,[TeamOrderList]?)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
         performSwiftyRequest(route: .getTeamOrders(date: date),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
@@ -198,27 +199,21 @@ extension APIClient {
                 for (_,jsn) in json["orders"] {
                     data.append(TeamOrderList(jsn))
                 }
-                
-                //                let sms  = json["message"].string ?? json["error"].stringValue
+                //   let sms  = json["message"].string ?? json["error"].stringValue
                 let status = data.count >= 0 ? true : false
                 if !status {
-                    
                     completionHandler(status,nil)
                     return
                 }
-                
                 completionHandler(status,data)
             }
         }) { (error) in
             DispatchQueue.main.async {
-                
                 print(error.debugDescription)
                 completionFaliure(error)
             }
         }
     }
-    
-    
     
     
     //MARK: getTeamOrder

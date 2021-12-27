@@ -32,19 +32,19 @@
                     <rect key="frame" x="30" y="194" width="354" height="633"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسيت كلمة المرور" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdc-KH-eRO">
-                            <rect key="frame" x="99" y="30" width="156" height="21"/>
+                            <rect key="frame" x="116.33333333333334" y="30" width="121.66666666666666" height="24.666666666666671"/>
                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="21"/>
                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الهاتف" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6F-ou-6iX">
-                            <rect key="frame" x="8" y="86" width="76" height="17"/>
+                            <rect key="frame" x="7.9999999999999964" y="89.666666666666686" width="62.666666666666657" height="20"/>
                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gfz-cn-kqg" customClass="CardView" customModule="صاين" customModuleProvider="target">
-                            <rect key="frame" x="8" y="111" width="338" height="50"/>
+                            <rect key="frame" x="8" y="117.66666666666669" width="338" height="50"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0000000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uUn-e8-kZe">
                                     <rect key="frame" x="8" y="0.0" width="322" height="50"/>
@@ -68,7 +68,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLv-0X-8qr" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
-                            <rect key="frame" x="8" y="201" width="338" height="40"/>
+                            <rect key="frame" x="8" y="207.66666666666669" width="338" height="40"/>
                             <color key="backgroundColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="5sp-9y-C2v"/>
@@ -111,7 +111,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUI-nJ-pUT">
-                    <rect key="frame" x="354" y="64" width="40" height="30"/>
+                    <rect key="frame" x="16" y="64" width="40" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="l5V-0c-HIb"/>
                         <constraint firstAttribute="width" constant="40" id="mOe-Um-Bsy"/>
@@ -132,7 +132,7 @@
                 <constraint firstItem="7Ev-CI-Gf1" firstAttribute="trailing" secondItem="ixo-8f-CnQ" secondAttribute="trailing" id="PVk-kt-rYq"/>
                 <constraint firstItem="7Ev-CI-Gf1" firstAttribute="bottom" secondItem="ixo-8f-CnQ" secondAttribute="bottom" id="U2v-DN-ruS"/>
                 <constraint firstItem="7Ev-CI-Gf1" firstAttribute="top" secondItem="O40-x8-B4s" secondAttribute="top" id="g5m-op-sp1"/>
-                <constraint firstItem="ixo-8f-CnQ" firstAttribute="trailing" secondItem="jUI-nJ-pUT" secondAttribute="trailing" constant="20" id="h6w-ch-d6m"/>
+                <constraint firstItem="jUI-nJ-pUT" firstAttribute="leading" secondItem="O40-x8-B4s" secondAttribute="leading" constant="16" id="haw-K4-nYs"/>
                 <constraint firstItem="7Ev-CI-Gf1" firstAttribute="leading" secondItem="ixo-8f-CnQ" secondAttribute="leading" id="lnW-7K-eyf"/>
                 <constraint firstItem="ixo-8f-CnQ" firstAttribute="bottom" secondItem="Z7v-Oa-YAp" secondAttribute="bottom" constant="35" id="mex-B2-9bZ"/>
                 <constraint firstItem="3lq-iZ-5Z8" firstAttribute="top" secondItem="ixo-8f-CnQ" secondAttribute="top" constant="30" id="wis-5c-emW"/>
@@ -144,7 +144,7 @@
     </objects>
     <designables>
         <designable name="BLv-0X-8qr">
-            <size key="intrinsicContentSize" width="82" height="29"/>
+            <size key="intrinsicContentSize" width="70" height="32"/>
         </designable>
     </designables>
     <resources>

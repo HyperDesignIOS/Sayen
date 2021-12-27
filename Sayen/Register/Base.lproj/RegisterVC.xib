@@ -65,7 +65,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C9g-rG-Y8r">
                                                     <rect key="frame" x="0.0" y="0.0" width="265" height="75"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الاسم" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mis-ij-1Mh">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الاسم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mis-ij-1Mh">
                                                             <rect key="frame" x="0.0" y="0.0" width="265" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="uW7-ge-XSU"/>
@@ -77,11 +77,11 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYR-Qw-aag" customClass="CardView" customModule="صاين" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="25" width="265" height="50"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اسم المستخدم" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aMn-Tc-EGe">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اسم المستخدم" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aMn-Tc-EGe">
                                                                     <rect key="frame" x="8" y="0.0" width="249" height="50"/>
                                                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
-                                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="ASCIICapableNumberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
+                                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                                             <integer key="value" value="10"/>
@@ -103,7 +103,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dgV-0k-MwR">
                                                     <rect key="frame" x="0.0" y="102" width="265" height="75"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الهاتف" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkm-sF-Uuc">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الهاتف" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkm-sF-Uuc">
                                                             <rect key="frame" x="0.0" y="0.0" width="265" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="aao-W4-Frx"/>
@@ -115,7 +115,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e16-hd-fNF" customClass="CardView" customModule="صاين" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="25" width="265" height="50"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0000000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8O-oX-i8h">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0000000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8O-oX-i8h">
                                                                     <rect key="frame" x="8" y="0.0" width="249" height="50"/>
                                                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
@@ -141,7 +141,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ns5-9R-d8D">
                                                     <rect key="frame" x="0.0" y="204" width="265" height="75"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="كلمة المرور" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLm-I4-QdU">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="كلمة المرور" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLm-I4-QdU">
                                                             <rect key="frame" x="0.0" y="0.0" width="265" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="J0M-kn-DLm"/>
@@ -153,7 +153,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhK-Z3-JmM" customClass="CardView" customModule="صاين" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="25" width="265" height="50"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="********" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLA-R2-JpX">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLA-R2-JpX">
                                                                     <rect key="frame" x="8" y="0.0" width="249" height="48"/>
                                                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="26"/>
@@ -179,7 +179,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sIp-m2-Rj2">
                                                     <rect key="frame" x="0.0" y="306" width="265" height="75"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تأكيد كلمة المرور" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sd-Wc-j9o">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تأكيد كلمة المرور" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sd-Wc-j9o">
                                                             <rect key="frame" x="0.0" y="0.0" width="265" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="AUo-Bq-SFW"/>
@@ -191,7 +191,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTs-f0-tIE" customClass="CardView" customModule="صاين" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="25" width="265" height="50"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="********" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D0K-6h-nPo">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D0K-6h-nPo">
                                                                     <rect key="frame" x="8" y="0.0" width="249" height="48"/>
                                                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="26"/>
@@ -271,7 +271,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d4c-PL-e8j">
                                                     <rect key="frame" x="0.0" y="470" width="265" height="75"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إسم العمارة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz2-bt-y1Q">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إسم العمارة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz2-bt-y1Q">
                                                             <rect key="frame" x="0.0" y="0.0" width="265" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="n1I-gU-BSo"/>
@@ -283,8 +283,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwN-Fx-R1g" customClass="CardView" customModule="صاين" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="25" width="265" height="50"/>
                                                             <subviews>
-                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الإسم" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XeR-Vn-oSQ">
-                                                                    <rect key="frame" x="21" y="0.0" width="236" height="50"/>
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الإسم" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XeR-Vn-oSQ">
+                                                                    <rect key="frame" x="8" y="0.0" width="249" height="50"/>
                                                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="ASCIICapableNumberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
@@ -295,22 +295,18 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </textField>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="pV4-68-gLN">
-                                                                    <rect key="frame" x="8" y="18.5" width="13" height="13"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" secondItem="pV4-68-gLN" secondAttribute="height" multiplier="1:1" id="IED-La-Lht"/>
-                                                                        <constraint firstAttribute="width" constant="13" id="nyC-ab-vke"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="231" y="12" width="26" height="26"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="XeR-Vn-oSQ" firstAttribute="top" secondItem="OwN-Fx-R1g" secondAttribute="top" id="0cn-th-ryM"/>
-                                                                <constraint firstItem="pV4-68-gLN" firstAttribute="centerY" secondItem="OwN-Fx-R1g" secondAttribute="centerY" id="3gr-70-WQg"/>
                                                                 <constraint firstAttribute="trailing" secondItem="XeR-Vn-oSQ" secondAttribute="trailing" constant="8" id="A0p-nz-uft"/>
                                                                 <constraint firstAttribute="height" constant="50" id="F4t-Dy-8iD"/>
-                                                                <constraint firstItem="pV4-68-gLN" firstAttribute="leading" secondItem="OwN-Fx-R1g" secondAttribute="leading" constant="8" id="XAh-H6-wL2"/>
+                                                                <constraint firstItem="pV4-68-gLN" firstAttribute="centerY" secondItem="OwN-Fx-R1g" secondAttribute="centerY" id="YRo-Hc-ICr"/>
+                                                                <constraint firstItem="XeR-Vn-oSQ" firstAttribute="leading" secondItem="OwN-Fx-R1g" secondAttribute="leading" constant="8" id="j3d-va-63a"/>
                                                                 <constraint firstAttribute="bottom" secondItem="XeR-Vn-oSQ" secondAttribute="bottom" id="upY-P4-xPX"/>
-                                                                <constraint firstItem="XeR-Vn-oSQ" firstAttribute="leading" secondItem="pV4-68-gLN" secondAttribute="trailing" id="w6t-fG-twx"/>
+                                                                <constraint firstAttribute="trailing" secondItem="pV4-68-gLN" secondAttribute="trailing" constant="8" id="yu2-6P-Pm1"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -318,7 +314,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ax4-jH-1E5">
                                                     <rect key="frame" x="0.0" y="572" width="265" height="75"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الشقة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8o-aq-9qi">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الشقة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8o-aq-9qi">
                                                             <rect key="frame" x="0.0" y="0.0" width="265" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="17" id="jLm-zd-vGf"/>
@@ -330,7 +326,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDx-0W-v9d" customClass="CardView" customModule="صاين" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="25" width="265" height="50"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الرقم" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l2D-gg-uMf">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الرقم" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l2D-gg-uMf">
                                                                     <rect key="frame" x="8" y="0.0" width="249" height="50"/>
                                                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
@@ -427,7 +423,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoE-OH-Nvh">
-                    <rect key="frame" x="319" y="20" width="40" height="30"/>
+                    <rect key="frame" x="16" y="20" width="40" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="3Rj-Je-tTS"/>
                         <constraint firstAttribute="height" constant="30" id="yOP-uL-ZYc"/>
@@ -447,13 +443,13 @@
                 <constraint firstItem="FeQ-4t-FkH" firstAttribute="centerY" secondItem="t7o-vz-AQU" secondAttribute="centerY" id="Bhq-hn-EDv"/>
                 <constraint firstItem="GD1-EX-mXj" firstAttribute="leading" secondItem="TqH-S5-P7l" secondAttribute="leading" constant="30" id="EhR-og-vYg"/>
                 <constraint firstItem="GD1-EX-mXj" firstAttribute="top" secondItem="MUH-wh-MYU" secondAttribute="bottom" constant="25" id="GHN-7b-G6t"/>
-                <constraint firstItem="TqH-S5-P7l" firstAttribute="trailing" secondItem="uoE-OH-Nvh" secondAttribute="trailing" constant="16" id="RJ6-Gb-cr5"/>
                 <constraint firstItem="MUH-wh-MYU" firstAttribute="top" secondItem="TqH-S5-P7l" secondAttribute="top" constant="10" id="Sir-9J-0cV"/>
                 <constraint firstItem="TqH-S5-P7l" firstAttribute="trailing" secondItem="FeQ-4t-FkH" secondAttribute="trailing" id="U13-F3-k44"/>
                 <constraint firstItem="uoE-OH-Nvh" firstAttribute="top" secondItem="TqH-S5-P7l" secondAttribute="top" constant="20" id="dgp-nf-dTk"/>
                 <constraint firstAttribute="bottom" secondItem="FeQ-4t-FkH" secondAttribute="bottom" id="fXp-bF-8zi"/>
                 <constraint firstItem="FeQ-4t-FkH" firstAttribute="centerX" secondItem="t7o-vz-AQU" secondAttribute="centerX" id="o5J-tI-LwD"/>
                 <constraint firstItem="TqH-S5-P7l" firstAttribute="trailing" secondItem="GD1-EX-mXj" secondAttribute="trailing" constant="30" id="peQ-0O-uMo"/>
+                <constraint firstItem="uoE-OH-Nvh" firstAttribute="leading" secondItem="t7o-vz-AQU" secondAttribute="leading" constant="16" id="uu9-6l-EPS"/>
                 <constraint firstItem="FeQ-4t-FkH" firstAttribute="top" secondItem="t7o-vz-AQU" secondAttribute="top" id="wQE-AD-h1l"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

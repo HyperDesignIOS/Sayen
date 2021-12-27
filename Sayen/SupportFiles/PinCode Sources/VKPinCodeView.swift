@@ -243,7 +243,6 @@ public final class VKPinCodeView: UIView {
     }
     
     private func turnOffSelectedLabel() {
-
         let label = _stack.arrangedSubviews[_activeIndex] as! VKLabel
         label.isSelected = false
     }

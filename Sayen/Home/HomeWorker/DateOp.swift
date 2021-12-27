@@ -62,7 +62,8 @@ class dateOp {
           //"MM-dd-yyyy"
            let date = formatter.date(from: date12)!
            let fmt = DateFormatter()
-           fmt.dateFormat = "yyyy-MM-dd"
+           fmt.locale = Locale(identifier: "en")
+           fmt.dateFormat = "dd-MM-yyyy"
            let outPut = fmt.string(from: date)
            return outPut
       }
@@ -87,14 +88,18 @@ class dateOp {
     
     
     func returnCurrntdateDay () ->String{
-           let date = Date()
-           
-           let formatter = DateFormatter()
-           formatter.dateFormat = "yyyy-MM-dd"
-           let outputDate = formatter.string(from: date)
-           
-           return outputDate
-           
+      
+        let date = Date()
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+
+        formatter.locale = Locale(identifier: "en")
+        
+        let outputDate = formatter.string(from: date)
+
+        return outputDate
+
        }
 }
 

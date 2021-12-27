@@ -14,15 +14,16 @@ class ForgetPassVc: UIViewController {
     lazy var viewModel : ForgetPassMV = {
         return ForgetPassMV()
     }()
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneTF.delegate = self
         initViewModel()
- 
     }
     
- 
-
     var user_type : String {
         return ad.user_type()
     }
@@ -43,7 +44,6 @@ class ForgetPassVc: UIViewController {
                 
                 ad.killLoading()
                 self.showDAlert(title: "Error".localized, subTitle: self.viewModel.alertMessage!, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
-
             case .loading:
                 ad.isLoading()
             case .populated :
@@ -77,7 +77,6 @@ class ForgetPassVc: UIViewController {
         viewModel.phonenum = self.phoneTF.text
         viewModel.initForget(for : self.user_type)
     }
-    
 }
 
 
@@ -85,7 +84,6 @@ class ForgetPassVc: UIViewController {
 extension ForgetPassVc : UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
      {
-         
          if textField == self.phoneTF {
          guard CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
              return false

@@ -180,7 +180,7 @@ class ReturnDate {
         //"MM-dd-yyyy"
         guard let date = formatter.date(from: date12)else{return ""}
          let fmt = DateFormatter()
-         fmt.dateFormat = "yyyy-MM-dd"
+         fmt.dateFormat =  "yyyy-MM-dd"
          let outPut = fmt.string(from: date)
          return outPut
     }

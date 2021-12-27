@@ -173,39 +173,43 @@ class TeamOrderDetailes {
     
     
     var id : Int?
-     var pay_method : String?
-     var coupon_discount : Int?
-     var team_added_price : [String] = []
-     var notes : String?
-     var order_status : String?
+    var pay_method : String?
+    var coupon_discount : Int?
+    var team_added_price : [String] = []
+    var notes : String?
+    var order_status : String?
     var orderIsFinished: Bool {
-         guard let status = Int(order_status ?? "") , status >= 3 else { return false }
+        guard let status = Int(order_status ?? "") , status >= 3 else { return false }
         return true
     }
-
-     var initial_price : Double?
-     var pay_status : String?
-     var user_name : String?
-     var team_added_price_desc : [String] = []
-     var images : [String] = []
-     var user_phone : String?
-     var title : String?
-     var final_price : Double?
-     var date : String?
-     var order_number : String?
-     var user_image : String?
-     var probImages : [UIImageView] = []
-     var imgSenf : UIImageView = UIImageView()
-     var lng : String?
-     var lat : String?
-     var user_accept_added_price : String?
+    var floor : Int?
+    var address : String?
+    var initial_price : Double?
+    var pay_status : String?
+    var user_name : String?
+    var team_added_price_desc : [String] = []
+    var images : [String] = []
+    var user_phone : String?
+    var title : String?
+    var final_price : Double?
+    var date : String?
+    var order_number : String?
+    var user_image : String?
+    var probImages : [UIImageView] = []
+    var imgSenf : UIImageView = UIImageView()
+    var lng : String?
+    var lat : String?
+    var user_accept_added_price : String?
     var total_before_discount : Double?
     var excellence_client : String
     var pay_by : String
     var isExcellenceClient : Bool {
         return excellence_client == "1"
     }
-
+    
+    
+    
+  
     init(_ jsonData : JSON) {
         print(jsonData)
         self.pay_by = jsonData["pay_by"].stringValue
@@ -213,6 +217,8 @@ class TeamOrderDetailes {
         self.user_accept_added_price = jsonData["user_accept_added_price"].stringValue
         self.id = jsonData["id"].intValue
         self.pay_method = jsonData["pay_method"].stringValue
+        self.floor = jsonData["floor"].intValue
+        self.address = jsonData["address"].stringValue
         self.coupon_discount = jsonData["coupon_discount"].intValue
         for x in jsonData["team_added_price"].arrayValue {
             let str = x.stringValue
@@ -248,21 +254,21 @@ class TeamOrderDetailes {
         for (i,img) in images.enumerated() {
             if let url = URL(string: img) {
                 let placeholderImage = UIImage(named: "imageProfile")!
-              //  self.probImages.append(img.af_setImage(withURL: url, placeholderImage: placeholderImage))
-               
-                    self.imgSenf.af_setImage(withURL: url, placeholderImage: placeholderImage)
-              
-                      self.probImages.append(imgSenf)
-         
-                  
-                    
-           
-          
-               
+                //  self.probImages.append(img.af_setImage(withURL: url, placeholderImage: placeholderImage))
+                
+                self.imgSenf.af_setImage(withURL: url, placeholderImage: placeholderImage)
+                
+                self.probImages.append(imgSenf)
+                
+                
+                
+                
+                
+                
             }
         }
         print(self.probImages.count)
         return self.probImages
     }
-
+    
 }

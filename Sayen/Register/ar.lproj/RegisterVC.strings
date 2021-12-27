@@ -24,7 +24,10 @@
 "W8O-oX-i8h.placeholder" = "0000000";
 
 /* Class = "UITextField"; placeholder = "الإسم"; ObjectID = "XeR-Vn-oSQ"; */
-"XeR-Vn-oSQ.placeholder" = "الإسم";
+"aMn-Tc-EGe.placeholder" = "اسم المستخدم";
+
+/* Class = "UILabel"; text = "إسم العمارة"; ObjectID = "Rz2-bt-y1Q"; */
+"Mis-ij-1Mh.text" = "الإسم";
 
 /* Class = "UIButton"; normalTitle = "عميل التميز"; ObjectID = "Xmv-z2-fX1"; */
 "Xmv-z2-fX1.normalTitle" = "عميل التميز";
@@ -40,3 +43,5 @@
 
 /* Class = "UILabel"; text = "رقم الهاتف"; ObjectID = "vkm-sF-Uuc"; */
 "vkm-sF-Uuc.text" = "رقم الهاتف";
+
+

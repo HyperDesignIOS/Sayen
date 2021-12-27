@@ -69,8 +69,7 @@ class ChangePassVM {
         
         guard validateRows()else{return}
         state = .loading
-        
-        APIClient.resetPassword(password: pass!, oldpassword : oldPass!, user_type: user_type, completionHandler: { (state, sms, status) in
+        APIClient.changePassRequest(old_password : oldPass!, password: pass!, user_type: user_type, completionHandler: { (state, sms, status) in
             guard state else{
                 self.alertMessage = sms
                 self.state = .error
@@ -82,11 +81,6 @@ class ChangePassVM {
             self.alertMessage = "tryAgain".localized
             self.state = .error
         }
-        
-
     }
-    
-    
-    
 }
 

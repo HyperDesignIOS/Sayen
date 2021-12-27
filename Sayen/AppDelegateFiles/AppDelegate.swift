@@ -44,8 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          handleTOkenInFirstLaunch()
          FirebaseApp.configure()
          
-        
-        
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
           UNUserNotificationCenter.current().delegate = self
@@ -62,12 +60,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         application.registerForRemoteNotifications()
         
-        
         Messaging.messaging().delegate = self
-        
-        
-        
-      
+   
          UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Tajawal-Regular", size: 10)!], for: .normal)
         //   MOLH.shared.activate(true)
 

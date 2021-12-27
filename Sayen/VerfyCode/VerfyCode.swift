@@ -22,6 +22,7 @@ class VerfyCode: UIViewController {
     @IBOutlet weak var buttonsStack: UIStackView!
     var seconds = 30
     //    var seconds = 1
+//    _layoutDirection
     var phone = ""
     var code_type = "1"
     weak var delegate : ChangePhone!
@@ -32,6 +33,11 @@ class VerfyCode: UIViewController {
            return ad.user_type()
        }
     var tabBar : UITabBarController?
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        

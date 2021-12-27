@@ -40,3 +40,7 @@
 
 /* Class = "UILabel"; text = "رقم الهاتف"; ObjectID = "vkm-sF-Uuc"; */
 "vkm-sF-Uuc.text" = "Mobile Number";
+
+"aMn-Tc-EGe.placeholder" = "User Name";
+
+"Mis-ij-1Mh.text" = "Name";

@@ -40,6 +40,11 @@ class WorderDetailes: UIViewController {
     @IBOutlet weak var stopwatchLabel: UILabel!
     @IBOutlet weak var openLocationBtnOL: UIButton!
     
+    @IBOutlet weak var floorLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    
+    
     var data : TeamOrderDetailes?
     var orderId : Int = 0
     
@@ -70,11 +75,10 @@ class WorderDetailes: UIViewController {
         self.imageCollection.delegate = self
         self.imageCollection.dataSource = self
         startTime = Date.timeIntervalSinceReferenceDate
-        getOrderData ()
+        getOrderData()
     }
     
     @IBAction func openLocationHandler(_ sender: UIButton) {
-        
         guard let data = self.data   , let lat = data.lat , lat != "" , let lng = data.lng , lng != "" , let latt = Double(lat) , let lngg = Double(lng) else { return }
         
         openMapButtonAction(lat : latt , lng : lngg)
@@ -208,23 +212,24 @@ class WorderDetailes: UIViewController {
             }
             
             if let data = data {
-                
-                
+           
                 if   let lat = data.lat , lat != "" , let lng = data.lng , lng != ""  {
                     self.openLocationBtnOL.isHidden = false
                 }else {
                     self.openLocationBtnOL.isHidden = true
                 }
-                self.clientTypeLbl.text = data.isExcellenceClient ? "special".localized : "other".localized
+                let clientType = data.isExcellenceClient ? "special".localized : "other".localized
+                self.clientTypeLbl.text = "clinetType".localized + " : " + clientType
                 self.upGroundView.alpha = 0
                 self.data = data
                 print(data.user_name)
                 DispatchQueue.main.async {
-                    
                     self.orderId = data.id!
                     self.mainTitle.text = data.title
                     self.orderNum.text = "#\(data.order_number ?? "" )"
                     self.date.text = data.date
+                    self.addressLabel.text = "address".localized + " : " + ( data.address ?? "")
+                    self.floorLabel.text = "floorDetails".localized + " : " + "\(data.floor ?? 0)"
                     self.clintName.text = "العميل : \(data.user_name!)"
                     var startWorkButtonOutletTitle = ""
                     if data.order_status == "5" || data.order_status == "1" {

@@ -334,6 +334,11 @@
 		F2789F4B26E543FF002ED441 /* cancelSendOrder.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2789F4D26E543FF002ED441 /* cancelSendOrder.xib */; };
 		F2789F5A26E545F7002ED441 /* ContactUsVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2789F5C26E545F7002ED441 /* ContactUsVc.xib */; };
 		F2789F6D26E54957002ED441 /* AboutUs.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2789F6F26E54957002ED441 /* AboutUs.xib */; };
+		F2795635277873FC00EBA5A4 /* SelectLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24A854326E10F5C00E7FAA1 /* SelectLanguageVC.swift */; };
+		F27956362778741C00EBA5A4 /* SelectLanguageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24A854D26E122BF00E7FAA1 /* SelectLanguageVC.xib */; };
+		F27956382778C67E00EBA5A4 /* HomeWorker+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27956372778C67E00EBA5A4 /* HomeWorker+CollectionView.swift */; };
+		F279563A2778C6A600EBA5A4 /* HomeWorker+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27956392778C6A600EBA5A4 /* HomeWorker+TableView.swift */; };
+		F279563C2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279563B2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift */; };
 		F2A1FA1326E7644800D0C483 /* PublicQuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A1FA1526E7644800D0C483 /* PublicQuVC.xib */; };
 		F2A1FA2626E7786700D0C483 /* RatingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A1FA2826E7786700D0C483 /* RatingVC.xib */; };
 		F2E6F7BB26E674BA00BBF76B /* InvoiceDetailes.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E6F7BD26E674BA00BBF76B /* InvoiceDetailes.xib */; };
@@ -641,6 +646,9 @@
 		F2789F6E26E54957002ED441 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutUs.xib; sourceTree = "<group>"; };
 		F2789F7526E54959002ED441 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AboutUs.strings; sourceTree = "<group>"; };
 		F2789F7B26E54959002ED441 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AboutUs.strings; sourceTree = "<group>"; };
+		F27956372778C67E00EBA5A4 /* HomeWorker+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWorker+CollectionView.swift"; sourceTree = "<group>"; };
+		F27956392778C6A600EBA5A4 /* HomeWorker+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWorker+TableView.swift"; sourceTree = "<group>"; };
+		F279563B2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWorker+LocationManager.swift"; sourceTree = "<group>"; };
 		F2A1FA1426E7644800D0C483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PublicQuVC.xib; sourceTree = "<group>"; };
 		F2A1FA1B26E7644A00D0C483 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PublicQuVC.strings; sourceTree = "<group>"; };
 		F2A1FA2126E7644B00D0C483 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/PublicQuVC.strings; sourceTree = "<group>"; };
@@ -783,6 +791,9 @@
 			isa = PBXGroup;
 			children = (
 				1C6182F7248958340002FFA3 /* HomeWorkerVC.swift */,
+				F27956372778C67E00EBA5A4 /* HomeWorker+CollectionView.swift */,
+				F27956392778C6A600EBA5A4 /* HomeWorker+TableView.swift */,
+				F279563B2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift */,
 				1CE3DE22249A1D2900B8C065 /* DateCell.swift */,
 				1CE3DE23249A1D2900B8C065 /* DateCell.xib */,
 				1CE3DE26249A1ED000B8C065 /* OrderWorkerCell.swift */,
@@ -1690,6 +1701,7 @@
 				F240898026E75AF1005CD093 /* LogOutAlert.xib in Resources */,
 				847FABB12545FED1008F01A2 /* RegisterTeamVC.xib in Resources */,
 				F2E6F7BB26E674BA00BBF76B /* InvoiceDetailes.xib in Resources */,
+				F27956362778741C00EBA5A4 /* SelectLanguageVC.xib in Resources */,
 				1C786D91248682A300BAFC46 /* Tajawal-Light.ttf in Resources */,
 				F2E6F7EB26E6838600BBF76B /* OrderCell.xib in Resources */,
 				1CBD1D4624A3597900412A5C /* Assets.xcassets in Resources */,
@@ -2078,6 +2090,7 @@
 				847FABB3254601AB008F01A2 /* RegisterTeamVM.swift in Sources */,
 				1CBD1D2E249F76DA00412A5C /* AddPriceVC.swift in Sources */,
 				1C786D0F2486829100BAFC46 /* Constants.swift in Sources */,
+				F279563A2778C6A600EBA5A4 /* HomeWorker+TableView.swift in Sources */,
 				1C786D63248682A300BAFC46 /* CardView.swift in Sources */,
 				1C24ED6424A4A3280048D9E6 /* ProblemCell.swift in Sources */,
 				1C786D89248682A300BAFC46 /* UIFont+Localization.swift in Sources */,
@@ -2098,6 +2111,7 @@
 				1C786CCB2486824000BAFC46 /* VerfyVM.swift in Sources */,
 				1C365BA2249B60A800FFCF7B /* TeamOrderList.swift in Sources */,
 				1C786D81248682A300BAFC46 /* UIView_Ext.swift in Sources */,
+				F2795635277873FC00EBA5A4 /* SelectLanguageVC.swift in Sources */,
 				1C786D71248682A300BAFC46 /* CDAlertExt.swift in Sources */,
 				1CE3DE32249A51DF00B8C065 /* WorderDetailes.swift in Sources */,
 				1C5BAC19248D204500556C66 /* EditPhoneVM.swift in Sources */,
@@ -2146,12 +2160,14 @@
 				1C786D1F2486829100BAFC46 /* DefaultModel.swift in Sources */,
 				1C786D5D248682A300BAFC46 /* UITextField_Main.swift in Sources */,
 				1CE3DE2B249A216E00B8C065 /* HomeData.swift in Sources */,
+				F27956382778C67E00EBA5A4 /* HomeWorker+CollectionView.swift in Sources */,
 				1C6182F22489579F0002FFA3 /* EditProfileVM.swift in Sources */,
 				1C786D7B248682A300BAFC46 /* Ext_GradientView.swift in Sources */,
 				1C6182F8248958340002FFA3 /* HomeWorkerVC.swift in Sources */,
 				1C786DBA24868F0500BAFC46 /* NewPassVM.swift in Sources */,
 				1C786CB32486819E00BAFC46 /* SceneDelegate.swift in Sources */,
 				1C786D79248682A300BAFC46 /* CustomSearchBar.swift in Sources */,
+				F279563C2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift in Sources */,
 				1C786D192486829100BAFC46 /* Reachability.swift in Sources */,
 				1C786DA1248682A300BAFC46 /* ResetType.swift in Sources */,
 				1CBD1D4B24A385D900412A5C /* NotificationVC.swift in Sources */,
@@ -2622,14 +2638,15 @@
 				CODE_SIGN_ENTITLEMENTS = Sayen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 4NR86733N8;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7364C3DSQ7;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.6;
+				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2646,14 +2663,15 @@
 				CODE_SIGN_ENTITLEMENTS = Sayen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 4NR86733N8;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7364C3DSQ7;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.6;
+				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";
 				PROVISIONING_PROFILE_SPECIFIER = "";

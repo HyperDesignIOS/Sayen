@@ -91,7 +91,6 @@ class PaymentVC: UIViewController {
     @IBAction func SendOrder(_ sender: Any) {
         if applePayBtn.isSelected {
             self.delegate.finallySendOrder(payType: .apple)
-
         }else if bankBtn.isSelected {
             self.delegate.finallySendOrder(payType: .cards)
         } else {

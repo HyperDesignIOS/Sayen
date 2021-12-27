@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="82u-yj-kRh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="82u-yj-kRh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,7 +23,7 @@
         <!--End OrderT-->
         <scene sceneID="pbX-IF-sA6">
             <objects>
-                <viewController id="NoW-8J-RMO" customClass="EndOrderT" customModule="Sayen_Team" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NoW-8J-RMO" customClass="EndOrderT" customModule="فريق_صاين" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lKU-rn-Ey0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +73,7 @@
                                                     <constraint firstAttribute="width" constant="30" id="5AW-Fu-T8O"/>
                                                     <constraint firstAttribute="height" constant="30" id="fXx-cX-6wL"/>
                                                 </constraints>
-                                                <state key="normal" image="multimedia-option (1)"/>
+                                                <state key="normal" image="multimedia-option"/>
                                                 <connections>
                                                     <action selector="nextMonth:" destination="NoW-8J-RMO" eventType="touchUpInside" id="n8w-hx-THR"/>
                                                 </connections>
@@ -82,7 +84,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="64m-El-G1N"/>
                                                     <constraint firstAttribute="width" constant="30" id="mv4-ya-fe1"/>
                                                 </constraints>
-                                                <state key="normal" image="multimedia-option (1)"/>
+                                                <state key="normal" image="multimedia-option"/>
                                                 <connections>
                                                     <action selector="previousMonth:" destination="NoW-8J-RMO" eventType="touchUpInside" id="HLz-z0-ZqV"/>
                                                 </connections>
@@ -102,14 +104,14 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjx-LR-FIT">
                                         <rect key="frame" x="0.0" y="38" width="414" height="74"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="414" id="4r5-u9-cJC"/>
                                             <constraint firstAttribute="height" constant="74" id="KxB-7b-ksT"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="mtl-UP-PgF" firstAttribute="leading" secondItem="sSw-Jq-01O" secondAttribute="leading" constant="20" id="XX2-9p-2wD"/>
                                     <constraint firstItem="Qjx-LR-FIT" firstAttribute="top" secondItem="mtl-UP-PgF" secondAttribute="bottom" id="b2C-7j-Yg1"/>
@@ -120,6 +122,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="pFU-F6-42f"/>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pFU-F6-42f" firstAttribute="trailing" secondItem="XMp-7U-hC6" secondAttribute="trailing" constant="20" id="736-Ct-yeq"/>
@@ -136,7 +139,6 @@
                             <constraint firstItem="gAV-SP-tLL" firstAttribute="centerY" secondItem="lKU-rn-Ey0" secondAttribute="centerY" id="vYh-2k-cZw"/>
                             <constraint firstItem="pY3-Hq-ggN" firstAttribute="centerY" secondItem="XMp-7U-hC6" secondAttribute="centerY" id="vko-VJ-hMd"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="pFU-F6-42f"/>
                     </view>
                     <navigationItem key="navigationItem" id="491-So-sSz"/>
                     <connections>
@@ -157,7 +159,7 @@
         <!--Home WorkerVC-->
         <scene sceneID="XWn-cf-8Ee">
             <objects>
-                <viewController id="EMs-AA-1t1" customClass="HomeWorkerVC" customModule="Sayen_Team" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EMs-AA-1t1" customClass="HomeWorkerVC" customModule="فريق_صاين" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gMu-zU-4VT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,7 +191,7 @@
                                             <action selector="logOut:" destination="EMs-AA-1t1" eventType="touchUpInside" id="xhy-Z0-GFC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JV-wa-057">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JV-wa-057">
                                         <rect key="frame" x="166" y="34" width="240" height="125"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="SnR-Mj-GhW"/>
@@ -214,7 +216,7 @@
                                     <constraint firstItem="cpo-lp-lFG" firstAttribute="leading" secondItem="5qH-sN-wrI" secondAttribute="trailing" constant="20" id="mkS-1O-D0f"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62a-65-ho2" customClass="CardView" customModule="Sayen_Team" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62a-65-ho2" customClass="CardView" customModule="فريق_صاين" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="167" width="414" height="729"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="طلباتك الجديده" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lK-uJ-J9P">
@@ -264,7 +266,8 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="SLe-hn-QF0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="62a-65-ho2" firstAttribute="top" secondItem="SLe-hn-QF0" secondAttribute="top" constant="123" id="0FN-iq-rOl"/>
                             <constraint firstItem="64y-dR-Ike" firstAttribute="leading" secondItem="SLe-hn-QF0" secondAttribute="leading" id="B8F-Al-5ok"/>
@@ -274,7 +277,6 @@
                             <constraint firstAttribute="bottom" secondItem="62a-65-ho2" secondAttribute="bottom" id="k2h-VE-VzH"/>
                             <constraint firstItem="62a-65-ho2" firstAttribute="leading" secondItem="SLe-hn-QF0" secondAttribute="leading" id="si6-rt-rl6"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="SLe-hn-QF0"/>
                     </view>
                     <navigationItem key="navigationItem" id="TnY-zi-cAp"/>
                     <connections>
@@ -292,7 +294,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bcH-BY-w4f">
             <objects>
-                <tabBarController storyboardIdentifier="rootNav" automaticallyAdjustsScrollViewInsets="NO" id="82u-yj-kRh" customClass="TabBarController" customModule="Sayen_Team" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="rootNav" automaticallyAdjustsScrollViewInsets="NO" id="82u-yj-kRh" customClass="TabBarController" customModule="فريق_صاين" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" id="WQF-2O-PAt">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -331,7 +333,7 @@
         <!--NotificationVC-->
         <scene sceneID="Joq-Uw-js8">
             <objects>
-                <viewController id="SBd-U6-lqq" customClass="NotificationVC" customModule="Sayen_Team" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SBd-U6-lqq" customClass="NotificationVC" customModule="فريق_صاين" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U3b-N0-dVE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -353,6 +355,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="CZ8-2T-Zbt"/>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="cpw-IX-F8Z" secondAttribute="bottom" id="HZd-8H-9xA"/>
@@ -364,7 +367,6 @@
                             <constraint firstItem="CZ8-2T-Zbt" firstAttribute="trailing" secondItem="Wid-wz-QZU" secondAttribute="trailing" constant="20" id="lBA-qT-8Oo"/>
                             <constraint firstItem="haj-dx-fQW" firstAttribute="centerX" secondItem="U3b-N0-dVE" secondAttribute="centerX" id="tqw-OH-OdB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="CZ8-2T-Zbt"/>
                     </view>
                     <navigationItem key="navigationItem" id="afD-hi-wH7"/>
                     <connections>
@@ -419,9 +421,12 @@
         <image name="Home12" width="17.5" height="17.5"/>
         <image name="clipboard-12" width="15.5" height="19.5"/>
         <image name="clipboard12" width="15.5" height="19.5"/>
-        <image name="multimedia-option (1)" width="6.5" height="11"/>
+        <image name="multimedia-option" width="6.5" height="11"/>
         <image name="music-and-multimedia-12" width="15.5" height="18.5"/>
         <image name="music-and-multimedia12" width="15.5" height="18.5"/>
         <image name="tools-and-utensils (1)" width="16.5" height="17"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

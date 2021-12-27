@@ -34,6 +34,10 @@ class RegisterVC: UIViewController {
     }()
     let dropDown = DropDown()
     
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         initRegisterVM()

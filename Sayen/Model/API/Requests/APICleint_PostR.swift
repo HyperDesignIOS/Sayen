@@ -207,8 +207,8 @@ extension APIClient {
       }
 
      //MARK: changePassword
-       static func changePassRequest(password : String ,user_type : String, completionHandler:@escaping (Bool,String,Int)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
-        performSwiftyRequest(route: .changePassword(password: password, user_type : user_type)   ,headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+       static func changePassRequest(old_password: String, password : String ,user_type : String, completionHandler:@escaping (Bool,String,Int)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+        performSwiftyRequest(route: .changePassword(password: password, user_type : user_type, old_password: old_password)   ,headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
              let json = JSON(jsonData)
 
              DispatchQueue.main.async {
@@ -234,8 +234,8 @@ extension APIClient {
     
     
     //MARK: resetNewPass
-    static func resetPassword(password : String,oldpassword : String ,user_type : String, completionHandler:@escaping (Bool,String,Int)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
-        performSwiftyRequest(route: .resetPass(password: password, user_type : user_type , old_password : oldpassword)   ,headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+    static func resetPassword(password : String, user_type : String, completionHandler:@escaping (Bool,String,Int)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+        performSwiftyRequest(route: .resetPass(password: password, user_type : user_type)   ,headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.token2)"] ,  { (jsonData) in
             let json = JSON(jsonData)
 
             DispatchQueue.main.async {

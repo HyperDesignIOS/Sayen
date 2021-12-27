@@ -27,7 +27,7 @@
 "Error" = "حدث خطأ";
 "tryAgain" = "حاول مره اخري";
 "forgetPassword" = "نسيت كلمة المرور";
-"phoneVaildationMsg" = "صيغة رقم الجوال يجب ان تكون 05xxxxxxxx";
+"phoneVaildationMsg" = "صيغة رقم الجوال يجب ان تكون 05xxxxxxxx ،  (10 ارقام تبدا ب 05)";
 "failed" = "خطأ";
 "cancel" = "إلغاء";
 "agree" = "موافق";
@@ -170,7 +170,7 @@
 "ComplainerType" = "صفة الشاكي" ;
 "crNumber" = "رقم السجل التجاري*" ;
 "crValidateDate" = "تاريخ إنتهاء السجل التجاري*" ;
-"address" = "العنوان*" ;
+"address" = "العنوان" ;
  "companyName" = "إسم الشركة*" ;
 "consPass" = "تأكيد كلمة المرور *" ;
 "industName" = "الإسم التجاري" ;
@@ -680,3 +680,5 @@
 
 
 "Orders for this service are complete at this hour" = "عفوا، قم بتحديد وقت اخر للخدمة ، يوجد لدينا طلبات بالفعل في هذا الوقت";
+"clinetType" = "نوع العميل";
+"floorDetails" = "رقم العمارة / الدور / رقم الشقة";

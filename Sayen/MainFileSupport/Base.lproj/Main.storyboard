@@ -265,7 +265,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bcH-BY-w4f">
             <objects>
-                <tabBarController storyboardIdentifier="rootNav" automaticallyAdjustsScrollViewInsets="NO" id="82u-yj-kRh" customClass="TabBarController" customModule="صاين" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="rootNav" automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" id="82u-yj-kRh" customClass="TabBarController" customModule="صاين" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" insetsLayoutMarginsFromSafeArea="NO" id="WQF-2O-PAt">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -420,7 +420,7 @@
     </scenes>
     <designables>
         <designable name="VeH-Mk-hn3">
-            <size key="intrinsicContentSize" width="55.5" height="16"/>
+            <size key="intrinsicContentSize" width="53.5" height="19"/>
         </designable>
     </designables>
     <resources>

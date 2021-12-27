@@ -265,13 +265,8 @@ class EndOrderT: UIViewController {
             self.getData()
             
         }
-        
-     
-       
-        
-    }
     
-  
+    }
 
 }
 

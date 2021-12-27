@@ -151,7 +151,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyv-JC-BhU">
-                    <rect key="frame" x="354" y="64" width="40" height="30"/>
+                    <rect key="frame" x="20" y="64" width="40" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="IxY-zx-IFm"/>
                         <constraint firstAttribute="height" constant="30" id="qTB-G2-LSk"/>
@@ -167,7 +167,6 @@
             <constraints>
                 <constraint firstItem="6l7-l6-Av8" firstAttribute="top" secondItem="cU8-r5-6wP" secondAttribute="bottom" constant="20" id="2e4-ec-aiF"/>
                 <constraint firstItem="HQb-a4-yZS" firstAttribute="trailing" secondItem="6l7-l6-Av8" secondAttribute="trailing" constant="30" id="63R-Yw-s8q"/>
-                <constraint firstItem="HQb-a4-yZS" firstAttribute="trailing" secondItem="tyv-JC-BhU" secondAttribute="trailing" constant="20" id="6rJ-0X-una"/>
                 <constraint firstItem="WUP-C3-IKU" firstAttribute="leading" secondItem="HQb-a4-yZS" secondAttribute="leading" id="7BC-lz-kfF"/>
                 <constraint firstItem="cU8-r5-6wP" firstAttribute="leading" secondItem="HQb-a4-yZS" secondAttribute="leading" constant="120" id="ASt-Jl-rgI"/>
                 <constraint firstItem="cU8-r5-6wP" firstAttribute="top" secondItem="HQb-a4-yZS" secondAttribute="top" constant="30" id="DLG-iZ-Eus"/>
@@ -177,6 +176,7 @@
                 <constraint firstItem="HQb-a4-yZS" firstAttribute="bottom" secondItem="6l7-l6-Av8" secondAttribute="bottom" constant="35" id="guL-ge-sGa"/>
                 <constraint firstAttribute="bottom" secondItem="WUP-C3-IKU" secondAttribute="bottom" id="jsH-nx-i9U"/>
                 <constraint firstItem="HQb-a4-yZS" firstAttribute="trailing" secondItem="cU8-r5-6wP" secondAttribute="trailing" constant="120" id="nzV-eB-Mrp"/>
+                <constraint firstItem="tyv-JC-BhU" firstAttribute="leading" secondItem="3cO-Cw-YdD" secondAttribute="leading" constant="20" id="o11-GE-2pt"/>
                 <constraint firstItem="6l7-l6-Av8" firstAttribute="leading" secondItem="HQb-a4-yZS" secondAttribute="leading" constant="30" id="veO-FF-cBz"/>
             </constraints>
             <point key="canvasLocation" x="136.23188405797103" y="130.58035714285714"/>

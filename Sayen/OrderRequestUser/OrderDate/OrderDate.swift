@@ -39,7 +39,7 @@ class OrderDate: UIViewController {
     var TransformTime = ""
     var transformeAmPm = ""
     var dateBackEnd = ""
-    var TimeBackEnd = ""
+    var timeBackEnd = ""
     var currentTime : String = ""
     var currentTimeAm : String = ""
     var rotationAngle : CGFloat!
@@ -212,30 +212,31 @@ class OrderDate: UIViewController {
         let currentday = returnDateM.returnCurrntdateDay()
         if transformeDate == "" {
             self.dateBackEnd = returnDateM.getdateinBackFormate(date12: currentday)
+            print(self.dateBackEnd)
             transformeDate = currentday
-            print("TimeBackEnd \(TimeBackEnd)")
+            print("TimeBackEnd \(timeBackEnd)")
             print("returnDateM.getBackTimeCurrent() \(returnDateM.getBackTimeCurrent())")
             
         }
         if TransformTime == "" {
             TransformTime = self.currentTime
-            self.TimeBackEnd = returnDateM.getBackTimeCurrent()
+            self.timeBackEnd = returnDateM.getBackTimeCurrent()
         }
 
         if transformeAmPm == "" {
             transformeAmPm = returnDateM.getCurrentTimeAm(addHours:2)
         }
         let ttt = "\(TransformTime) \(transformeAmPm)"
-        self.TimeBackEnd = (returnDateM.getBackTime(Time: ttt))
-        print(transformeDate)
+        self.timeBackEnd = (returnDateM.getBackTime(Time: ttt))
+        print(dateBackEnd)
         if self.dateBackEnd == returnDateM.getdateinBackFormate(date12: currentday) {
-            print("ok \(TimeBackEnd)")
+            print("ok \(timeBackEnd)")
            
             let formatter = DateFormatter()
             formatter.dateFormat =  "HH:mm:ss"
             formatter.timeZone = Calendar.current.timeZone
           
-            guard let date11 = formatter.date(from: TimeBackEnd) else {return}
+            guard let date11 = formatter.date(from: timeBackEnd) else {return}
             guard let date22 = formatter.date(from:  returnDateM.getBackTimeCurrent()) else{return}
             let time1Houres = Calendar.current.component(.hour, from: date11)
             let time2Houres =  Calendar.current.component(.hour, from: date22)
@@ -251,7 +252,7 @@ class OrderDate: UIViewController {
                 return
             }
         }
-        self.delegate.sendDate(date: "\(transformeDate), \(TransformTime) \(transformeAmPm)" , backendDate: "\(dateBackEnd) \(TimeBackEnd)")
+        self.delegate.sendDate(date: "\(transformeDate), \(TransformTime) \(transformeAmPm)" , backendDate: "\(dateBackEnd) \(timeBackEnd)")
         self.dismissViewC()
         
     }
@@ -300,6 +301,7 @@ extension OrderDate : UIPickerViewDelegate, UIPickerViewDataSource {
          //   let datett = (returnDateM.getdateinBackFormate(date12: dateSelected))
             self.transformeDate = dateSelected
             self.dateBackEnd = returnDateM.getdateinBackFormate(date12: dateSelected)
+            print("dateBackEnd : \(self.dateBackEnd)")
             self.monthLBL.text = returnDateM.returnMounth()[row]
         }else if pickerView == timePicker {
             self.TransformTime = timeArr[row]

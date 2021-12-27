@@ -59,7 +59,7 @@ class NewPassVM {
         guard validateRows()else{return}
         state = .loading
         
-        APIClient.changePassRequest(password: pass!, user_type: user_type, completionHandler: { (state, sms, status) in
+        APIClient.resetPassword(password: pass!, user_type: user_type, completionHandler: { (state, sms, status) in
             guard state else{
                 self.alertMessage = sms
                 self.state = .error

@@ -224,6 +224,7 @@ class SendOrder: UIViewController {
         
         return result
     }
+    
     @IBAction func okHandler(_ sender: Any) {
 //        guard ad.isOnline() else{return}
         if enteredDataValidator(data: [
@@ -235,14 +236,10 @@ class SendOrder: UIViewController {
         ]){
             self.present(contianuAlert, animated: false)
         }
-        
     }
-    
-    
+
     func sendCashOrder() {
         parameters["notes"] = self.notesTextV.text
-            
-        
         print(parameters)
         ad.isLoading()
         APIClient.SendOrder(parameters: parameters, imageDict: images) { [weak self] (state, sms,urlStr, orderId)   in
@@ -252,9 +249,9 @@ class SendOrder: UIViewController {
                 DispatchQueue.main.async {
                     self.showDAlert(title: "Error".localized, subTitle: sms.localized, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
                 }
-                
                 return
             }
+            
             DispatchQueue.main.async {
                 ad.killLoading()
                 switch self.paymentType {
@@ -267,7 +264,6 @@ class SendOrder: UIViewController {
                             self.paymentHandler.startPayment(servcie: self.pageTransformeTitle, price: self.initial_price) { (success) in
                                 if success {
                                     //TODO: need to handle when applepay scussess
-    //
                                     print("SSSS success")
                                 }
                             }

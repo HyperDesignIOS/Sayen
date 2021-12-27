@@ -20,6 +20,9 @@ class LoginVC: UIViewController {
          }()
     var tabBar : UITabBarController?
     var comeFromResetPass = false
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

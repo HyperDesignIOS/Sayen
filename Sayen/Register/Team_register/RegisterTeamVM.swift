@@ -105,18 +105,14 @@ class RegisterTeamVM {
             guard state else{
                 self.alertMessage = sms
                 self.state = .error
-                
                 return
             }
 //            self.state = .populated
-
             DispatchQueue.main.async {
                 ad.CurrentRootVC()?.showDAlert(title: "", subTitle: sms, type: .success, completionHandler: { (_) in
-                
-                DispatchQueue.main.async {
-
-                ad.restartApplication()
-                }
+//                DispatchQueue.main.async {
+//                ad.restartApplication()
+//                }
             })
             }
         }) { (err) in
@@ -125,5 +121,4 @@ class RegisterTeamVM {
           
         }
     }
-     
 }
