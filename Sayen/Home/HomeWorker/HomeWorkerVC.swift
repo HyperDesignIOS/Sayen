@@ -218,3 +218,32 @@ class HomeWorkerVC: UIViewController {
     
    
 }
+//    @IBAction func logOut(_ sender: Any) {
+//        //            ad.CurrentRootVC()?.showDAlert(title: "تسجيل خروج", subTitle: "اذا كنت متأكد من تسجيل الخروج اضغط نعم",type: .withContent,buttonTitle: "yes".localized, completionHandler: {   (status) in
+//        //
+//        //
+//        //                     guard ad.isOnline() else {
+//        //                          return
+//        //                     }
+//        //                      guard status else { return }
+//        //                     APIClient.logoutHandler(user_type : ad.user_type() , completionHandler: { (status) in
+//        //
+//        //                         guard status else { return }
+//        //                         DispatchQueue.main.async {
+//        //                         ad.save(userId: nil, token: nil)
+//        //                         UserDefaults.standard.setValue(nil, forKey: Constants.firebaseTokenKey)
+//        //                         ad.restartApplication()
+//        //
+//        //                         }
+//        //                     }) { (err) in
+//        //                         self.showDAlert(title: "Error".localized, subTitle: "tryAgain".localized, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
+//        //
+//        //
+//        //                     }
+//        //                 })
+//        let vc = LogOutAlert()
+//       vc.modalTransitionStyle = .crossDissolve
+//       vc.modalPresentationStyle = .overFullScreen
+//       self.present(vc, animated: false)
+//     //   self.navigationController?.pushViewController(vc, animated: false)
+//    }

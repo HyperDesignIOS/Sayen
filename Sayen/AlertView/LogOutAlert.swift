@@ -26,13 +26,11 @@ class LogOutAlert: UIViewController {
     }
     
     func logout() {
-
-                
         ad.isLoading()
             guard ad.isOnline() else {
                  return
             }
-            
+        print(ad.user_type())
             APIClient.logoutHandler(user_type : ad.user_type() , completionHandler: { (status) in
                 ad.killLoading()
                 guard status else { return }

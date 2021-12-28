@@ -93,7 +93,6 @@
 		1C786CD82486825700BAFC46 /* ForgetPassVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C786CD32486825700BAFC46 /* ForgetPassVc.swift */; };
 		1C786CD92486825700BAFC46 /* ForgetPassVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C786CD32486825700BAFC46 /* ForgetPassVc.swift */; };
 		1C786CDE2486826900BAFC46 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C786CDB2486826900BAFC46 /* RegisterVC.swift */; };
-		1C786CDF2486826900BAFC46 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C786CDB2486826900BAFC46 /* RegisterVC.swift */; };
 		1C786CE02486826900BAFC46 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C786CDC2486826900BAFC46 /* RegisterVM.swift */; };
 		1C786CE12486826900BAFC46 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C786CDC2486826900BAFC46 /* RegisterVM.swift */; };
 		1C786CE92486827300BAFC46 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C786CE52486827200BAFC46 /* LoginVC.swift */; };
@@ -341,6 +340,8 @@
 		F279563C2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279563B2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift */; };
 		F2A1FA1326E7644800D0C483 /* PublicQuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A1FA1526E7644800D0C483 /* PublicQuVC.xib */; };
 		F2A1FA2626E7786700D0C483 /* RatingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A1FA2826E7786700D0C483 /* RatingVC.xib */; };
+		F2C5F58D277B149600765ADD /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C786CDB2486826900BAFC46 /* RegisterVC.swift */; };
+		F2C5F58E277B16AF00765ADD /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24A857B26E3B20100E7FAA1 /* RegisterVC.xib */; };
 		F2E6F7BB26E674BA00BBF76B /* InvoiceDetailes.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E6F7BD26E674BA00BBF76B /* InvoiceDetailes.xib */; };
 		F2E6F7EA26E6838600BBF76B /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E6F7ED26E6838600BBF76B /* OrderCell.xib */; };
 		F2E6F7EB26E6838600BBF76B /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E6F7ED26E6838600BBF76B /* OrderCell.xib */; };
@@ -1725,6 +1726,7 @@
 				1CBD1D23249F551700412A5C /* GoogleService-Info.plist in Resources */,
 				1C4A65A0248E75DB0049C877 /* Launch Screen.storyboard in Resources */,
 				1C786D9D248682A300BAFC46 /* Tajawal-Black.ttf in Resources */,
+				F2C5F58E277B16AF00765ADD /* RegisterVC.xib in Resources */,
 				1C5BCBC924AB3ACE00DA85DA /* ProImageCell.xib in Resources */,
 				1CE3DE3D249A67FF00B8C065 /* TeamAddPriceVC.xib in Resources */,
 			);
@@ -2091,6 +2093,7 @@
 				1CBD1D2E249F76DA00412A5C /* AddPriceVC.swift in Sources */,
 				1C786D0F2486829100BAFC46 /* Constants.swift in Sources */,
 				F279563A2778C6A600EBA5A4 /* HomeWorker+TableView.swift in Sources */,
+				F2C5F58D277B149600765ADD /* RegisterVC.swift in Sources */,
 				1C786D63248682A300BAFC46 /* CardView.swift in Sources */,
 				1C24ED6424A4A3280048D9E6 /* ProblemCell.swift in Sources */,
 				1C786D89248682A300BAFC46 /* UIFont+Localization.swift in Sources */,
@@ -2151,7 +2154,6 @@
 				1C786CD52486825700BAFC46 /* ForgetPassVM.swift in Sources */,
 				1C786D75248682A300BAFC46 /* UIVC_Ext.swift in Sources */,
 				1CE3DE3C249A67FF00B8C065 /* TeamAddPriceVC.swift in Sources */,
-				1C786CDF2486826900BAFC46 /* RegisterVC.swift in Sources */,
 				1C4A659E248E5E700049C877 /* ProfileData.swift in Sources */,
 				1CE3DE40249A6B7100B8C065 /* TeamAddPriceCell.swift in Sources */,
 				1C5BCBC724AB3ACE00DA85DA /* ProImageCell.swift in Sources */,

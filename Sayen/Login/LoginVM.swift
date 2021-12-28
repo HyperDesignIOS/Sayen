@@ -62,8 +62,6 @@ class LoginVM {
     
     
     func initLogin () {
-    
-        
         guard let phonenum = phonenum , let pass = pass else {return}
         guard validateRows()else{return}
        
