@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeUserVC: UIViewController {
 
@@ -30,7 +31,7 @@ class HomeUserVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getCurrentToken()
        print(Constants.current_Language,"-----------")
         self.collectionView.register(UINib(nibName: "HomeUserCell", bundle: nil), forCellWithReuseIdentifier: "HomeUserCell")
         collectionView.register(UINib(nibName: "HomeHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HomeHeader")
@@ -48,6 +49,11 @@ class HomeUserVC: UIViewController {
    
     }
     
+    func getCurrentToken(){
+        if let token = Messaging.messaging().fcmToken {
+            print(token)
+        }
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //  UserDefaults.standard.set(1, forKey: "banned")

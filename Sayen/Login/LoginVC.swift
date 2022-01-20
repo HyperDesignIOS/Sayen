@@ -108,7 +108,6 @@ class LoginVC: UIViewController {
       
     }
     @IBAction func loginAction(_ sender: Any) {
-    
         guard ad.isOnline()else{return}
         viewModel.goAhead = "Gooooo"
         viewModel.initLogin()

@@ -229,7 +229,6 @@
 		1C8F519224B36D8300895FA0 /* CancelOrderAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F518F24B36D8300895FA0 /* CancelOrderAlert.swift */; };
 		1C906AE5249015BD00B9855F /* OrderDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C906AE3249015BD00B9855F /* OrderDate.swift */; };
 		1CB98D8B2488E90800A822EB /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CB98D8A2488E90800A822EB /* LoginVC.xib */; };
-		1CBD1D23249F551700412A5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CBD1D22249F551600412A5C /* GoogleService-Info.plist */; };
 		1CBD1D25249F70B800412A5C /* OrderDetailesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CECC30024942CBB00354DD7 /* OrderDetailesVC.swift */; };
 		1CBD1D29249F719400412A5C /* TeamAddPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE3DE3E249A6B7100B8C065 /* TeamAddPriceCell.swift */; };
 		1CBD1D2A249F756300412A5C /* WorderDetailes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE3DE30249A51DF00B8C065 /* WorderDetailes.swift */; };
@@ -291,7 +290,6 @@
 		789D891BA740B8F1C4B00930 /* Pods_Sayen__Sayen_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADA9EC5172D341B28E3DE4A /* Pods_Sayen__Sayen_UITests.framework */; };
 		840FB8D124EBD95800B2DC85 /* MapExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB8D024EBD95700B2DC85 /* MapExt.swift */; };
 		840FB8D424ED3A9300B2DC85 /* PubLicQuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840FB8D324ED3A9200B2DC85 /* PubLicQuCell.xib */; };
-		84560262253C48AF002E352D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84560261253C48AF002E352D /* GoogleService-Info.plist */; };
 		847FABB02545FED1008F01A2 /* RegisterTeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FABAE2545FED1008F01A2 /* RegisterTeamVC.swift */; };
 		847FABB12545FED1008F01A2 /* RegisterTeamVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847FABAF2545FED1008F01A2 /* RegisterTeamVC.xib */; };
 		847FABB3254601AB008F01A2 /* RegisterTeamVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FABB2254601AB008F01A2 /* RegisterTeamVM.swift */; };
@@ -320,6 +318,8 @@
 		F24FB8CA273D4C91007566EA /* SendOrder+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24FB8C9273D4C91007566EA /* SendOrder+CollectionView.swift */; };
 		F24FB8D0273D4CD3007566EA /* SendOrder+Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24FB8CF273D4CD3007566EA /* SendOrder+Address.swift */; };
 		F24FB8D6273D4D51007566EA /* SendOrder+finallySendOrderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24FB8D5273D4D51007566EA /* SendOrder+finallySendOrderDelegate.swift */; };
+		F25C1F732798282300196407 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F25C1F722798282300196407 /* GoogleService-Info.plist */; };
+		F25C1F752798285400196407 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F25C1F742798285400196407 /* GoogleService-Info.plist */; };
 		F27278AA26E4AAC600984069 /* VerfyCode.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27278AC26E4AAC600984069 /* VerfyCode.xib */; };
 		F27278B926E4B7DD00984069 /* NewPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27278BB26E4B7DD00984069 /* NewPasswordVC.xib */; };
 		F27278CC26E4E10100984069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27278CE26E4E10100984069 /* Main.storyboard */; };
@@ -515,7 +515,6 @@
 		1C906AE3249015BD00B9855F /* OrderDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDate.swift; sourceTree = "<group>"; };
 		1CB20946249D5DDF000E19A9 /* Sayen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sayen.entitlements; sourceTree = "<group>"; };
 		1CB98D8A2488E90800A822EB /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoginVC.xib; path = ../Register/LoginVC.xib; sourceTree = "<group>"; };
-		1CBD1D22249F551600412A5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1CBD1D3224A0E42800412A5C /* EndOrderT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOrderT.swift; sourceTree = "<group>"; };
 		1CBD1D3624A0ED3700412A5C /* InvoiceDetailes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDetailes.swift; sourceTree = "<group>"; };
 		1CBD1D4024A10A5F00412A5C /* FilterInvoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInvoices.swift; sourceTree = "<group>"; };
@@ -558,7 +557,6 @@
 		66BA6687AC55C9026D9E2D56 /* Pods-Sayen .release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sayen .release.xcconfig"; path = "Target Support Files/Pods-Sayen /Pods-Sayen .release.xcconfig"; sourceTree = "<group>"; };
 		840FB8D024EBD95700B2DC85 /* MapExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExt.swift; sourceTree = "<group>"; };
 		840FB8D324ED3A9200B2DC85 /* PubLicQuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PubLicQuCell.xib; sourceTree = "<group>"; };
-		84560261253C48AF002E352D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		847FABAE2545FED1008F01A2 /* RegisterTeamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTeamVC.swift; sourceTree = "<group>"; };
 		847FABAF2545FED1008F01A2 /* RegisterTeamVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterTeamVC.xib; sourceTree = "<group>"; };
 		847FABB2254601AB008F01A2 /* RegisterTeamVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTeamVM.swift; sourceTree = "<group>"; };
@@ -608,6 +606,8 @@
 		F24FB8C9273D4C91007566EA /* SendOrder+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+CollectionView.swift"; sourceTree = "<group>"; };
 		F24FB8CF273D4CD3007566EA /* SendOrder+Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+Address.swift"; sourceTree = "<group>"; };
 		F24FB8D5273D4D51007566EA /* SendOrder+finallySendOrderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+finallySendOrderDelegate.swift"; sourceTree = "<group>"; };
+		F25C1F722798282300196407 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F25C1F742798285400196407 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F27278AB26E4AAC600984069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VerfyCode.xib; sourceTree = "<group>"; };
 		F27278AE26E4AAC800984069 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/VerfyCode.strings; sourceTree = "<group>"; };
 		F27278B426E4AAF800984069 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/VerfyCode.strings; sourceTree = "<group>"; };
@@ -747,7 +747,7 @@
 			children = (
 				1C4A659F248E75DB0049C877 /* Launch Screen.storyboard */,
 				1C309E302488F7A9002CE4CC /* Main.storyboard */,
-				1CBD1D22249F551600412A5C /* GoogleService-Info.plist */,
+				F25C1F722798282300196407 /* GoogleService-Info.plist */,
 			);
 			path = MainWorker;
 			sourceTree = "<group>";
@@ -1020,7 +1020,7 @@
 				1C309E292488F3B4002CE4CC /* MainWorker */,
 				1C2AC1CF2487C7E7008F22DE /* Info.plist */,
 				1C88EA3C249D6895009E1DAD /* SayenTeam-Info.plist */,
-				84560261253C48AF002E352D /* GoogleService-Info.plist */,
+				F25C1F742798285400196407 /* GoogleService-Info.plist */,
 				F27278CE26E4E10100984069 /* Main.storyboard */,
 				1C786CBA248681C400BAFC46 /* LaunchScreen.storyboard */,
 				1C786CB7248681BB00BAFC46 /* Assets.xcassets */,
@@ -1617,8 +1617,8 @@
 				F240893726E753FC005CD093 /* ChangePassVC.xib in Resources */,
 				1C786D8C248682A300BAFC46 /* Montserrat-Regular.ttf in Resources */,
 				1CECC2FE24940B2A00354DD7 /* imagesCell.xib in Resources */,
+				F25C1F752798285400196407 /* GoogleService-Info.plist in Resources */,
 				1C786D96248682A300BAFC46 /* Tajawal-Regular.ttf in Resources */,
-				84560262253C48AF002E352D /* GoogleService-Info.plist in Resources */,
 				F2789F3C26E543BB002ED441 /* ContianuAlert.xib in Resources */,
 				F27278B926E4B7DD00984069 /* NewPasswordVC.xib in Resources */,
 				1C786DAE248682A300BAFC46 /* UITextField_Main.xib in Resources */,
@@ -1722,8 +1722,8 @@
 				1C786D8B248682A300BAFC46 /* Montserrat-SemiBold.ttf in Resources */,
 				1CE3DE33249A51DF00B8C065 /* WorderDetailes.xib in Resources */,
 				1C786D9B248682A300BAFC46 /* OFL.txt in Resources */,
+				F25C1F732798282300196407 /* GoogleService-Info.plist in Resources */,
 				1C786D8F248682A300BAFC46 /* Tajawal-ExtraBold.ttf in Resources */,
-				1CBD1D23249F551700412A5C /* GoogleService-Info.plist in Resources */,
 				1C4A65A0248E75DB0049C877 /* Launch Screen.storyboard in Resources */,
 				1C786D9D248682A300BAFC46 /* Tajawal-Black.ttf in Resources */,
 				F2C5F58E277B16AF00765ADD /* RegisterVC.xib in Resources */,
@@ -2641,13 +2641,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7364C3DSQ7;
+				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";
@@ -2666,13 +2666,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7364C3DSQ7;
+				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.7;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";
@@ -2778,7 +2778,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Sayen Worker.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/SayenTeam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2786,11 +2786,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				OTHER_SWIFT_FLAGS = "-D Team";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cems.it.SayenWorker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cems.it.SayenTeam;
 				PRODUCT_NAME = "فريق صاين";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2804,7 +2805,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Sayen Worker.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/SayenTeam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2812,11 +2813,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				OTHER_SWIFT_FLAGS = "-D Team";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cems.it.SayenWorker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cems.it.SayenTeam;
 				PRODUCT_NAME = "فريق صاين";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

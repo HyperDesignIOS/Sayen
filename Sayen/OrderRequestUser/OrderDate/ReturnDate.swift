@@ -186,16 +186,16 @@ class ReturnDate {
     }
     
     func getBackTime (Time:String)->String{
-        let formatter = DateFormatter()
-     //   formatter.locale = Locale(identifier: Constants.current_Language)
-        formatter.timeZone = Calendar.current.timeZone
-        formatter.dateFormat = "hh:mm a"
-        //"MM-dd-yyyy"
-        guard let date = formatter.date(from: Time) else {return ""}
-        let fmt = DateFormatter()
-        fmt.dateFormat = "HH:mm:ss"
-        let outPut = fmt.string(from: date)
-        return outPut
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm a"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // fixes nil if device time in 24 hour format
+        guard  let date = dateFormatter.date(from: Time)  else {return ""}
+
+        dateFormatter.dateFormat = "HH:mm:ss"
+        let date24 = dateFormatter.string(from: date)
+
+        return date24
         
     }
     func getBackTimeCurrent ()->String{

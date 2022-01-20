@@ -49,25 +49,25 @@
                                     <rect key="frame" x="20" y="225" width="335" height="567"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تسجيل دخول" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9g-lW-BvJ">
-                                            <rect key="frame" x="94" y="10" width="147" height="37.333333333333336"/>
+                                            <rect key="frame" x="74.333333333333329" y="10" width="186.66666666666669" height="32"/>
                                             <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="32"/>
                                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الهاتف" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrg-cq-60D">
-                                            <rect key="frame" x="252.33333333333329" y="87.333333333333314" width="62.666666666666657" height="20"/>
+                                            <rect key="frame" x="20" y="82" width="295" height="17"/>
                                             <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="17"/>
                                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="كلمة المرور" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8V-VQ-ZoZ">
-                                            <rect key="frame" x="254.66666666666671" y="184.33333333333331" width="60.333333333333343" height="20"/>
+                                            <rect key="frame" x="20" y="176" width="295" height="17"/>
                                             <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="17"/>
                                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3de-yT-Act" customClass="CardView" customModule="فريق_صاين" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="214.33333333333331" width="295" height="50"/>
+                                            <rect key="frame" x="20" y="203" width="295" height="50"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4We-D0-dYd" customClass="NMTextField" customModule="فريق_صاين" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="0.0" width="279" height="48"/>
@@ -91,7 +91,7 @@
                                             </constraints>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH0-F1-guq">
-                                            <rect key="frame" x="20" y="274.33333333333331" width="105" height="32"/>
+                                            <rect key="frame" x="20" y="263" width="134" height="29"/>
                                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                             <state key="normal" title="نسيت كلمة المرور؟">
                                                 <color key="titleColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,7 +101,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrz-He-6Rv" customClass="UIButtonX" customModule="فريق_صاين" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="345.33333333333337" width="295" height="50"/>
+                                            <rect key="frame" x="20" y="331" width="295" height="50"/>
                                             <color key="backgroundColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="RXu-Ik-nFn"/>
@@ -121,7 +121,7 @@
                                             </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9I-r7-3IY" customClass="CardView" customModule="فريق_صاين" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="117.33333333333331" width="295" height="50"/>
+                                            <rect key="frame" x="20" y="109" width="295" height="50"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0000000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bxr-aW-MIM">
                                                     <rect key="frame" x="8" y="0.0" width="279" height="50"/>
@@ -145,7 +145,7 @@
                                             </constraints>
                                         </view>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ليس لديك حساب؟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHV-tH-oH9">
-                                            <rect key="frame" x="20" y="410.33333333333337" width="295" height="40"/>
+                                            <rect key="frame" x="20" y="396" width="295" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="WHO-nU-WaL"/>
                                             </constraints>
@@ -154,7 +154,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsD-UL-44l" customClass="UIButtonX" customModule="فريق_صاين" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="458.33333333333337" width="295" height="40"/>
+                                            <rect key="frame" x="20" y="444" width="295" height="40"/>
                                             <color key="backgroundColor" red="0.60784313729999995" green="0.67843137249999996" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="Xg7-3s-AVe"/>
@@ -181,8 +181,10 @@
                                         <constraint firstItem="3de-yT-Act" firstAttribute="leading" secondItem="i9I-r7-3IY" secondAttribute="leading" id="7vM-Gu-Rww"/>
                                         <constraint firstItem="a9g-lW-BvJ" firstAttribute="centerX" secondItem="rDZ-Ld-4JX" secondAttribute="centerX" id="9Cc-g1-frh"/>
                                         <constraint firstItem="a9g-lW-BvJ" firstAttribute="top" secondItem="rDZ-Ld-4JX" secondAttribute="top" constant="10" id="ACT-n6-3z9"/>
+                                        <constraint firstItem="nrg-cq-60D" firstAttribute="leading" secondItem="rDZ-Ld-4JX" secondAttribute="leading" constant="20" id="HOn-Ho-cIn"/>
                                         <constraint firstItem="EH0-F1-guq" firstAttribute="top" secondItem="3de-yT-Act" secondAttribute="bottom" constant="10" id="Jnf-We-QEG"/>
                                         <constraint firstItem="EH0-F1-guq" firstAttribute="leading" secondItem="rDZ-Ld-4JX" secondAttribute="leading" constant="20" id="LkE-Hf-XND"/>
+                                        <constraint firstItem="D8V-VQ-ZoZ" firstAttribute="leading" secondItem="rDZ-Ld-4JX" secondAttribute="leading" constant="20" id="MEo-Ep-zF1"/>
                                         <constraint firstItem="zHV-tH-oH9" firstAttribute="top" secondItem="Zrz-He-6Rv" secondAttribute="bottom" constant="15" id="Ozm-Lf-ceQ"/>
                                         <constraint firstItem="3de-yT-Act" firstAttribute="trailing" secondItem="i9I-r7-3IY" secondAttribute="trailing" id="PoJ-4c-yF3"/>
                                         <constraint firstItem="3de-yT-Act" firstAttribute="top" secondItem="D8V-VQ-ZoZ" secondAttribute="bottom" constant="10" id="SqD-s9-j81"/>
@@ -240,10 +242,10 @@
     </objects>
     <designables>
         <designable name="EsD-UL-44l">
-            <size key="intrinsicContentSize" width="111" height="32"/>
+            <size key="intrinsicContentSize" width="128" height="29"/>
         </designable>
         <designable name="Zrz-He-6Rv">
-            <size key="intrinsicContentSize" width="78" height="32"/>
+            <size key="intrinsicContentSize" width="94" height="29"/>
         </designable>
     </designables>
     <resources>

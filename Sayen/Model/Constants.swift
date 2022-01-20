@@ -18,8 +18,8 @@ class Constants {
     static var firebaseTokenKey = "firebaseToken"
     static let  selectedImg = UIImage(named:"Radio-On-Enabled")
     static let deSelectedImg = UIImage(named:"Radio-Off-Enabled")
-    static let GOOGLE_MAPS_API_KEY = "AIzaSyAwyQnnV0Z4PaFX645Ua1PMX56qlbuHvls"
-
+//    static let GOOGLE_MAPS_API_KEY = "AIzaSyAwyQnnV0Z4PaFX645Ua1PMX56qlbuHvls"
+    static let GOOGLE_MAPS_API_KEY = "AIzaSyD0lvyEMmVw-jCqobmghYJaopzaks9M83A"
     static var currency = "SAR"
       static var user_token  : String {
          set {

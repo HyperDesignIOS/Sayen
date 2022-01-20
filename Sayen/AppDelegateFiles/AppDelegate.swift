@@ -12,7 +12,8 @@ import IQKeyboardManagerSwift
 import MOLH
 import GoogleMaps
 import Locksmith
-import Firebase
+import FirebaseCore
+import FirebaseMessaging
 import DropDown
 
 @UIApplicationMain
@@ -43,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          GMSServices.provideAPIKey(GOOGLE_MAPS_API_KEY)
          handleTOkenInFirstLaunch()
          FirebaseApp.configure()
-         
+        Messaging.messaging().delegate = self
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
           UNUserNotificationCenter.current().delegate = self
@@ -51,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
           UNUserNotificationCenter.current().requestAuthorization(
             options: authOptions,
-            completionHandler: {_, _ in })
+            completionHandler: { _, _ in })
         } else {
           let settings: UIUserNotificationSettings =
           UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
@@ -60,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         application.registerForRemoteNotifications()
         
-        Messaging.messaging().delegate = self
+       
    
          UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Tajawal-Regular", size: 10)!], for: .normal)
         //   MOLH.shared.activate(true)
@@ -213,8 +214,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       completionHandler(UIBackgroundFetchResult.newData)
     }
     
- 
-
 
 }
 
@@ -226,6 +225,9 @@ extension AppDelegate : MessagingDelegate {
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         print("Firebase registration token: \(fcmToken)")
+        let dataDict: [String: String] = ["token": fcmToken ]
+        NotificationCenter.default.post(
+          name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
      //   guard  fcmToken != "" else { return }
          UserDefaults.standard.setValue(fcmToken, forKey: Constants.firebaseTokenKey)
         
