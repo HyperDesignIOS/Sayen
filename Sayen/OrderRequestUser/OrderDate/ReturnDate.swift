@@ -41,7 +41,17 @@ class ReturnDate {
         }
         return mydayNum
     }
-    
+    func getCurrentMonthStr() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.locale = Locale(identifier: Constants.current_Language)
+        // formatter.dateFormat = "EEEE, d, MMMM"
+        formatter.dateFormat = "MMMM"
+        let outputDate = formatter.string(from: date)
+        return outputDate
+
+    }
     func returndayesNumF () -> [String]{
         // Formatter for printing the date, adjust it according to your needs:
         let fmt = DateFormatter()

@@ -20,53 +20,65 @@ class HomeData {
     private var _active : String?
     private  var _id : Int?
     private var _name : String?
+    private var _text : String?
+    private  var _checkSub : Int?
     
     
-
-       
-       var id : Int {
-           return   _id ?? 0
-       }
-
-       var name : String {
-            guard let x =    _name  else { return "" }
-           return x
-       }
-       var image_path : String {
-             guard let x = _image_path else { return "" }
-             return x
-           
-         }
+    
+    
+    var id : Int {
+        return   _id ?? 0
+    }
+    
+    var name : String {
+        guard let x =    _name  else { return "" }
+        return x
+    }
+    var image_path : String {
+        guard let x = _image_path else { return "" }
+        return x
+    }
     var active : String {
-               guard let x = _active else { return "" }
-               return x
-             
-           }
-  var initial_price_Double : Double {
-   guard let x =  _initial_price else { return 0.0 }
-   
-      return x
-  }
-
-       var initial_price : String {
+        guard let x = _active else { return "" }
+        return x
+        
+    }
+    var initial_price_Double : Double {
+        guard let x =  _initial_price else { return 0.0 }
+        
+        return x
+    }
+    
+    var initial_price : String {
         guard let x =  _initial_price else { return "0.0" }
         guard    floor(x) == x else {
             return "\(x)"
         }
-           return "\(Int(x))"
-       }
-
-       init(_ jsonData : JSON) {
+        return "\(Int(x))"
+    }
+    
+    
+    var checkSub : Int {
+        return   _checkSub ?? 0
+    }
+    
+    
+    var text : String {
+        guard let x =    _text  else { return "" }
+        return x
+    }
+    
+    init(_ jsonData : JSON) {
         
-           self._image_path = jsonData["image_path"].stringValue
-           self._id = jsonData["id"].intValue
-           self._name = jsonData["name"].stringValue
-           self._active = jsonData["active"].stringValue
-           self._initial_price = jsonData["initial_price"].doubleValue
-         
+        self._image_path = jsonData["image_path"].stringValue
+        self._id = jsonData["id"].intValue
+        self._name = jsonData["name"].stringValue
+        self._active = jsonData["active"].stringValue
+        self._initial_price = jsonData["initial_price"].doubleValue
+        self._checkSub = jsonData["checkSub"].intValue
+        self._text = jsonData["text"].stringValue
+    }
     
-       }
     
     
-
 }

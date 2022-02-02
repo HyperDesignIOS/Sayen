@@ -22,7 +22,10 @@ class SendOrder: UIViewController {
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var priceLbl: UILabel!
+    @IBOutlet weak var infoLbl: UILabel!
+    @IBOutlet weak var infoImg: UIImageView!
     @IBOutlet weak var couponTxt: UITextField!
+    @IBOutlet weak var imageLabelTopAnchor: NSLayoutConstraint!
     let picker = UIImagePickerController()
     var imageDict : [String:UIImage] = [:]
     var locManager = CLLocationManager()
@@ -39,9 +42,11 @@ class SendOrder: UIViewController {
     var latTran : Double = 0.0
     var longTran : Double = 0.0
     var floor = ""
+    var address = ""
     var initPrice = ""
+    var infoText = ""
     var calenderNewDate: String = ""
-
+    var user : UserProfile_Data? = nil
 
 
 
@@ -93,6 +98,32 @@ class SendOrder: UIViewController {
         self.priceLbl.text = "\(initial_price) " + "Rial".localized
         parameters["price_after_coupon"] = "\(initial_price)"
         parameters["service_id"] = id
+        infoLbl.text = infoText
+        if infoText.isEmpty {
+            imageLabelTopAnchor.constant = 16
+            infoLbl.isHidden = true
+            infoImg.isHidden = true
+        }
+        if let user = user {
+            let lat = user.lat
+            if !lat.isEmpty {
+                self.lat = Double(lat) ?? 0.0
+            }
+            let lng = user.lng
+            if !lng.isEmpty {
+                self.long =  Double(lng) ?? 0.0
+            }
+            let address = user.address
+            if !address.isEmpty {
+                self.address = address
+                addressLbl.text = address
+            }
+            let floor = user.floor
+            if !floor.isEmpty {
+                self.floor = floor
+            }
+            
+        }
     }
    
     func configContainerAlert() {
@@ -109,6 +140,7 @@ class SendOrder: UIViewController {
         paymentController.delegate = self
     }
     @IBAction func openCalnder(_ sender: Any) {
+        print(user?.email)
         guard ad.isOnline() else{return}
         let vc = OrderDate()
         vc.modalTransitionStyle = .crossDissolve
@@ -205,6 +237,8 @@ class SendOrder: UIViewController {
             vc.latTran = self.lat
             vc.longTran = self.long
             vc.floor =  self.floor
+            vc.address = self.address
+            print(self.lat , self.long)
         }
       
         vc.delegate = self

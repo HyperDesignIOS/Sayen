@@ -320,6 +320,10 @@
 		F24FB8D6273D4D51007566EA /* SendOrder+finallySendOrderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24FB8D5273D4D51007566EA /* SendOrder+finallySendOrderDelegate.swift */; };
 		F25C1F732798282300196407 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F25C1F722798282300196407 /* GoogleService-Info.plist */; };
 		F25C1F752798285400196407 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F25C1F742798285400196407 /* GoogleService-Info.plist */; };
+		F26522FC27AAD89D00DF488E /* HomeUser+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26522FB27AAD89D00DF488E /* HomeUser+CollectionView.swift */; };
+		F26522FF27AAE0FC00DF488E /* SubService+CollectionView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26522FE27AAE0FC00DF488E /* SubService+CollectionView.swift.swift */; };
+		F265230127AAE11400DF488E /* SubServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F265230027AAE11400DF488E /* SubServiceVC.swift */; };
+		F265230327AAE1A600DF488E /* SubServiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F265230227AAE1A600DF488E /* SubServiceVC.xib */; };
 		F27278AA26E4AAC600984069 /* VerfyCode.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27278AC26E4AAC600984069 /* VerfyCode.xib */; };
 		F27278B926E4B7DD00984069 /* NewPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27278BB26E4B7DD00984069 /* NewPasswordVC.xib */; };
 		F27278CC26E4E10100984069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27278CE26E4E10100984069 /* Main.storyboard */; };
@@ -608,6 +612,10 @@
 		F24FB8D5273D4D51007566EA /* SendOrder+finallySendOrderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+finallySendOrderDelegate.swift"; sourceTree = "<group>"; };
 		F25C1F722798282300196407 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F25C1F742798285400196407 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F26522FB27AAD89D00DF488E /* HomeUser+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeUser+CollectionView.swift"; sourceTree = "<group>"; };
+		F26522FE27AAE0FC00DF488E /* SubService+CollectionView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubService+CollectionView.swift.swift"; sourceTree = "<group>"; };
+		F265230027AAE11400DF488E /* SubServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubServiceVC.swift; sourceTree = "<group>"; };
+		F265230227AAE1A600DF488E /* SubServiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubServiceVC.xib; sourceTree = "<group>"; };
 		F27278AB26E4AAC600984069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VerfyCode.xib; sourceTree = "<group>"; };
 		F27278AE26E4AAC800984069 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/VerfyCode.strings; sourceTree = "<group>"; };
 		F27278B426E4AAF800984069 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/VerfyCode.strings; sourceTree = "<group>"; };
@@ -808,11 +816,10 @@
 		1C3D78A1248F985200759C5D /* HomeUser */ = {
 			isa = PBXGroup;
 			children = (
+				F26522FD27AAE0C800DF488E /* SubService */,
+				F26522FA27AAD87600DF488E /* collectionViewCell */,
 				1C3D78A2248F987500759C5D /* HomeUserVC.swift */,
-				1C3D78A4248F98A000759C5D /* HomeUserCell.swift */,
-				1C3D78A5248F98A000759C5D /* HomeUserCell.xib */,
-				1C3D78A8248FBAFD00759C5D /* HomeHeader.swift */,
-				F24A850326E0DB4200E7FAA1 /* HomeHeader.xib */,
+				F26522FB27AAD89D00DF488E /* HomeUser+CollectionView.swift */,
 				1CE93A1124950FC000001690 /* HomeData.swift */,
 			);
 			path = HomeUser;
@@ -1474,6 +1481,27 @@
 			path = SendOrder;
 			sourceTree = "<group>";
 		};
+		F26522FA27AAD87600DF488E /* collectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1C3D78A4248F98A000759C5D /* HomeUserCell.swift */,
+				1C3D78A5248F98A000759C5D /* HomeUserCell.xib */,
+				1C3D78A8248FBAFD00759C5D /* HomeHeader.swift */,
+				F24A850326E0DB4200E7FAA1 /* HomeHeader.xib */,
+			);
+			path = collectionViewCell;
+			sourceTree = "<group>";
+		};
+		F26522FD27AAE0C800DF488E /* SubService */ = {
+			isa = PBXGroup;
+			children = (
+				F26522FE27AAE0FC00DF488E /* SubService+CollectionView.swift.swift */,
+				F265230027AAE11400DF488E /* SubServiceVC.swift */,
+				F265230227AAE1A600DF488E /* SubServiceVC.xib */,
+			);
+			path = SubService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1612,6 +1640,7 @@
 				F240895B26E75827005CD093 /* EditProfileVC.xib in Resources */,
 				F24A855726E1565800E7FAA1 /* LoginVC.xib in Resources */,
 				F2789EF826E53233002ED441 /* PaymentVC.xib in Resources */,
+				F265230327AAE1A600DF488E /* SubServiceVC.xib in Resources */,
 				F24A854E26E122BF00E7FAA1 /* SelectLanguageVC.xib in Resources */,
 				F2789F2D26E54376002ED441 /* removeImage.xib in Resources */,
 				F240893726E753FC005CD093 /* ChangePassVC.xib in Resources */,
@@ -1942,6 +1971,7 @@
 				1C729FB724A921F20070C9D2 /* QuModel.swift in Sources */,
 				1C786CE92486827300BAFC46 /* LoginVC.swift in Sources */,
 				F24FB8C0273D4B9B007566EA /* SendOrder+ImagePicker.swift in Sources */,
+				F26522FF27AAE0FC00DF488E /* SubService+CollectionView.swift.swift in Sources */,
 				1C6182EC2489500C0002FFA3 /* ChangePassVC.swift in Sources */,
 				1C786D64248682A300BAFC46 /* ToolbarPickerView.swift in Sources */,
 				1C3D78A6248F98A000759C5D /* HomeUserCell.swift in Sources */,
@@ -1970,6 +2000,7 @@
 				1C786D1C2486829100BAFC46 /* APICleint_PostR.swift in Sources */,
 				1C786CF32486828000BAFC46 /* ViewController.swift in Sources */,
 				1CF81061249259DF0046C6AC /* ReturnDate.swift in Sources */,
+				F26522FC27AAD89D00DF488E /* HomeUser+CollectionView.swift in Sources */,
 				1C309E4824894564002CE4CC /* selfInfoVC.swift in Sources */,
 				1C906AE5249015BD00B9855F /* OrderDate.swift in Sources */,
 				1CBD1D5324A3945500412A5C /* NotiModel.swift in Sources */,
@@ -2007,6 +2038,7 @@
 				1C786D162486829100BAFC46 /* Default_Root_M.swift in Sources */,
 				1C786DA4248682A300BAFC46 /* VKPinCodeView.swift in Sources */,
 				1CE93A152495692700001690 /* OrderHistoryVC.swift in Sources */,
+				F265230127AAE11400DF488E /* SubServiceVC.swift in Sources */,
 				1C786CAE2486819E00BAFC46 /* AppDelegate.swift in Sources */,
 				1C5BCBC024AB3A1C00DA85DA /* ShowimagesVC.swift in Sources */,
 				1C4A659D248E5E700049C877 /* ProfileData.swift in Sources */,
@@ -2647,7 +2679,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.0.9;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";
@@ -2672,7 +2704,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.0.9;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";

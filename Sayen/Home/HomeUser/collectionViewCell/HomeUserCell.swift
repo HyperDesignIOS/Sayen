@@ -17,4 +17,8 @@ class HomeUserCell: UICollectionViewCell {
         self.mainView.layer.cornerRadius = 5
     }
 
+    func configerCell(){
+        
+    }
+    
 }

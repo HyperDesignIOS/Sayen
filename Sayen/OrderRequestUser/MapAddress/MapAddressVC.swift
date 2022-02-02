@@ -13,7 +13,7 @@ class MapAddressVC: UIViewController {
     
     @IBOutlet weak var currentOutl: UIButtonX!
     @IBOutlet weak var detailesAddress: UITextField!
-    @IBOutlet weak var addressTf: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var mapView: GMSMapView!
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
@@ -24,6 +24,7 @@ class MapAddressVC: UIViewController {
     var lat : Double = 0.0
     var long : Double = 0.0
     var floor = ""
+    var address = ""
     
     var latTran : Double = 0.0
     var longTran : Double = 0.0
@@ -46,6 +47,9 @@ class MapAddressVC: UIViewController {
         super.viewWillAppear(animated)
         let camera = GMSCameraPosition.camera(withLatitude: latTran ,longitude: longTran , zoom: zoomLevel)
         self.mapView.animate(to: camera)
+        if address != "" {
+            self.addressTextField.text =  address
+        }
         if floor != "" {
             self.detailesAddress.text = floor
         }
@@ -154,7 +158,7 @@ class MapAddressVC: UIViewController {
             
             DispatchQueue.main.async {
                 ad.killLoading()
-                self?.addressTf.text = addressString
+//                self?.floorTextField.text = addressString
                 self?.addressDetailes = addressString
                 self?.lat = lat
                 self?.long = long
@@ -178,7 +182,7 @@ class MapAddressVC: UIViewController {
     }
     @IBAction func saveAddress(_ sender: Any) {
         view.endEditing(true)
-        if self.detailesAddress.text == "" ||  self.addressTf.text == "" {
+        if self.detailesAddress.text == "" ||  self.addressTextField.text == "" {
         
             var sms = ""
             if self.detailesAddress.text == "" {
@@ -189,7 +193,8 @@ class MapAddressVC: UIViewController {
             self.showDAlert(title: "Error".localized, subTitle: sms , type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
             return
         }
-        self.delegate.sendAddress(address: self.addressTf.text!, lat: self.lat, long: self.long, floor: self.detailesAddress.text ?? "")
+        print(self.lat , self.long)
+        self.delegate.sendAddress(address: self.addressTextField.text!, lat: self.lat, long: self.long, floor: self.detailesAddress.text ?? "")
         self.dismissViewC()
   
     }
@@ -263,7 +268,7 @@ extension MapAddressVC: GMSMapViewDelegate{
         view.layer.cornerRadius = 6
         
         let lbl1 = UILabel(frame: CGRect.init(x: 8, y: 8, width: view.frame.size.width - 16, height: 15))
-        lbl1.text = self.addressTf.text
+        lbl1.text = self.addressTextField.text
         view.addSubview(lbl1)
         
       

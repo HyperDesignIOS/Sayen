@@ -21,51 +21,81 @@ class UserProfile_Data {
     private var _active  : String?
     private var building_id_  : Int?
     private var flat_  : String?
-
     
-       var building_id : Int {
-           return   building_id_ ?? 0
-       }
-          var flat : String {
-              return   flat_ ?? ""
-          }
+    private var _lat  : String?
+    private var _lng  : String?
+    private var _address  : String?
+    private var _floor  : String?
+    
+    
+    
+    
+    var building_id : Int {
+        return   building_id_ ?? 0
+    }
+    var flat : String {
+        return   flat_ ?? ""
+    }
     
     var id : Int {
         return   _id ?? 0
     }
     var client_type : String {
         guard let x = _client_type else { return ""}
-            return x
+        return x
     }
     var excellence_client : String {
-           guard let x = _excellence_client else { return ""}
-               return x
-       }
+        guard let x = _excellence_client else { return ""}
+        return x
+    }
     var active : String {
         guard let x = _active else { return ""}
-            return x
+        return x
     }
     var name : String {
-         guard let x =    _name  else { return "" }
+        guard let x =    _name  else { return "" }
         return x
     }
     var imageLink : String {
-          guard let x = _image else { return "" }
-          return x
+        guard let x = _image else { return "" }
+        return x
         
-      }
- 
+    }
+    
     var email : String {
         guard let x =  _email else { return "" }
         return x
     }
-  
+    
     var phone : String {
         guard let x =  _phone else { return "" }
         return x
     }
-
-
+    
+    
+    
+    var lat : String {
+        guard let x =    _lat  else { return "" }
+        return x
+    }
+    var lng : String {
+        guard let x = _lng else { return "" }
+        return x
+        
+    }
+    
+    var address : String {
+        guard let x =  _address else { return "" }
+        return x
+    }
+    
+    var floor : String {
+        guard let x =  _floor else { return "" }
+        return x
+    }
+    
+    
+    
     init(_ jsonData : JSON) {
         self._client_type = jsonData["client_type"].stringValue
         UserDefaults.standard.setValue(self._client_type, forKey: "client_type")
@@ -76,11 +106,16 @@ class UserProfile_Data {
         self._email = jsonData["email"].stringValue
         self._phone = jsonData["phone"].stringValue
         self._active = jsonData["active"].stringValue
- 
+        
         self.building_id_ = jsonData["building_id"].intValue
         self.flat_ = jsonData["flat"].stringValue
-
+        
+        self._lat = jsonData["lat"].stringValue
+        self._lng = jsonData["lng"].stringValue
+        self._address = jsonData["address"].stringValue
+        self._floor = jsonData["floor"].stringValue
+        
     }
-
-
+    
+    
 }

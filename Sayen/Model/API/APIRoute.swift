@@ -26,6 +26,7 @@ enum APIRouter: URLRequestConvertible {
     case get_profile(user_type : String)
     case logout(user_type : String)
     case service
+    case subService(serviceId : Int)
     case currentOrder(offset : Int)
     case previousOrder(offset : Int)
     case userOrder(order_id : Int)
@@ -61,7 +62,7 @@ enum APIRouter: URLRequestConvertible {
      // MARK: - HTTPMethod
      var method: HTTPMethod {
         switch self {
-        case .login , .register , .verifyCode , .forgotPass ,.resendCode , .changePhone ,.logout ,.cancel_order , .validateCoupon ,.userAcceptPrice ,.rateWorker , .teamreportProblem , .userSendMessage , .registerTeam :
+        case .login , .register , .verifyCode , .forgotPass ,.resendCode , .changePhone ,.logout ,.cancel_order , .validateCoupon ,.userAcceptPrice ,.rateWorker , .teamreportProblem , .userSendMessage , .registerTeam , .subService :
             return .post
         case .changePassword , .resetPass , .update_profile , .update_profileT , .teamStartWork , .teamGoWork , .teamAddPrice , .setPlayerId ,.teamEndWork , .teamfinishWork , .notification_seen,.updateLocation :
             return .put
@@ -88,6 +89,7 @@ enum APIRouter: URLRequestConvertible {
         case .get_profile(let user_type): return "profile?user_type=\(user_type)"
         case .logout : return "logout"
         case .service : return "services"
+        case .subService : return "subServices"
         case .currentOrder(let offset): return "user/order?order_type=current&limit=20&offset=\(offset)"
         case .previousOrder(let offset): return "user/order?order_type=previous&limit=20&offset=\(offset)"
         case .userOrder(let order_id) : return "user/order/\(order_id)"
@@ -147,6 +149,8 @@ enum APIRouter: URLRequestConvertible {
         case .logout(let user_type):
             return ["user_type" : user_type]
         case .service: return nil
+        case .subService(let serviceId):
+            return ["service_id" : serviceId]
         case .currentOrder: return nil
         case .previousOrder: return nil
         case .userOrder : return nil

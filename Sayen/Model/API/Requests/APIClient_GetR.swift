@@ -67,26 +67,27 @@ extension APIClient {
     
     //MARK: Get Services
     
-  static func getServices (completionHandler:@escaping (Bool,[HomeData]?)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+  static func getServices (completionHandler:@escaping (Bool,[HomeData]? , UserProfile_Data?)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
     performSwiftyRequest(route: .service , headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
               let json = JSON(jsonData)
               print(json)
               DispatchQueue.main.async {
 
                 var data : [HomeData] = []
+                let user : UserProfile_Data? = UserProfile_Data(json["user_data"])
                 for (_,jsn) in json["services"] {
                         data.append(HomeData(jsn))
                     }
-                  
+                
                   print(data)
 //                let sms  = json["message"].string ?? json["error"].stringValue
                  let status = data.count >= 0 ? true : false
                 if !status {
                     
-                    completionHandler(status,nil)
+                    completionHandler(status,nil, nil)
                     return
                 }
-                  completionHandler(status,data)
+                  completionHandler(status,data, user)
             }
           }) { (error) in
               DispatchQueue.main.async {
@@ -97,7 +98,38 @@ extension APIClient {
           }
         
     }
-    
+    static func getSubServices (serviceId : Int , completionHandler:@escaping (Bool,[HomeData]? , UserProfile_Data?)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+      performSwiftyRequest(route: .subService(serviceId: serviceId) , headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+                let json = JSON(jsonData)
+                print(json)
+                DispatchQueue.main.async {
+
+                  var data : [HomeData] = []
+                  let user : UserProfile_Data? = UserProfile_Data(json["user_data"])
+                  for (_,jsn) in json["services"] {
+                          data.append(HomeData(jsn))
+                      }
+                  
+                    print(data)
+  //                let sms  = json["message"].string ?? json["error"].stringValue
+                   let status = data.count >= 0 ? true : false
+                  if !status {
+                      
+                      completionHandler(status,nil, nil)
+                      return
+                  }
+                    completionHandler(status,data, user)
+              }
+            }) { (error) in
+                DispatchQueue.main.async {
+                    
+                    print(error.debugDescription)
+                    completionFaliure(error)
+                }
+            }
+          
+      }
+      
     
         //MARK: Get current Order
         

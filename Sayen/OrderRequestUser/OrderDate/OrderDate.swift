@@ -9,14 +9,11 @@ import UIKit
 
 
 class OrderDate: UIViewController {
-    
-    
-    
+ 
     @IBOutlet weak var monthLBL: UILabel!
     @IBOutlet weak var mainView: CardView!
     @IBOutlet weak var dateView: UIView!
     @IBOutlet weak var timeView: UIView!
- 
     @IBOutlet weak var nextMonthButtonOutlet: UIButton!
     @IBOutlet weak var lastMonthButtonOutlet: UIButton!
     @IBOutlet weak var amPmView: UIView!
@@ -29,15 +26,14 @@ class OrderDate: UIViewController {
     let amPmPicker = UIPickerView()
     var dateSelected : String = ""
     var addMonth = 0
-    let timeArr = ["01:00", "02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00"]
-    let amPmArr = ["AM" , "PM"]
+    let timeArr = ["06:00 AM","07:00 AM","08:00 AM","09:00 AM","10:00 AM","11:00 AM","12:00 PM","01:00 PM", "02:00 PM","03:00 PM","04:00 PM","05:00 PM","06:00 PM","07:00 PM","08:00 PM","09:00 PM"]
     var returnDateM = ReturnDate()
     var mydayNum : [String] = []
     var mydayName : [String] = []
     var myMounthName : String = ""
     var transformeDate = ""
     var TransformTime = ""
-    var transformeAmPm = ""
+   // var transformeAmPm = ""
     var dateBackEnd = ""
     var timeBackEnd = ""
     var currentTime : String = ""
@@ -46,45 +42,24 @@ class OrderDate: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         createAllPicker ()
-
-        timePicker.selectRow(6, inComponent: 0, animated: true)
-        getDate()
+        
+//        timePicker.selectRow(11, inComponent: 0, animated: true)
+        self.monthLBL.text = returnDateM.getCurrentMonthStr()
         self.mydayNum = returnDateM.returndayesNum()
         self.mydayName = returnDateM.returnDayName()
         mydayNum = Array(mydayNum.prefix(32))
         mydayName = Array(mydayName.prefix(32))
         selecytedIndex()
         self.currentTime = returnDateM.getCurrentTime(addHours:2)
-        self.currentTimeAm = returnDateM.getCurrentTimeAm(addHours:2)
+        
         self.dateView.semanticContentAttribute = .forceLeftToRight
         self.timeView.semanticContentAttribute = .forceRightToLeft
         self.amPmView.semanticContentAttribute = .forceRightToLeft
 //        
     }
     
-    func getDate() {
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        formatter.locale = Locale(identifier: Constants.current_Language)
-        // formatter.dateFormat = "EEEE, d, MMMM"
-        formatter.dateFormat = "MMMM"
-        let outputDate = formatter.string(from: date)
-        self.monthLBL.text = outputDate
-    }
-    func getDateSelected( date : Date) {
-       
-           let formatter = DateFormatter()
-           formatter.dateFormat = "yyyy-MM-dd"
-           formatter.locale = Locale(identifier: Constants.current_Language)
-           // formatter.dateFormat = "EEEE, d, MMMM"
-           formatter.dateFormat = "MMMM"
-           let outputDate = formatter.string(from: date)
-           self.monthLBL.text = outputDate
-       }
-    
+
 
     func selecytedIndex () {
         for (index , day) in returnDateM.AllDaysFunc().enumerated() {
@@ -100,13 +75,7 @@ class OrderDate: UIViewController {
                 timePicker.selectRow(index, inComponent: 0, animated: true)
             }
         }
-        for (index , timeAm) in amPmArr.enumerated() {
-            if timeAm == self.returnDateM.getCurrentTimeAm(addHours:2){
-                amPmPicker.selectRow(index, inComponent: 0, animated: true)
-            }
-        }
-        
-    
+
      }
     
     func createAllPicker () {
@@ -117,30 +86,18 @@ class OrderDate: UIViewController {
         datePicker.dataSource = self
         datePicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
         datePicker.frame = CGRect(x: 0, y : 0, width: self.dateView.frame.width, height: self.dateView.frame.height)
-        
         self.dateView.addSubview(datePicker)
-        
         timePicker.delegate = self
         timePicker.dataSource = self
-        timePicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
+       
         timePicker.frame = CGRect(x: 0, y : 0, width: self.timeView.frame.width, height: self.timeView.frame.height)
         self.timeView.addSubview(timePicker)
-        
-        amPmPicker.delegate = self
-        amPmPicker.dataSource = self
-        amPmPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
-        amPmPicker.frame = CGRect(x: 0, y : 0, width: self.amPmView.frame.width, height: self.amPmView.frame.height)
-        self.amPmView.addSubview(amPmPicker)
+
     }
 
     override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
-//            for i in [1, 2] {
-//
-//                datePicker.subviews[i].isHidden = true
-//                timePicker.subviews[i].isHidden = true
-//                amPmPicker.subviews[i].isHidden = true
-//            }
+
         }
 
   
@@ -183,7 +140,6 @@ class OrderDate: UIViewController {
         }
     }
     private func prevMonth() {
-        
                var isoDate = dateSelected
                if isoDate == "" {
                    isoDate = returnDateM.returnCurrntdateDay()
@@ -223,11 +179,8 @@ class OrderDate: UIViewController {
             self.timeBackEnd = returnDateM.getBackTimeCurrent()
         }
 
-        if transformeAmPm == "" {
-            transformeAmPm = returnDateM.getCurrentTimeAm(addHours:2)
-        }
-        let ttt = "\(TransformTime) \(transformeAmPm)"
-        self.timeBackEnd = (returnDateM.getBackTime(Time: ttt))
+    
+        self.timeBackEnd = (returnDateM.getBackTime(Time: TransformTime))
         print(dateBackEnd)
         if self.dateBackEnd == returnDateM.getdateinBackFormate(date12: currentday) {
             print("ok \(timeBackEnd)")
@@ -247,15 +200,12 @@ class OrderDate: UIViewController {
             if time2Houres >= time1Houres  || time2Houres ==  time1Houres - 1  {
                 self.showDAlert(title: "Error".localized, subTitle: "selectRightTime".localized, type: .error, buttonTitle: "tryAgain".localized, completionHandler: nil)
                 return
-            }else if transformeAmPm == "AM" , returnDateM.getCurrentTimeAm(addHours:2) == "PM" {
-                self.showDAlert(title: "Error".localized, subTitle: "selectRightTime".localized, type: .error, buttonTitle: "tryAgain".localized, completionHandler: nil)
-                return
             }
         }
-        self.delegate.sendDate(date: "\(transformeDate), \(TransformTime) \(transformeAmPm)" , backendDate: "\(dateBackEnd) \(timeBackEnd)")
+        self.delegate.sendDate(date: "\(transformeDate), \(TransformTime)" , backendDate: "\(dateBackEnd) \(timeBackEnd)")
         self.dismissViewC()
-        
     }
+    
     @IBAction func dismiss(_ sender: Any) {
         self.dismissViewC()
         
@@ -271,10 +221,8 @@ extension OrderDate : UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == datePicker {
             return mydayNum.count
-        }else if pickerView == timePicker{
-            return timeArr.count
         }else{
-            return amPmArr.count
+            return timeArr.count
         }
         
     }
@@ -282,14 +230,12 @@ extension OrderDate : UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == datePicker {
             return mydayNum[row]
-        }else if pickerView == timePicker{
+        }else {
             return timeArr[row]
-        }else{
-            return amPmArr[row]
         }
+      
        
     }
-    
     
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -303,20 +249,17 @@ extension OrderDate : UIPickerViewDelegate, UIPickerViewDataSource {
             self.dateBackEnd = returnDateM.getdateinBackFormate(date12: dateSelected)
             print("dateBackEnd : \(self.dateBackEnd)")
             self.monthLBL.text = returnDateM.returnMounth()[row]
-        }else if pickerView == timePicker {
+        }else  {
             self.TransformTime = timeArr[row]
-        }else if pickerView == amPmPicker {
-            self.transformeAmPm = amPmArr[row]
+            print(self.TransformTime)
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         if pickerView == datePicker {
                 return 60
-            }else if pickerView == timePicker{
-                return 60
-            }else{
-                return 50
+            }else {
+                return 30
             }
      
     }
@@ -343,32 +286,20 @@ extension OrderDate : UIPickerViewDelegate, UIPickerViewDataSource {
             view.addSubview(dayName)
             view.transform = CGAffineTransform(rotationAngle: -90 * (.pi/180))
             return view
-        }else if pickerView == timePicker {
+        }else  {
             let view = UIView()
-            view.frame = CGRect(x: 0, y: 0, width: 60, height: 30)
+            view.frame = CGRect(x: 0, y: 0, width: 120, height: 30)
             let timeLbl = UILabel()
-            timeLbl.frame = CGRect(x: 0, y: 5, width: 60, height: 30)
+            timeLbl.frame = CGRect(x: 0, y: 0, width: 120, height: 30)
             timeLbl.text = timeArr[row]
             timeLbl.textColor = UIColor.brownMainColor
             timeLbl.font = UIFont(name: "Tajawal-Bold", size: 17)
             timeLbl.textAlignment = .center
             view.addSubview(timeLbl)
-            view.transform = CGAffineTransform(rotationAngle: -90 * (.pi/180))
-            return view
-        }else{
-            let view = UIView()
-            view.frame = CGRect(x: 0, y: 0, width: 50, height: 30)
-            let amLbl = UILabel()
-            amLbl.frame = CGRect(x: 0, y: 5, width: 50, height: 30)
-            amLbl.text = amPmArr[row]
-            amLbl.textColor = UIColor.brownMainColor
-            amLbl.font = UIFont(name: "Tajawal-Bold", size: 17)
-            amLbl.textAlignment = .center
-            view.addSubview(amLbl)
-            view.transform = CGAffineTransform(rotationAngle: -90 * (.pi/180))
+           // view.transform = CGAffineTransform(rotationAngle: -90 * (.pi/180))
             return view
         }
-        
+
     }
     
 }

@@ -22,7 +22,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapAddressVC" customModule="صاين" customModuleProvider="target">
             <connections>
-                <outlet property="addressTf" destination="Ynr-G5-ZC5" id="8Ll-6w-mxr"/>
+                <outlet property="addressTextField" destination="Ynr-G5-ZC5" id="UEX-LI-PLm"/>
                 <outlet property="currentOutl" destination="Tn7-3W-zxi" id="gA6-KC-WKu"/>
                 <outlet property="detailesAddress" destination="R4e-Tf-gk4" id="VW5-xy-BZN"/>
                 <outlet property="mapView" destination="P0v-ct-VnQ" id="l2P-Zt-ayA"/>
