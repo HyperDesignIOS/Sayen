@@ -27,9 +27,13 @@ enum APIRouter: URLRequestConvertible {
     case logout(user_type : String)
     case service
     case subService(serviceId : Int)
+    case emergencyOrder(noteStr : String)
     case currentOrder(offset : Int)
     case previousOrder(offset : Int)
+    case currentِEmergencyOrder(offset : Int, lang: String)
+    case previousِEmergencyOrder(offset : Int, lang: String)
     case userOrder(order_id : Int)
+    case userEmergencyOrder(order_id : Int)
     case teamOrder(order_id : Int)
     case cancel_order(order_id : Int)
     case getTeamOrders(date : String)
@@ -62,14 +66,13 @@ enum APIRouter: URLRequestConvertible {
      // MARK: - HTTPMethod
      var method: HTTPMethod {
         switch self {
-        case .login , .register , .verifyCode , .forgotPass ,.resendCode , .changePhone ,.logout ,.cancel_order , .validateCoupon ,.userAcceptPrice ,.rateWorker , .teamreportProblem , .userSendMessage , .registerTeam , .subService :
+        case .login , .register , .verifyCode , .forgotPass ,.resendCode , .changePhone ,.logout ,.cancel_order , .validateCoupon ,.userAcceptPrice ,.rateWorker , .teamreportProblem , .userSendMessage , .registerTeam , .subService , .emergencyOrder :
             return .post
         case .changePassword , .resetPass , .update_profile , .update_profileT , .teamStartWork , .teamGoWork , .teamAddPrice , .setPlayerId ,.teamEndWork , .teamfinishWork , .notification_seen,.updateLocation :
             return .put
-        case .get_profile ,.service  , .currentOrder , .previousOrder , .userOrder , .getTeamOrders , .teamOrder , .teaminvoices , .filterOrders , .notifications , .problem_types ,.common_questions , .static_page,.user_buildings , .moyaserSuccessPay:
+        case .get_profile ,.service  , .currentOrder , .previousOrder , .userOrder , .userEmergencyOrder, .currentِEmergencyOrder , .previousِEmergencyOrder , .getTeamOrders , .teamOrder , .teaminvoices , .filterOrders , .notifications , .problem_types ,.common_questions , .static_page,.user_buildings , .moyaserSuccessPay:
            return .get
-//
-//        case  : return .delete
+
         }
     }
     
@@ -90,9 +93,13 @@ enum APIRouter: URLRequestConvertible {
         case .logout : return "logout"
         case .service : return "services"
         case .subService : return "subServices"
+        case .emergencyOrder : return "user/emergency-order"
         case .currentOrder(let offset): return "user/order?order_type=current&limit=20&offset=\(offset)"
         case .previousOrder(let offset): return "user/order?order_type=previous&limit=20&offset=\(offset)"
+        case .currentِEmergencyOrder(let offset, let lang): return "user/emergency-order?order_type=current&limit=10&offset=\(offset)&lang=\(lang)"
+        case .previousِEmergencyOrder(let offset, let lang): return "user/emergency-order?order_type=previous&limit=20&offset=\(offset)&lang=\(lang)"
         case .userOrder(let order_id) : return "user/order/\(order_id)"
+        case .userEmergencyOrder(let order_id) : return "user/emergency-order/\(order_id)"
         case .teamOrder(let order_id) : return "team/order/\(order_id)"
         case .cancel_order: return "user/cancel-order"
         case .getTeamOrders(let date): return "team/order?date=\(date)&offset=0&limit=200"
@@ -124,7 +131,6 @@ enum APIRouter: URLRequestConvertible {
     // MARK: - Parameters
      var parameters: Parameters? {
         switch self {
-            
         case.login(let phone,let password ,let country_code):
             return ["phone":phone,"password":password , "country_code" : country_code]
         case .register(let name, let mobile, let password,let country_code, let excellence_client,let building_id , let flat ):
@@ -151,9 +157,14 @@ enum APIRouter: URLRequestConvertible {
         case .service: return nil
         case .subService(let serviceId):
             return ["service_id" : serviceId]
+        case .emergencyOrder(let noteStr):
+            return ["note" : noteStr]
         case .currentOrder: return nil
         case .previousOrder: return nil
+        case .currentِEmergencyOrder: return nil
+        case .previousِEmergencyOrder: return nil
         case .userOrder : return nil
+        case .userEmergencyOrder : return nil
         case .teamOrder : return nil
         case .static_page : return nil
         case .problem_types : return nil

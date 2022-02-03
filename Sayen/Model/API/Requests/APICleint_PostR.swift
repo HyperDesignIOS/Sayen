@@ -490,25 +490,29 @@ extension APIClient {
          
     }
     
-//    { response in
-//        guard  let value = response.result.value else {
-//            completed(false,"tryAgain".localized,nil, nil)
-//            return
-//        }
-//        let json = JSON( value)
-//        print("that;s json \(json)")
-//        let sms = json["message"].string ?? json["error"].stringValue
-//        if let url = json["url"].string {
-//            completed(true ,sms,url)
-//        }else {
-//            guard let status = json["status_code"].int , status == 200  else {
-//                completed( false ,sms, nil,nil)
-//                return
-//            }
-//            completed(true ,sms,json["url"].string, json["order_id"].int)
-//        }
-//    }
     
+    static func emergencyOrder (noteStr : String , completionHandler:@escaping (Bool,String? , Int?)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+        performSwiftyRequest(route: .emergencyOrder(noteStr : noteStr) , headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+            let json = JSON(jsonData)
+            DispatchQueue.main.async {
+                let sms  = json["message"].string ?? json["error"].stringValue
+                let orderId  = json["order_id"].int
+                guard let status = json["status_code"].int , status == 200  else {
+                    
+                    completionHandler(false ,sms,nil)
+                    return
+                }
+                completionHandler(true,sms, orderId)
+            }
+        }) { (error) in
+            DispatchQueue.main.async {
+               
+                print(error.debugDescription)
+                completionFaliure(error)
+            }
+        }
+                             
+    }
     
 //MARK: cancelOrder
     static func cancelOrder(order_id : Int , completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {

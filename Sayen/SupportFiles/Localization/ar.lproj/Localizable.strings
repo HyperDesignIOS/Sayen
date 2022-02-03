@@ -682,3 +682,5 @@
 "Orders for this service are complete at this hour" = "عفوا، قم بتحديد وقت اخر للخدمة ، يوجد لدينا طلبات بالفعل في هذا الوقت";
 "clinetType" = "نوع العميل";
 "floorDetails" = "رقم العمارة / الدور / رقم الشقة";
+"alertNote" = "اكتب حالة الطوارئ الخاصة بك ...";
+"emergancyRequestSent" = "تم ارسال حالة الطوارئ بنجاح";

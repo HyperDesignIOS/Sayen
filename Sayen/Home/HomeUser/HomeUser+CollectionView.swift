@@ -17,30 +17,42 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
             return
         }
         let checkSub = data[indexPath.row].checkSub
-        if checkSub > 0 {
-            let vc = SubServiceVC()
-            vc.subServiceId = data[indexPath.row].id
-            vc.subServiceTitle =  data[indexPath.row].name
-            vc.user = user
-            self.navigationController?.pushViewController(vc, animated: true)
+        if indexPath.row == 0 {
+            let vc = CustomizedInputAlert()
+            vc.delegate = self
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true, completion: nil)
         }else {
-            let vc = SendOrder()
-            vc.user = user
-            vc.infoText = data[indexPath.row].text
-            vc.pageTransformeTitle = data[indexPath.row].name
-            vc.id = data[indexPath.row].id
-            vc.initial_price = String(data[indexPath.row].initial_price)
-            self.navigationController?.pushViewController(vc, animated: true)
+            if checkSub > 0 {
+                let vc = SubServiceVC()
+                vc.subServiceId = data[indexPath.row].id
+                vc.subServiceTitle =  data[indexPath.row].name
+                vc.user = user
+                self.navigationController?.pushViewController(vc, animated: true)
+            }else {
+                let vc = SendOrder()
+                vc.user = user
+                vc.infoText = data[indexPath.row].text
+                vc.pageTransformeTitle = data[indexPath.row].name
+                vc.id = data[indexPath.row].id
+                vc.initial_price = String(data[indexPath.row].initial_price)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
-       
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeUserCell", for: indexPath) as! HomeUserCell
-        cell.labelCell.text = data[indexPath.row].name
-        if let url = URL(string: data[indexPath.row].image_path) {
-            let placeholderImage = UIImage(named: "Group 1059")!
-            cell.image.af_setImage(withURL: url, placeholderImage: placeholderImage)
+        if indexPath.row == 0 {
+            cell.labelCell.text = "طلب طوارئ"
+            cell.image.image = UIImage(named: "siren")!
+        }else {
+            cell.labelCell.text = data[indexPath.row].name
+            if let url = URL(string: data[indexPath.row].image_path) {
+                let placeholderImage = UIImage(named: "Group 1059")!
+                cell.image.af_setImage(withURL: url, placeholderImage: placeholderImage)
+            }
         }
         return cell
     }

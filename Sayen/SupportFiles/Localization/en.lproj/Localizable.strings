@@ -732,3 +732,5 @@
 "Orders for this service are complete at this hour" = "Orders for this service are complete at this hour";
 "clinetType" = "Clinet Type";
 "floorDetails" = "Building Number / Floor / flat Number";
+"alertNote" = "Write your emergency case ...";
+"emergancyRequestSent" = "Emergency Request sent successfully";

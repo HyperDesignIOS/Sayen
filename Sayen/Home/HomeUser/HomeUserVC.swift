@@ -8,10 +8,9 @@
 import UIKit
 import Firebase
 
-class HomeUserVC: UIViewController {
+class HomeUserVC: UIViewController , EmergancyVCDelegate {
 
     @IBOutlet weak var noDataLbl: UILabel!
-    
     @IBOutlet weak var HeadView: UICollectionReusableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -49,6 +48,37 @@ class HomeUserVC: UIViewController {
    
     }
     
+    func emergancyRequestButton(_ sender: UIButton){
+        let vc = CustomizedInputAlert()
+        vc.delegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func onDismissAlert(send message: String) {
+        if !message.isEmpty , message != "alertNote".localized{
+            APIClient.emergencyOrder(noteStr: message) { status, msg, orderId in
+                if status {
+                    self.showDAlert(title: "thanks".localized, subTitle:  "emergancyRequestSent".localized, type: .success, buttonTitle: "") { (_) in
+                        self.gotoOrders()
+                    }
+                }
+            } completionFaliure: { error in
+                print(error?.localizedDescription)
+            }
+        }
+      
+    }
+    func gotoOrders() {
+        DispatchQueue.main.async {
+            var tabBar : UITabBarController?
+            let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+            guard let window = keyWindow else {return}
+            let storyb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            tabBar = storyb.instantiateViewController(withIdentifier: "rootNav") as? UITabBarController
+            tabBar?.selectedIndex = 1
+            window.rootViewController = tabBar
+            window.makeKeyAndVisible()
+        }
+    }
     func getCurrentToken(){
         if let token = Messaging.messaging().fcmToken {
             print(token)
@@ -77,7 +107,6 @@ class HomeUserVC: UIViewController {
     
     
     func getProfileData() {
-    
         APIClient.getProfileData(user_type: ad.user_type(), completionHandler: {[weak self] (state, sms, data) in
             guard let self = self else {return}
             guard state else{
@@ -88,7 +117,6 @@ class HomeUserVC: UIViewController {
             DispatchQueue.main.async {
                 if let data = data {
                     self.dataProfile = data
-                 
                     if data.active == "0" {
                         ad.bnannedAccount(databanned: "201")
                     }
@@ -121,6 +149,7 @@ class HomeUserVC: UIViewController {
                     print(data[0].checkSub)
                     self.noDataLbl.alpha = 0
                     self.data = data
+                    self.data.insert(data[0], at: 0)
                     self.collectionView.reloadData()
                     ad.killLoading()
                 }

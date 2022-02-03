@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,44 +36,60 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اطلب خدمه الصيانه من منزلك الان" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CM-Gs-UKh">
-                            <rect key="frame" x="119" y="147" width="195" height="14"/>
+                            <rect key="frame" x="134" y="150.5" width="165" height="16.5"/>
                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="طلب جديد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2a-Bn-g5N">
-                            <rect key="frame" x="175" y="201" width="83.5" height="19"/>
+                            <rect key="frame" x="183.5" y="207" width="66.5" height="22.5"/>
                             <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="19"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DH4-qz-Pjd">
-                            <rect key="frame" x="158.5" y="120" width="116" height="19"/>
+                            <rect key="frame" x="170.5" y="120" width="92" height="22.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vd" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6u-b4-SCA">
-                                    <rect key="frame" x="0.0" y="0.0" width="19.5" height="19"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="21" height="22.5"/>
                                     <fontDescription key="fontDescription" name="Tajawal-ExtraBold" family="Tajawal" pointSize="19"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="يوم سعيد ," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydf-dC-wdk">
-                                    <rect key="frame" x="19.5" y="0.0" width="96.5" height="19"/>
+                                    <rect key="frame" x="21" y="0.0" width="71" height="22.5"/>
                                     <fontDescription key="fontDescription" name="Tajawal-ExtraBold" family="Tajawal" pointSize="19"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
+                        <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfu-Ni-4vF" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="168.5" y="158.5" width="96.5" height="35"/>
+                            <color key="backgroundColor" red="0.84355080130000004" green="0.86997705700000005" blue="0.90980952979999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="طلب طوارئ">
+                                <fontDescription key="titleFontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="18"/>
+                                <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="CaT-WA-1r2" firstAttribute="centerX" secondItem="Ptf-AA-ShT" secondAttribute="centerX" id="5Bw-6u-Zbw"/>
+                        <constraint firstItem="xfu-Ni-4vF" firstAttribute="centerX" secondItem="Ptf-AA-ShT" secondAttribute="centerX" id="5SY-BN-Kpt"/>
                         <constraint firstItem="DH4-qz-Pjd" firstAttribute="centerX" secondItem="Ptf-AA-ShT" secondAttribute="centerX" id="6vS-dD-Fcw"/>
                         <constraint firstItem="A2a-Bn-g5N" firstAttribute="top" secondItem="7CM-Gs-UKh" secondAttribute="bottom" constant="40" id="FvW-x8-DFq"/>
                         <constraint firstItem="DH4-qz-Pjd" firstAttribute="top" secondItem="CaT-WA-1r2" secondAttribute="bottom" id="JVK-JW-wID"/>
                         <constraint firstItem="7CM-Gs-UKh" firstAttribute="top" secondItem="DH4-qz-Pjd" secondAttribute="bottom" constant="8" id="aCZ-g8-lsj"/>
                         <constraint firstItem="7CM-Gs-UKh" firstAttribute="centerX" secondItem="Ptf-AA-ShT" secondAttribute="centerX" id="mPm-zv-bBE"/>
                         <constraint firstItem="A2a-Bn-g5N" firstAttribute="centerX" secondItem="Ptf-AA-ShT" secondAttribute="centerX" id="oT6-Bh-GNm"/>
+                        <constraint firstItem="xfu-Ni-4vF" firstAttribute="top" secondItem="DH4-qz-Pjd" secondAttribute="bottom" constant="16" id="u4v-py-FFK"/>
                         <constraint firstItem="CaT-WA-1r2" firstAttribute="top" secondItem="Ptf-AA-ShT" secondAttribute="top" constant="20" id="wRx-fZ-dVu"/>
                     </constraints>
                 </view>
@@ -91,6 +107,11 @@
             <point key="canvasLocation" x="292" y="180"/>
         </collectionReusableView>
     </objects>
+    <designables>
+        <designable name="xfu-Ni-4vF">
+            <size key="intrinsicContentSize" width="96.5" height="35"/>
+        </designable>
+    </designables>
     <resources>
         <image name="1-logo splash" width="214.5" height="203"/>
     </resources>

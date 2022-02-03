@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "ارسال الطلب"; ObjectID = "0S1-uH-4T5"; */
+"0S1-uH-4T5.normalTitle" = "ارسال الطلب";
+
+/* Class = "UIButton"; normalTitle = "موافق"; ObjectID = "1XP-KE-tcl"; */
+"1XP-KE-tcl.normalTitle" = "موافق";
+
+/* Class = "UILabel"; text = "اكتب حالة الطوارئ الخاصة بك"; ObjectID = "27v-1u-aoX"; */
+"27v-1u-aoX.text" = "اكتب حالة الطوارئ الخاصة بك";
+
+/* Class = "UILabel"; text = "طلب طوارئ"; ObjectID = "Ei7-oy-bFF"; */
+"Ei7-oy-bFF.text" = "طلب طوارئ";
+
+/* Class = "UITextView"; text = "Write Your Note ...."; ObjectID = "Gb2-N8-L7g"; */
+"Gb2-N8-L7g.text" = "Write Your Note ....";
+
+/* Class = "UIButton"; normalTitle = "غير موافق"; ObjectID = "uNY-SI-6uY"; */
+"uNY-SI-6uY.normalTitle" = "غير موافق";
