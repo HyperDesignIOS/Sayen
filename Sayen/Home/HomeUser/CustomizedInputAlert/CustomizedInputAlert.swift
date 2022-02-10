@@ -7,26 +7,32 @@
 
 
 import UIKit
-
+import DropDown
 class CustomizedInputAlert: UIViewController {
     
     @IBOutlet weak var buttonOutlet: UIButton!
     @IBOutlet weak var noteTextView: UITextView!
+    @IBOutlet weak var serviceLabel: UILabel!
+    @IBOutlet weak var dropDownAnchorView: UIView!
     
     weak var delegate : EmergancyVCDelegate?
-    
+    var services : [HomeData] = []
+    let dropDown = DropDown()
     var alertMsg = ""
     var alertIcon = UIImage()
-
+    var selectedServiceId = Int()
+        
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        handleDropDown()
         textViewDelegate()
         noteTextView.text = "alertNote".localized
     }
     
     @IBAction func agreeButton(_ sender: UIButton){
-        delegate?.onDismissAlert(send: noteTextView.text ?? "")
+        delegate?.onDismissAlert(send: noteTextView.text ?? "", serviceId: selectedServiceId)
         self.dismissViewC()
     }
     @IBAction func closeButtons(_ sender: UIButton){
@@ -38,6 +44,39 @@ class CustomizedInputAlert: UIViewController {
         noteTextView.returnKeyType = .done
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    private func handleDropDown() {
+        
+        
+        dropDown.shadowColor  =  UIColor.black.withAlphaComponent(0.16)
+        dropDown.shadowRadius  = 2
+        dropDown.shadowOpacity  = 6
+        dropDown.shadowOffset  =  CGSize(width:3 ,height: 3 )
+        dropDown.backgroundColor = .white
+        dropDown.anchorView = dropDownAnchorView
+        let buttonHeight = dropDown.anchorView?.plainView.bounds.height ?? 0
+        dropDown.bottomOffset = CGPoint(x: 0, y:buttonHeight)
+        dropDown.direction = .bottom
+        dropDown.textFont = UIFont.init(name: "Tajawal", size: 12) ?? UIFont.systemFont(ofSize: 18)
+        var data = [String]()
+        for x in services {
+            data.append(x.name)
+        }
+        dropDown.dataSource = data
+        
+        
+        
+        
+        
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            self.selectedServiceId = self.services[index].id
+            self.serviceLabel.text = item
+        }
+    }
+    
+    @IBAction func selectServiceButton(_ sender: UIButton){
+        dropDown.show()
     }
     
     @objc func keyboardWillShow(notification: NSNotification){
@@ -83,6 +122,6 @@ extension CustomizedInputAlert : UITextViewDelegate{
 
 
 protocol EmergancyVCDelegate: NSObjectProtocol {
-    func onDismissAlert(send message: String)
+    func onDismissAlert(send message: String, serviceId: Int)
 }
 

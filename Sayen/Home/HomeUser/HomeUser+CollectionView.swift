@@ -20,6 +20,8 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
         if indexPath.row == 0 {
             let vc = CustomizedInputAlert()
             vc.delegate = self
+            vc.services = data
+            vc.services.remove(at: 0)
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overFullScreen
             self.present(vc, animated: true, completion: nil)

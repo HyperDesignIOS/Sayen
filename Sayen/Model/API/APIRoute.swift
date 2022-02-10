@@ -27,7 +27,7 @@ enum APIRouter: URLRequestConvertible {
     case logout(user_type : String)
     case service
     case subService(serviceId : Int)
-    case emergencyOrder(noteStr : String)
+    case emergencyOrder(noteStr : String, serviceId: Int)
     case currentOrder(offset : Int)
     case previousOrder(offset : Int)
     case currentِEmergencyOrder(offset : Int, lang: String)
@@ -36,6 +36,7 @@ enum APIRouter: URLRequestConvertible {
     case userEmergencyOrder(order_id : Int)
     case teamOrder(order_id : Int)
     case cancel_order(order_id : Int)
+    case requestWarranty(order_id : Int)
     case getTeamOrders(date : String)
     case teamStartWork(order_id : Int)
     case teamGoWork(order_id : Int)
@@ -45,7 +46,7 @@ enum APIRouter: URLRequestConvertible {
     case setPlayerId (player_id : String , user_type : String)
     case validateCoupon(code : String , total_price : String , service_id : Int)
     case userAcceptPrice(order_id : Int , status : String )
-    case rateWorker(order_id : Int  , rate_service_value : Int ,rate_team_value : Int ,rate_service_comment : String ,rate_team_comment : String )
+    case rateWorker(order_id : Int  , rate_service_value : Int ,rate_team_value : Int ,rate_service_comment : String ,rate_team_comment : String ,type: String)
     case teamreportProblem( order_id : Int  , problem_type : Int)
     case teaminvoices(offset : Int)
     case filterOrders(date_from : String)
@@ -66,7 +67,7 @@ enum APIRouter: URLRequestConvertible {
      // MARK: - HTTPMethod
      var method: HTTPMethod {
         switch self {
-        case .login , .register , .verifyCode , .forgotPass ,.resendCode , .changePhone ,.logout ,.cancel_order , .validateCoupon ,.userAcceptPrice ,.rateWorker , .teamreportProblem , .userSendMessage , .registerTeam , .subService , .emergencyOrder :
+        case .login , .register , .verifyCode , .forgotPass ,.resendCode , .changePhone ,.logout ,.cancel_order , .requestWarranty ,.validateCoupon ,.userAcceptPrice ,.rateWorker , .teamreportProblem , .userSendMessage , .registerTeam , .subService , .emergencyOrder :
             return .post
         case .changePassword , .resetPass , .update_profile , .update_profileT , .teamStartWork , .teamGoWork , .teamAddPrice , .setPlayerId ,.teamEndWork , .teamfinishWork , .notification_seen,.updateLocation :
             return .put
@@ -102,6 +103,7 @@ enum APIRouter: URLRequestConvertible {
         case .userEmergencyOrder(let order_id) : return "user/emergency-order/\(order_id)"
         case .teamOrder(let order_id) : return "team/order/\(order_id)"
         case .cancel_order: return "user/cancel-order"
+        case .requestWarranty: return "user/warranty-order"
         case .getTeamOrders(let date): return "team/order?date=\(date)&offset=0&limit=200"
         case .teamStartWork : return "team/start-work"
         case .teamGoWork : return "team/go-work"
@@ -157,8 +159,8 @@ enum APIRouter: URLRequestConvertible {
         case .service: return nil
         case .subService(let serviceId):
             return ["service_id" : serviceId]
-        case .emergencyOrder(let noteStr):
-            return ["note" : noteStr]
+        case .emergencyOrder(let noteStr, let serviceId):
+            return ["note" : noteStr , "service_id" : serviceId]
         case .currentOrder: return nil
         case .previousOrder: return nil
         case .currentِEmergencyOrder: return nil
@@ -170,6 +172,7 @@ enum APIRouter: URLRequestConvertible {
         case .problem_types : return nil
         case .teaminvoices : return nil
         case .cancel_order(let order_id) : return ["order_id" : order_id]
+        case .requestWarranty(let order_id) : return ["order_id" : order_id]
         case .getTeamOrders : return nil
         case .teamStartWork(let order_id) :return ["order_id" : order_id]
         case .teamGoWork(let order_id) :return ["order_id" : order_id]
@@ -185,8 +188,8 @@ enum APIRouter: URLRequestConvertible {
         case .setPlayerId (let player_id, let user_type) : return ["player_id" : player_id , "user_type" : user_type]
         case .validateCoupon(let code , let total_price , let serviceid) : return ["code" : code , "total_price" : total_price , "service_id" : serviceid ]
         case .userAcceptPrice(let order_id, let status) : return ["order_id" : order_id , "status" : status]
-        case .rateWorker(let order_id, let rate_service_value ,let rate_team_value , let rate_service_comment , let rate_team_comment):
-            return ["order_id" : order_id ,"rate_service_value" : rate_service_value , "rate_team_value" : rate_team_value , "rate_service_comment" : rate_service_comment , "rate_team_comment" : rate_team_comment ]
+        case .rateWorker(let order_id, let rate_service_value ,let rate_team_value , let rate_service_comment , let rate_team_comment, let type):
+            return ["order_id" : order_id ,"rate_service_value" : rate_service_value , "rate_team_value" : rate_team_value , "rate_service_comment" : rate_service_comment , "rate_team_comment" : rate_team_comment, "type" : type ]
         case .teamreportProblem(let order_id,let problem_type) : return ["order_id" : order_id , "type_id" : problem_type]
         case .filterOrders: return nil
         case .notifications : return nil

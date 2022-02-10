@@ -38,9 +38,7 @@ class MapAddressVC: UIViewController {
         setupGoogleLocation()
         setStyleMap()
         //    checkLocation()
-        
-        
-        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -169,10 +167,8 @@ class MapAddressVC: UIViewController {
     }
     
     @IBAction func getCurrentLocation(_ sender: Any) {
-         
          guard let lat = self.mapView.myLocation?.coordinate.latitude,
                 let lng = self.mapView.myLocation?.coordinate.longitude else { return }
-
           let camera = GMSCameraPosition.camera(withLatitude: lat ,longitude: lng , zoom: zoomLevel)
           self.mapView.animate(to: camera)
     }

@@ -65,6 +65,10 @@ class OrderDetails {
     var user_accept_added_price : String?
     var total_before_team_add_price : String?
     var pay_by : String?
+    var warrantyDate : String?
+    var warranty : String?
+    var type: String?
+    var order_id: Int?
 
     var excellence_client : String
        var isExcellenceClient : Bool {
@@ -113,6 +117,10 @@ class OrderDetails {
             self.images.append(str)
         }
         
+        self.warrantyDate = jsonData["warrantyDate"].stringValue
+        self.warranty = jsonData["warranty"].string
+        self.type = jsonData["type"].string
+        self.order_id = jsonData["order_id"].int
     }
     
     
@@ -127,10 +135,6 @@ class OrderDetails {
                       self.probImages.append(imgSenf)
          
                   
-                    
-           
-          
-               
             }
         }
         print(self.probImages.count)

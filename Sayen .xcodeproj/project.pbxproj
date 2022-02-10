@@ -298,7 +298,6 @@
 		84CE28A524E18ACE00A6527C /* OnlinePaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE28A324E18A1100A6527C /* OnlinePaymentVC.swift */; };
 		F203546127AC76C800070CC7 /* OrderHistoryVC+tableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F203546027AC76C800070CC7 /* OrderHistoryVC+tableView.swift */; };
 		F203546427AC791300070CC7 /* EmergencyOrderDetailesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F203546327AC791300070CC7 /* EmergencyOrderDetailesVC.swift */; };
-		F203546627AC793E00070CC7 /* EmergencyOrderDetailesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F203546527AC793E00070CC7 /* EmergencyOrderDetailesVC.xib */; };
 		F240893726E753FC005CD093 /* ChangePassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F240893A26E753FC005CD093 /* ChangePassVC.xib */; };
 		F240893826E753FC005CD093 /* ChangePassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F240893A26E753FC005CD093 /* ChangePassVC.xib */; };
 		F240894B26E7550D005CD093 /* EditPhoneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F240894E26E7550D005CD093 /* EditPhoneVC.xib */; };
@@ -345,6 +344,7 @@
 		F27956382778C67E00EBA5A4 /* HomeWorker+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27956372778C67E00EBA5A4 /* HomeWorker+CollectionView.swift */; };
 		F279563A2778C6A600EBA5A4 /* HomeWorker+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27956392778C6A600EBA5A4 /* HomeWorker+TableView.swift */; };
 		F279563C2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279563B2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift */; };
+		F29C2EBA27B171E30098F726 /* EmergencyOrderDetailesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29C2EBC27B171E30098F726 /* EmergencyOrderDetailesVC.xib */; };
 		F2A104A727ABD9600012197A /* CustomizedInputAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A104A227ABD9370012197A /* CustomizedInputAlert.xib */; };
 		F2A104A827ABD9660012197A /* CustomizedInputAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1049D27ABD1770012197A /* CustomizedInputAlert.swift */; };
 		F2A104AA27AC03040012197A /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A104A927AC03040012197A /* UIViewX.swift */; };
@@ -584,7 +584,6 @@
 		DF25C98BF6FCABCFB5149065 /* Pods-SayenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SayenTests.release.xcconfig"; path = "Target Support Files/Pods-SayenTests/Pods-SayenTests.release.xcconfig"; sourceTree = "<group>"; };
 		F203546027AC76C800070CC7 /* OrderHistoryVC+tableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderHistoryVC+tableView.swift"; sourceTree = "<group>"; };
 		F203546327AC791300070CC7 /* EmergencyOrderDetailesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyOrderDetailesVC.swift; sourceTree = "<group>"; };
-		F203546527AC793E00070CC7 /* EmergencyOrderDetailesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmergencyOrderDetailesVC.xib; sourceTree = "<group>"; };
 		F240893926E753FC005CD093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChangePassVC.xib; sourceTree = "<group>"; };
 		F240894026E753FE005CD093 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ChangePassVC.strings; sourceTree = "<group>"; };
 		F240894626E753FF005CD093 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ChangePassVC.strings; sourceTree = "<group>"; };
@@ -668,6 +667,9 @@
 		F27956372778C67E00EBA5A4 /* HomeWorker+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWorker+CollectionView.swift"; sourceTree = "<group>"; };
 		F27956392778C6A600EBA5A4 /* HomeWorker+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWorker+TableView.swift"; sourceTree = "<group>"; };
 		F279563B2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWorker+LocationManager.swift"; sourceTree = "<group>"; };
+		F29C2EBB27B171E30098F726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EmergencyOrderDetailesVC.xib; sourceTree = "<group>"; };
+		F29C2EBE27B171E70098F726 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EmergencyOrderDetailesVC.strings; sourceTree = "<group>"; };
+		F29C2EC027B171EA0098F726 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/EmergencyOrderDetailesVC.strings; sourceTree = "<group>"; };
 		F2A1049D27ABD1770012197A /* CustomizedInputAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedInputAlert.swift; sourceTree = "<group>"; };
 		F2A104A127ABD9370012197A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CustomizedInputAlert.xib; sourceTree = "<group>"; };
 		F2A104A427ABD9390012197A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CustomizedInputAlert.strings; sourceTree = "<group>"; };
@@ -1481,7 +1483,7 @@
 			isa = PBXGroup;
 			children = (
 				F203546327AC791300070CC7 /* EmergencyOrderDetailesVC.swift */,
-				F203546527AC793E00070CC7 /* EmergencyOrderDetailesVC.xib */,
+				F29C2EBC27B171E30098F726 /* EmergencyOrderDetailesVC.xib */,
 			);
 			path = EmergencyOrderDetailes;
 			sourceTree = "<group>";
@@ -1718,7 +1720,7 @@
 				F2789EE126E52F38002ED441 /* OnlinePaymentVC.xib in Resources */,
 				1C786DB0248682A300BAFC46 /* Localizable.strings in Resources */,
 				F2A1FA1326E7644800D0C483 /* PublicQuVC.xib in Resources */,
-				F203546627AC793E00070CC7 /* EmergencyOrderDetailesVC.xib in Resources */,
+				F29C2EBA27B171E30098F726 /* EmergencyOrderDetailesVC.xib in Resources */,
 				1C786CFB2486828600BAFC46 /* AlertViewC.xib in Resources */,
 				1C5BCBC824AB3ACE00DA85DA /* ProImageCell.xib in Resources */,
 				F2E6F7FE26E68A1F00BBF76B /* CancelOrderAlert.xib in Resources */,
@@ -2539,6 +2541,16 @@
 			name = AboutUs.xib;
 			sourceTree = "<group>";
 		};
+		F29C2EBC27B171E30098F726 /* EmergencyOrderDetailesVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F29C2EBB27B171E30098F726 /* Base */,
+				F29C2EBE27B171E70098F726 /* en */,
+				F29C2EC027B171EA0098F726 /* ar */,
+			);
+			name = EmergencyOrderDetailesVC.xib;
+			sourceTree = "<group>";
+		};
 		F2A104A227ABD9370012197A /* CustomizedInputAlert.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2734,7 +2746,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sayen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2759,7 +2771,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sayen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

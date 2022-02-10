@@ -18,6 +18,9 @@ class RatingVC: UIViewController {
     @IBOutlet weak var workComment: UITextView!
     @IBOutlet weak var workerRate: SwiftyStarRatingView!
     var tabBar : UITabBarController?
+    
+    var controllerType: RateType = .order
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         workerComment.delegate = self
@@ -38,7 +41,7 @@ class RatingVC: UIViewController {
             return}
         ad.isLoading()
 
-        APIClient.ratingTeamService(order_id: self.order_id, rate_service_value: rateWork, rate_team_value: rateWorker, rate_service_comment: self.workComment.text, rate_team_comment: self.workerComment.text, completionHandler: { (state, sms) in
+        APIClient.ratingTeamService(order_id: self.order_id, rate_service_value: rateWork, rate_team_value: rateWorker, rate_service_comment: self.workComment.text, rate_team_comment: self.workerComment.text, type: controllerType.rawValue, completionHandler: { (state, sms) in
             ad.killLoading()
             guard state else {
                 return
@@ -83,4 +86,9 @@ extension RatingVC : UITextViewDelegate {
         }
        }
     
+}
+
+enum  RateType : String{
+    case order
+    case EmergencyOrder
 }

@@ -66,6 +66,7 @@ class SubServiceVC: UIViewController {
                     self.noDataLbl.alpha = 1
                     self.collectionView.reloadData()
                     self.noDataLbl.text = "جاري اضافه خدمات للتطبيق"
+                    ad.killLoading()
                 }else{
                     print(data[0].checkSub)
                     self.noDataLbl.alpha = 0

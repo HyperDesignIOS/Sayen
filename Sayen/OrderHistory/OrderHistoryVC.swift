@@ -26,7 +26,7 @@ class OrderHistoryVC: UIViewController {
     var data : [Orders] = []
     lazy var refresher : UIRefreshControl = {
        let refresher = UIRefreshControl()
-       refresher.addTarget(self, action: #selector(getDataCurrent), for: .valueChanged)
+       refresher.addTarget(self, action: #selector(refesherMethod), for: .valueChanged)
        return refresher
      }()
     var offset : Int = 0
@@ -36,7 +36,7 @@ class OrderHistoryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.barStyle = .black
         lastAndCurrentSeg.defaultConfiguration(font: UIFont(name: "Tajawal-Medium", size: 17)!, color: .lightGray)
         lastAndCurrentSeg.selectedConfiguration(font: UIFont(name: "Tajawal-Medium", size: 17)!, color: .mainColor)
         lastAndCurrentSeg.semanticContentAttribute = .forceRightToLeft
@@ -49,10 +49,21 @@ class OrderHistoryVC: UIViewController {
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getDataCurrent()
+        if emergencySwitchOutlet.isOn {
+            getEmergencyDataCurrent()
+        }else {
+            getDataCurrent ()
+        }
         lastAndCurrentSeg.addTarget( self, action: #selector(segmentSelected(sender:)), for: UIControl.Event.valueChanged )
     }
    
+    @objc func refesherMethod(){
+        if emergencySwitchOutlet.isOn {
+            getEmergencyDataCurrent()
+        }else {
+            getDataCurrent ()
+        }
+    }
     @objc func segmentSelected(sender: UISegmentedControl)
     {
         print("selected index: \(sender.selectedSegmentIndex)")

@@ -53,15 +53,18 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    func onDismissAlert(send message: String) {
+    func onDismissAlert(send message: String, serviceId: Int) {
         if !message.isEmpty , message != "alertNote".localized{
-            APIClient.emergencyOrder(noteStr: message) { status, msg, orderId in
+            ad.isLoading()
+            APIClient.emergencyOrder(noteStr: message, serviceId: serviceId) { status, msg, orderId in
                 if status {
+                    ad.killLoading()
                     self.showDAlert(title: "thanks".localized, subTitle:  "emergancyRequestSent".localized, type: .success, buttonTitle: "") { (_) in
                         self.gotoOrders()
                     }
                 }
             } completionFaliure: { error in
+                ad.killLoading()
                 print(error?.localizedDescription)
             }
         }

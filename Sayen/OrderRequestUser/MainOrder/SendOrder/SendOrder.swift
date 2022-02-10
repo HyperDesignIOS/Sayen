@@ -104,6 +104,7 @@ class SendOrder: UIViewController {
             infoLbl.isHidden = true
             infoImg.isHidden = true
         }
+        
         if let user = user {
             let lat = user.lat
             if !lat.isEmpty {
@@ -122,7 +123,10 @@ class SendOrder: UIViewController {
             if !floor.isEmpty {
                 self.floor = floor
             }
-            
+            self.parameters["address"] = address
+            self.parameters["lat"] = lat
+            self.parameters["lng"] = lng
+            self.parameters["floor"] = floor
         }
     }
    
@@ -199,8 +203,6 @@ class SendOrder: UIViewController {
                 DispatchQueue.main.asyncAfter(deadline: .now()+2) {
                     self.errorCopunLbl.alpha = 0
                 }
-
-                
                 return
             }
 

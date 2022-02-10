@@ -53,6 +53,10 @@ class OrderDetailesVC: UIViewController {
     @IBOutlet weak var paymenSourceContainerV: UIView!
     @IBOutlet weak var paymentSourceLbl: UILabel!
     @IBOutlet weak var problemImageLblTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var requestWarrantyButtonOutlet: UIButtonX!
+    @IBOutlet weak var showWarrantyButtonOutlet: UIButtonX!
+    
+    
     var tabBar : UITabBarController?
     var statePrice : String = ""
     var order_id : Int = 0
@@ -79,7 +83,6 @@ class OrderDetailesVC: UIViewController {
         self.imagesCollection.dataSource = self
     }
 
-    
     
     func getOrderDetails (order_id : Int) {
         ad.isLoading()
@@ -122,6 +125,16 @@ class OrderDetailesVC: UIViewController {
                     self.mainPrice.text = "\(data.initial_price!) " + "Rial".localized
                     self.orderNum.text = "#\(data.order_number!)"
                     self.setStatus(orderStatus: data.order_status!)
+                    if data.warranty == "1" && data.order_status == "3" && data.type == "order" {
+                        self.requestWarrantyButtonOutlet.isHidden = false
+                        self.showWarrantyButtonOutlet.isHidden = true
+                    }else if data.warranty == "2" && data.order_status == "3" && data.type == "order" {
+                        self.showWarrantyButtonOutlet.isHidden = false
+                        self.requestWarrantyButtonOutlet.isHidden = true
+                    }else {
+                        self.requestWarrantyButtonOutlet.isHidden = true
+                        self.showWarrantyButtonOutlet.isHidden = true
+                    }
 //                      self.setStatus(orderStatus: "3")
                   
                 }
@@ -293,6 +306,7 @@ class OrderDetailesVC: UIViewController {
                 self.showDAlert(title: "", subTitle:"rateRequestMsg".localized, type: .success, buttonTitle: "تقييم") { (ـ) in
                     let vc = RatingVC()
                     vc.order_id = self.data!.id!
+                    vc.controllerType = .order
                     self.navigationController?.pushViewController(vc, animated: false)
                 }
             }
@@ -421,6 +435,7 @@ class OrderDetailesVC: UIViewController {
     @IBAction func rateWork(_ sender: Any) {
         let vc = RatingVC()
         vc.order_id = data!.id!
+        vc.controllerType = .order
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
@@ -504,9 +519,15 @@ class OrderDetailesVC: UIViewController {
             ad.killLoading()
             print("error")
         }
-        
     }
     
+    @IBAction func showWarrantyButton(_ sender: UIButton) {
+        if let orderId = data?.order_id {
+            let vc = OrderDetailesVC()
+            vc.order_id = orderId
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
     @IBAction func cancelOrder(_ sender: Any) {
         let vc = CancelOrderAlert()
@@ -517,7 +538,37 @@ class OrderDetailesVC: UIViewController {
       //  self.navigationController?.pushViewController(vc, animated: false)
         
  }
-    
+    @IBAction func requestWarrantyButton(_ sender: UIButton) {
+        
+        guard let order_id = data?.id else {
+            return
+        }
+        ad.isLoading()
+        APIClient.requestWarranty(order_id: order_id, completionHandler: { (state, sms, orderId)  in
+            
+            guard state else {
+                ad.killLoading()
+                 self.showDAlert(title: "Error".localized, subTitle: sms , type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
+                return
+            }
+            DispatchQueue.main.async {
+                ad.killLoading()
+                self.showDAlert(title: "", subTitle: sms, type: .success, buttonTitle: "done".localized ) { (ـ) in
+                    if let orderId = orderId {
+                        let vc = OrderDetailesVC()
+                        vc.order_id = orderId
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+
+            }
+            print(sms)
+        }) { (err) in
+            ad.killLoading()
+             self.showDAlert(title: "Error".localized, subTitle: "tryAgain".localized , type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
+            print(err)
+        }
+    }
     
        func finshOrder () {
            

@@ -58,7 +58,9 @@
                 <outlet property="problemImageLblTopConstraint" destination="zcv-xK-9Uz" id="e6N-1k-Lra"/>
                 <outlet property="rateBtn" destination="pmg-hg-4y0" id="FQJ-fG-nKG"/>
                 <outlet property="rateStack" destination="kyx-O7-Sxd" id="kg2-ri-ZcN"/>
+                <outlet property="requestWarrantyButtonOutlet" destination="Fuo-bc-foR" id="2ej-Kx-9dE"/>
                 <outlet property="scrollView" destination="MUk-K6-qrI" id="hC0-rt-oeI"/>
+                <outlet property="showWarrantyButtonOutlet" destination="Pe1-jj-4NM" id="0St-Oq-QwR"/>
                 <outlet property="totalPrcieView" destination="T3X-gN-Mdr" id="gXw-D9-oYG"/>
                 <outlet property="totalPrice" destination="hcw-Vl-1JA" id="43J-mk-6Ld"/>
                 <outlet property="totalPriceConst" destination="ddu-Oe-FxY" id="gmR-Tx-rrv"/>
@@ -392,11 +394,57 @@
                                         </imageView>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kyx-O7-Sxd">
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kyx-O7-Sxd">
                                     <rect key="frame" x="35" y="737.5" width="344" height="40"/>
                                     <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-bc-foR" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="101.5" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" title="طلب ضمان" image="warranty">
+                                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemPinkColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="requestWarrantyButton:" destination="-1" eventType="touchUpInside" id="tVS-mT-5xV"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-jj-4NM" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
+                                            <rect key="frame" x="121.5" y="0.0" width="101" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                            <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" title="عرض الضمان" image="warranty">
+                                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemPinkColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="showWarrantyButton:" destination="-1" eventType="touchUpInside" id="NwF-2k-FxZ"/>
+                                            </connections>
+                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmg-hg-4y0" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="344" height="40"/>
+                                            <rect key="frame" x="242.5" y="0.0" width="101.5" height="40"/>
                                             <color key="backgroundColor" red="0.68951332570000001" green="0.567664206" blue="0.28505024309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -409,7 +457,6 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="changePrice:" destination="-1" eventType="touchUpInside" id="o69-OA-bEi"/>
                                                 <action selector="rateWork:" destination="-1" eventType="touchUpInside" id="NiL-P0-pII"/>
                                             </connections>
                                         </button>
@@ -699,6 +746,12 @@
         </view>
     </objects>
     <designables>
+        <designable name="Fuo-bc-foR">
+            <size key="intrinsicContentSize" width="103" height="18"/>
+        </designable>
+        <designable name="Pe1-jj-4NM">
+            <size key="intrinsicContentSize" width="116" height="18"/>
+        </designable>
         <designable name="QEX-XK-yZ4">
             <size key="intrinsicContentSize" width="88" height="26"/>
         </designable>
@@ -721,6 +774,7 @@
         <image name="backArrow" width="13.5" height="12"/>
         <image name="signs" width="16" height="12.5"/>
         <image name="star-2" width="16" height="15.5"/>
+        <image name="warranty" width="20" height="18"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
