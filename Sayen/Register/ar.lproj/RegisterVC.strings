@@ -27,7 +27,7 @@
 "aMn-Tc-EGe.placeholder" = "اسم المستخدم";
 
 /* Class = "UILabel"; text = "إسم العمارة"; ObjectID = "Rz2-bt-y1Q"; */
-"Mis-ij-1Mh.text" = "الإسم";
+"Mis-ij-1Mh.text" = "الاسم ثنائي";
 
 /* Class = "UIButton"; normalTitle = "عميل التميز"; ObjectID = "Xmv-z2-fX1"; */
 "Xmv-z2-fX1.normalTitle" = "عميل التميز";

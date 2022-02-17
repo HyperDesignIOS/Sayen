@@ -684,3 +684,12 @@
 "floorDetails" = "رقم العمارة / الدور / رقم الشقة";
 "alertNote" = "اكتب حالة الطوارئ الخاصة بك ...";
 "emergancyRequestSent" = "تم ارسال حالة الطوارئ بنجاح";
+"lang" = "ar";
+
+
+
+"Sorry" = "عفوا";
+"userNameErrorMsg" = "غير مسموح بالأرقام فى خانة الاسم";
+"Ok" = "حسنا";
+
+"emergancyOrder" = "طلب طوارئ";

@@ -20,8 +20,7 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
         if indexPath.row == 0 {
             let vc = CustomizedInputAlert()
             vc.delegate = self
-            vc.services = data
-            vc.services.remove(at: 0)
+            vc.services = emergenacyServices
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overFullScreen
             self.present(vc, animated: true, completion: nil)
@@ -47,7 +46,7 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeUserCell", for: indexPath) as! HomeUserCell
         if indexPath.row == 0 {
-            cell.labelCell.text = "طلب طوارئ"
+            cell.labelCell.text = "emergancyOrder".localized
             cell.image.image = UIImage(named: "siren")!
         }else {
             cell.labelCell.text = data[indexPath.row].name

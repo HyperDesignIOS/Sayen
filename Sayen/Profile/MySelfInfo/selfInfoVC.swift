@@ -91,7 +91,11 @@ class selfInfoVC: UIViewController {
         }
         dropDown.dataSource = data
         
-        
+        if "lang".localized == "ar" {
+            dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+                cell.optionLabel.textAlignment = .right
+            }
+        }
         flatNameContainerV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectFlatName)))
         
         

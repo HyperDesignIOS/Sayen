@@ -15,8 +15,7 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var passTf: UITextField!
-    var passTfS : String = ""
-    var confirmTFS : String = ""
+
     @IBOutlet weak var confirmTF: UITextField!
     
     @IBOutlet weak var niceClint: DLRadioButton!
@@ -27,7 +26,8 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var flatNameContainerV: CardView!
     @IBOutlet weak var flatNameTF: UITextField!
     @IBOutlet weak var flatNumTF: UITextField!
-    
+    var passTfS : String = ""
+    var confirmTFS : String = ""
     
     lazy var viewModel: RegisterVM = {
         return RegisterVM()
@@ -41,6 +41,7 @@ class RegisterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initRegisterVM()
+        self.nameTF.delegate = self
         self.phoneTF.delegate = self
         self.passTf.delegate = self
         self.confirmTF.delegate = self
@@ -76,7 +77,11 @@ class RegisterVC: UIViewController {
         }
         dropDown.dataSource = data
         
-        
+        if "lang".localized == "ar" {
+            dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+                cell.optionLabel.textAlignment = .right
+            }
+        }
         flatNameContainerV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectFlatName)))
         
         
@@ -181,7 +186,16 @@ extension RegisterVC : UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
     {
-        
+        if textField == self.nameTF {
+            let nubmers = "0123456789٠١٢٣٤٥٦٧٨٩"
+            if nubmers.contains(string) {
+                showDAlert(title: "Sorry".localized, subTitle: "userNameErrorMsg".localized, type: .error, buttonTitle: "Ok".localized) {_ in 
+                    self.nameTF.text = ""
+                }
+                
+            }
+            return true
+        }
         if textField == self.phoneTF {
             guard CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
                 return false

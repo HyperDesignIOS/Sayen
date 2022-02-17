@@ -18,7 +18,7 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
     var dataProfile: UserProfile_Data?
     var name : String = ""
     var user : UserProfile_Data? = nil
-    
+    var emergenacyServices : [HomeData] = []
     
      lazy var refresher : UIRefreshControl = {
               let refresher = UIRefreshControl()
@@ -152,6 +152,12 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
                     print(data[0].checkSub)
                     self.noDataLbl.alpha = 0
                     self.data = data
+                    data.forEach { service in
+                        let emergencyIds = [1,2]
+                        if emergencyIds.contains(service.id) {
+                            self.emergenacyServices.append(service)
+                        }
+                    }
                     self.data.insert(data[0], at: 0)
                     self.collectionView.reloadData()
                     ad.killLoading()

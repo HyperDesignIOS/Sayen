@@ -734,3 +734,6 @@
 "floorDetails" = "Building Number / Floor / flat Number";
 "alertNote" = "Write your emergency case ...";
 "emergancyRequestSent" = "Emergency Request sent successfully";
+"lang" = "en";
+
+"emergancyOrder" = "Emergancy Order";

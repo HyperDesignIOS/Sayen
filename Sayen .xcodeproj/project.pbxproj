@@ -353,6 +353,7 @@
 		F2A1FA2626E7786700D0C483 /* RatingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A1FA2826E7786700D0C483 /* RatingVC.xib */; };
 		F2C5F58D277B149600765ADD /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C786CDB2486826900BAFC46 /* RegisterVC.swift */; };
 		F2C5F58E277B16AF00765ADD /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24A857B26E3B20100E7FAA1 /* RegisterVC.xib */; };
+		F2D18BF427BE5F6500FD4B61 /* EndOrdersTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D18BF327BE5F6500FD4B61 /* EndOrdersTeam.swift */; };
 		F2E6F7BB26E674BA00BBF76B /* InvoiceDetailes.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E6F7BD26E674BA00BBF76B /* InvoiceDetailes.xib */; };
 		F2E6F7EA26E6838600BBF76B /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E6F7ED26E6838600BBF76B /* OrderCell.xib */; };
 		F2E6F7EB26E6838600BBF76B /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E6F7ED26E6838600BBF76B /* OrderCell.xib */; };
@@ -681,6 +682,7 @@
 		F2A1FA2726E7786700D0C483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RatingVC.xib; sourceTree = "<group>"; };
 		F2A1FA2E26E7786A00D0C483 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RatingVC.strings; sourceTree = "<group>"; };
 		F2A1FA3026E7786B00D0C483 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/RatingVC.strings; sourceTree = "<group>"; };
+		F2D18BF327BE5F6500FD4B61 /* EndOrdersTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOrdersTeam.swift; sourceTree = "<group>"; };
 		F2E6F7BC26E674BA00BBF76B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/InvoiceDetailes.xib; sourceTree = "<group>"; };
 		F2E6F7E326E67B0B00BBF76B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InvoiceDetailes.strings; sourceTree = "<group>"; };
 		F2E6F7E526E67B0D00BBF76B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InvoiceDetailes.strings; sourceTree = "<group>"; };
@@ -992,6 +994,7 @@
 				1C729FA324A894640070C9D2 /* AboutUs */,
 				1CBD1D4824A385B200412A5C /* Notification */,
 				1CBD1D3124A0E3F500412A5C /* EndOrdersTeam */,
+				F2D18BF227BE5E4C00FD4B61 /* EmergencyOrderTeam */,
 				F203546227AC78EC00070CC7 /* EmergencyOrderDetailes */,
 				1CE93A13249568FA00001690 /* OrderHistory */,
 				1CECC2FF24942C8000354DD7 /* OrderDetailes */,
@@ -1547,6 +1550,14 @@
 				F2A1049D27ABD1770012197A /* CustomizedInputAlert.swift */,
 			);
 			path = CustomizedInputAlert;
+			sourceTree = "<group>";
+		};
+		F2D18BF227BE5E4C00FD4B61 /* EmergencyOrderTeam */ = {
+			isa = PBXGroup;
+			children = (
+				F2D18BF327BE5F6500FD4B61 /* EndOrdersTeam.swift */,
+			);
+			path = EmergencyOrderTeam;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2218,6 +2229,7 @@
 				1CE3DE37249A5B0700B8C065 /* ProblemVC.swift in Sources */,
 				1C786CE12486826900BAFC46 /* RegisterVM.swift in Sources */,
 				1C786DA9248682A300BAFC46 /* EntryViewStyle+Extensions.swift in Sources */,
+				F2D18BF427BE5F6500FD4B61 /* EndOrdersTeam.swift in Sources */,
 				1C786D7F248682A300BAFC46 /* String+HTML.swift in Sources */,
 				1CE3DE2C249A217C00B8C065 /* OrderDetails.swift in Sources */,
 				1CBD1D4224A10A5F00412A5C /* FilterInvoices.swift in Sources */,
@@ -2746,7 +2758,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sayen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2771,7 +2783,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sayen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

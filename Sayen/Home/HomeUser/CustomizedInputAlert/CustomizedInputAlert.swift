@@ -65,8 +65,12 @@ class CustomizedInputAlert: UIViewController {
         dropDown.dataSource = data
         
         
-        
-        
+        if "lang".localized == "ar" {
+            dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+                cell.optionLabel.textAlignment = .right
+            }
+        }
+     
         
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
