@@ -18,13 +18,18 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
         }
         let checkSub = data[indexPath.row].checkSub
         if indexPath.row == 0 {
-            let vc = CustomizedInputAlert()
+            let vc = EmergencyServiceAlert()
             vc.delegate = self
             vc.services = emergenacyServices
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overFullScreen
             self.present(vc, animated: true, completion: nil)
-        }else {
+        }else if indexPath.row == 1 , !offers.isEmpty{
+            let vc = ServicesOffers()
+            vc.user = user
+            vc.offers = offers
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else  {
             if checkSub > 0 {
                 let vc = SubServiceVC()
                 vc.subServiceId = data[indexPath.row].id
@@ -48,9 +53,17 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
         if indexPath.row == 0 {
             cell.labelCell.text = "emergancyOrder".localized
             cell.image.image = UIImage(named: "siren")!
+            cell.offerImageView.isHidden = true 
+        }else if indexPath.row == 1 {
+            if !offers.isEmpty {
+                cell.labelCell.text = "spicailOffers".localized
+                cell.image.image = UIImage(named: "fsdjh87")!
+                cell.offerImageView.isHidden = true
+            }
         }else {
             cell.labelCell.text = data[indexPath.row].name
-            if let url = URL(string: data[indexPath.row].image_path) {
+            cell.offerImageView.isHidden = data[indexPath.row].offer == 0 ? true : false
+                if let url = URL(string: data[indexPath.row].image_path) {
                 let placeholderImage = UIImage(named: "Group 1059")!
                 cell.image.af_setImage(withURL: url, placeholderImage: placeholderImage)
             }
@@ -94,5 +107,12 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
     }
     
     
-    
+    func handleCollectionView(){
+        self.collectionView.register(UINib(nibName: "HomeUserCell", bundle: nil), forCellWithReuseIdentifier: "HomeUserCell")
+        collectionView.register(UINib(nibName: "HomeHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HomeHeader")
+        collectionView.semanticContentAttribute = .forceRightToLeft
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.addSubview(refresher)
+    }
 }

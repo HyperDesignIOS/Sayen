@@ -17,7 +17,14 @@ class PaymentVC: UIViewController {
     @IBOutlet weak var copunView: UIView!
     @IBOutlet weak var applePayBtn: DLRadioButton!
     @IBOutlet weak var topPriceCons: NSLayoutConstraint!
- //   @IBOutlet weak var applePayView: UIView!
+    @IBOutlet weak var applePayView: UIView!
+    
+    
+    
+    @IBOutlet weak var cardsImageView: UIImageView!
+    @IBOutlet weak var appleImageView: UIImageView!
+    @IBOutlet weak var cashImageView: UIImageView!
+    
     var initPricePay = ""
     var price = ""
     var service = ""
@@ -26,12 +33,13 @@ class PaymentVC: UIViewController {
     let paymentHandler = PaymentHandler()
     weak var delegate : finallySendOrder!
     @IBOutlet weak var cashBtn: DLRadioButton!
+    var paymentType :  PaymentType? = nil
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setinit ()
-      //  initApplePay()
+        initApplePay()
     }
 
     
@@ -49,27 +57,27 @@ class PaymentVC: UIViewController {
             self.topPriceCons.constant = 56
         }
     }
-//    func initApplePay(){
-//        let result = PaymentHandler.applePayStatus()
-//        var button: UIButton?
-//
-//        if result.canMakePayments {
-//            button = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .white)
-//        } else if result.canSetupCards {
-//            button = PKPaymentButton(paymentButtonType: .setUp, paymentButtonStyle: .black)
-//        }
-//
-//        if let applePayButton = button {
-//            let constraints = [
-//                applePayButton.centerXAnchor.constraint(equalTo: applePayView.centerXAnchor),
-//                applePayButton.centerYAnchor.constraint(equalTo: applePayView.centerYAnchor)
-//            ]
-//            applePayButton.translatesAutoresizingMaskIntoConstraints = false
-//            applePayButton.isEnabled = false
-//            applePayView.addSubview(applePayButton)
-//            NSLayoutConstraint.activate(constraints)
-//        }
-//    }
+    func initApplePay(){
+        let result = PaymentHandler.applePayStatus()
+        var button: UIButton?
+
+        if result.canMakePayments {
+            button = PKPaymentButton(paymentButtonType: .plain, paymentButtonStyle: .whiteOutline)
+        } else if result.canSetupCards {
+            button = PKPaymentButton(paymentButtonType: .setUp, paymentButtonStyle: .black)
+        }
+
+        if let applePayButton = button {
+            let constraints = [
+                applePayButton.centerXAnchor.constraint(equalTo: applePayView.centerXAnchor),
+                applePayButton.centerYAnchor.constraint(equalTo: applePayView.centerYAnchor)
+            ]
+            applePayButton.translatesAutoresizingMaskIntoConstraints = false
+            applePayButton.isEnabled = false
+            applePayView.addSubview(applePayButton)
+            NSLayoutConstraint.activate(constraints)
+        }
+    }
 //    @objc func payPressed(sender: AnyObject) {
 //        paymentHandler.startPayment() { (success) in
 //            if success {
@@ -87,15 +95,36 @@ class PaymentVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
-    @IBAction func SendOrder(_ sender: Any) {
-        if applePayBtn.isSelected {
-            self.delegate.finallySendOrder(payType: .apple)
-        }else if bankBtn.isSelected {
-            self.delegate.finallySendOrder(payType: .cards)
-        } else {
-            self.delegate.finallySendOrder(payType: .cash)
+    @IBAction func selectPaymentRadioButtons(_ sender: UIButton){
+        switch sender.tag {
+        case 0:
+            appleImageView.image = UIImage(named: "radio-button-active")
+            cardsImageView.image = UIImage(named: "radio-button-off")
+            
+            cashImageView.image = UIImage(named: "radio-button-off")
+            paymentType = .apple
+            
+        case 1:
+          
+            cardsImageView.image = UIImage(named: "radio-button-active")
+            appleImageView.image = UIImage(named: "radio-button-off")
+            cashImageView.image = UIImage(named: "radio-button-off")
+            paymentType = .cards
+        case 2:
+            cardsImageView.image = UIImage(named: "radio-button-off")
+            appleImageView.image = UIImage(named: "radio-button-off")
+            cashImageView.image =  UIImage(named: "radio-button-active")
+            paymentType = .cash
+            
+        default:
+            break
         }
+    }
+    @IBAction func SendOrder(_ sender: Any) {
+        if let paymentType = paymentType {
+            self.delegate.finallySendOrder(payType: paymentType)
+        }
+        
     }
     
 }

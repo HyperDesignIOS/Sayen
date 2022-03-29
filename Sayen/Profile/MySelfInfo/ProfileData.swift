@@ -119,3 +119,23 @@ class UserProfile_Data {
     
     
 }
+
+
+class Setting_Data {
+    private var _userAppIosVersion  : String?
+    var userAppIosVersion : String {
+        guard let x =  _userAppIosVersion else { return "" }
+        return x
+    }
+
+    init(_ jsonData : JSON) {
+        self._userAppIosVersion = jsonData["user_app_ios_version"].stringValue
+        
+    }
+    
+    
+}
+//"setting": {
+//      "user_app_android_version": "1.0.30",
+//      "user_app_ios_version": "1.8"
+//  }

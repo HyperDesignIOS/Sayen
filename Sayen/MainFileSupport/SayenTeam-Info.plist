@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -18,10 +22,6 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
-    <key>BGTaskSchedulerPermittedIdentifiers</key>
-    <array>
-        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-    </array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -69,6 +69,8 @@
 تحديد موقع الفريق لتتبعه من الاداره
 
 </string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>فتح المعرض لرفع صور العمل المنفذ</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Tajawal-ExtraBold.tff</string>

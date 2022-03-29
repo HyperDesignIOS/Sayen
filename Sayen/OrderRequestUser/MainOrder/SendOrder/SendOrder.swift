@@ -26,6 +26,15 @@ class SendOrder: UIViewController {
     @IBOutlet weak var infoImg: UIImageView!
     @IBOutlet weak var couponTxt: UITextField!
     @IBOutlet weak var imageLabelTopAnchor: NSLayoutConstraint!
+    @IBOutlet weak var imagesCollection: UICollectionView!
+    @IBOutlet weak var imagesLbl: UILabel!
+    @IBOutlet weak var offersTableView: UITableView!
+    @IBOutlet weak var offersTableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var offerQuantityLabel: UILabel!
+    @IBOutlet weak var offerPriceLabel: UILabel!
+    @IBOutlet weak var quantitiyTextFeild: UITextField!
+    @IBOutlet weak var offerView: UIView!
+    
     let picker = UIImagePickerController()
     var imageDict : [String:UIImage] = [:]
     var locManager = CLLocationManager()
@@ -47,24 +56,27 @@ class SendOrder: UIViewController {
     var infoText = ""
     var calenderNewDate: String = ""
     var user : UserProfile_Data? = nil
-
-
-
     var orderId = Int()
     let paymentHandler = PaymentHandler()
-    
     let contianuAlert = ContianuAlert()
     let paymentController = PaymentVC()
-    @IBOutlet weak var imagesCollection: UICollectionView!
-    @IBOutlet weak var imagesLbl: UILabel!
+    var offers : [OfferData] = []
+    var selectedOfferIndexPath : IndexPath? = nil
     var pageTransformeTitle = ""
     var id = 0
     var index : Int = 0
     var oldProfileImage : UIImage?
     var allImgs : [UIImage] = []
+    var offerQuantityRang : (max: Int, min: Int) = (max: 0, min: 0)
+    var tabBar : UITabBarController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+
+        quantitiyTextFeild.delegate = self
+
+        getOffers()
+        self.offersTableView.register(UINib(nibName: "OfferTableViewCell", bundle: nil), forCellReuseIdentifier: "OfferTableViewCell")
         configContainerAlert()
         configPaymentController()
         let tabBar = self.tabBarController as! TabBarController
@@ -73,8 +85,9 @@ class SendOrder: UIViewController {
         self.couponTxt.addTarget(self, action: #selector(couponTxtdidChange(_:)), for: .editingDidEnd)
         setData ()
         notesTextV.semanticContentAttribute = .forceRightToLeft
-        self.imagesCollection.semanticContentAttribute = .forceRightToLeft
+        
         self.notesTextV.delegate = self
+        self.imagesCollection.semanticContentAttribute = .forceRightToLeft
         self.imagesCollection.register(UINib(nibName: "imagesCell", bundle: nil), forCellWithReuseIdentifier: "imagesCell")
         self.imagesCollection.delegate = self
         self.imagesCollection.dataSource = self
@@ -90,8 +103,26 @@ class SendOrder: UIViewController {
            
         }
 
+        offersTableView.addObserver(self, forKeyPath: Constants.contentSizeObserverKey, options: .new, context: nil)
+        offersTableView.delegate = self
+        offersTableView.dataSource = self
     }
     
+    deinit {
+        offersTableView.removeObserver(self, forKeyPath: Constants.contentSizeObserverKey)
+        
+    }
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if let objc = object as? UITableView {
+            if objc == self.offersTableView && keyPath == Constants.contentSizeObserverKey{
+                self.offersTableViewHeight.constant = offersTableView.contentSize.height
+                if !offers.isEmpty {
+                    self.imageLabelTopAnchor.constant = offersTableView.contentSize.height + 140
+                }
+                
+            }
+        }
+    }
     func setData () {
         self.initPrice = initial_price
         self.pageTilte.text = "request".localized  + pageTransformeTitle
@@ -100,7 +131,7 @@ class SendOrder: UIViewController {
         parameters["service_id"] = id
         infoLbl.text = infoText
         if infoText.isEmpty {
-            imageLabelTopAnchor.constant = 16
+     //       imageLabelTopAnchor.constant = 16
             infoLbl.isHidden = true
             infoImg.isHidden = true
         }
@@ -129,7 +160,7 @@ class SendOrder: UIViewController {
             self.parameters["floor"] = floor
         }
     }
-   
+    
     func configContainerAlert() {
         contianuAlert.delegate = self
         contianuAlert.modalTransitionStyle = .crossDissolve
@@ -147,6 +178,7 @@ class SendOrder: UIViewController {
         print(user?.email)
         guard ad.isOnline() else{return}
         let vc = OrderDate()
+        vc.serviceId = id
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overFullScreen
         vc.delegate = self
@@ -169,7 +201,22 @@ class SendOrder: UIViewController {
             }
         }
     }
-    
+    func getOffers(){
+        APIClient.offers(service_id: id) { state, offers in
+            if let offers = offers {
+                if !offers.isEmpty {
+                    self.offers = offers
+                    DispatchQueue.main.async {
+                        self.offerView.isHidden = false
+                        self.offersTableView.reloadData()
+                    }
+                }
+            }
+        } completionFaliure: { error in
+            print(error?.localizedDescription)
+        }
+
+    }
     @objc func couponTxtdidChange(_ textF : UITextField) {
         guard CouponBool else { return }
         CouponBool = false
@@ -297,10 +344,13 @@ class SendOrder: UIViewController {
                         let result = PaymentHandler.applePayStatus()
                         if result.canMakePayments {
                             self.paymentHandler.delegate = self
-                            self.paymentHandler.startPayment(servcie: self.pageTransformeTitle, price: self.initial_price) { (success) in
+                            self.paymentHandler.startPayment(price: self.initial_price) { (success) in
                                 if success {
-                                    //TODO: need to handle when applepay scussess
-                                    print("SSSS success")
+                                    self.showDAlert(title: "", subTitle:  "paymentSuccess".localized, type: .success, buttonTitle: "") { (_) in
+                                        self.goToHome()
+                                    }
+                                }else {
+                                    self.showDAlert(title: "", subTitle:  "paymentError".localized, type: .error, buttonTitle: "", completionHandler: nil) 
                                 }
                             }
                             
@@ -335,6 +385,18 @@ class SendOrder: UIViewController {
             window.rootViewController = tabBar
             window.makeKeyAndVisible()
         }
+    }
+    func goToHome(){
+        let navController = UINavigationController()
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        guard let window = keyWindow else {return}
+        let storyb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        tabBar = storyb.instantiateViewController(withIdentifier: "rootNav") as? UITabBarController
+        navController.navigationBar.isHidden = true
+        navController.viewControllers = [tabBar!]
+        window.rootViewController = navController
+        window.makeKeyAndVisible()
+        
     }
     @IBAction func cancelHandler(_ sender: Any) {
         
@@ -411,6 +473,57 @@ extension SendOrder : UITextViewDelegate {
 }
 
 
+
+
+
+
+extension SendOrder : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        
+        return false
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let textInt = Int(string)  {
+            if textInt > offerQuantityRang.max {
+                textField.text = "\(offerQuantityRang.max)"
+                return false
+            }else if textInt < offerQuantityRang.min {
+                textField.text = "\(offerQuantityRang.min)"
+                return false
+            }
+        }
+           return true
+       }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if let textInt = Int(textField.text ?? "0")  {
+            if textInt > offerQuantityRang.max {
+                textField.text = "\(offerQuantityRang.max)"
+                return false
+            }else if textInt < offerQuantityRang.min {
+                textField.text = "\(offerQuantityRang.min)"
+                return false
+            }
+            
+        }
+        if let textInt = Float(textField.text ?? "0")  {
+            if let selectedOfferIndexPath = selectedOfferIndexPath {
+                if  let price =  offers[selectedOfferIndexPath.row].offer.price {
+                    offerPriceLabel.text = "\( textInt * price)"
+                    initial_price = "\( textInt * price)"
+                    self.priceLbl.text = "\(initial_price) " + "Rial".localized
+                    parameters["price_after_coupon"] = "\(initial_price)"
+                    parameters["offer_count"] = quantitiyTextFeild.text ?? ""
+                }
+            }
+           
+        }
+           return true
+       }
+    
+}
 
 
 

@@ -9,7 +9,7 @@
 import UIKit
 
 enum AlertType {
-    case withContent , success , error , net , sucNil
+    case withContent , success , error , net , sucNil , updateRequired
     case imagePopup(url:URL)
 }
 

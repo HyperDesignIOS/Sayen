@@ -20,10 +20,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterVC" customModule="صاين" customModuleProvider="target">
             <connections>
                 <outlet property="anotherClint" destination="0pQ-tn-mo3" id="gDa-mu-BmY"/>
+                <outlet property="buildingNoContainerV" destination="OwN-Fx-R1g" id="yZF-hV-IcW"/>
+                <outlet property="buildingNoTF" destination="XeR-Vn-oSQ" id="5Zr-UK-mz0"/>
                 <outlet property="confirmTF" destination="D0K-6h-nPo" id="a7r-b1-lop"/>
                 <outlet property="flatContainerV" destination="d4c-PL-e8j" id="6xW-Pc-Ds9"/>
-                <outlet property="flatNameContainerV" destination="OwN-Fx-R1g" id="yZF-hV-IcW"/>
-                <outlet property="flatNameTF" destination="XeR-Vn-oSQ" id="5Zr-UK-mz0"/>
+                <outlet property="flatNoContainerV" destination="tDx-0W-v9d" id="8Ig-AH-dyS"/>
                 <outlet property="flatNumTF" destination="l2D-gg-uMf" id="om7-TI-kxL"/>
                 <outlet property="flatNumberContainerV" destination="ax4-jH-1E5" id="a2D-o1-Wkj"/>
                 <outlet property="nameTF" destination="aMn-Tc-EGe" id="592-4Y-Jm4"/>
@@ -51,7 +52,7 @@
                                     <rect key="frame" x="15" y="0.0" width="285" height="827"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="انشاء حساب" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vR5-MG-N0z">
-                                            <rect key="frame" x="84.5" y="25" width="116" height="21"/>
+                                            <rect key="frame" x="95.5" y="25" width="94.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="n4B-tR-ohe"/>
                                             </constraints>
@@ -284,7 +285,7 @@
                                                             <rect key="frame" x="0.0" y="25" width="265" height="50"/>
                                                             <subviews>
                                                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الإسم" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XeR-Vn-oSQ">
-                                                                    <rect key="frame" x="8" y="0.0" width="249" height="50"/>
+                                                                    <rect key="frame" x="8" y="0.0" width="213" height="50"/>
                                                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="ASCIICapableNumberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
@@ -296,14 +297,17 @@
                                                                 </textField>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="pV4-68-gLN">
                                                                     <rect key="frame" x="231" y="12" width="26" height="26"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="26" id="glj-5h-TFc"/>
+                                                                    </constraints>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="XeR-Vn-oSQ" firstAttribute="top" secondItem="OwN-Fx-R1g" secondAttribute="top" id="0cn-th-ryM"/>
-                                                                <constraint firstAttribute="trailing" secondItem="XeR-Vn-oSQ" secondAttribute="trailing" constant="8" id="A0p-nz-uft"/>
                                                                 <constraint firstAttribute="height" constant="50" id="F4t-Dy-8iD"/>
                                                                 <constraint firstItem="pV4-68-gLN" firstAttribute="centerY" secondItem="OwN-Fx-R1g" secondAttribute="centerY" id="YRo-Hc-ICr"/>
+                                                                <constraint firstItem="pV4-68-gLN" firstAttribute="leading" secondItem="XeR-Vn-oSQ" secondAttribute="trailing" constant="10" id="hND-rO-OG0"/>
                                                                 <constraint firstItem="XeR-Vn-oSQ" firstAttribute="leading" secondItem="OwN-Fx-R1g" secondAttribute="leading" constant="8" id="j3d-va-63a"/>
                                                                 <constraint firstAttribute="bottom" secondItem="XeR-Vn-oSQ" secondAttribute="bottom" id="upY-P4-xPX"/>
                                                                 <constraint firstAttribute="trailing" secondItem="pV4-68-gLN" secondAttribute="trailing" constant="8" id="yu2-6P-Pm1"/>
@@ -326,8 +330,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDx-0W-v9d" customClass="CardView" customModule="صاين" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="25" width="265" height="50"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الرقم" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l2D-gg-uMf">
-                                                                    <rect key="frame" x="8" y="0.0" width="249" height="50"/>
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الرقم" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l2D-gg-uMf">
+                                                                    <rect key="frame" x="8" y="0.0" width="213" height="50"/>
                                                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
@@ -337,14 +341,22 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </textField>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="47h-OF-ovA">
+                                                                    <rect key="frame" x="231" y="12" width="26" height="26"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="26" id="T5e-xi-Idh"/>
+                                                                    </constraints>
+                                                                </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="l2D-gg-uMf" firstAttribute="leading" secondItem="tDx-0W-v9d" secondAttribute="leading" constant="8" id="0d4-CI-88J"/>
+                                                                <constraint firstItem="47h-OF-ovA" firstAttribute="leading" secondItem="l2D-gg-uMf" secondAttribute="trailing" constant="10" id="2Rs-na-b3r"/>
                                                                 <constraint firstAttribute="height" constant="50" id="FpV-jm-Dai"/>
-                                                                <constraint firstAttribute="trailing" secondItem="l2D-gg-uMf" secondAttribute="trailing" constant="8" id="G4W-83-gP6"/>
+                                                                <constraint firstItem="47h-OF-ovA" firstAttribute="centerY" secondItem="tDx-0W-v9d" secondAttribute="centerY" id="Xcy-xr-aSd"/>
                                                                 <constraint firstAttribute="bottom" secondItem="l2D-gg-uMf" secondAttribute="bottom" id="jLa-no-BCo"/>
                                                                 <constraint firstItem="l2D-gg-uMf" firstAttribute="top" secondItem="tDx-0W-v9d" secondAttribute="top" id="vTe-O0-r9T"/>
+                                                                <constraint firstAttribute="trailing" secondItem="47h-OF-ovA" secondAttribute="trailing" constant="8" id="x0Y-8Z-k0c"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -458,7 +470,7 @@
     </objects>
     <designables>
         <designable name="Aeb-Kn-5uj">
-            <size key="intrinsicContentSize" width="41" height="29"/>
+            <size key="intrinsicContentSize" width="33" height="32"/>
         </designable>
     </designables>
     <resources>

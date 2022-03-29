@@ -157,7 +157,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لا توجد إشعارات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWO-pB-0x7">
-                                <rect key="frame" x="139" y="438" width="136.5" height="20"/>
+                                <rect key="frame" x="150" y="436.5" width="114.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="20"/>
                                 <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -248,7 +248,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لا توجد طلبات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBt-W1-dRM">
-                                <rect key="frame" x="149.5" y="531" width="115" height="20"/>
+                                <rect key="frame" x="159" y="529.5" width="96" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="20"/>
                                 <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -354,33 +354,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jM-C6-o4u" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
-                                <rect key="frame" x="327" y="74" width="71" height="57"/>
-                                <color key="backgroundColor" red="0.84355080130000004" green="0.86997705700000005" blue="0.90980952979999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="siren" title=" ">
-                                    <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="experimental" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAp-95-7rd">
+                                <rect key="frame" x="303" y="54" width="91" height="16"/>
+                                <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GdW-u6-qfX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="jgl-6s-IiS" secondAttribute="bottom" id="7vd-dz-KnQ"/>
+                            <constraint firstItem="iAp-95-7rd" firstAttribute="top" secondItem="GdW-u6-qfX" secondAttribute="top" constant="10" id="IXt-hu-kXG"/>
                             <constraint firstItem="qpb-dk-0TK" firstAttribute="centerY" secondItem="NnK-QT-oyT" secondAttribute="centerY" id="JFb-A1-qKh"/>
                             <constraint firstItem="GdW-u6-qfX" firstAttribute="trailing" secondItem="GLz-uz-Hfc" secondAttribute="trailing" constant="35" id="MOq-RM-OTM"/>
                             <constraint firstItem="qpb-dk-0TK" firstAttribute="centerX" secondItem="NnK-QT-oyT" secondAttribute="centerX" id="TAr-OH-8O9"/>
                             <constraint firstItem="jgl-6s-IiS" firstAttribute="top" secondItem="NnK-QT-oyT" secondAttribute="top" id="TMt-Ux-zcI"/>
-                            <constraint firstItem="9jM-C6-o4u" firstAttribute="top" secondItem="GdW-u6-qfX" secondAttribute="top" constant="30" id="XJm-ce-hXc"/>
                             <constraint firstItem="GLz-uz-Hfc" firstAttribute="top" secondItem="GdW-u6-qfX" secondAttribute="top" id="aCO-8L-NNS"/>
                             <constraint firstItem="jgl-6s-IiS" firstAttribute="trailing" secondItem="GdW-u6-qfX" secondAttribute="trailing" id="bad-SU-k4r"/>
+                            <constraint firstItem="GdW-u6-qfX" firstAttribute="trailing" secondItem="iAp-95-7rd" secondAttribute="trailing" constant="20" id="gp2-Fx-zF5"/>
                             <constraint firstItem="GLz-uz-Hfc" firstAttribute="leading" secondItem="GdW-u6-qfX" secondAttribute="leading" constant="35" id="hxf-Wv-na9"/>
-                            <constraint firstItem="GdW-u6-qfX" firstAttribute="trailing" secondItem="9jM-C6-o4u" secondAttribute="trailing" constant="16" id="mKk-u8-mbo"/>
                             <constraint firstItem="jgl-6s-IiS" firstAttribute="leading" secondItem="GdW-u6-qfX" secondAttribute="leading" id="quV-ex-weB"/>
                             <constraint firstAttribute="bottom" secondItem="GLz-uz-Hfc" secondAttribute="bottom" id="wU1-UQ-K8Z"/>
                         </constraints>
@@ -454,9 +447,6 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="9jM-C6-o4u">
-            <size key="intrinsicContentSize" width="71" height="57"/>
-        </designable>
         <designable name="VeH-Mk-hn3">
             <size key="intrinsicContentSize" width="55.5" height="16"/>
         </designable>
@@ -474,7 +464,6 @@
         <image name="music-and-multimedia-1" width="15.5" height="18.5"/>
         <image name="profile" width="15" height="18.5"/>
         <image name="profile-1" width="15" height="18.5"/>
-        <image name="siren" width="43" height="43"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

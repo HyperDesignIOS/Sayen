@@ -27,6 +27,7 @@ class TeamOrderList {
     var lat : String?
     var time : String?
     var id : Int?
+    var date : String?
     
      init(_ jsonData : JSON) {
            
@@ -36,7 +37,7 @@ class TeamOrderList {
               self.lng = jsonData["lng"].stringValue
               self.lat = jsonData["lat"].stringValue
               self.time = jsonData["time"].stringValue
-    
+              self.date = jsonData["date"].stringValue
           }
     
     

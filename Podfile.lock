@@ -109,6 +109,7 @@ PODS:
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
+  - OpalImagePicker (3.0.0)
   - PromisesObjC (1.2.9)
   - Protobuf (3.12.0)
   - SwiftyJSON (5.0.0)
@@ -133,6 +134,7 @@ DEPENDENCIES:
   - MMText
   - MOLH
   - NVActivityIndicatorView
+  - OpalImagePicker
   - SwiftyJSON
   - SwiftyStarRatingView
 
@@ -164,6 +166,7 @@ SPEC REPOS:
     - MOLH
     - nanopb
     - NVActivityIndicatorView
+    - OpalImagePicker
     - PromisesObjC
     - Protobuf
     - SwiftyJSON
@@ -196,11 +199,12 @@ SPEC CHECKSUMS:
   MOLH: 9ea6c0390f5963b2df9827ae64035fbc8598b092
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  OpalImagePicker: 38e772dd93a54431fc516b33e1f337c50f745834
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyStarRatingView: a2b0057700e0adeb8e7442c55d99cb53b531d2f4
 
-PODFILE CHECKSUM: d5cc69c523363a4e44d7fd314a8c2d2a05bb054b
+PODFILE CHECKSUM: 3e92c8938fe699c0bef3aeda53e6119d1924da82
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.11.2

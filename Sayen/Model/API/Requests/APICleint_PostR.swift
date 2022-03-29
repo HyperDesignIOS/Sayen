@@ -490,7 +490,119 @@ extension APIClient {
          
     }
     
-    
+    static func emergencyOrderFinishWork(orderId : String , images : [UIImage],completed : @escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+        let url = Constants.ProductionServer.baseURL_V2 +  "team/emergency-order/finish-work"
+        let parameters = ["order_id": orderId]
+        longSessionManager.upload(multipartFormData: { (multipartFormData) in
+
+            for (index,img) in images.enumerated() {
+                if let imageData = img.jpegData(compressionQuality: 0.5) {
+                   multipartFormData.append(imageData, withName: "finish_work_image[\(index)]", fileName: "file.jpeg", mimeType: "image/jpeg")
+               }
+            }
+            
+            
+            for (key, value) in parameters {
+               multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+                       }
+            print(multipartFormData)
+        
+        }, to:url, method: .post, headers:["Authorization":"Bearer \(Constants.user_token)"])
+        { (result) in
+            switch result {
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
+                    guard  let value = response.result.value else {
+                        completed(false,"tryAgain".localized)
+                        return
+                    }
+                    let json = JSON( value)
+                    print("that;s json \(json)")
+                    let sms = json["message"].string ?? json["error"].stringValue
+                    if let status = json["status_code"].int , status == 400 {
+                        completed( false ,sms)
+                    }else {
+                        completed(true ,sms)
+                    }
+                    
+                }
+            case .failure(let encodingError):
+                
+                print(encodingError.localizedDescription)
+                completed(false,"tryAgain".localized)
+            }
+            
+        }
+        
+         
+    }
+    static func finishWork(orderId : String ,images : [UIImage],completed : @escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+            let url = Constants.ProductionServer.baseURL_V2 +  "team/finish-work"
+            let parameters = ["order_id": orderId,"pay_by": "1"]
+            longSessionManager.upload(multipartFormData: { (multipartFormData) in
+
+                for (index,img) in images.enumerated() {
+                    if let imageData = img.jpegData(compressionQuality: 0.5) {
+                       multipartFormData.append(imageData, withName: "finish_work_image[\(index)]", fileName: "file.jpeg", mimeType: "image/jpeg")
+                   }
+                }
+                
+                
+                for (key, value) in parameters {
+                   multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
+                           }
+                print(multipartFormData)
+            
+            }, to:url, method: .post, headers:["Authorization":"bearer \(Constants.user_token)"])
+            { (result) in
+                switch result {
+                case .success(let upload, _, _):
+                    upload.responseJSON { response in
+                        guard  let value = response.result.value else {
+                            completed(false,"tryAgain".localized)
+                            return
+                        }
+                        let json = JSON( value)
+                        print("that;s json \(json)")
+                        let sms = json["message"].string ?? json["error"].stringValue
+                        if let status = json["status_code"].int , status == 400 {
+                            completed( false ,sms)
+                        }else {
+                            completed(true ,sms)
+                        }
+                        
+                    }
+                case .failure(let encodingError):
+                    
+                    print(encodingError.localizedDescription)
+                    completed(false,"tryAgain".localized)
+                }
+                
+            }
+            
+             
+        }
+//
+//    let json = JSON(jsonData)
+//    DispatchQueue.main.async {
+//        let sms  = json["message"].string ?? json["error"].stringValue
+//        guard let status = json["status_code"].int , status == 200  else {
+//
+//            completionHandler(false ,sms)
+//            return
+//        }
+//
+//        completionHandler(true,sms)
+//    }
+//}) { (error) in
+//    DispatchQueue.main.async {
+//
+//        print(error.debugDescription)
+//        completionFaliure(error)
+//    }
+//}
+//
+//
     static func emergencyOrder (noteStr : String , serviceId: Int, completionHandler:@escaping (Bool,String? , Int?)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
         performSwiftyRequest(route: .emergencyOrder(noteStr : noteStr, serviceId: serviceId ) , headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
             let json = JSON(jsonData)
@@ -513,6 +625,83 @@ extension APIClient {
         }
                              
     }
+    
+    
+    static func successPay ( orderId: Int,id : String ,status : String , completionHandler:@escaping (Bool,String? , Int?)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+        performSwiftyRequest(route: .moyaserSuccessPay(orderId: orderId, id: id, status: status) , headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+            let json = JSON(jsonData)
+            DispatchQueue.main.async {
+                let sms  = json["message"].string ?? json["error"].stringValue
+                let orderId  = json["order_id"].int
+                guard let status = json["status_code"].int , status == 200  else {
+                    
+                    completionHandler(false ,sms,nil)
+                    return
+                }
+                completionHandler(true,sms, orderId)
+            }
+        }) { (error) in
+            DispatchQueue.main.async {
+               
+                print(error.debugDescription)
+                completionFaliure(error)
+            }
+        }
+                             
+    }
+    
+    
+    static func availableHours(date : String, service_id : Int , completionHandler:@escaping ([String])->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+         
+         performSwiftyRequest(route: .checkTimeDate(date : date, serviceId: service_id),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+             let json = JSON(jsonData)
+             DispatchQueue.main.async {
+                 var hours : [String] = []
+                 for (_,jsn) in json["hours"] {
+                     hours.append(jsn.stringValue)
+                 }
+                 completionHandler(hours)
+             }
+         }) { (error) in
+             DispatchQueue.main.async {
+                
+                 print(error.debugDescription)
+                 completionFaliure(error)
+             }
+         }
+         
+     }
+    
+    static func availableDays(service_id : Int , completionHandler:@escaping ([DateStr])->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+         performSwiftyRequest(route: .checkDate(serviceId: service_id),headers: [ "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+             let json = JSON(jsonData)
+             DispatchQueue.main.async {
+                 var avilableDates : [DateStr] = []
+                 for (_,jsn) in json["dates"] {
+                     let backEndDate = jsn["date"].stringValue
+                     var hours : [String] = []
+                     for (_,js) in jsn["time"] {
+                         hours.append(js.stringValue)
+                     }
+                     let dateName = backEndDate.dateName
+                     let dateNum = backEndDate.dateNum
+                     let longFormate = backEndDate.longFormate
+                     let month = backEndDate.month
+                     
+                     avilableDates.append(DateStr(backendDate: backEndDate, dateName: dateName, dateNum: dateNum, longFormate: longFormate, month: month, hours: hours))
+
+                 }
+                 completionHandler(avilableDates)
+             }
+         }) { (error) in
+             DispatchQueue.main.async {
+                
+                 print(error.debugDescription)
+                 completionFaliure(error)
+             }
+         }
+         
+     }
     
 //MARK: cancelOrder
     static func cancelOrder(order_id : Int , completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
@@ -538,7 +727,98 @@ extension APIClient {
          }
          
      }
-    
+    static func teamAddService(order_id : Int , service: String,  completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+         
+         performSwiftyRequest(route: .teamAddService(orderId: order_id, service: service),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+             let json = JSON(jsonData)
+             DispatchQueue.main.async {
+                 let sms  = json["message"].string ?? json["error"].stringValue
+                 guard let status = json["status_code"].int , status == 200  else {
+                     
+                     completionHandler(false ,sms)
+                     return
+                 }
+                 
+                 completionHandler(true,sms)
+             }
+         }) { (error) in
+             DispatchQueue.main.async {
+                
+                 print(error.debugDescription)
+                 completionFaliure(error)
+             }
+         }
+         
+     }
+    static func teamEmergencyOrderAddService(order_id : Int , service: String,  completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+         
+         performSwiftyRequest(route: .teamEmergencyOrderAddService(orderId: order_id, service: service),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+             let json = JSON(jsonData)
+             DispatchQueue.main.async {
+                 let sms  = json["message"].string ?? json["error"].stringValue
+                 guard let status = json["status_code"].int , status == 200  else {
+                     
+                     completionHandler(false ,sms)
+                     return
+                 }
+                 
+                 completionHandler(true,sms)
+             }
+         }) { (error) in
+             DispatchQueue.main.async {
+                
+                 print(error.debugDescription)
+                 completionFaliure(error)
+             }
+         }
+         
+     }
+    static func teamAddMaterial(order_id : Int , material: String,  completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+         
+         performSwiftyRequest(route: .teamAddMaterial(orderId: order_id, material: material),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+             let json = JSON(jsonData)
+             DispatchQueue.main.async {
+                 let sms  = json["message"].string ?? json["error"].stringValue
+                 guard let status = json["status_code"].int , status == 200  else {
+                     
+                     completionHandler(false ,sms)
+                     return
+                 }
+                 
+                 completionHandler(true,sms)
+             }
+         }) { (error) in
+             DispatchQueue.main.async {
+                
+                 print(error.debugDescription)
+                 completionFaliure(error)
+             }
+         }
+         
+     }
+    static func teamEmergencyOrderAddMaterial(order_id : Int , material: String,  completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+         
+         performSwiftyRequest(route: .teamEmergencyOrderAddMaterial(orderId: order_id, material: material),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+             let json = JSON(jsonData)
+             DispatchQueue.main.async {
+                 let sms  = json["message"].string ?? json["error"].stringValue
+                 guard let status = json["status_code"].int , status == 200  else {
+                     
+                     completionHandler(false ,sms)
+                     return
+                 }
+                 
+                 completionHandler(true,sms)
+             }
+         }) { (error) in
+             DispatchQueue.main.async {
+                
+                 print(error.debugDescription)
+                 completionFaliure(error)
+             }
+         }
+         
+     }
     static func requestWarranty(order_id : Int , completionHandler:@escaping (Bool,String, Int?)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
          
          performSwiftyRequest(route: .requestWarranty(order_id: order_id),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in

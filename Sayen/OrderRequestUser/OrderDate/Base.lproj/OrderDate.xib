@@ -25,6 +25,7 @@
                 <outlet property="mainView" destination="xOP-Uu-Ygh" id="qRE-ub-XY3"/>
                 <outlet property="monthLBL" destination="5tE-W6-n2C" id="TDI-11-I40"/>
                 <outlet property="nextMonthButtonOutlet" destination="Hn1-kD-xBh" id="B6Y-Fs-rY0"/>
+                <outlet property="noAvailableTime" destination="l6O-Lu-Y0K" id="GiK-aC-Ycp"/>
                 <outlet property="timeView" destination="ULg-Ur-Dm5" id="5BJ-V9-1L8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -144,6 +145,12 @@
                                 <constraint firstAttribute="height" constant="130" id="4Wb-60-WTQ"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لا يوجد مواعيد متاحة لهذا اليوم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6O-Lu-Y0K">
+                            <rect key="frame" x="12" y="276" width="320" height="130"/>
+                            <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="19"/>
+                            <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umV-Eb-Zxv">
                             <rect key="frame" x="102" y="331" width="140" height="35"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -164,18 +171,22 @@
                         <constraint firstItem="ULg-Ur-Dm5" firstAttribute="top" secondItem="Ebo-Ar-9SQ" secondAttribute="bottom" constant="8" id="7eu-mo-J4u"/>
                         <constraint firstItem="owj-mX-xva" firstAttribute="top" secondItem="7LV-Oj-17x" secondAttribute="bottom" constant="10" id="7sd-WC-miw"/>
                         <constraint firstItem="I1z-mu-Q1m" firstAttribute="top" secondItem="ULg-Ur-Dm5" secondAttribute="bottom" constant="20" id="9QB-SA-doN"/>
+                        <constraint firstItem="l6O-Lu-Y0K" firstAttribute="top" secondItem="ULg-Ur-Dm5" secondAttribute="top" id="DHN-k8-LZP"/>
                         <constraint firstItem="umV-Eb-Zxv" firstAttribute="top" secondItem="ULg-Ur-Dm5" secondAttribute="bottom" constant="20" id="Jbe-Ez-ABd"/>
                         <constraint firstItem="ULg-Ur-Dm5" firstAttribute="centerX" secondItem="xOP-Uu-Ygh" secondAttribute="centerX" id="Opc-qf-bTe"/>
+                        <constraint firstItem="l6O-Lu-Y0K" firstAttribute="leading" secondItem="ULg-Ur-Dm5" secondAttribute="leading" id="Qc0-1r-x76"/>
                         <constraint firstAttribute="trailing" secondItem="I1z-mu-Q1m" secondAttribute="trailing" constant="8" id="Rcn-4G-zkv"/>
                         <constraint firstAttribute="bottom" secondItem="I1z-mu-Q1m" secondAttribute="bottom" constant="18" id="StC-VH-TP4"/>
                         <constraint firstItem="ULg-Ur-Dm5" firstAttribute="leading" secondItem="xOP-Uu-Ygh" secondAttribute="leading" constant="12" id="dMS-Ez-IMs"/>
                         <constraint firstItem="umV-Eb-Zxv" firstAttribute="centerX" secondItem="xOP-Uu-Ygh" secondAttribute="centerX" id="dTq-kE-YSQ"/>
                         <constraint firstItem="yd7-kW-ytu" firstAttribute="top" secondItem="xOP-Uu-Ygh" secondAttribute="top" constant="50" id="fpU-se-apb"/>
+                        <constraint firstItem="l6O-Lu-Y0K" firstAttribute="trailing" secondItem="ULg-Ur-Dm5" secondAttribute="trailing" id="gPu-PS-BeR"/>
                         <constraint firstAttribute="trailing" secondItem="ULg-Ur-Dm5" secondAttribute="trailing" constant="12" id="ghR-CG-XQ8"/>
                         <constraint firstItem="yd7-kW-ytu" firstAttribute="centerX" secondItem="xOP-Uu-Ygh" secondAttribute="centerX" id="hb3-QQ-uxI"/>
                         <constraint firstAttribute="trailing" secondItem="owj-mX-xva" secondAttribute="trailing" id="kUI-nr-H0a"/>
                         <constraint firstItem="Ebo-Ar-9SQ" firstAttribute="leading" secondItem="xOP-Uu-Ygh" secondAttribute="leading" constant="12" id="m8P-hc-t7V"/>
                         <constraint firstItem="7LV-Oj-17x" firstAttribute="top" secondItem="adv-Xw-u8X" secondAttribute="bottom" constant="50" id="nS0-0e-ONC"/>
+                        <constraint firstItem="l6O-Lu-Y0K" firstAttribute="bottom" secondItem="ULg-Ur-Dm5" secondAttribute="bottom" id="oVS-1w-7hz"/>
                         <constraint firstAttribute="trailing" secondItem="Ebo-Ar-9SQ" secondAttribute="trailing" constant="12" id="qcp-ba-3Sm"/>
                         <constraint firstAttribute="trailing" secondItem="adv-Xw-u8X" secondAttribute="trailing" constant="8" id="rCz-h0-Su5"/>
                         <constraint firstItem="7LV-Oj-17x" firstAttribute="leading" secondItem="xOP-Uu-Ygh" secondAttribute="leading" constant="12" id="vpn-09-98j"/>

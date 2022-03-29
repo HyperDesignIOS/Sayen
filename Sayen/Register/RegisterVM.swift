@@ -113,7 +113,6 @@ class RegisterVM {
             guard state else{
                 self.alertMessage = sms
                 self.state = .error
-                
                 return
             }
             self.state = .populated

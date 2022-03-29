@@ -180,5 +180,48 @@ extension String {
         return NSLocalizedString(self, comment: self)
     }
     
+
+    
+    func returndayesNum() -> (dateName:String, dateNum: String,longFormate : String, month: String){
+         let date = self
+        var dateName = ""
+        var dateNum = ""
+        var longFormate = ""
+        var month = ""
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: Constants.current_Language)
+        formatter.dateFormat = "yyyy-MM-dd"
+        if let date = formatter.date(from: date){
+            formatter.dateFormat =  "EEEE"
+            dateName = formatter.string(from: date)
+            formatter.dateFormat = "d"
+            dateNum = formatter.string(from: date)
+            formatter.dateFormat = "EEEE, d, MMMM, yyyy"
+            longFormate = formatter.string(from: date)
+            formatter.dateFormat = "MMMM"
+            month = formatter.string(from: date)
+        }
+        return (dateName:dateName, dateNum: dateNum, longFormate: longFormate, month: month)
+    }
+    
+    
+    var dateName: String {
+        return self.returndayesNum().dateName
+    }
+    
+    var dateNum: String {
+        return self.returndayesNum().dateNum
+    }
+    
+    var longFormate: String {
+        return self.returndayesNum().longFormate
+    }
+    
+    var month: String {
+        return self.returndayesNum().month
+    }
+    
+    
+    
 }
 

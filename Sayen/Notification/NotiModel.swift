@@ -33,6 +33,54 @@ class NotiModel {
     
     
 }
+
+
+class OffersRoot {
+    var id : Int?
+    var title : String?
+    var title_en : String?
+    var price : Float?
+    var service_id : Int?
+    var from : Int?
+    var to : Int?
+    var image_path : String?
+    
+    
+    init(_ jsonData : JSON) {
+        self.id = jsonData["id"].intValue
+        self.title = jsonData["title"].stringValue
+        self.title_en = jsonData["title_en"].stringValue
+        self.price = jsonData["price"].floatValue
+        self.service_id = jsonData["service_id"].intValue
+        self.from = jsonData["from"].intValue
+        self.to = jsonData["to"].intValue
+        self.image_path = jsonData["image_path"].stringValue
+    }
+    
+    
+}
+
+struct OfferData {
+    var offer: OffersRoot
+    var isSelected: Bool
+    
+}
+struct OfferService {
+    var offer: OffersRoot
+    var service: HomeData
+    
+}
+
+//"id": 1,
+//"title": "عرض المميز",
+//"title_en": "offer",
+//"price": 50,
+//"service_id": 26,
+//"image_path": "https://sayen.co/public/img/default_offer.png"
+//
+//
+//
+
 //"notifications" : [
 //{
 //  "user_id" : 38,

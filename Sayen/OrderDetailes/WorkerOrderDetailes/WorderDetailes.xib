@@ -26,6 +26,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorderDetailes" customModule="فريق_صاين" customModuleProvider="target">
             <connections>
+                <outlet property="addButtonsStackView" destination="LNd-SR-B3t" id="b8V-6O-0Xq"/>
                 <outlet property="addressLabel" destination="hvM-cb-FgV" id="aOH-FG-RDL"/>
                 <outlet property="canceledOrderL" destination="Qeb-IN-mMW" id="kLP-5O-va4"/>
                 <outlet property="clientTypeLbl" destination="Fjd-Uh-Q6k" id="MVL-A9-7Gf"/>
@@ -53,6 +54,7 @@
                 <outlet property="openLocationBtnOL" destination="LKN-dH-RVP" id="fn1-TA-TUD"/>
                 <outlet property="orderNum" destination="qGp-vs-DbX" id="kSA-RU-ONE"/>
                 <outlet property="probAndEndStack" destination="Vme-YW-JT4" id="Iq2-9n-zfc"/>
+                <outlet property="reportAProblemBtnOL" destination="Twp-xV-WKV" id="Uxg-fz-Qby"/>
                 <outlet property="startWorkButtonOutlet" destination="ERo-c6-YrH" id="kQx-AR-kwd"/>
                 <outlet property="stopwatchLabel" destination="hLJ-YO-Pug" id="NIz-Wh-DvJ"/>
                 <outlet property="timerView" destination="Gae-Ta-P7p" id="WNB-6D-D8m"/>
@@ -425,7 +427,7 @@
                                 </button>
                                 <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kug-oJ-eC4" customClass="UIButtonX" customModule="فريق_صاين" customModuleProvider="target">
                                     <rect key="frame" x="20" y="727" width="374" height="40"/>
-                                    <color key="backgroundColor" red="0.83999327150000003" green="0.31358403109999999" blue="0.29528633370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.83921568627450982" green="0.31372549019607843" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="DRB-1S-sHT"/>
                                     </constraints>
@@ -442,12 +444,12 @@
                                         <action selector="EndWorkAction:" destination="-1" eventType="touchUpInside" id="r3q-SM-2t5"/>
                                     </connections>
                                 </button>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LNd-SR-B3t">
+                                <stackView opaque="NO" alpha="0.80000000000000004" tag="1" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LNd-SR-B3t">
                                     <rect key="frame" x="20" y="667" width="374" height="40"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZU-Q2-42h" customClass="UIButtonX" customModule="فريق_صاين" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQ8-mX-RXC" customClass="UIButtonX" customModule="فريق_صاين" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
-                                            <color key="backgroundColor" red="0.60784313729999995" green="0.67843137249999996" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.081526808440000001" green="0.18991735579999999" blue="0.4313949943" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                             <state key="normal" title="إضافة مواد">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -458,14 +460,14 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="addPrice:" destination="-1" eventType="touchUpInside" id="o0Q-Lr-xiZ"/>
+                                                <action selector="addMatrialButton:" destination="-1" eventType="touchUpInside" id="aNE-iQ-cZX"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g34-xW-HLe" customClass="UIButtonX" customModule="فريق_صاين" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4X-S3-TP2" customClass="UIButtonX" customModule="فريق_صاين" customModuleProvider="target">
                                             <rect key="frame" x="191" y="0.0" width="183" height="40"/>
-                                            <color key="backgroundColor" red="0.60784313729999995" green="0.67843137249999996" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.081526808440000001" green="0.18991735579999999" blue="0.4313949943" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
-                                            <state key="normal" title="إضافة مبلغ">
+                                            <state key="normal" title="إضافة خدمة">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -474,7 +476,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="addPrice:" destination="-1" eventType="touchUpInside" id="U6W-Lx-JMk"/>
+                                                <action selector="addServiceButton:" destination="-1" eventType="touchUpInside" id="fMu-Ez-WvD"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -583,8 +585,8 @@
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="xgF-tP-TsN" firstAttribute="leading" secondItem="fza-uF-8g1" secondAttribute="leading" id="36y-g4-nh2"/>
-                        <constraint firstAttribute="trailing" secondItem="xgF-tP-TsN" secondAttribute="trailing" id="60j-an-Tph"/>
+                        <constraint firstItem="xgF-tP-TsN" firstAttribute="left" secondItem="fza-uF-8g1" secondAttribute="left" id="36y-g4-nh2"/>
+                        <constraint firstAttribute="right" secondItem="xgF-tP-TsN" secondAttribute="right" id="60j-an-Tph"/>
                         <constraint firstItem="xgF-tP-TsN" firstAttribute="height" secondItem="fza-uF-8g1" secondAttribute="height" priority="250" id="6aw-Ea-idT"/>
                         <constraint firstAttribute="bottom" secondItem="xgF-tP-TsN" secondAttribute="bottom" id="KLo-sm-WTP"/>
                         <constraint firstItem="xgF-tP-TsN" firstAttribute="width" secondItem="fza-uF-8g1" secondAttribute="width" id="V4n-3j-OTt"/>
@@ -642,10 +644,10 @@
         <designable name="Twp-xV-WKV">
             <size key="intrinsicContentSize" width="91" height="26"/>
         </designable>
-        <designable name="g34-xW-HLe">
-            <size key="intrinsicContentSize" width="66" height="26"/>
+        <designable name="W4X-S3-TP2">
+            <size key="intrinsicContentSize" width="70" height="26"/>
         </designable>
-        <designable name="pZU-Q2-42h">
+        <designable name="gQ8-mX-RXC">
             <size key="intrinsicContentSize" width="64" height="26"/>
         </designable>
     </designables>

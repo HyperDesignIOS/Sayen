@@ -693,3 +693,15 @@
 "Ok" = "حسنا";
 
 "emergancyOrder" = "طلب طوارئ";
+"finishWork" = "انهاء العمل";
+"uploadToFinish" = "قم برفع صورة لانهاء العمل";
+"spicailOffers" = "العروض \nو التخفيضات";
+"DearUser" = "عزيري العميل";
+"NewVersionAvailable" = "يرجى تحديث نسخة التطبيق";
+"update" = "تحديث";
+"addService" = "اضافة خدمة";
+"addMatrial" = "اضافة مواد";
+"addServiceNote" = "اكتب الخدمة التي تريد ان تضيفهاهنا ....";
+"addMatrialNote" = "اكتب المواد التي تريد ان تضيفهاهنا ....";
+"maxFImages" = "عفوا، الحد الاقصي 5 صور";
+"yourSessionHasBeenEnded" = "عفوا، قم بتسجيل الدخول مرة اخري";

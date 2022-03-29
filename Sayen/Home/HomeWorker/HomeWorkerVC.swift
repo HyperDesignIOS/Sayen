@@ -141,12 +141,23 @@ class HomeWorkerVC: UIViewController {
         ad.isLoading()
         self.refresher.endRefreshing()
         
-        APIClient.getWorkerOrders(date: self.getDateParm, completionHandler: { (state, data) in
+        APIClient.getWorkerOrders(date: self.getDateParm, completionHandler: { (state, data, leastAppVersion ) in
             ad.killLoading()
             guard state else {
                  self.showDAlert(title: "Error".localized, subTitle: "tryAgain".localized, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
                 return
             }
+//            if let leastAppVersion = leastAppVersion {
+//                if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+//                    if appVersion != leastAppVersion {
+//                        self.showDAlert(title: "DearUser".localized, subTitle: "NewVersionAvailable".localized, type: .updateRequired, buttonTitle: "update".localized) { _ in
+//                            if let url = URL(string: Constants.workerAppstoreUrl) {
+//                                UIApplication.shared.open(url)
+//                            }
+//                        }
+//                    }
+//                }
+//            }
             if let data = data {
                 self.data = data
                 if data.count == 0 {

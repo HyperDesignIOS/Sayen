@@ -260,7 +260,19 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
       print("Message ID: \(messageID)")
     }
 
-    // Print full message.
+      
+    
+      
+      // Print full message.
+      print("----------------------\(userInfo)")
+      let type = userInfo["type"] as! String
+      if type == "offer" {
+          
+//          if let vc = UIApplication.topViewController() as? HomeUserVC {
+//              vc.collectionView.selectItem(at: IndexPath(item: 1, section: 0), animated: true, scrollPosition: .right)
+//          }
+      }
+
     print(userInfo)
     if ad.isUser() {
         

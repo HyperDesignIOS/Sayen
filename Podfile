@@ -25,7 +25,7 @@
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
   pod 'SwiftyStarRatingView'
-
+  pod 'OpalImagePicker'
 
 
 target 'Sayen ' do

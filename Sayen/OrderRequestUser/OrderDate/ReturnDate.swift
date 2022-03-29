@@ -8,8 +8,6 @@
 import UIKit
 class ReturnDate {
     
-    
-    
     var mydayNum : [String] = []
     var mydayName : [String] = []
     var allDays : [String] = []
@@ -39,6 +37,44 @@ class ReturnDate {
             dateFrom = Calendar.current.date(byAdding: .day, value: 1, to: dateFrom)!
             
         }
+        return mydayNum
+    }
+    func returndayesNum (date: String) -> (dateName:String, dateNum: String,longFormate : String, month: String){
+        
+        var dateName = ""
+        var dateNum = ""
+        var longFormate = ""
+        var month = ""
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: Constants.current_Language)
+        formatter.dateFormat = "yyyy-MM-dd"
+        if let date = formatter.date(from: date){
+            formatter.dateFormat =  "EEEE"
+            dateName = formatter.string(from: date)
+            formatter.dateFormat = "d"
+            dateNum = formatter.string(from: date)
+            formatter.dateFormat = "EEEE, d, MMMM, yyyy"
+            longFormate = formatter.string(from: date)
+            formatter.dateFormat = "MMMM"
+            month = formatter.string(from: date)
+        }
+        return (dateName:dateName, dateNum: dateNum, longFormate: longFormate, month: month)
+    }
+    func returndayesNumForCheckAPIRequest() -> [String]{
+    
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyy-MM-dd"
+        dateFrom = Date()
+        let Todate = Calendar.current.date(byAdding: .month, value: 1, to: dateFrom)!
+        dateTo = fmt.date(from: endDate)!
+        fmt.locale = Locale(identifier: "en")
+        fmt.dateFormat = "yyyy-MM-dd"
+        mydayNum.removeAll()
+        while dateFrom <= Todate {
+            mydayNum.append(fmt.string(from: dateFrom))
+            dateFrom = Calendar.current.date(byAdding: .day, value: 1, to: dateFrom)!
+        }
+        
         return mydayNum
     }
     func getCurrentMonthStr() -> String {
@@ -86,6 +122,19 @@ class ReturnDate {
             
         }
         return mydayName
+    }
+    func returnDayNameAfterCheck (days: [String]) -> [String]{
+        var outDays : [String] = []
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: Constants.current_Language)
+        formatter.dateFormat = "yyyy-MM-dd"
+        for day in days {
+            if let date = formatter.date(from: day){
+                formatter.dateFormat =  "EEEE"
+                outDays.append(formatter.string(from: date))
+            }
+        }
+        return outDays
     }
     func returnDayNameF () -> [String]{
         let fmt2 = DateFormatter()
@@ -195,17 +244,23 @@ class ReturnDate {
          return outPut
     }
     
-    func getBackTime (Time:String)->String{
+    func getBackTime(Time:String)->(backEnd:String , trsaform: String){
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:mm a"
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // fixes nil if device time in 24 hour format
-        guard  let date = dateFormatter.date(from: Time)  else {return ""}
-
-        dateFormatter.dateFormat = "HH:mm:ss"
-        let date24 = dateFormatter.string(from: date)
-
-        return date24
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.locale = Locale(identifier: Constants.current_Language) // fixes nil if device time in 24 hour format
+        var date24 = ""
+        var transform = ""
+        if let date =  dateFormatter.date(from: Time)  {
+          
+            dateFormatter.dateFormat = "hh:mm a"
+            transform = dateFormatter.string(from: date)
+            dateFormatter.locale = Locale(identifier: "en")
+            dateFormatter.dateFormat = "HH:mm:ss"
+             date24 = dateFormatter.string(from: date)
+        }
+      
+        return (backEnd:date24 , trsaform: transform)
         
     }
     func getBackTimeCurrent ()->String{
@@ -240,7 +295,14 @@ class ReturnDate {
           return outPut
           
       }
-      
+    func getCurrentDate ()->String{
+        let date = Date()
+        let fmt = DateFormatter()
+//        fmt.locale = Locale(identifier: Constants.current_Language)
+        fmt.dateFormat =  "yyyy-MM-dd"
+        let outPut = fmt.string(from: date)
+        return outPut
+    }
     func getCurrentTimeAm (addHours:Int? = nil)->String{
         let formatter = DateFormatter()
      //   formatter.locale = Locale(identifier: Constants.current_Language)
@@ -260,12 +322,53 @@ class ReturnDate {
         return outPut
         
     }
-    
-    
-    
 }
 
-
-
-
-
+//    private func nextMonth() {
+//       var isoDate = dateSelected
+//                 if isoDate == "" {
+//                     isoDate = returnDateM.returnCurrntdateDay()
+//                 }
+//                 let dateFormatter = DateFormatter()
+//                 dateFormatter.locale = Locale(identifier: Constants.current_Language)
+//                 dateFormatter.dateFormat = "EEEE, d, MMMM, yyyy"
+//        if let date = dateFormatter.date(from:isoDate){
+//            var dateComponent = DateComponents()
+//            dateComponent.month = -1
+//
+//            let futureDate = Calendar.current.date(byAdding: dateComponent, to: date)
+//            print(futureDate!)
+//            let dateString = dateFormatter.string(from: futureDate!)
+//            for (index , day) in returnDateM.AllDaysFunc().enumerated() {
+//                if day == dateString {
+//                    // self.datePicker.selectedRow(inComponent: index)
+//                    datePicker.selectRow(index, inComponent: 0, animated: true)
+//
+//                }
+//            }
+//        }
+//    }
+//    private func prevMonth() {
+//               var isoDate = dateSelected
+//               if isoDate == "" {
+//                   isoDate = returnDateM.returnCurrntdateDay()
+//               }
+//               let dateFormatter = DateFormatter()
+//               dateFormatter.locale = Locale(identifier: Constants.current_Language)
+//               dateFormatter.dateFormat = "EEEE, d, MMMM, yyyy"
+//        if let date = dateFormatter.date(from:isoDate){
+//            var dateComponent = DateComponents()
+//            dateComponent.month = 1
+//
+//            let futureDate = Calendar.current.date(byAdding: dateComponent, to: date)
+//            print(futureDate!)
+//            let dateString = dateFormatter.string(from: futureDate!)
+//            for (index , day) in returnDateM.AllDaysFunc().enumerated() {
+//                if day == dateString {
+//                    // self.datePicker.selectedRow(inComponent: index)
+//                    datePicker.selectRow(index, inComponent: 0, animated: true)
+//
+//                }
+//            }
+//        }
+//    }

@@ -19,4 +19,7 @@ extension String {
                                                  attributes: [NSAttributedString.Key.font: f], context: NSStringDrawingContext()).size.height
         return ceil(textH)
     }
+    
+    
+    
 }

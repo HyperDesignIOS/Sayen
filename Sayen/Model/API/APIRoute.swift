@@ -38,10 +38,23 @@ enum APIRouter: URLRequestConvertible {
     case cancel_order(order_id : Int)
     case requestWarranty(order_id : Int)
     case getTeamOrders(date : String)
+    case getTeamEmergencyOrders
+    case filterTeamEmergencyOrders(date : String)
+    case teamEmergencyOrder(order_id : Int)
+    case checkTimeDate(date : String, serviceId: Int)
+    case checkDate(serviceId: Int)
     case teamStartWork(order_id : Int)
     case teamGoWork(order_id : Int)
     case teamEndWork(order_id : Int)
     case teamfinishWork(order_id : Int,pay_by:String?)
+    case teamEmergencyOrderStartWork(order_id : Int)
+    case teamEmergencyOrderGoWork(order_id : Int)
+    case teamEmergencyOrderEndWork(order_id : Int)
+    case teamEmergencyOrderfinishWork(order_id : Int)
+    case teamAddService(orderId : Int, service: String)
+    case teamEmergencyOrderAddService(orderId : Int, service: String)
+    case teamAddMaterial(orderId : Int, material: String)
+    case teamEmergencyOrderAddMaterial(orderId : Int, material: String)
     case teamAddPrice (order_id : Int , price : [String] , price_desc : [String] )
     case setPlayerId (player_id : String , user_type : String)
     case validateCoupon(code : String , total_price : String , service_id : Int)
@@ -59,6 +72,7 @@ enum APIRouter: URLRequestConvertible {
   case user_buildings
     case updateLocation(lat:Double,lng:Double)
     case moyaserSuccessPay(orderId : Int ,id : String , status : String)
+    case offers(service_id : Int)
     //v1/common-questions
   
     //v1/static-page/{id}
@@ -67,11 +81,11 @@ enum APIRouter: URLRequestConvertible {
      // MARK: - HTTPMethod
      var method: HTTPMethod {
         switch self {
-        case .login , .register , .verifyCode , .forgotPass ,.resendCode , .changePhone ,.logout ,.cancel_order , .requestWarranty ,.validateCoupon ,.userAcceptPrice ,.rateWorker , .teamreportProblem , .userSendMessage , .registerTeam , .subService , .emergencyOrder :
+        case .login , .register , .verifyCode , .forgotPass ,.resendCode , .changePhone ,.logout ,.cancel_order , .requestWarranty ,.validateCoupon ,.userAcceptPrice ,.rateWorker , .teamreportProblem , .userSendMessage , .registerTeam , .subService , .emergencyOrder , .checkTimeDate, .checkDate, .teamAddService , .teamEmergencyOrderAddService, .teamAddMaterial, .teamEmergencyOrderAddMaterial  :
             return .post
-        case .changePassword , .resetPass , .update_profile , .update_profileT , .teamStartWork , .teamGoWork , .teamAddPrice , .setPlayerId ,.teamEndWork , .teamfinishWork , .notification_seen,.updateLocation :
+        case .changePassword , .resetPass , .update_profile , .update_profileT , .teamStartWork , .teamGoWork , .teamAddPrice , .setPlayerId ,.teamEndWork , .teamfinishWork , .notification_seen,.updateLocation, .teamEmergencyOrderStartWork, .teamEmergencyOrderGoWork, .teamEmergencyOrderEndWork, .teamEmergencyOrderfinishWork:
             return .put
-        case .get_profile ,.service  , .currentOrder , .previousOrder , .userOrder , .userEmergencyOrder, .currentِEmergencyOrder , .previousِEmergencyOrder , .getTeamOrders , .teamOrder , .teaminvoices , .filterOrders , .notifications , .problem_types ,.common_questions , .static_page,.user_buildings , .moyaserSuccessPay:
+        case .get_profile ,.service  , .currentOrder , .previousOrder , .userOrder , .userEmergencyOrder, .currentِEmergencyOrder , .previousِEmergencyOrder , .getTeamOrders , .teamOrder , .teaminvoices , .filterOrders , .notifications , .problem_types ,.common_questions , .static_page,.user_buildings , .moyaserSuccessPay  , .getTeamEmergencyOrders,  .teamEmergencyOrder   , .filterTeamEmergencyOrders , .offers:
            return .get
 
         }
@@ -89,6 +103,8 @@ enum APIRouter: URLRequestConvertible {
         case .resetPass : return "change-password"
         case .changePhone : return "change-phone"
         case .update_profile: return "user/update-profile"
+        case .checkTimeDate : return "user/checkTimeDate"
+        case .checkDate : return "user/checkDate"
         case .update_profileT: return "team/update-profile"
         case .get_profile(let user_type): return "profile?user_type=\(user_type)"
         case .logout : return "logout"
@@ -105,10 +121,22 @@ enum APIRouter: URLRequestConvertible {
         case .cancel_order: return "user/cancel-order"
         case .requestWarranty: return "user/warranty-order"
         case .getTeamOrders(let date): return "team/order?date=\(date)&offset=0&limit=200"
+        case .filterTeamEmergencyOrders(let date): return "team/emergency-order?limit=10&offset=0&date_from=\(date)&date_to=\(date)"
+        case .getTeamEmergencyOrders: return "team/emergency-order?limit=200&offset=0"
+        case .teamEmergencyOrder(let order_id) : return "team/emergency-order/\(order_id)"
         case .teamStartWork : return "team/start-work"
         case .teamGoWork : return "team/go-work"
         case .teamEndWork : return "team/end-work"
         case .teamfinishWork : return "team/finish-work"
+        case .teamEmergencyOrderStartWork : return "team/emergency-order/start-work"
+        case .teamEmergencyOrderGoWork : return "team/emergency-order/go-work"
+        case .teamEmergencyOrderEndWork : return "team/emergency-order/end-work"
+        case .teamEmergencyOrderfinishWork : return "team/emergency-order/finish-work"
+        case .teamAddService : return "team/add-service"
+        case .teamEmergencyOrderAddService :   return "team/emergency-order/add-service"
+        case .teamAddMaterial : return "team/add-material"
+        case .teamEmergencyOrderAddMaterial :   return "team/emergency-order/add-material"
+            
         case .teamAddPrice : return "team/add-price"
         case .setPlayerId : return "set-player-id"
         case .validateCoupon : return "user/validate-coupon"
@@ -127,9 +155,10 @@ enum APIRouter: URLRequestConvertible {
         case .updateLocation(let lat,let lng) : return "team/update-location?lat=\(lat)&lng=\(lng)"
         case .registerTeam : return "team/register"
         case .moyaserSuccessPay : return "user/success-pay"
+        case .offers(let service_id): return "offers?service_id=\(service_id)"
          }
     }
-    
+
     // MARK: - Parameters
      var parameters: Parameters? {
         switch self {
@@ -161,6 +190,18 @@ enum APIRouter: URLRequestConvertible {
             return ["service_id" : serviceId]
         case .emergencyOrder(let noteStr, let serviceId):
             return ["note" : noteStr , "service_id" : serviceId]
+        case .checkTimeDate(let date, let serviceId):
+            return ["date" : date , "service_id" : serviceId]
+        case .checkDate(let serviceId):
+            return ["service_id" : serviceId]
+        case .teamAddService(let orderId, let service):
+            return ["order_id" : orderId , "service" : service]
+        case .teamEmergencyOrderAddService(let orderId, let service):
+            return ["order_id" : orderId , "service" : service]
+        case .teamAddMaterial(let orderId, let material):
+            return ["order_id" : orderId , "material" : material]
+        case .teamEmergencyOrderAddMaterial(let orderId, let material):
+            return ["order_id" : orderId , "material" : material]
         case .currentOrder: return nil
         case .previousOrder: return nil
         case .currentِEmergencyOrder: return nil
@@ -174,6 +215,7 @@ enum APIRouter: URLRequestConvertible {
         case .cancel_order(let order_id) : return ["order_id" : order_id]
         case .requestWarranty(let order_id) : return ["order_id" : order_id]
         case .getTeamOrders : return nil
+        case .filterTeamEmergencyOrders : return nil
         case .teamStartWork(let order_id) :return ["order_id" : order_id]
         case .teamGoWork(let order_id) :return ["order_id" : order_id]
         case .teamEndWork(let order_id) :return ["order_id" : order_id]
@@ -184,6 +226,12 @@ enum APIRouter: URLRequestConvertible {
             }
             print(dict)
             return dict
+        case .getTeamEmergencyOrders : return nil
+        case .teamEmergencyOrder(let order_id) :return ["order_id" : order_id]
+        case .teamEmergencyOrderStartWork(let order_id) :return ["order_id" : order_id]
+        case .teamEmergencyOrderGoWork(let order_id) :return ["order_id" : order_id]
+        case .teamEmergencyOrderEndWork(let order_id) :return ["order_id" : order_id]
+        case .teamEmergencyOrderfinishWork(let order_id) :return ["order_id" : order_id]
         case .teamAddPrice(let order_id,let  price,let price_desc): return ["order_id" : order_id ,"price" : price , "price_desc" : price_desc]
         case .setPlayerId (let player_id, let user_type) : return ["player_id" : player_id , "user_type" : user_type]
         case .validateCoupon(let code , let total_price , let serviceid) : return ["code" : code , "total_price" : total_price , "service_id" : serviceid ]
@@ -201,6 +249,7 @@ enum APIRouter: URLRequestConvertible {
             case .registerTeam(let name,let mobile,let email, let password,let country_code ):
                 return ["name":name,"phone": mobile , "email":email, "password" : password , "country_code" : country_code  ]
         case .moyaserSuccessPay(let orderId,let id, let status) : return ["order_id" : orderId , "id" : id , "status" : status]
+        case .offers : return nil
      }
     }
     

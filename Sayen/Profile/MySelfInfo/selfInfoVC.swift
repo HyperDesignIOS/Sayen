@@ -22,16 +22,23 @@ class selfInfoVC: UIViewController {
     @IBOutlet weak var company: DLRadioButton!
     @IBOutlet weak var client_typeLbl: UILabel!
     @IBOutlet weak var flatNameStackV: UIStackView!
-    @IBOutlet weak var flatNameContainerV: CardView!
-    @IBOutlet weak var flatNameTxtF: UITextField!
+    @IBOutlet weak var buildingNoContainerV: CardView!
+    @IBOutlet weak var flatNoContainerV: CardView!
+    @IBOutlet weak var buildingNoTF: UITextField!
     @IBOutlet weak var flatNumStackV: UIStackView!
-    @IBOutlet weak var flatNumTxtF: UITextField!
+    @IBOutlet weak var flatNumTF: UITextField!
+
     
     var oldProfileImage : UIImage?
     var data: UserProfile_Data?
     fileprivate let picker = UIImagePickerController()
     fileprivate var imageDict : [String:Any] = [:]
-    let dropDown = DropDown()
+    
+    let buildingNoDropDown = DropDown()
+    let flatNoDropDown = DropDown()
+    
+    
+    
     var buildingData = [BuildingM]()
     var selectedData : BuildingM?
     var firstLaunch = true
@@ -79,38 +86,70 @@ class selfInfoVC: UIViewController {
         }
     }
     
-    private func handleDropDown() {
-        dropDown.anchorView = flatNameContainerV // UIView or UIBarButtonItem
-        dropDown.direction = .bottom
-        dropDown.backgroundColor = UIColor.white
-        dropDown.transform = CGAffineTransform(translationX: 0, y: 50).concatenating(CGAffineTransform(scaleX: 1, y: 0.9))
+    private func handleDropDown(){
+        buildingNoDropDown.anchorView = buildingNoContainerV // UIView or UIBarButtonItem
+        buildingNoDropDown.direction = .bottom
+        buildingNoDropDown.backgroundColor = UIColor.white
+        buildingNoDropDown.transform = CGAffineTransform(translationX: 0, y: 50).concatenating(CGAffineTransform(scaleX: 1, y: 0.9))
 
         var data = [String]()
+        var unitsArr = [String]()
         for x in buildingData {
             data.append(x.name)
         }
-        dropDown.dataSource = data
+        buildingNoDropDown.dataSource = data
         
         if "lang".localized == "ar" {
-            dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+            buildingNoDropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
                 cell.optionLabel.textAlignment = .right
             }
         }
-        flatNameContainerV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectFlatName)))
+        buildingNoContainerV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectFlatName)))
         
         
-        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+        buildingNoDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
-            self.selectedData = self.buildingData[index]
-            self.flatNameTxtF.text = item
+            selectedData = buildingData[index]
+            unitsArr = buildingData[index].units
+            flatNoDropDown.dataSource = unitsArr
+            flatNoDropDown.reloadAllComponents()
+            self.buildingNoTF.text = item
+            self.flatNumTF.text = ""
                    }
+        
+        
+        flatNoDropDown.anchorView = flatNoContainerV // UIView or UIBarButtonItem
+        flatNoDropDown.direction = .bottom
+        flatNoDropDown.backgroundColor = UIColor.white
+        flatNoDropDown.transform = CGAffineTransform(translationX: 0, y: 70).concatenating(CGAffineTransform(scaleX: 1, y: 0.9))
+
+        if "lang".localized == "ar" {
+            flatNoDropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+                cell.optionLabel.textAlignment = .right
+            }
+        }
+        flatNoContainerV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectFlatNum)))
+        //
+        
+        flatNoDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+         //   self.viewModel.selectedData = unitsArr[index]
+            self.flatNumTF.text = item
+        }
+        }
+
+        @objc func selectFlatNum() {
+        flatNoDropDown.show()
+        }
+
+    
+    
+    @objc func selectFlatName() {
+        
+        buildingNoDropDown.show()
     }
     
 
-    @objc func selectFlatName() {
-        
-        dropDown.show()
-    }
     func getBuildingsName(completionHandler:@escaping((Bool)->())) {
         
         
@@ -163,13 +202,16 @@ class selfInfoVC: UIViewController {
                         self.clint.isSelected = true
                         self.flatNameStackV.isHidden = false
                         self.flatNumStackV.isHidden = false
-                        self.flatNumTxtF.text = data.flat
+                        self.flatNumTF.text = data.flat
                         
                         for x in self.buildingData where data.building_id == x.id {
                             self.selectedData = x
-                            self.flatNameTxtF.text = x.name
+                            self.buildingNoTF.text = x.name
+                            self.flatNoDropDown.dataSource =  x.units
+                            self.flatNoDropDown.reloadAllComponents()
                             return
                         }
+                 
                     }
                     }
                 }
@@ -242,7 +284,7 @@ class selfInfoVC: UIViewController {
                 return
             }
             
-            guard let num = flatNumTxtF.text ,num != "" else{
+            guard let num = flatNumTF.text ,num != "" else{
                 let alertMessage = "selectFlateNumber".localized
                 self.showDAlert(title: "Error".localized, subTitle: alertMessage, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
 
@@ -262,7 +304,7 @@ class selfInfoVC: UIViewController {
         ad.isLoading()
         if ad.isUser(){
             let excellence_client = self.clint.isSelected ? "1" : "2"
-            APIClient.changeInfoUser(name: self.nameTF.text!, email: self.emailTF.text!, excellence_client: excellence_client,building_id: self.selectedData?.id ?? 0,flat: self.flatNumTxtF.text ?? "", completionHandler: { (state, sms) in
+            APIClient.changeInfoUser(name: self.nameTF.text!, email: self.emailTF.text!, excellence_client: excellence_client,building_id: self.selectedData?.id ?? 0,flat: self.flatNumTF.text ?? "", completionHandler: { (state, sms) in
                 guard state else{
                     DispatchQueue.main.async {
                         ad.killLoading()

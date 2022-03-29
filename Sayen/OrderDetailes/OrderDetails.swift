@@ -210,7 +210,7 @@ class TeamOrderDetailes {
     var isExcellenceClient : Bool {
         return excellence_client == "1"
     }
-    
+    var finish_image: String?
     
     
   
@@ -246,6 +246,7 @@ class TeamOrderDetailes {
         self.lat = jsonData["lat"].stringValue
         self.lng = jsonData["lng"].stringValue
         self.total_before_discount = jsonData["total_before_discount"].doubleValue
+        self.finish_image = jsonData["finish_image"].stringValue
         for imageString in jsonData["images"].arrayValue{
             let str = imageString.stringValue
             self.images.append(str)

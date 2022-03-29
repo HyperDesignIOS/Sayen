@@ -92,7 +92,7 @@ class dateOp {
         let date = Date()
 
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy"
+        formatter.dateFormat = "yyyy-MM-dd"
 
         formatter.locale = Locale(identifier: "en")
         

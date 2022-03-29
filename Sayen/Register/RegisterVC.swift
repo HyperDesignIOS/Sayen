@@ -23,8 +23,9 @@ class RegisterVC: UIViewController {
     
     @IBOutlet weak var flatContainerV: UIStackView!
     @IBOutlet weak var flatNumberContainerV: UIStackView!
-    @IBOutlet weak var flatNameContainerV: CardView!
-    @IBOutlet weak var flatNameTF: UITextField!
+    @IBOutlet weak var buildingNoContainerV: CardView!
+    @IBOutlet weak var flatNoContainerV: CardView!
+    @IBOutlet weak var buildingNoTF: UITextField!
     @IBOutlet weak var flatNumTF: UITextField!
     var passTfS : String = ""
     var confirmTFS : String = ""
@@ -32,8 +33,8 @@ class RegisterVC: UIViewController {
     lazy var viewModel: RegisterVM = {
         return RegisterVM()
     }()
-    let dropDown = DropDown()
-    
+    let buildingNoDropDown = DropDown()
+    let flatNoDropDown = DropDown()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
           return .lightContent
@@ -53,8 +54,6 @@ class RegisterVC: UIViewController {
     }
     
     func getBuildingNamesData() {
-        
-        
         viewModel.getBuildingsName { (status) in
             
             guard status else {
@@ -66,36 +65,66 @@ class RegisterVC: UIViewController {
     }
     
     private func handleDropDown() {
-        dropDown.anchorView = flatNameContainerV // UIView or UIBarButtonItem
-        dropDown.direction = .bottom
-        dropDown.backgroundColor = UIColor.white
-        dropDown.transform = CGAffineTransform(translationX: 0, y: 50).concatenating(CGAffineTransform(scaleX: 1, y: 0.9))
+        buildingNoDropDown.anchorView = buildingNoContainerV // UIView or UIBarButtonItem
+        buildingNoDropDown.direction = .bottom
+        buildingNoDropDown.backgroundColor = UIColor.white
+        buildingNoDropDown.transform = CGAffineTransform(translationX: 0, y: 50).concatenating(CGAffineTransform(scaleX: 1, y: 0.9))
 
         var data = [String]()
+        var unitsArr = [String]()
         for x in viewModel.buildingData {
             data.append(x.name)
         }
-        dropDown.dataSource = data
+        buildingNoDropDown.dataSource = data
         
         if "lang".localized == "ar" {
-            dropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+            buildingNoDropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
                 cell.optionLabel.textAlignment = .right
             }
         }
-        flatNameContainerV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectFlatName)))
+        buildingNoContainerV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectFlatName)))
         
         
-        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+        buildingNoDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
             self.viewModel.selectedData = self.viewModel.buildingData[index]
-            self.flatNameTF.text = item
+            unitsArr = self.viewModel.buildingData[index].units
+            flatNoDropDown.dataSource = unitsArr
+            flatNoDropDown.reloadAllComponents()
+            self.buildingNoTF.text = item
+            self.flatNumTF.text = ""
                    }
-    }
+        
+        
+        flatNoDropDown.anchorView = flatNoContainerV // UIView or UIBarButtonItem
+        flatNoDropDown.direction = .bottom
+        flatNoDropDown.backgroundColor = UIColor.white
+        flatNoDropDown.transform = CGAffineTransform(translationX: 0, y: 70).concatenating(CGAffineTransform(scaleX: 1, y: 0.9))
+
+        if "lang".localized == "ar" {
+            flatNoDropDown.customCellConfiguration = { (index: Index, item: String, cell: DropDownCell) -> Void in
+                cell.optionLabel.textAlignment = .right
+            }
+        }
+        flatNoContainerV.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectFlatNum)))
+        //
+        
+        flatNoDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+         //   self.viewModel.selectedData = unitsArr[index]
+            self.flatNumTF.text = item
+        }
+        }
+
+        @objc func selectFlatNum() {
+        flatNoDropDown.show()
+        }
+
     
     
     @objc func selectFlatName() {
         
-        dropDown.show()
+        buildingNoDropDown.show()
     }
     
     func initRegisterVM () {
@@ -162,7 +191,7 @@ class RegisterVC: UIViewController {
         guard ad.isOnline()else{return}
         if self.niceClint.isSelected {
             self.viewModel.clint = 1
-            viewModel.flatTitle = flatNameTF.text
+            viewModel.flatTitle = buildingNoTF.text
             viewModel.flatNum = flatNumTF.text
             
          }else if self.anotherClint.isSelected {
@@ -260,3 +289,4 @@ extension RegisterVC : UITextFieldDelegate {
         return true
     }
 }
+

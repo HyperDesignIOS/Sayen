@@ -14,7 +14,6 @@ class WorderDetailes: UIViewController {
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var orderNum: UILabel!
     @IBOutlet weak var date: UILabel!
-    var tabBar : UITabBarController?
     @IBOutlet weak var inWayTitle: UILabel!
     @IBOutlet weak var endTitle: UILabel!
     @IBOutlet weak var inProgTitle: UILabel!
@@ -39,21 +38,18 @@ class WorderDetailes: UIViewController {
     @IBOutlet weak var clientTypeLbl: UILabel!
     @IBOutlet weak var stopwatchLabel: UILabel!
     @IBOutlet weak var openLocationBtnOL: UIButton!
-    
+    @IBOutlet weak var reportAProblemBtnOL: UIButton!
+//    @IBOutlet weak var addMatiralsBtnOL: UIButton!
+//    @IBOutlet weak var addPriceBtnOL: UIButton!
     @IBOutlet weak var floorLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var addButtonsStackView: UIStackView!
     
-    
-    
+    var tabBar : UITabBarController?
     var data : TeamOrderDetailes?
     var orderId : Int = 0
-    
-    
     var tranId : Int = 0
-    var timer:Timer = Timer()
     var time:Int = 0
-    var isActive: Bool = false
-    var isReset: Bool = true
     var startTime:TimeInterval?
     var elapsed:TimeInterval?
     var timeInterval:TimeInterval?
@@ -116,9 +112,7 @@ class WorderDetailes: UIViewController {
         present(alert, animated: true)
     }
     @IBAction func callClint(_ sender: Any) {
-        
         guard data!.user_phone != "" else {
-            
             return
         }
         print("that's the phone Number : \(data!.user_phone)")
@@ -140,8 +134,6 @@ class WorderDetailes: UIViewController {
             alertController.addAction(noPressed)
             present(alertController, animated: true, completion: nil)
         }
-        
-        
     }
     
     @IBAction func dismiss(_ sender: Any) {
@@ -156,6 +148,24 @@ class WorderDetailes: UIViewController {
         }else{
             goWorkAPIRequest(sender)
         }
+    }
+    
+    @IBAction func addServiceButton(_ sender: UIButton){
+        let vc = AddValuesAlert()
+        vc.controlletType = .AddService
+        vc.orderId = data?.id ?? 0
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func addMatrialButton(_ sender: UIButton){
+        let vc = AddValuesAlert()
+        vc.controlletType = .AddMaterial
+        vc.orderId = data?.id ?? 0
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
    private func startWorkAPIRequest(){
@@ -175,7 +185,7 @@ class WorderDetailes: UIViewController {
             self.probAndEndStack.alpha = 0
             self.endWork.alpha = 1
             self.gotoEndV.backgroundColor = .brownMainColor
-            self.startTimer()
+//            self.startTimer()
         }
     }) { (err) in
         ad.killLoading()
@@ -183,9 +193,12 @@ class WorderDetailes: UIViewController {
     }
 }
     
+    
+    
+    
     private func goWorkAPIRequest(_ sender: UIButton){
         ad.isLoading()
-        APIClient.startWork(order_id: self.tranId, completionHandler: { (state, sms) in
+        APIClient.goWork(order_id: self.tranId, completionHandler: { (state, sms) in
             ad.killLoading()
             guard state else {
                 self.showDAlert(title: "Error".localized, subTitle:sms, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
@@ -260,7 +273,6 @@ class WorderDetailes: UIViewController {
                     self.probImages = data.images
                     self.imageCollection.reloadData()
                     if endBill {
-                        
                         let vc = AllPriceVCT()
                         vc.endPrice = "\(data.final_price!)"
                         vc.coponPrice = "\(data.total_before_discount!)"
@@ -268,7 +280,6 @@ class WorderDetailes: UIViewController {
                         vc.order_id = data.id!
                         vc.data = data
                         vc.delegate = self
-                        
                         self.navigationController?.pushViewController(vc, animated: true)
                         
                     }
@@ -287,6 +298,7 @@ class WorderDetailes: UIViewController {
         }
     }
     
+    
     func goToHome(){
         let navController = UINavigationController()
         let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
@@ -300,12 +312,13 @@ class WorderDetailes: UIViewController {
     }
     
     func setOrderDetaiels (order_status : String) {
+        self.timerView.alpha = 0
         if order_status == "2" {
             self.canceledOrderL.alpha = 0
             self.startWorkButtonOutlet.alpha = 0
-            self.timerView.alpha = 1
-            if let x = UserDefaults.standard.value(forKey: "timerStart") as? TimeInterval {
-                self.isReset = false
+            
+//            if let _ = UserDefaults.standard.value(forKey: "timerStart") as? TimeInterval {
+//                self.isReset = false
                 //        //To in progress
                 self.inWayImg.image = UIImage(named: "Group 1069")
                 self.inProgImg.image =  UIImage(named: "Group 1069")
@@ -318,12 +331,12 @@ class WorderDetailes: UIViewController {
                 self.inProgTitle.textColor = UIColor.brownMainColor
                 
                 self.startWorkButtonOutlet.alpha = 0
-                self.timerView.alpha = 1
+//                self.timerView.alpha = 1
                 self.probAndEndStack.alpha = 0
                 self.endWork.alpha = 1
                 self.gotoEndV.backgroundColor = .brownMainColor
-                self.startTimer()
-            }
+//                self.startTimer()
+//            }
             
         }else if order_status == "1"{
             self.canceledOrderL.alpha = 0
@@ -344,8 +357,9 @@ class WorderDetailes: UIViewController {
             self.endTitle.textColor = UIColor.brownMainColor
             self.startWorkButtonOutlet.alpha = 0
             self.probAndEndStack.alpha = 0
-            
+            self.addButtonsStackView.isHidden = true 
         }else if order_status == "4" {
+            //canceled
             self.probAndEndStack.alpha = 0
             self.startWorkButtonOutlet.alpha = 0
             self.canceledOrderL.alpha = 1
@@ -355,10 +369,13 @@ class WorderDetailes: UIViewController {
             self.inWayImg.image = UIImage(named: "Group 1070")
             self.inWayTitle.textColor = UIColor.red
             self.inWayTitle.text = "canceled".localized
+            self.inProgImg.alpha = 0
             self.gotoEndV.alpha = 0
+            self.inProgV.alpha = 0
+            self.inProgTitle.alpha = 0
             self.endImg.alpha = 0
             self.endTitle.alpha = 0
-            
+            self.addButtonsStackView.isHidden = true
         }else if order_status == "6"{
             //To in way
             self.inWayImg.image = UIImage(named: "Group 1069")
@@ -368,140 +385,142 @@ class WorderDetailes: UIViewController {
         }
     }
     
-    @IBAction func EndWorkAction(_ sender: Any) {
-        
-        
+    @IBAction func EndWorkAction(_ sender: Any){
         getOrderData(endBill: true)
-        
-        
     }
     
-    func EndFinalWork1 (pay_by: String?) {
-        UserDefaults.standard.set(nil, forKey: "timerStart")
-        timer.invalidate()
-        ad.isLoading()
-        APIClient.finishWork(order_id: data!.id!, pay_by: data!.excellence_client == "1" ? pay_by ?? "" : nil, completionHandler: { (state, sms) in
-            ad.killLoading()
-            guard state else{
-                return
+    func EndFinalWork1 (pay_by: String?, images: [UIImage]) {
+        if let data = data {
+            if let orderId = data.id {
+                ad.isLoading()
+                APIClient.finishWork(orderId: "\(orderId)" , images: images) { (state, sms) in
+                    ad.killLoading()
+                    guard state else{
+                        return
+                    }
+                    self.showDAlert(title: "", subTitle: "requestDone".localized, type: .success, buttonTitle: "done".localized ) { (_) in
+                        self.goToHome()
+                    }
+                    
+                } completionFaliure: { (error) in
+                    ad.killLoading()
+                    print("Error")
+                }
+                
             }
-            self.showDAlert(title: "", subTitle: "requestDone".localized, type: .success, buttonTitle: "done".localized ) { (_) in
-                self.goToHome()
-            }
-            
-        }) { (error) in
-            ad.killLoading()
-            print("Error")
         }
     }
+
+//    func startTimer() {
+//        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.incrementTimer), userInfo: nil, repeats: true)
+//
+//        isActive = true
+//
+//
+//    }
+//
+//    func funcTimer() {
+//
+//        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.incrementTimer), userInfo: nil, repeats: true)
+//    }
+//
     
-    func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.incrementTimer), userInfo: nil, repeats: true)
-        
-        isActive = true
-        
-        
-    }
+//    func stopTimer() {
+//
+//        isActive = false
+//        isReset = false
+//        timer.invalidate()
+//    }
     
-    func funcTimer() {
-        
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.incrementTimer), userInfo: nil, repeats: true)
-    }
-    
-    
-    func stopTimer() {
-        
-        isActive = false
-        isReset = false
-        timer.invalidate()
-    }
-    
-    func resetTimer() {
-        
-        isActive = false
-        isReset = true
-        stopwatchLabel.text = "00:00:00"
-    }
-    
-    
-    @objc func incrementTimer() {
-        time += 1
-        
-        if isReset {
-            stopwatchLabel.text = newTime()
-        } else {
-            stopwatchLabel.text = continueTime()
-        }
-        
-    }
-    
-    
-    func displayMinSeconds(time:Int) -> String {
-        let hours = (time / 3600)
-        let minutes:Int = time / 60 % 60
-        let seconds:Int = time % 60
-        //        let milliseconds:Int = time * 1000
-        
-        return String(format: "%0.2d:%02i:%02i", hours, minutes, seconds)
-    }
-    
-    
-    func newTime() -> String  {
-        let currentTime = Date.timeIntervalSinceReferenceDate
-        let elapsedTime: TimeInterval = currentTime - startTime!
-        
-        UserDefaults.standard.set(startTime , forKey: "timerStart")
-        return updateTimer(time: elapsedTime)
-    }
-    
-    func continueTime () -> String {
-        let currentTime = Date.timeIntervalSinceReferenceDate
-        guard let x = UserDefaults.standard.value(forKey: "timerStart") as? TimeInterval else{ return ""}
-        
-        let elapsedTime: TimeInterval = currentTime - x
-        
-        return updateTimer(time: elapsedTime)
-    }
-    
-    func updateTime() -> String {
-        return updateTimer(time: elapsed!)
-    }
-    
-    func updateTimer(time:TimeInterval) -> String {
-        var elapsedTime = time
-        
-        //calculate the minutes in elapsed time.
-        let ti = NSInteger(elapsedTime)
-        
-        let hours = (ti / 3600)
-        
-        
-        let minutes_ = UInt8(elapsedTime  / 60.0)
-        elapsedTime  -= (TimeInterval(minutes_) * 60)
-        
-        let minutes = UInt8(Double(ti)  / 60.0) % 60
-        
-        //calculate the seconds in elapsed time.
-        
-        let seconds = UInt8(elapsedTime )
-        
-        elapsedTime  -= TimeInterval(seconds)
-        
-        //find out the fraction of milliseconds to be displayed.
-        
-        let fraction = UInt8(elapsedTime  * 60)
-        
-        //add the leading zero for minutes, seconds and millseconds and store them as string constants
-        
-        
-        //concatenate minuets, seconds and milliseconds as assign it to the UILabel
-        
-        elapsed = elapsedTime
-        return String(format: "%0.2d:%02d:%02d", hours, minutes, seconds)
-        
-    }
-    
-    
+//    func resetTimer() {
+//
+//        isActive = false
+//        isReset = true
+//        stopwatchLabel.text = "00:00:00"
+//    }
+//
+//
+//    @objc func incrementTimer() {
+//        time += 1
+//
+//        if isReset {
+//            stopwatchLabel.text = newTime()
+//        } else {
+//            stopwatchLabel.text = continueTime()
+//            print(stopwatchLabel.text ?? "")
+//        }
+//
+//    }
+//
+//
+//    func displayMinSeconds(time:Int) -> String {
+//        let hours = (time / 3600)
+//        let minutes:Int = time / 60 % 60
+//        let seconds:Int = time % 60
+//        //        let milliseconds:Int = time * 1000
+//
+//        return String(format: "%0.2d:%02i:%02i", hours, minutes, seconds)
+//    }
+//
+//
+//    func newTime() -> String  {
+//        let currentTime = Date.timeIntervalSinceReferenceDate
+//        let elapsedTime: TimeInterval = currentTime - startTime!
+//
+//        UserDefaults.standard.set(startTime , forKey: "timerStart")
+//        return updateTimer(time: elapsedTime)
+//    }
+//
+//    func continueTime () -> String {
+//        newTime()
+//        let currentTime = Date.timeIntervalSinceReferenceDate
+//        guard let x = UserDefaults.standard.value(forKey: "timerStart") as? TimeInterval else{ return
+//            "UserDefaults cann't find timerStart"}
+//
+//        let elapsedTime: TimeInterval = currentTime - x
+//
+//        return updateTimer(time: elapsedTime)
+//    }
+//
+//    func updateTime() -> String {
+//        return updateTimer(time: elapsed!)
+//    }
+//
+//    func updateTimer(time:TimeInterval) -> String {
+//        var elapsedTime = time
+//
+//        //calculate the minutes in elapsed time.
+//        let ti = NSInteger(elapsedTime)
+//
+//        let hours = (ti / 3600)
+//
+//
+//        let minutes_ = UInt8(elapsedTime  / 60.0)
+//        elapsedTime  -= (TimeInterval(minutes_) * 60)
+//
+//        let minutes = UInt8(Double(ti)  / 60.0) % 60
+//
+//        //calculate the seconds in elapsed time.
+//
+//        let seconds = UInt8(elapsedTime )
+//
+//        elapsedTime  -= TimeInterval(seconds)
+//
+//        //find out the fraction of milliseconds to be displayed.
+//
+//        let fraction = UInt8(elapsedTime  * 60)
+//
+//        //add the leading zero for minutes, seconds and millseconds and store them as string constants
+//
+//
+//        //concatenate minuets, seconds and milliseconds as assign it to the UILabel
+//
+//        elapsed = elapsedTime
+//        return String(format: "%0.2d:%02d:%02d", hours, minutes, seconds)
+//
+//    }
+//
+//
     
     @IBAction func addPrice(_ sender: Any) {
         let vc = TeamAddPriceVC()
@@ -511,24 +530,12 @@ class WorderDetailes: UIViewController {
     }
     
     @IBAction func ProblemVc(_ sender: Any) {
-        
         guard let id = data?.id else{return}
-        
-        //        ad.isLoading()
-        //        APIClient.EndWork(order_id: id, completionHandler: { (state, sms) in
-        //            ad.killLoading()
-        //            guard state else {
-        //                return}
         DispatchQueue.main.async {
             let vc = ProblemVC()
             vc.order_id = id
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        //        }) { (err) in
-        //            ad.killLoading()
-        //            print("error")
-        //        }
-        //
     }
 }
 
@@ -574,9 +581,9 @@ extension WorderDetailes : UICollectionViewDataSource , UICollectionViewDelegate
 }
 
 extension WorderDetailes : endFinalWork {
-    func endFinalWork(state: Bool, pay_by: String?) {
+    func endFinalWork(state: Bool, pay_by: String?, images: [UIImage]) {
         if state {
-            self.EndFinalWork1(pay_by: pay_by)
+            self.EndFinalWork1(pay_by: pay_by,images: images)
         }
     }
     

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,15 +22,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="selfInfoVC" customModule="صاين" customModuleProvider="target">
             <connections>
+                <outlet property="buildingNoContainerV" destination="6gT-6l-qH4" id="lZP-I1-1jc"/>
+                <outlet property="buildingNoTF" destination="MR3-ZR-plw" id="hcY-jc-KQa"/>
                 <outlet property="client_typeLbl" destination="9or-23-FwF" id="616-b7-1Vk"/>
                 <outlet property="clint" destination="fhJ-UK-twA" id="HME-UW-YG2"/>
                 <outlet property="company" destination="EVs-U9-1zg" id="chF-GY-fhn"/>
                 <outlet property="emailTF" destination="V2j-8j-zak" id="xK0-nh-GfD"/>
-                <outlet property="flatNameContainerV" destination="6gT-6l-qH4" id="kiC-Sl-GAX"/>
                 <outlet property="flatNameStackV" destination="e2b-MU-6Ti" id="fLa-ba-XHy"/>
-                <outlet property="flatNameTxtF" destination="MR3-ZR-plw" id="l4g-BQ-ndX"/>
+                <outlet property="flatNoContainerV" destination="BAS-2q-LuG" id="OVt-Rp-GNL"/>
                 <outlet property="flatNumStackV" destination="h6D-ZQ-jqb" id="wJl-3m-cgY"/>
-                <outlet property="flatNumTxtF" destination="PG4-7L-UPV" id="FPj-0L-KT6"/>
+                <outlet property="flatNumTF" destination="PG4-7L-UPV" id="4At-O6-A8e"/>
                 <outlet property="nameTF" destination="F64-EZ-Fk4" id="tqf-m7-eNa"/>
                 <outlet property="profileImage" destination="obY-TV-c6U" id="Gil-Kt-URj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -215,7 +216,7 @@
                                                     <rect key="frame" x="0.0" y="25" width="360" height="50"/>
                                                     <subviews>
                                                         <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الإسم" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MR3-ZR-plw">
-                                                            <rect key="frame" x="10" y="0.0" width="342" height="50"/>
+                                                            <rect key="frame" x="10" y="0.0" width="306" height="50"/>
                                                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="ASCIICapableNumberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
@@ -226,10 +227,9 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </textField>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-Q3-5J8">
-                                                            <rect key="frame" x="339" y="18.5" width="13" height="13"/>
+                                                            <rect key="frame" x="326" y="12" width="26" height="26"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="13" id="QRP-nX-6g7"/>
-                                                                <constraint firstAttribute="width" secondItem="5cr-Q3-5J8" secondAttribute="height" multiplier="1:1" id="R6e-E0-L3D"/>
+                                                                <constraint firstAttribute="width" constant="26" id="mqy-a9-fmN"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
@@ -237,8 +237,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="MR3-ZR-plw" secondAttribute="bottom" id="5t5-zv-nyX"/>
                                                         <constraint firstAttribute="height" constant="50" id="Zkd-Jy-kxc"/>
-                                                        <constraint firstAttribute="trailing" secondItem="MR3-ZR-plw" secondAttribute="trailing" constant="8" id="eIs-zt-hg8"/>
                                                         <constraint firstItem="MR3-ZR-plw" firstAttribute="leading" secondItem="6gT-6l-qH4" secondAttribute="leading" constant="10" id="hra-n0-Un5"/>
+                                                        <constraint firstItem="5cr-Q3-5J8" firstAttribute="leading" secondItem="MR3-ZR-plw" secondAttribute="trailing" constant="10" id="icH-b9-tAT"/>
                                                         <constraint firstItem="5cr-Q3-5J8" firstAttribute="centerY" secondItem="6gT-6l-qH4" secondAttribute="centerY" id="ke7-wk-ONk"/>
                                                         <constraint firstAttribute="trailing" secondItem="5cr-Q3-5J8" secondAttribute="trailing" constant="8" id="wG8-nh-3aW"/>
                                                         <constraint firstItem="MR3-ZR-plw" firstAttribute="top" secondItem="6gT-6l-qH4" secondAttribute="top" id="yjV-V6-2Nj"/>
@@ -261,8 +261,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAS-2q-LuG" customClass="CardView" customModule="صاين" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="25" width="360" height="50"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الرقم" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PG4-7L-UPV">
-                                                            <rect key="frame" x="8" y="0.0" width="344" height="50"/>
+                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الرقم" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PG4-7L-UPV">
+                                                            <rect key="frame" x="8" y="0.0" width="308" height="50"/>
                                                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="ASCIICapableNumberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
@@ -272,14 +272,22 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </textField>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" image="down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="W9b-ek-GV4">
+                                                            <rect key="frame" x="326" y="12" width="26" height="26"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="26" id="vsm-HJ-Znx"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="PG4-7L-UPV" firstAttribute="leading" secondItem="BAS-2q-LuG" secondAttribute="leading" constant="8" id="3h4-bf-yCh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="W9b-ek-GV4" secondAttribute="trailing" constant="8" id="6Rj-jG-dUK"/>
                                                         <constraint firstAttribute="height" constant="50" id="RDJ-j2-UGB"/>
+                                                        <constraint firstItem="W9b-ek-GV4" firstAttribute="centerY" secondItem="BAS-2q-LuG" secondAttribute="centerY" id="VIC-GP-Qms"/>
                                                         <constraint firstAttribute="bottom" secondItem="PG4-7L-UPV" secondAttribute="bottom" id="a1z-ut-EUf"/>
+                                                        <constraint firstItem="W9b-ek-GV4" firstAttribute="leading" secondItem="PG4-7L-UPV" secondAttribute="trailing" constant="10" id="ntO-4X-Nwj"/>
                                                         <constraint firstItem="PG4-7L-UPV" firstAttribute="top" secondItem="BAS-2q-LuG" secondAttribute="top" id="s6l-do-32b"/>
-                                                        <constraint firstAttribute="trailing" secondItem="PG4-7L-UPV" secondAttribute="trailing" constant="8" id="tAY-NG-31z"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

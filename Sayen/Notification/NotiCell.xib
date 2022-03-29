@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -37,16 +37,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="L5a-dx-HT3">
                                 <rect key="frame" x="80" y="25" width="236" height="36"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="aa1-9v-EF0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="aa1-9v-EF0">
                                         <rect key="frame" x="0.0" y="0.0" width="236" height="14"/>
                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DO-fT-f6p">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DO-fT-f6p">
                                         <rect key="frame" x="0.0" y="22" width="236" height="14"/>
                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
-                                        <color key="textColor" red="0.60534828900000004" green="0.67665320630000003" blue="0.73954386139999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -54,16 +54,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="L5a-dx-HT3" firstAttribute="centerY" secondItem="x87-S2-5m4" secondAttribute="centerY" id="0CC-Y1-OGv"/>
+                            <constraint firstItem="L5a-dx-HT3" firstAttribute="top" secondItem="cWs-Bn-chl" secondAttribute="top" constant="25" id="DA1-iC-SDe"/>
                             <constraint firstItem="L5a-dx-HT3" firstAttribute="leading" secondItem="x87-S2-5m4" secondAttribute="trailing" constant="10" id="EjI-WN-BbN"/>
                             <constraint firstAttribute="trailing" secondItem="L5a-dx-HT3" secondAttribute="trailing" constant="10" id="ILI-xm-I7r"/>
+                            <constraint firstItem="x87-S2-5m4" firstAttribute="top" secondItem="cWs-Bn-chl" secondAttribute="top" constant="18" id="XSn-dy-ous"/>
+                            <constraint firstAttribute="bottom" secondItem="L5a-dx-HT3" secondAttribute="bottom" constant="25" id="l6O-bq-NZF"/>
                             <constraint firstItem="x87-S2-5m4" firstAttribute="leading" secondItem="cWs-Bn-chl" secondAttribute="leading" constant="20" id="suq-U9-Dw9"/>
                         </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="x87-S2-5m4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0Vc-w3-hRd"/>
                     <constraint firstAttribute="bottom" secondItem="cWs-Bn-chl" secondAttribute="bottom" constant="5" id="8ab-B0-2gx"/>
                     <constraint firstAttribute="trailing" secondItem="cWs-Bn-chl" secondAttribute="trailing" constant="5" id="9Pw-jw-f9z"/>
                     <constraint firstItem="cWs-Bn-chl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="FQd-7l-1gr"/>

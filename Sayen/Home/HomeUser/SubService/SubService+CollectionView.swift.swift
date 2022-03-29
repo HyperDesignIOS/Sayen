@@ -39,6 +39,7 @@ extension SubServiceVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeUserCell", for: indexPath) as! HomeUserCell
         cell.labelCell.text = data[indexPath.row].name
+        cell.offerImageView.isHidden = data[indexPath.row].offer == 0 ? true : false
         if let url = URL(string: data[indexPath.row].image_path) {
             let placeholderImage = UIImage(named: "Group 1059")!
             cell.image.af_setImage(withURL: url, placeholderImage: placeholderImage)

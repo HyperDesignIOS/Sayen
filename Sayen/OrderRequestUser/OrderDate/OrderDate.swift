@@ -17,7 +17,7 @@ class OrderDate: UIViewController {
     @IBOutlet weak var nextMonthButtonOutlet: UIButton!
     @IBOutlet weak var lastMonthButtonOutlet: UIButton!
     @IBOutlet weak var amPmView: UIView!
-  
+    @IBOutlet weak var noAvailableTime: UILabel!
     
    
     weak var delegate : SendDate!
@@ -26,7 +26,8 @@ class OrderDate: UIViewController {
     let amPmPicker = UIPickerView()
     var dateSelected : String = ""
     var addMonth = 0
-    let timeArr = ["06:00 AM","07:00 AM","08:00 AM","09:00 AM","10:00 AM","11:00 AM","12:00 PM","01:00 PM", "02:00 PM","03:00 PM","04:00 PM","05:00 PM","06:00 PM","07:00 PM","08:00 PM","09:00 PM"]
+    var timeArr : [String] = []
+//    ["09:00 AM","10:00 AM","11:00 AM","12:00 PM","01:00 PM", "02:00 PM","03:00 PM","04:00 PM","05:00 PM","06:00 PM"]
     var returnDateM = ReturnDate()
     var mydayNum : [String] = []
     var mydayName : [String] = []
@@ -39,44 +40,19 @@ class OrderDate: UIViewController {
     var currentTime : String = ""
     var currentTimeAm : String = ""
     var rotationAngle : CGFloat!
+    var serviceId = Int()
+    var avilableDateArr : [DateStr] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         createAllPicker ()
-        
-//        timePicker.selectRow(11, inComponent: 0, animated: true)
-        self.monthLBL.text = returnDateM.getCurrentMonthStr()
-        self.mydayNum = returnDateM.returndayesNum()
-        self.mydayName = returnDateM.returnDayName()
-        mydayNum = Array(mydayNum.prefix(32))
-        mydayName = Array(mydayName.prefix(32))
-        selecytedIndex()
-        self.currentTime = returnDateM.getCurrentTime(addHours:2)
-        
+        self.noAvailableTime.isHidden = true
+        self.avaliableDays()
         self.dateView.semanticContentAttribute = .forceLeftToRight
         self.timeView.semanticContentAttribute = .forceRightToLeft
         self.amPmView.semanticContentAttribute = .forceRightToLeft
 //        
     }
-    
-
-
-    func selecytedIndex () {
-        for (index , day) in returnDateM.AllDaysFunc().enumerated() {
-            if day == returnDateM.returnCurrntdateDay() {
-               // self.datePicker.selectedRow(inComponent: index)
-                datePicker.selectRow(index, inComponent: 0, animated: true)
-                
-            }
-        }
-        
-        for (index , time) in timeArr.enumerated() {
-            if time == self.returnDateM.getCurrentTime(addHours:2){
-                timePicker.selectRow(index, inComponent: 0, animated: true)
-            }
-        }
-
-     }
     
     func createAllPicker () {
         rotationAngle = 90 * (.pi/180)
@@ -103,108 +79,79 @@ class OrderDate: UIViewController {
   
 
     @IBAction func nextMonth(_ sender: Any) {
-        lastMonthButtonOutlet.isHidden = false
-        nextMonthButtonOutlet.isHidden = true
-        prevMonth()
-        
+//        lastMonthButtonOutlet.isHidden = false
+//        nextMonthButtonOutlet.isHidden = true
+//        prevMonth()
+
     }
-    
+
     @IBAction func previousMonth(_ sender: Any) {
-        lastMonthButtonOutlet.isHidden = true
-        nextMonthButtonOutlet.isHidden = false
-        nextMonth()
+//        lastMonthButtonOutlet.isHidden = true
+//        nextMonthButtonOutlet.isHidden = false
+//        nextMonth()
     }
     
-    private func nextMonth() {
-       var isoDate = dateSelected
-                 if isoDate == "" {
-                     isoDate = returnDateM.returnCurrntdateDay()
-                 }
-                 let dateFormatter = DateFormatter()
-                 dateFormatter.locale = Locale(identifier: Constants.current_Language)
-                 dateFormatter.dateFormat = "EEEE, d, MMMM, yyyy"
-        if let date = dateFormatter.date(from:isoDate){
-            var dateComponent = DateComponents()
-            dateComponent.month = -1
-            
-            let futureDate = Calendar.current.date(byAdding: dateComponent, to: date)
-            print(futureDate!)
-            let dateString = dateFormatter.string(from: futureDate!)
-            for (index , day) in returnDateM.AllDaysFunc().enumerated() {
-                if day == dateString {
-                    // self.datePicker.selectedRow(inComponent: index)
-                    datePicker.selectRow(index, inComponent: 0, animated: true)
-                    
-                }
+    func avaliableHours(date: String){
+        APIClient.availableHours(date: date, service_id: serviceId) {hours in
+            self.timeArr = hours
+            if hours.isEmpty {
+                self.timePicker.isHidden = true
+                self.noAvailableTime.isHidden = false
+            }else {
+                self.TransformTime = self.timeArr[0]
+                self.timePicker.isHidden = false
+                self.noAvailableTime.isHidden = true
             }
-        }
-    }
-    private func prevMonth() {
-               var isoDate = dateSelected
-               if isoDate == "" {
-                   isoDate = returnDateM.returnCurrntdateDay()
-               }
-               let dateFormatter = DateFormatter()
-               dateFormatter.locale = Locale(identifier: Constants.current_Language)
-               dateFormatter.dateFormat = "EEEE, d, MMMM, yyyy"
-        if let date = dateFormatter.date(from:isoDate){
-            var dateComponent = DateComponents()
-            dateComponent.month = 1
             
-            let futureDate = Calendar.current.date(byAdding: dateComponent, to: date)
-            print(futureDate!)
-            let dateString = dateFormatter.string(from: futureDate!)
-            for (index , day) in returnDateM.AllDaysFunc().enumerated() {
-                if day == dateString {
-                    // self.datePicker.selectedRow(inComponent: index)
-                    datePicker.selectRow(index, inComponent: 0, animated: true)
-                    
-                }
+            DispatchQueue.main.async {
+                self.timePicker.reloadAllComponents()
             }
-        }
-    }
-    
-    @IBAction func saveDate(_ sender: Any) {
-        let currentday = returnDateM.returnCurrntdateDay()
-        if transformeDate == "" {
-            self.dateBackEnd = returnDateM.getdateinBackFormate(date12: currentday)
-            print(self.dateBackEnd)
-            transformeDate = currentday
-            print("TimeBackEnd \(timeBackEnd)")
-            print("returnDateM.getBackTimeCurrent() \(returnDateM.getBackTimeCurrent())")
-            
-        }
-        if TransformTime == "" {
-            TransformTime = self.currentTime
-            self.timeBackEnd = returnDateM.getBackTimeCurrent()
+        } completionFaliure: { error in
+            print(error?.localizedDescription)
         }
 
-    
-        self.timeBackEnd = (returnDateM.getBackTime(Time: TransformTime))
-        print(dateBackEnd)
-        if self.dateBackEnd == returnDateM.getdateinBackFormate(date12: currentday) {
-            print("ok \(timeBackEnd)")
-           
-            let formatter = DateFormatter()
-            formatter.dateFormat =  "HH:mm:ss"
-            formatter.timeZone = Calendar.current.timeZone
-          
-            guard let date11 = formatter.date(from: timeBackEnd) else {return}
-            guard let date22 = formatter.date(from:  returnDateM.getBackTimeCurrent()) else{return}
-            let time1Houres = Calendar.current.component(.hour, from: date11)
-            let time2Houres =  Calendar.current.component(.hour, from: date22)
-            print(time1Houres)
-            print(time2Houres)
- 
-            
-            if time2Houres >= time1Houres  || time2Houres ==  time1Houres - 1  {
-                self.showDAlert(title: "Error".localized, subTitle: "selectRightTime".localized, type: .error, buttonTitle: "tryAgain".localized, completionHandler: nil)
-                return
-            }
-        }
-        self.delegate.sendDate(date: "\(transformeDate), \(TransformTime)" , backendDate: "\(dateBackEnd) \(timeBackEnd)")
-        self.dismissViewC()
     }
+    
+    func avaliableDays(){
+        ad.isLoading()
+        APIClient.availableDays(service_id: serviceId) {days in
+            self.avilableDateArr = days
+            if !days.isEmpty {
+                ad.killLoading()
+                self.transformeDate = days[0].longFormate
+                self.dateBackEnd = days[0].backendDate
+                self.timeArr = days[0].hours
+                self.monthLBL.text = days[0].month
+                if !days[0].hours.isEmpty {
+                    self.TransformTime = days[0].hours[0]
+                    DispatchQueue.main.async {
+                        self.timePicker.reloadAllComponents()
+                    }
+                }else {
+                    self.timePicker.isHidden = true
+                    self.noAvailableTime.isHidden = false
+                }
+              
+                
+            }
+            DispatchQueue.main.async {
+                self.datePicker.reloadAllComponents()
+            }
+        } completionFaliure: { error in
+            print(error?.localizedDescription)
+        }
+
+    }
+
+    @IBAction func saveDate(_ sender: Any) {
+        if noAvailableTime.isHidden {
+            self.timeBackEnd = returnDateM.getBackTime(Time: TransformTime).backEnd
+            let ttime = returnDateM.getBackTime(Time: TransformTime).trsaform
+            self.delegate.sendDate(date: "\(transformeDate), \(ttime)" , backendDate: "\(dateBackEnd) \(timeBackEnd)")
+            self.dismissViewC()
+        } 
+    }
+    
     
     @IBAction func dismiss(_ sender: Any) {
         self.dismissViewC()
@@ -220,7 +167,7 @@ extension OrderDate : UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == datePicker {
-            return mydayNum.count
+            return avilableDateArr.count
         }else{
             return timeArr.count
         }
@@ -229,7 +176,7 @@ extension OrderDate : UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == datePicker {
-            return mydayNum[row]
+            return avilableDateArr[row].dateNum
         }else {
             return timeArr[row]
         }
@@ -243,14 +190,33 @@ extension OrderDate : UIPickerViewDelegate, UIPickerViewDataSource {
             print(row)
             print(returnDateM.AllDaysFunc()[row])
             
-            dateSelected = (returnDateM.AllDaysFunc()[row])
+            
          //   let datett = (returnDateM.getdateinBackFormate(date12: dateSelected))
-            self.transformeDate = dateSelected
-            self.dateBackEnd = returnDateM.getdateinBackFormate(date12: dateSelected)
-            print("dateBackEnd : \(self.dateBackEnd)")
-            self.monthLBL.text = returnDateM.returnMounth()[row]
+//            dateSelected = (returnDateM.AllDaysFunc()[row])
+//            self.transformeDate = dateSelected
+//            self.dateBackEnd = returnDateM.getdateinBackFormate(date12: dateSelected)
+ //            print("dateBackEnd : \(self.dateBackEnd)")
+ //            avaliableHours(date: self.dateBackEnd)
+ //            self.monthLBL.text = returnDateM.returnMounth()[row]
+            self.transformeDate = avilableDateArr[row].longFormate
+            self.dateBackEnd = avilableDateArr[row].backendDate
+            self.monthLBL.text = avilableDateArr[row].month
+            self.timeArr = avilableDateArr[row].hours
+            if !timeArr.isEmpty{
+                self.TransformTime = self.timeArr[0]
+                timePicker.reloadAllComponents()
+                self.timePicker.isHidden = false
+                self.noAvailableTime.isHidden = true
+            }else{
+                self.timePicker.isHidden = true
+                self.noAvailableTime.isHidden = false
+            }
+            
+            
+
         }else  {
             self.TransformTime = timeArr[row]
+    
             print(self.TransformTime)
         }
     }
@@ -272,14 +238,14 @@ extension OrderDate : UIPickerViewDelegate, UIPickerViewDataSource {
             view.frame = CGRect(x: 0, y: 0, width: 60, height: 90)
             let day = UILabel()
             day.frame = CGRect(x: 0, y: 20, width: 60, height: 30)
-            day.text = mydayNum[row]
+            day.text = avilableDateArr[row].dateNum
             day.textColor = UIColor.brownMainColor
             day.font = UIFont(name: "Tajawal-Bold", size: 17)
             day.textAlignment = .center
             view.addSubview(day)
             let dayName = UILabel()
             dayName.frame = CGRect(x: 0, y: 40, width: 60, height: 30)
-            dayName.text = mydayName[row]
+            dayName.text = avilableDateArr[row].dateName
             dayName.textColor = UIColor.brownMainColor
             dayName.font = UIFont(name: "Tajawal-Bold", size: 15)
             dayName.textAlignment = .center
@@ -306,3 +272,47 @@ extension OrderDate : UIPickerViewDelegate, UIPickerViewDataSource {
 protocol SendDate : class {
     func sendDate (date : String , backendDate : String)
 }
+
+
+
+//@IBAction func saveDateOld(_ sender: Any) {
+//    let currentday = returnDateM.returnCurrntdateDay()
+//    if transformeDate == "" {
+//        self.dateBackEnd = returnDateM.getdateinBackFormate(date12: currentday)
+//        print(self.dateBackEnd)
+//        transformeDate = currentday
+//        print("TimeBackEnd \(timeBackEnd)")
+//        print("returnDateM.getBackTimeCurrent() \(returnDateM.getBackTimeCurrent())")
+//
+//    }
+//    if TransformTime == "" {
+//        TransformTime = self.currentTime
+//        self.timeBackEnd = returnDateM.getBackTimeCurrent()
+//    }
+//
+//
+//    self.timeBackEnd = (returnDateM.getBackTime(Time: TransformTime))
+//    print(dateBackEnd)
+//    if self.dateBackEnd == returnDateM.getdateinBackFormate(date12: currentday) {
+//        print("ok \(timeBackEnd)")
+//
+//        let formatter = DateFormatter()
+//        formatter.dateFormat =  "HH:mm:ss"
+//        formatter.timeZone = Calendar.current.timeZone
+//
+//        guard let date11 = formatter.date(from: timeBackEnd) else {return}
+//        guard let date22 = formatter.date(from:  returnDateM.getBackTimeCurrent()) else{return}
+//        let time1Houres = Calendar.current.component(.hour, from: date11)
+//        let time2Houres =  Calendar.current.component(.hour, from: date22)
+//        print(time1Houres)
+//        print(time2Houres)
+//
+//
+//        if time2Houres >= time1Houres  || time2Houres ==  time1Houres - 1  {
+//            self.showDAlert(title: "Error".localized, subTitle: "selectRightTime".localized, type: .error, buttonTitle: "tryAgain".localized, completionHandler: nil)
+//            return
+//        }
+//    }
+//    self.delegate.sendDate(date: "\(transformeDate), \(TransformTime)" , backendDate: "\(dateBackEnd) \(timeBackEnd)")
+//    self.dismissViewC()
+//}

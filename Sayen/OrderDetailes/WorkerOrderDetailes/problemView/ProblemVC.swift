@@ -16,7 +16,7 @@ class ProblemVC: UIViewController {
     var data : [ProblemTypes] = []
     @IBOutlet weak var tableView: UITableView!
     var selectedBool = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "ProblemCell", bundle: nil), forCellReuseIdentifier: "ProblemCell")

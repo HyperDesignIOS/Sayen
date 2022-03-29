@@ -10,12 +10,15 @@ import Locksmith
 import UIKit
 
 class Constants {
- 
+   
     //    static var lang = L102Language.currentAppleLanguage() == "ar" ? true : false
     static var deviceID = UIDevice.current.identifierForVendor!.uuidString
     static let randomQueue =  DispatchQueue(label: "randomQueue", qos: .utility)
-    
+    static let contentSizeObserverKey = "contentSize"
+    static let userAppstoreUrl = "https://apps.apple.com/us/app/sayen-user/id1536317315"
+    static let workerAppstoreUrl = "https://apps.apple.com/us/app/sayen-team/id1536320901"
     static var firebaseTokenKey = "firebaseToken"
+    static var merchantName = "Sayn App (Yaqoub Alarfaj)"
     static let  selectedImg = UIImage(named:"Radio-On-Enabled")
     static let deSelectedImg = UIImage(named:"Radio-Off-Enabled")
 //    static let GOOGLE_MAPS_API_KEY = "AIzaSyAwyQnnV0Z4PaFX645Ua1PMX56qlbuHvls"

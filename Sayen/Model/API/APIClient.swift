@@ -12,7 +12,6 @@ import SwiftyJSON
 
 class APIClient {
     
-    
  
     @discardableResult
     static func performSwiftyRequest(route:APIRouter, headers: HTTPHeaders? = nil,  _ completion:@escaping (JSON)->Void,_ failure:@escaping (Error?)->Void) -> DataRequest {
@@ -80,8 +79,8 @@ class APIClient {
     }
    static let longSessionManager : SessionManager = {
         let con = URLSessionConfiguration.default
-        con.timeoutIntervalForResource = TimeInterval(60)
-        con.timeoutIntervalForRequest = TimeInterval(60)
+        con.timeoutIntervalForResource = TimeInterval(120)
+        con.timeoutIntervalForRequest = TimeInterval(120)
         return  Alamofire.SessionManager(configuration: con)
     }()
      

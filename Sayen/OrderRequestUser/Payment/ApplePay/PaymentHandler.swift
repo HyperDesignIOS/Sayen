@@ -56,11 +56,12 @@ class PaymentHandler: NSObject {
 //        return [shippingDelivery, shippingCollection]
 //    }
 //
-    func startPayment(servcie: String, price: String, completion: @escaping PaymentCompletionHandler) {
+    func startPayment(price: String, completion: @escaping PaymentCompletionHandler) {
 
         completionHandler = completion
          
-        let service = PKPaymentSummaryItem(label: servcie, amount: NSDecimalNumber(string: price), type: .final)
+        let service = PKPaymentSummaryItem(label:  Constants.merchantName, amount: NSDecimalNumber(string: price), type: .final)
+        
         priceAmount = price
         paymentSummaryItems = [service]
 
@@ -104,55 +105,59 @@ extension PaymentHandler: PKPaymentAuthorizationControllerDelegate {
         let paymentDataDictionary: [AnyHashable: Any]? = try? (JSONSerialization.jsonObject(with: payment.token.paymentData, options: .mutableContainers) as! [AnyHashable : Any])
         
         let price = (Double(priceAmount) ?? 0.0) * 100
-        guard let paymentDataDic = paymentDataDictionary else {return}
-        guard let  headerDictionaryGr = paymentDataDic["header"] as?  [AnyHashable: Any]  else {return}
+        if let paymentDataDic = paymentDataDictionary {
+            if let headerDictionaryGr = paymentDataDic["header"] as?  [AnyHashable: Any]  {
+                let headerDictionary : [AnyHashable: Any] = ["publicKeyHash": "\(headerDictionaryGr["publicKeyHash"] ?? "")","ephemeralPublicKey": "\(headerDictionaryGr["ephemeralPublicKey"] ?? "")","transactionId": "\(headerDictionaryGr["transactionId"] ?? "")"]
+                print(headerDictionary)
             
-            let headerDictionary : [AnyHashable: Any] = ["publicKeyHash": "\(headerDictionaryGr["publicKeyHash"] ?? "")","ephemeralPublicKey": "\(headerDictionaryGr["ephemeralPublicKey"] ?? "")","transactionId": "\(headerDictionaryGr["transactionId"] ?? "")"]
-            print(headerDictionary)
-        
 
-        let tokenDictionary: [AnyHashable: Any]  = ["data": "\(paymentDataDic["data"] ?? "")","signature": "\(paymentDataDic["signature"]  ?? "")", "header": headerDictionary, "version": "\(paymentDataDic["version"] ?? "")"]
-      
-        let sourceDictionary: [AnyHashable: Any]  = ["type": "applepay", "token": tokenDictionary]
-        let parametersDictionary: [AnyHashable: Any] = ["amount": price, "description": "apple pay request", "source": sourceDictionary]
-        print(parametersDictionary,"")
-//
-        let parameters: Data? = try? JSONSerialization.data(withJSONObject: parametersDictionary, options: [])
-        
-        let username = "pk_test_2VTNkH5DfoAKATQsF1wh2eoG7vBk3T21GzYsuQNX"
-        let password = ""
-        let loginString = String(format: "%@:%@", username, password)
-        let loginData = loginString.data(using: String.Encoding.utf8)!
-        let base64LoginString = loginData.base64EncodedString()
-        var request = URLRequest(url: URL(string: "https://api.moyasar.com/v1/payments")!,timeoutInterval: Double.infinity)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+            let tokenDictionary: [AnyHashable: Any]  = ["data": "\(paymentDataDic["data"] ?? "")","signature": "\(paymentDataDic["signature"]  ?? "")", "header": headerDictionary, "version": "\(paymentDataDic["version"] ?? "")"]
+          
+            let sourceDictionary: [AnyHashable: Any]  = ["type": "applepay", "token": tokenDictionary]
+            let parametersDictionary: [AnyHashable: Any] = ["amount": price, "description": "apple pay request", "source": sourceDictionary]
+            print(parametersDictionary,"")
+    //
+            let parameters: Data? = try? JSONSerialization.data(withJSONObject: parametersDictionary, options: [])
+            
+            let username = "pk_test_2VTNkH5DfoAKATQsF1wh2eoG7vBk3T21GzYsuQNX"
+            let password = ""
+            let loginString = String(format: "%@:%@", username, password)
+            let loginData = loginString.data(using: String.Encoding.utf8)!
+            let base64LoginString = loginData.base64EncodedString()
+            var request = URLRequest(url: URL(string: "https://api.moyasar.com/v1/payments")!,timeoutInterval: Double.infinity)
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
 
-        request.httpMethod = "POST"
-        request.httpBody = parameters
-        
+            request.httpMethod = "POST"
+            request.httpBody = parameters
+            
 
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-         guard let data = data else {
-           print(String(describing: error))
-           semaphore.signal()
-           return
-         }
-      	   print(String(data: data, encoding: .utf8)!)
-            let json = JSON(data)
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+             guard let data = data else {
+               print(String(describing: error))
+               semaphore.signal()
+               return
+             }
+                 print(String(data: data, encoding: .utf8)!)
+                let json = JSON(data)
+                
+                
+                let id = json["id"].string ?? ""
+                let status = json["status"].string ?? ""
+                self.delegate.successApplePay(id: id, status: status)
+                print(id , status)
+                
+             semaphore.signal()
+            }
+            task.resume()
+            semaphore.wait()
             
-            
-            let id = json["id"].string ?? ""
-            let status = json["status"].string ?? ""
-            self.delegate.successApplePay(id: id, status: status)
-            print(id , status)
-            
-         semaphore.signal()
+
+            }
         }
-        task.resume()
-        semaphore.wait()
-        
-
+     
+            
+  
         let token = payment.token
         print(token)
         self.paymentStatus = status

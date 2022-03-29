@@ -34,3 +34,6 @@
 
 /* Class = "UILabel"; text = "لا توجد إشعارات"; ObjectID = "rWO-pB-0x7"; */
 "rWO-pB-0x7.text" = "No Notifications ,yet!";
+
+/* Class = "UILabel"; text = "لا توجد إشعارات"; ObjectID = "rWO-pB-0x7"; */
+"iAp-95-7rd.text" = "experimental";

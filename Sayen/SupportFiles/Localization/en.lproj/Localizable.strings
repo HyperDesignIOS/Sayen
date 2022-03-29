@@ -737,3 +737,13 @@
 "lang" = "en";
 
 "emergancyOrder" = "Emergancy Order";
+"finishWork" = "finish Work";
+"uploadToFinish" = "please, upload image to finish work";
+"spicailOffers" = "spicail Offers";
+"DearUser" = "Dear User";
+"NewVersionAvailable" = "New Version is Available on AppStore";
+"update" = "Update";
+"addService" = "Add Service";
+"addMatrial" = "Add Matrial";
+"maxFImages" = "You cannot select maximum 5 images!";
+"yourSessionHasBeenEnded" = "your session has been ended" ;

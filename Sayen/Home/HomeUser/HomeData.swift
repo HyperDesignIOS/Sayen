@@ -22,12 +22,17 @@ class HomeData {
     private var _name : String?
     private var _text : String?
     private  var _checkSub : Int?
+    private  var _offer : Int?
     
     
     
     
     var id : Int {
         return   _id ?? 0
+    }
+    
+    var offer : Int {
+        return   _offer ?? 0
     }
     
     var name : String {
@@ -77,6 +82,7 @@ class HomeData {
         self._initial_price = jsonData["initial_price"].doubleValue
         self._checkSub = jsonData["checkSub"].intValue
         self._text = jsonData["text"].stringValue
+        self._offer = jsonData["offer"].intValue
     }
     
     

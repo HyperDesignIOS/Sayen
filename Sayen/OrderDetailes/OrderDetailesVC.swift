@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class OrderDetailesVC: UIViewController {
     
@@ -55,7 +56,7 @@ class OrderDetailesVC: UIViewController {
     @IBOutlet weak var problemImageLblTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var requestWarrantyButtonOutlet: UIButtonX!
     @IBOutlet weak var showWarrantyButtonOutlet: UIButtonX!
-    
+    @IBOutlet weak var warrantyButtonsStackView: UIStackView!
     
     var tabBar : UITabBarController?
     var statePrice : String = ""
@@ -951,4 +952,53 @@ extension OrderDetailesVC : EndYesOrNo {
 //
 //    }
 //
+//}
+
+
+//
+//(state, sms,urlStr, orderId)   in
+//    guard let self = self else {return}
+//    guard state  else{
+//        ad.killLoading()
+//        DispatchQueue.main.async {
+//            self.showDAlert(title: "Error".localized, subTitle: sms.localized, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
+//        }
+//        return
+//    }
+//
+//    DispatchQueue.main.async {
+//        ad.killLoading()
+//        switch self.paymentType {
+//        case .apple:
+//            if let orderId = orderId {
+//                self.orderId = orderId
+//                let result = PaymentHandler.applePayStatus()
+//                if result.canMakePayments {
+//                    self.paymentHandler.delegate = self
+//                    self.paymentHandler.startPayment(servcie: self.pageTransformeTitle, price: self.initial_price) { (success) in
+//                        if success {
+//                            //TODO: need to handle when applepay scussess
+//                            print("SSSS success")
+//                        }
+//                    }
+//
+//                } else if result.canSetupCards {
+//                    let passLibrary = PKPassLibrary()
+//                    passLibrary.openPaymentSetup()
+//                }
+//            }
+//        case .cards:
+//            if let urlS = urlStr , let _ = URL(string: urlS) {
+//            let vc = OnlinePaymentVC()
+//            vc.urlSt = urlS
+//            self.presentInFullScreen(vc, animated: true)
+//            }
+//        case .cash:
+//            self.showDAlert(title: "thanks".localized, subTitle:  "requestSentSuccessfully".localized, type: .success, buttonTitle: "") { (_) in
+//                self.gotoOrders()
+//            }
+//        }
+//    }
+//
+//}
 //}

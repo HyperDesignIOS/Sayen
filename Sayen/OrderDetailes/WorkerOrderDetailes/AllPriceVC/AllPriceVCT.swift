@@ -10,7 +10,7 @@ import DLRadioButton
 
 class AllPriceVCT: UIViewController {
 
-    @IBOutlet weak var checkBoxbtn: UIButton!
+    
     var startPrice : String = ""
     var coponPrice : String = ""
     var endPrice : String = ""
@@ -23,18 +23,27 @@ class AllPriceVCT: UIViewController {
     @IBOutlet weak var endlbl: UILabel!
     @IBOutlet weak var requiredCostLbl: UILabel!
     @IBOutlet weak var cashtrueImg: UIImageView!
-    
+    @IBOutlet weak var checkBoxbtn: UIButton!
     @IBOutlet weak var paymentMethodContainerV: CardView!
     @IBOutlet weak var ownerPayBtnOL: DLRadioButton!
     @IBOutlet weak var clientPayBtnOL: DLRadioButton!
     
     @IBOutlet weak var finalCOstContainerV: UIView!
     @IBOutlet weak var costBeforeDiscountV: UIView!
+    
+    
+    @IBOutlet weak var multiButtonOutlet: UIButton!
+    @IBOutlet weak var imagesCollection: UICollectionView!
+    @IBOutlet weak var imageHieght: NSLayoutConstraint!
+    
     var cashPrice : Bool = false
     var data: TeamOrderDetailes?
+    let picker = UIImagePickerController()
+    var selectedImages : [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        handleCollectionView()
         self.startLbl.text = "\(startPrice.getPriceValue()) " + "Rial".localized
         if let total = Double(coponPrice) , let startP = Double(startPrice) {
             let v = total - startP
@@ -65,9 +74,23 @@ class AllPriceVCT: UIViewController {
              self.requiredCostLbl.text = endPrice.getPriceValue()
             self.finalCOstContainerV.isHidden = true
         }
+        
+        self.picker.delegate = self
+        self.picker.allowsEditing = true
+        
+        
     }
 
-    //Group 1062
+    @IBAction func uplodeImgs(_ sender: Any) {
+        guard ad.isOnline() else{return}
+        if selectedImages.count != 5{
+        self.picker.delegate = self
+        self.picker.allowsEditing = true
+        uploadFinishWorkImage()
+        }else{
+            showDAlert(title: "Sorry", subTitle: "maxFImages".localized, type: .updateRequired, buttonTitle: "ok", completionHandler: nil)
+        }
+    }
 
     @IBAction func checkhandler(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
@@ -80,15 +103,52 @@ class AllPriceVCT: UIViewController {
                 self.cashtrueImg.alpha = 0
             }
     }
+    func EndFinalWork (pay_by: String?, images: [UIImage]) {
+        if let data = data {
+            if let orderId = data.id {
+                ad.isLoading()
+                APIClient.finishWork(orderId: "\(orderId)" , images: images) { (state, sms) in
+                    ad.killLoading()
+                    guard state else{
+                        return
+                    }
+                    self.showDAlert(title: "", subTitle: "requestDone".localized, type: .success, buttonTitle: "done".localized ) { (_) in
+                        self.goToHome()
+                    }
+                    
+                } completionFaliure: { (error) in
+                    ad.killLoading()
+                    print("Error")
+                }
+                
+            }
+        }
+    }
     
+    func goToHome(){
+        let navController = UINavigationController()
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        guard let window = keyWindow else {return}
+        let storyb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        tabBar = storyb.instantiateViewController(withIdentifier: "rootNav") as? UITabBarController
+        navController.navigationBar.isHidden = true
+        navController.viewControllers = [tabBar!]
+        window.rootViewController = navController
+        window.makeKeyAndVisible()
+    }
     
-    @IBAction func endWorking(_ sender: Any) {
-        guard cashPrice else{
-            self.showDAlert(title: "", subTitle: "confirmReceipt".localized, type: .error, buttonTitle: "", completionHandler: nil)
-               return
-           }
-        self.delegate.endFinalWork(state: true, pay_by: clientPayBtnOL.isSelected ? "1" : "2" )
-          
+    @IBAction func endWorking(_ sender: UIButton) {
+       
+        if sender.tag == 123 {
+            guard cashPrice else{
+                self.showDAlert(title: "", subTitle: "confirmReceipt".localized, type: .error, buttonTitle: "", completionHandler: nil)
+                   return
+               }
+            EndFinalWork (pay_by: clientPayBtnOL.isSelected ? "1" : "2" , images: selectedImages )
+
+        }else  if sender.tag == 122 {
+            self.uploadFinishWorkImage()
+        }
     }
 
     @IBAction func dismiss(_ sender: Any) {
@@ -101,5 +161,7 @@ class AllPriceVCT: UIViewController {
 
 
 protocol endFinalWork : class {
-    func endFinalWork (state : Bool,pay_by:String?)
+    func endFinalWork (state : Bool,pay_by:String?, images: [UIImage])
 }
+
+

@@ -19,6 +19,7 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
     var name : String = ""
     var user : UserProfile_Data? = nil
     var emergenacyServices : [HomeData] = []
+    var offers : [OfferService] = []
     
      lazy var refresher : UIRefreshControl = {
               let refresher = UIRefreshControl()
@@ -31,14 +32,11 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getCurrentToken()
+//        getOffers()
        print(Constants.current_Language,"-----------")
-        self.collectionView.register(UINib(nibName: "HomeUserCell", bundle: nil), forCellWithReuseIdentifier: "HomeUserCell")
-        collectionView.register(UINib(nibName: "HomeHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HomeHeader")
-        collectionView.semanticContentAttribute = .forceRightToLeft
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.addSubview(refresher)
+       handleCollectionView()
         ad.checkIfTokenSent()
+        checkVersion()
 //        if let navigationController = self.navigationController{
 //            navigationController.setStatusBar(backgroundColor: UIColor(rgb: 0x1F3D69))
 //                    }
@@ -48,8 +46,21 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
    
     }
     
+    
+    func checkVersion(){
+        VersionCheck.shared.isUpdateAvailable() { hasUpdates in
+            if hasUpdates {
+                self.showDAlert(title: "DearUser".localized, subTitle: "NewVersionAvailable".localized, type: .updateRequired, buttonTitle: "update".localized) { _ in
+                    if let url = URL(string: Constants.userAppstoreUrl) {
+                        UIApplication.shared.open(url)
+                    }
+                }
+            }
+        }
+    }
+    
     func emergancyRequestButton(_ sender: UIButton){
-        let vc = CustomizedInputAlert()
+        let vc = EmergencyServiceAlert()
         vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -108,7 +119,19 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
     }
     
     
-    
+//    func getOffers(){
+//        APIClient.offers(service_id: 0) { state, offers in
+//            if let offers = offers {
+//                if !offers.isEmpty {
+//                    self.offers = offers
+//
+//                }
+//            }
+//        } completionFaliure: { error in
+//            print(error?.localizedDescription)
+//        }
+//
+//    }
     func getProfileData() {
         APIClient.getProfileData(user_type: ad.user_type(), completionHandler: {[weak self] (state, sms, data) in
             guard let self = self else {return}
@@ -133,16 +156,21 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
     @objc func getAllServices (){
         ad.isLoading()
         self.refresher.endRefreshing()
-        APIClient.getServices(completionHandler: {[weak self] (state, data,user)  in
+        APIClient.getServices(completionHandler: {[weak self] (state, data, offers , user, userAppVersion)    in
             guard let self = self else {return}
             guard state else{
-                self.showDAlert(title: "Error".localized, subTitle: "tryAgain".localized, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
+                self.showDAlert(title: "", subTitle: "yourSessionHasBeenEnded".localized, type: .updateRequired, buttonTitle: "login".localized) { _ in
+                    ad.restartApplicationToLogin()
+                    UserDefaults.standard.setValue(nil, forKey: Constants.firebaseTokenKey)
+                    Constants.user_token = "" 
+                }
                 ad.killLoading()
                 return
             }
             if let user = user {
                 self.user = user
             }
+
             if let data = data {
                 if data.count == 0 {
                     self.noDataLbl.alpha = 1
@@ -152,20 +180,24 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
                     print(data[0].checkSub)
                     self.noDataLbl.alpha = 0
                     self.data = data
+                    self.emergenacyServices.removeAll()
                     data.forEach { service in
                         let emergencyIds = [1,2]
                         if emergencyIds.contains(service.id) {
                             self.emergenacyServices.append(service)
                         }
                     }
+                    if let offers = offers {
+                        self.offers = offers
+                        if !offers.isEmpty {
+                            self.data.insert(data[0], at: 0)
+                        }
+                    }
                     self.data.insert(data[0], at: 0)
                     self.collectionView.reloadData()
                     ad.killLoading()
                 }
-               
             }
-            
-            
         }) { (err) in
             ad.killLoading()
             self.refresher.endRefreshing()

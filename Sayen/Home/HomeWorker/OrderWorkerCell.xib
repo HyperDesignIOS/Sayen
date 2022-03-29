@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,14 +19,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="OrderWorkerCell" rowHeight="71" id="KGk-i7-Jjw" customClass="OrderWorkerCell" customModule="Sayen_Team" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="OrderWorkerCell" rowHeight="71" id="KGk-i7-Jjw" customClass="OrderWorkerCell" customModule="فريق_صاين" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="342" height="71"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="342" height="71"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Mv-e6-Fjy" customClass="CardView" customModule="Sayen_Team" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Mv-e6-Fjy" customClass="CardView" customModule="فريق_صاين" customModuleProvider="target">
                         <rect key="frame" x="5" y="5" width="332" height="61"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vo8-Lt-pQT">
@@ -38,6 +40,9 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKK-F9-DPo">
                                         <rect key="frame" x="0.0" y="25" width="39.5" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="DMo-cA-GZR"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                         <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -62,11 +67,13 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Vo8-Lt-pQT" secondAttribute="trailing" constant="20" id="053-zC-nmX"/>
+                            <constraint firstAttribute="right" secondItem="Vo8-Lt-pQT" secondAttribute="right" constant="20" id="053-zC-nmX"/>
                             <constraint firstItem="ned-QX-m6V" firstAttribute="centerY" secondItem="3Mv-e6-Fjy" secondAttribute="centerY" id="31H-fr-06a"/>
-                            <constraint firstItem="ned-QX-m6V" firstAttribute="leading" secondItem="3Mv-e6-Fjy" secondAttribute="leading" id="4cZ-TC-3qo"/>
+                            <constraint firstItem="ned-QX-m6V" firstAttribute="left" secondItem="3Mv-e6-Fjy" secondAttribute="left" id="4cZ-TC-3qo"/>
+                            <constraint firstAttribute="bottom" secondItem="Vo8-Lt-pQT" secondAttribute="bottom" constant="9.5" id="HDU-XD-zid"/>
+                            <constraint firstItem="Vo8-Lt-pQT" firstAttribute="top" secondItem="3Mv-e6-Fjy" secondAttribute="top" constant="9.5" id="SX8-1z-nFf"/>
                             <constraint firstItem="Vo8-Lt-pQT" firstAttribute="centerY" secondItem="3Mv-e6-Fjy" secondAttribute="centerY" id="jpo-I5-vWx"/>
                         </constraints>
                     </view>
@@ -78,8 +85,8 @@
                     <constraint firstAttribute="trailing" secondItem="3Mv-e6-Fjy" secondAttribute="trailing" constant="5" id="nKb-oi-YHY"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="callBtn" destination="4zc-5N-sdL" id="Nw9-b7-wum"/>
                 <outlet property="kindWork" destination="RKK-F9-DPo" id="DHX-zy-wZ4"/>
@@ -92,5 +99,8 @@
     <resources>
         <image name="Group 1008" width="23.5" height="23.5"/>
         <image name="Group 1038" width="23.5" height="23.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

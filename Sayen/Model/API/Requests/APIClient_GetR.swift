@@ -67,7 +67,7 @@ extension APIClient {
     
     //MARK: Get Services
     
-  static func getServices (completionHandler:@escaping (Bool,[HomeData]? , UserProfile_Data?)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+  static func getServices (completionHandler:@escaping (Bool, [HomeData]? , [OfferService]? , UserProfile_Data?, String?)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
     performSwiftyRequest(route: .service , headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
               let json = JSON(jsonData)
               print(json)
@@ -75,19 +75,28 @@ extension APIClient {
 
                 var data : [HomeData] = []
                 let user : UserProfile_Data? = UserProfile_Data(json["user_data"])
+                let versionData : Setting_Data = Setting_Data(json["setting"])
+                  
                 for (_,jsn) in json["services"] {
                         data.append(HomeData(jsn))
                     }
                 
-                  print(data)
+                  var OfferData : [OfferService] = []
+                  for (_,jsn) in json["offers"] {
+                      let offerService : HomeData = HomeData(jsn["service"])
+                      let offer = OffersRoot(jsn)
+                      OfferData.append(OfferService(offer: offer, service: offerService))
+                  }
+                 
+                  print(OfferData)
 //                let sms  = json["message"].string ?? json["error"].stringValue
-                 let status = data.count >= 0 ? true : false
+                 let status = data.count > 0 ? true : false
                 if !status {
                     
-                    completionHandler(status,nil, nil)
+                    completionHandler(status,nil, nil ,nil,nil)
                     return
                 }
-                  completionHandler(status,data, user)
+                  completionHandler(status,data, OfferData , user,versionData.userAppIosVersion)
             }
           }) { (error) in
               DispatchQueue.main.async {
@@ -309,8 +318,60 @@ extension APIClient {
           }
       }
         //MARK: getWorkerOrders
-    static func getWorkerOrders(date : String,completionHandler:@escaping (Bool,[TeamOrderList]?)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+    static func getWorkerOrders(date : String,completionHandler:@escaping (Bool,[TeamOrderList]?, String?)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
         performSwiftyRequest(route: .getTeamOrders(date: date),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+            let json = JSON(jsonData)
+            print(json)
+            DispatchQueue.main.async {
+                var data : [TeamOrderList] = []
+                let versionData : Setting_Data = Setting_Data(json["setting"])
+                  
+                for (_,jsn) in json["orders"] {
+                    data.append(TeamOrderList(jsn))
+                }
+                //   let sms  = json["message"].string ?? json["error"].stringValue
+                let status = data.count >= 0 ? true : false
+                if !status {
+                    completionHandler(status,nil,nil)
+                    return
+                }
+                completionHandler(status,data,versionData.userAppIosVersion)
+            }
+        }) { (error) in
+            DispatchQueue.main.async {
+                print(error.debugDescription)
+                completionFaliure(error)
+            }
+        }
+    }
+    
+    //MARK: getWorkerOrders
+static func getWorkerEmergencyOrders(completionHandler:@escaping (Bool,[TeamOrderList]?)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+    performSwiftyRequest(route: .getTeamEmergencyOrders,headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+        let json = JSON(jsonData)
+        print(json)
+        DispatchQueue.main.async {
+            var data : [TeamOrderList] = []
+            for (_,jsn) in json["orders"] {
+                data.append(TeamOrderList(jsn))
+            }
+            //   let sms  = json["message"].string ?? json["error"].stringValue
+            let status = data.count >= 0 ? true : false
+            if !status {
+                completionHandler(status,nil)
+                return
+            }
+            completionHandler(status,data)
+        }
+    }) { (error) in
+        DispatchQueue.main.async {
+            print(error.debugDescription)
+            completionFaliure(error)
+        }
+    }
+}
+    static func filterWorkerEmergencyOrders(date: String, completionHandler:@escaping (Bool,[TeamOrderList]?)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+        performSwiftyRequest(route: .filterTeamEmergencyOrders(date: date),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
             let json = JSON(jsonData)
             print(json)
             DispatchQueue.main.async {
@@ -333,11 +394,35 @@ extension APIClient {
             }
         }
     }
-    
-    
     //MARK: getTeamOrder
     static func getTOrder(order_id : Int,completionHandler:@escaping (Bool,String,TeamOrderDetailes?)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
              performSwiftyRequest(route: .teamOrder(order_id: order_id),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+              let json = JSON(jsonData)
+              print(json)
+              DispatchQueue.main.async {
+                  let sms  = json["message"].string ?? json["error"].stringValue
+                  guard let status = json["status_code"].int , status == 200  else {
+                      
+                      completionHandler(false ,sms,nil)
+                      return
+                  }
+                  let data = TeamOrderDetailes(json["order"])
+                  print(data)
+                  completionHandler(true,sms,data)
+              }
+          }) { (error) in
+              DispatchQueue.main.async {
+                  
+                  print(error.debugDescription)
+                  completionFaliure(error)
+              }
+          }
+      }
+    
+    
+    //MARK: getTeamOrder
+    static func getToEmergancyOrder(order_id : Int,completionHandler:@escaping (Bool,String,TeamOrderDetailes?)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+             performSwiftyRequest(route: .teamEmergencyOrder(order_id: order_id),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
               let json = JSON(jsonData)
               print(json)
               DispatchQueue.main.async {
@@ -449,6 +534,130 @@ extension APIClient {
                     }
                     
                     completionHandler(true,sms)
+                }
+            }) { (error) in
+                DispatchQueue.main.async {
+                   
+                    print(error.debugDescription)
+                    completionFaliure(error)
+                }
+            }
+        }
+   
+    //MARK: Team Go Work
+
+    static func emergencyGoWork(order_id : Int , completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+            
+            performSwiftyRequest(route: .teamEmergencyOrderGoWork(order_id: order_id) ,  headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+                let json = JSON(jsonData)
+                DispatchQueue.main.async {
+                    let sms  = json["message"].string ?? json["error"].stringValue
+                    guard let status = json["status_code"].int , status == 200  else {
+                        completionHandler(false ,sms)
+                        return
+                    }
+                    completionHandler(true,sms)
+                }
+            }) { (error) in
+                DispatchQueue.main.async {
+                   
+                    print(error.debugDescription)
+                    completionFaliure(error)
+                }
+            }
+        }
+    
+    //MARK: Team Start Work
+    
+    static func emergencyStartWork(order_id : Int , completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+            
+            performSwiftyRequest(route: .teamEmergencyOrderStartWork(order_id: order_id),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+                let json = JSON(jsonData)
+                DispatchQueue.main.async {
+                    let sms  = json["message"].string ?? json["error"].stringValue
+                    guard let status = json["status_code"].int , status == 200  else {
+                        
+                        completionHandler(false ,sms)
+                        return
+                    }
+                    
+                    completionHandler(true,sms)
+                }
+            }) { (error) in
+                DispatchQueue.main.async {
+                   
+                    print(error.debugDescription)
+                    completionFaliure(error)
+                }
+            }
+            
+        }
+    
+    //MARK: Team End Work
+    
+    static func emergencyEndWork(order_id : Int , completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+            
+            performSwiftyRequest(route: .teamEmergencyOrderEndWork(order_id: order_id),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+                let json = JSON(jsonData)
+                DispatchQueue.main.async {
+                    let sms  = json["message"].string ?? json["error"].stringValue
+                    guard let status = json["status_code"].int , status == 200  else {
+                        
+                        completionHandler(false ,sms)
+                        return
+                    }
+                    
+                    completionHandler(true,sms)
+                }
+            }) { (error) in
+                DispatchQueue.main.async {
+                   
+                    print(error.debugDescription)
+                    completionFaliure(error)
+                }
+            }
+            
+        }
+    //MARK: Team Finish Work
+    
+    static func emergencyFinishWork(order_id : Int , completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+            
+        performSwiftyRequest(route: .teamEmergencyOrderfinishWork(order_id: order_id),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+                let json = JSON(jsonData)
+                DispatchQueue.main.async {
+                    let sms  = json["message"].string ?? json["error"].stringValue
+                    guard let status = json["status_code"].int , status == 200  else {
+                        
+                        completionHandler(false ,sms)
+                        return
+                    }
+                    
+                    completionHandler(true,sms)
+                }
+            }) { (error) in
+                DispatchQueue.main.async {
+                   
+                    print(error.debugDescription)
+                    completionFaliure(error)
+                }
+            }
+        }
+   
+    
+    
+    static func offers(service_id : Int , completionHandler:@escaping (Bool,[OfferData]?)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+            
+        performSwiftyRequest(route: .offers(service_id: service_id),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+                let json = JSON(jsonData)
+                DispatchQueue.main.async {
+                   
+                    var data : [OfferData] = []
+                    for (_,jsn) in json["offers"] {
+                        data.append(OfferData(offer: OffersRoot(jsn), isSelected: false))
+                    }
+                   
+                    print(data)
+                    completionHandler(true,data)
                 }
             }) { (error) in
                 DispatchQueue.main.async {
@@ -578,7 +787,6 @@ extension APIClient {
                            let json = JSON(jsonData)
 //                           print(json)
                 let data = BuildingRoot(fromJson: json)
-                
                            DispatchQueue.main.async {
                             ad.killLoading()
                             guard data.statusCode == 200 else {

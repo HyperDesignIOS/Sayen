@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,9 +22,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentVC" customModule="صاين" customModuleProvider="target">
             <connections>
-                <outlet property="applePayBtn" destination="VXh-Wg-cVq" id="tgs-EI-bHZ"/>
+                <outlet property="appleImageView" destination="wel-oY-1AX" id="w7o-BU-8ms"/>
+                <outlet property="applePayView" destination="2Hi-8q-Gvp" id="SZt-qQ-IX0"/>
                 <outlet property="bankBtn" destination="u2U-SF-rBg" id="s0x-fB-sEw"/>
-                <outlet property="cashBtn" destination="dsd-1A-4q1" id="2T0-Ad-dJT"/>
+                <outlet property="cardsImageView" destination="Es2-Ge-lQn" id="ciI-f2-jCa"/>
+                <outlet property="cashImageView" destination="Ss2-84-B3e" id="Pid-Na-O9O"/>
                 <outlet property="copounPrice" destination="nmB-vg-jfN" id="k1n-GF-6Wd"/>
                 <outlet property="copunView" destination="AXG-kV-csc" id="FsF-5r-4Lx"/>
                 <outlet property="initPrice" destination="Yqb-hh-BDk" id="fWT-UK-Ke4"/>
@@ -41,7 +43,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إستكمال الطلب" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgT-Qe-QgB">
-                            <rect key="frame" x="123.5" y="23.5" width="128" height="18"/>
+                            <rect key="frame" x="140" y="22" width="95" height="21"/>
                             <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="18"/>
                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -71,13 +73,13 @@
                     <rect key="frame" x="0.0" y="82" width="375" height="40"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رسوم الفحص و الزيارة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xB5-rc-hXu">
-                            <rect key="frame" x="35" y="11" width="167.5" height="18"/>
+                            <rect key="frame" x="35" y="9.5" width="140.5" height="21"/>
                             <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="18"/>
                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="700 ريال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqb-hh-BDk">
-                            <rect key="frame" x="277" y="11" width="63" height="18"/>
+                            <rect key="frame" x="278" y="9.5" width="62" height="21"/>
                             <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="18"/>
                             <color key="textColor" red="0.019607843137254902" green="0.20000000000000001" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -97,13 +99,13 @@
                     <rect key="frame" x="0.0" y="122" width="375" height="40"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="700 ريال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmB-vg-jfN">
-                            <rect key="frame" x="277" y="11" width="63" height="18"/>
+                            <rect key="frame" x="278" y="9.5" width="62" height="21"/>
                             <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="18"/>
                             <color key="textColor" red="0.53994888070000002" green="0.43772861359999998" blue="0.19690179820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التكلفة بعد الخصم" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2C-SC-Gxs">
-                            <rect key="frame" x="35" y="11" width="140.5" height="18"/>
+                            <rect key="frame" x="35" y="9.5" width="114.5" height="21"/>
                             <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="18"/>
                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -145,18 +147,184 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إختر وسيلة الدفع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADI-YP-ykU">
-                    <rect key="frame" x="35" y="262" width="127" height="18"/>
+                    <rect key="frame" x="35" y="262" width="105.5" height="21"/>
                     <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="18"/>
                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LYv-Bw-kZO">
+                    <rect key="frame" x="35" y="297" width="305" height="166"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ace-E8-b2X" customClass="CardView2" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="305" height="50"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio-button-off" translatesAutoresizingMaskIntoConstraints="NO" id="wel-oY-1AX">
+                                    <rect key="frame" x="10" y="15" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="wel-oY-1AX" secondAttribute="height" multiplier="1:1" id="eAf-nc-hii"/>
+                                    </constraints>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Hi-8q-Gvp">
+                                    <rect key="frame" x="179" y="0.0" width="126" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ادفع من خلال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyn-nj-o1U">
+                                    <rect key="frame" x="46" y="16.5" width="71" height="17.5"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="15"/>
+                                    <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymx-Zr-zfT">
+                                    <rect key="frame" x="0.0" y="0.0" width="305" height="50"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                    <state key="normal">
+                                        <color key="titleColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio-button-off"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio-button-active"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="selectPaymentRadioButtons:" destination="-1" eventType="touchUpInside" id="uKe-2J-pxQ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="2Hi-8q-Gvp" secondAttribute="bottom" id="8KU-ao-fyD"/>
+                                <constraint firstItem="wel-oY-1AX" firstAttribute="centerY" secondItem="Ace-E8-b2X" secondAttribute="centerY" constant="-2" id="C2w-26-Hhi"/>
+                                <constraint firstAttribute="trailing" secondItem="2Hi-8q-Gvp" secondAttribute="trailing" id="DUp-DO-FQp"/>
+                                <constraint firstItem="Nyn-nj-o1U" firstAttribute="leading" secondItem="wel-oY-1AX" secondAttribute="trailing" constant="20" id="OKI-np-J8m"/>
+                                <constraint firstItem="wel-oY-1AX" firstAttribute="leading" secondItem="Ace-E8-b2X" secondAttribute="leading" constant="10" id="Ov7-3K-Qr0"/>
+                                <constraint firstItem="Nyn-nj-o1U" firstAttribute="centerY" secondItem="Ace-E8-b2X" secondAttribute="centerY" id="Sxd-sm-CUK"/>
+                                <constraint firstItem="2Hi-8q-Gvp" firstAttribute="top" secondItem="Ace-E8-b2X" secondAttribute="top" id="Ysb-bp-3ML"/>
+                                <constraint firstAttribute="bottom" secondItem="Ymx-Zr-zfT" secondAttribute="bottom" id="a80-1Q-L5h"/>
+                                <constraint firstAttribute="trailing" secondItem="Ymx-Zr-zfT" secondAttribute="trailing" id="coS-mP-Jii"/>
+                                <constraint firstItem="2Hi-8q-Gvp" firstAttribute="leading" secondItem="Nyn-nj-o1U" secondAttribute="trailing" constant="62" id="d1b-Xi-aYm"/>
+                                <constraint firstItem="Ymx-Zr-zfT" firstAttribute="top" secondItem="Ace-E8-b2X" secondAttribute="top" id="fF3-Pt-fse"/>
+                                <constraint firstAttribute="height" constant="50" id="uQB-FA-i1H"/>
+                                <constraint firstItem="Ymx-Zr-zfT" firstAttribute="leading" secondItem="Ace-E8-b2X" secondAttribute="leading" id="znL-J4-3Jf"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vw3-8p-4YX" customClass="CardView2" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="58" width="305" height="50"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio-button-off" translatesAutoresizingMaskIntoConstraints="NO" id="Es2-Ge-lQn">
+                                    <rect key="frame" x="10" y="15" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Es2-Ge-lQn" secondAttribute="height" multiplier="1:1" id="GKu-4w-iUX"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SKm-dT-dvw">
+                                    <rect key="frame" x="170" y="12.5" width="130" height="25"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visa" translatesAutoresizingMaskIntoConstraints="NO" id="vgM-7D-Xlb">
+                                            <rect key="frame" x="0.0" y="0.0" width="40" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="P5c-y8-K9x"/>
+                                                <constraint firstAttribute="height" constant="25" id="udU-U0-vei"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercard (1)" translatesAutoresizingMaskIntoConstraints="NO" id="Z5w-PM-KG6">
+                                            <rect key="frame" x="45" y="0.0" width="40" height="25"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="SPv-Mn-J3o">
+                                            <rect key="frame" x="90" y="0.0" width="40" height="25"/>
+                                        </imageView>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بطاقات الدفع" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlm-rz-LEt">
+                                    <rect key="frame" x="42" y="16.5" width="108" height="17.5"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="15"/>
+                                    <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2U-SF-rBg">
+                                    <rect key="frame" x="0.0" y="0.0" width="305" height="50"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                    <state key="normal">
+                                        <color key="titleColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio-button-off"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio-button-active"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="selectPaymentRadioButtons:" destination="-1" eventType="touchUpInside" id="jHx-Ya-K4B"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="0Iy-KN-CDt"/>
+                                <constraint firstItem="Es2-Ge-lQn" firstAttribute="centerY" secondItem="Vw3-8p-4YX" secondAttribute="centerY" constant="-2" id="3Lt-4Q-Y1e"/>
+                                <constraint firstItem="Es2-Ge-lQn" firstAttribute="leading" secondItem="Vw3-8p-4YX" secondAttribute="leading" constant="10" id="6cg-1J-g6p"/>
+                                <constraint firstAttribute="trailing" secondItem="u2U-SF-rBg" secondAttribute="trailing" id="E0E-al-DmT"/>
+                                <constraint firstItem="u2U-SF-rBg" firstAttribute="top" secondItem="Vw3-8p-4YX" secondAttribute="top" id="Ha9-0T-CzB"/>
+                                <constraint firstItem="u2U-SF-rBg" firstAttribute="leading" secondItem="Vw3-8p-4YX" secondAttribute="leading" id="Jkv-nG-Mbt"/>
+                                <constraint firstItem="SKm-dT-dvw" firstAttribute="leading" secondItem="jlm-rz-LEt" secondAttribute="trailing" constant="20" id="JlW-cy-f1c"/>
+                                <constraint firstItem="SKm-dT-dvw" firstAttribute="centerY" secondItem="Vw3-8p-4YX" secondAttribute="centerY" id="Oxd-UI-dj3"/>
+                                <constraint firstItem="jlm-rz-LEt" firstAttribute="centerY" secondItem="Vw3-8p-4YX" secondAttribute="centerY" id="Szf-3z-6Rg"/>
+                                <constraint firstAttribute="trailing" secondItem="SKm-dT-dvw" secondAttribute="trailing" constant="5" id="efL-h6-JGl"/>
+                                <constraint firstItem="jlm-rz-LEt" firstAttribute="leading" secondItem="Es2-Ge-lQn" secondAttribute="trailing" constant="16" id="fJL-8I-1Qi"/>
+                                <constraint firstAttribute="bottom" secondItem="u2U-SF-rBg" secondAttribute="bottom" id="lXg-dp-bFt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CbH-cn-ago" customClass="CardView2" customModule="صاين" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="116" width="305" height="50"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio-button-off" translatesAutoresizingMaskIntoConstraints="NO" id="Ss2-84-B3e">
+                                    <rect key="frame" x="10" y="15" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Ss2-84-B3e" secondAttribute="height" multiplier="1:1" id="ISW-6h-GeK"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الدفع اثناء الزيارة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT5-Xs-ejN">
+                                    <rect key="frame" x="42" y="16.5" width="90.5" height="17.5"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="15"/>
+                                    <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8q-kV-ZZ2">
+                                    <rect key="frame" x="0.0" y="0.0" width="305" height="50"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                    <state key="normal">
+                                        <color key="titleColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="radio-button-off"/>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="radio-button-active"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="selectPaymentRadioButtons:" destination="-1" eventType="touchUpInside" id="fZY-M4-s3q"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="LT5-Xs-ejN" firstAttribute="centerY" secondItem="CbH-cn-ago" secondAttribute="centerY" id="4Sy-hY-xfa"/>
+                                <constraint firstItem="LT5-Xs-ejN" firstAttribute="leading" secondItem="Ss2-84-B3e" secondAttribute="trailing" constant="16" id="5TO-8F-tOZ"/>
+                                <constraint firstItem="j8q-kV-ZZ2" firstAttribute="top" secondItem="CbH-cn-ago" secondAttribute="top" id="5dh-ge-vSV"/>
+                                <constraint firstItem="Ss2-84-B3e" firstAttribute="leading" secondItem="CbH-cn-ago" secondAttribute="leading" constant="10" id="CLZ-fV-ymn"/>
+                                <constraint firstItem="Ss2-84-B3e" firstAttribute="centerY" secondItem="CbH-cn-ago" secondAttribute="centerY" constant="-2" id="M0b-XR-d17"/>
+                                <constraint firstAttribute="trailing" secondItem="j8q-kV-ZZ2" secondAttribute="trailing" id="T1c-hu-tSc"/>
+                                <constraint firstItem="j8q-kV-ZZ2" firstAttribute="leading" secondItem="CbH-cn-ago" secondAttribute="leading" id="WLm-0c-XGw"/>
+                                <constraint firstAttribute="height" constant="50" id="a2U-Wm-os2"/>
+                                <constraint firstAttribute="bottom" secondItem="j8q-kV-ZZ2" secondAttribute="bottom" id="evf-y8-dwE"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0XY-TN-JXp">
                     <rect key="frame" x="35" y="294" width="305" height="226"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vw3-8p-4YX" customClass="CardView2" customModule="صاين" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wS-LX-f7W" customClass="CardView2" customModule="صاين" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="305" height="70"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2U-SF-rBg" customClass="DLRadioButton">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdb-DU-4jA" customClass="DLRadioButton">
                                     <rect key="frame" x="10" y="0.0" width="123" height="70"/>
                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                     <state key="normal" title="بطاقات الدفع">
@@ -168,23 +336,23 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <outletCollection property="otherButtons" destination="VXh-Wg-cVq" id="b0k-hu-qGA"/>
+                                        <outletCollection property="otherButtons" destination="Dc8-rZ-DMU" id="eNo-Gd-Dwi"/>
                                     </connections>
                                 </button>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="SKm-dT-dvw">
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6f4-oE-07d">
                                     <rect key="frame" x="143" y="20" width="154" height="30"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visa" translatesAutoresizingMaskIntoConstraints="NO" id="vgM-7D-Xlb">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visa" translatesAutoresizingMaskIntoConstraints="NO" id="4Hf-dm-ibq">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="P5c-y8-K9x"/>
-                                                <constraint firstAttribute="height" constant="30" id="udU-U0-vei"/>
+                                                <constraint firstAttribute="width" constant="50" id="5dM-TL-GnJ"/>
+                                                <constraint firstAttribute="height" constant="30" id="rew-zN-bI4"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercard (1)" translatesAutoresizingMaskIntoConstraints="NO" id="Z5w-PM-KG6">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mastercard (1)" translatesAutoresizingMaskIntoConstraints="NO" id="lu6-rb-FjI">
                                             <rect key="frame" x="52" y="0.0" width="50" height="30"/>
                                         </imageView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="SPv-Mn-J3o">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="1BO-cA-6Kg">
                                             <rect key="frame" x="104" y="0.0" width="50" height="30"/>
                                         </imageView>
                                     </subviews>
@@ -192,20 +360,20 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="70" id="0Iy-KN-CDt"/>
-                                <constraint firstItem="SKm-dT-dvw" firstAttribute="leading" secondItem="u2U-SF-rBg" secondAttribute="trailing" constant="10" id="6cR-rS-On4"/>
-                                <constraint firstItem="u2U-SF-rBg" firstAttribute="top" secondItem="Vw3-8p-4YX" secondAttribute="top" id="GKC-4O-5i0"/>
-                                <constraint firstAttribute="bottom" secondItem="u2U-SF-rBg" secondAttribute="bottom" id="NcK-Vi-6yf"/>
-                                <constraint firstItem="SKm-dT-dvw" firstAttribute="centerY" secondItem="Vw3-8p-4YX" secondAttribute="centerY" id="Oxd-UI-dj3"/>
-                                <constraint firstAttribute="trailing" secondItem="SKm-dT-dvw" secondAttribute="trailing" constant="8" id="ZE3-fD-bgL"/>
-                                <constraint firstItem="u2U-SF-rBg" firstAttribute="leading" secondItem="Vw3-8p-4YX" secondAttribute="leading" constant="10" id="d6A-HM-235"/>
-                                <constraint firstItem="u2U-SF-rBg" firstAttribute="centerY" secondItem="Vw3-8p-4YX" secondAttribute="centerY" id="iUp-CH-4sa"/>
+                                <constraint firstAttribute="height" constant="70" id="0NG-U8-Thc"/>
+                                <constraint firstItem="jdb-DU-4jA" firstAttribute="top" secondItem="7wS-LX-f7W" secondAttribute="top" id="2mS-0s-uVH"/>
+                                <constraint firstItem="6f4-oE-07d" firstAttribute="centerY" secondItem="7wS-LX-f7W" secondAttribute="centerY" id="6Bm-Lf-UwF"/>
+                                <constraint firstItem="6f4-oE-07d" firstAttribute="leading" secondItem="jdb-DU-4jA" secondAttribute="trailing" constant="10" id="CZh-J8-JXy"/>
+                                <constraint firstItem="jdb-DU-4jA" firstAttribute="centerY" secondItem="7wS-LX-f7W" secondAttribute="centerY" id="OA1-j7-SVX"/>
+                                <constraint firstItem="jdb-DU-4jA" firstAttribute="leading" secondItem="7wS-LX-f7W" secondAttribute="leading" constant="10" id="eMZ-up-Afd"/>
+                                <constraint firstAttribute="bottom" secondItem="jdb-DU-4jA" secondAttribute="bottom" id="eZn-hg-eQc"/>
+                                <constraint firstAttribute="trailing" secondItem="6f4-oE-07d" secondAttribute="trailing" constant="8" id="sfi-bC-wZW"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGu-UI-Wv8" customClass="CardView2" customModule="صاين" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCK-Rf-oOM" customClass="CardView2" customModule="صاين" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="78" width="305" height="70"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-Wg-cVq" customClass="DLRadioButton">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dc8-rZ-DMU" customClass="DLRadioButton">
                                     <rect key="frame" x="10" y="0.0" width="160" height="70"/>
                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                     <state key="normal" title="عن طريق آبل">
@@ -217,32 +385,32 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <outletCollection property="otherButtons" destination="u2U-SF-rBg" id="hb8-0J-rFc"/>
-                                        <outletCollection property="otherButtons" destination="dsd-1A-4q1" id="HmQ-Se-G1u"/>
+                                        <outletCollection property="otherButtons" destination="jdb-DU-4jA" id="blW-Ik-Cr3"/>
+                                        <outletCollection property="otherButtons" destination="zbI-Iu-UDy" id="FVU-TR-hnZ"/>
                                     </connections>
                                 </button>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1027" translatesAutoresizingMaskIntoConstraints="NO" id="QgI-MF-aQL">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 1027" translatesAutoresizingMaskIntoConstraints="NO" id="qJe-9p-eaZ">
                                     <rect key="frame" x="247" y="20" width="50" height="30"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="0Me-Z0-Zfo"/>
-                                        <constraint firstAttribute="height" constant="30" id="2Fk-1Q-Jjr"/>
+                                        <constraint firstAttribute="width" constant="50" id="Kci-c4-abi"/>
+                                        <constraint firstAttribute="height" constant="30" id="znl-1y-nNE"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="VXh-Wg-cVq" firstAttribute="leading" secondItem="oGu-UI-Wv8" secondAttribute="leading" constant="10" id="DLI-9Q-0bw"/>
-                                <constraint firstItem="VXh-Wg-cVq" firstAttribute="centerY" secondItem="oGu-UI-Wv8" secondAttribute="centerY" id="LJh-yk-hHM"/>
-                                <constraint firstAttribute="bottom" secondItem="VXh-Wg-cVq" secondAttribute="bottom" id="ZLR-hk-KTd"/>
-                                <constraint firstItem="QgI-MF-aQL" firstAttribute="centerY" secondItem="oGu-UI-Wv8" secondAttribute="centerY" id="g2h-Jm-tag"/>
-                                <constraint firstItem="VXh-Wg-cVq" firstAttribute="top" secondItem="oGu-UI-Wv8" secondAttribute="top" id="sOi-7j-ZLe"/>
-                                <constraint firstAttribute="trailing" secondItem="QgI-MF-aQL" secondAttribute="trailing" constant="8" id="zVs-Dh-ad5"/>
+                                <constraint firstItem="qJe-9p-eaZ" firstAttribute="centerY" secondItem="VCK-Rf-oOM" secondAttribute="centerY" id="IyR-mC-AQ4"/>
+                                <constraint firstItem="Dc8-rZ-DMU" firstAttribute="top" secondItem="VCK-Rf-oOM" secondAttribute="top" id="Xx9-RB-KDF"/>
+                                <constraint firstItem="Dc8-rZ-DMU" firstAttribute="centerY" secondItem="VCK-Rf-oOM" secondAttribute="centerY" id="YCd-qC-Rre"/>
+                                <constraint firstItem="Dc8-rZ-DMU" firstAttribute="leading" secondItem="VCK-Rf-oOM" secondAttribute="leading" constant="10" id="ebw-Ut-11m"/>
+                                <constraint firstAttribute="trailing" secondItem="qJe-9p-eaZ" secondAttribute="trailing" constant="8" id="iZV-fW-SFr"/>
+                                <constraint firstAttribute="bottom" secondItem="Dc8-rZ-DMU" secondAttribute="bottom" id="nMf-Zx-kt2"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkF-bv-RAU" customClass="CardView2" customModule="صاين" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRZ-6r-kJL" customClass="CardView2" customModule="صاين" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="156" width="305" height="70"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsd-1A-4q1" customClass="DLRadioButton">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbI-Iu-UDy" customClass="DLRadioButton">
                                     <rect key="frame" x="10" y="0.0" width="160" height="70"/>
                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                     <state key="normal" title="الدفع اثناء الزيارة">
@@ -254,27 +422,27 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <outletCollection property="otherButtons" destination="u2U-SF-rBg" id="vUG-gc-Ucg"/>
-                                        <outletCollection property="otherButtons" destination="VXh-Wg-cVq" id="qEl-r0-hKA"/>
+                                        <outletCollection property="otherButtons" destination="jdb-DU-4jA" id="9e9-qc-OZN"/>
+                                        <outletCollection property="otherButtons" destination="Dc8-rZ-DMU" id="9vE-nA-BPT"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="dsd-1A-4q1" secondAttribute="bottom" id="AtP-gQ-Hw0"/>
-                                <constraint firstItem="dsd-1A-4q1" firstAttribute="leading" secondItem="DkF-bv-RAU" secondAttribute="leading" constant="10" id="Poe-qt-ivE"/>
-                                <constraint firstItem="dsd-1A-4q1" firstAttribute="top" secondItem="DkF-bv-RAU" secondAttribute="top" id="Tox-Ng-Med"/>
-                                <constraint firstItem="dsd-1A-4q1" firstAttribute="centerY" secondItem="DkF-bv-RAU" secondAttribute="centerY" id="aoj-xh-7dN"/>
+                                <constraint firstItem="zbI-Iu-UDy" firstAttribute="top" secondItem="hRZ-6r-kJL" secondAttribute="top" id="HuI-bV-wsb"/>
+                                <constraint firstItem="zbI-Iu-UDy" firstAttribute="leading" secondItem="hRZ-6r-kJL" secondAttribute="leading" constant="10" id="pXs-mt-o7I"/>
+                                <constraint firstItem="zbI-Iu-UDy" firstAttribute="centerY" secondItem="hRZ-6r-kJL" secondAttribute="centerY" id="q92-sn-o5I"/>
+                                <constraint firstAttribute="bottom" secondItem="zbI-Iu-UDy" secondAttribute="bottom" id="qUY-pl-ux7"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="VXh-Wg-cVq" firstAttribute="width" secondItem="u2U-SF-rBg" secondAttribute="width" multiplier="1.3" id="1q1-f6-8WA"/>
-                        <constraint firstItem="dsd-1A-4q1" firstAttribute="width" secondItem="u2U-SF-rBg" secondAttribute="width" multiplier="1.3" id="HbI-aJ-ieq"/>
+                        <constraint firstItem="Dc8-rZ-DMU" firstAttribute="width" secondItem="jdb-DU-4jA" secondAttribute="width" multiplier="1.3" id="OSY-VW-DDP"/>
+                        <constraint firstItem="zbI-Iu-UDy" firstAttribute="width" secondItem="jdb-DU-4jA" secondAttribute="width" multiplier="1.3" id="Qgr-g4-Nkc"/>
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blO-YV-mZb" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
-                    <rect key="frame" x="35" y="565" width="305" height="40"/>
+                    <rect key="frame" x="35" y="508" width="305" height="40"/>
                     <color key="backgroundColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="NLn-ba-bNr"/>
@@ -299,11 +467,15 @@
             <constraints>
                 <constraint firstItem="LYv-Bw-kZO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="1J7-SE-N9f"/>
                 <constraint firstItem="AXG-kV-csc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2Qu-KE-Ije"/>
+                <constraint firstItem="0XY-TN-JXp" firstAttribute="top" secondItem="LYv-Bw-kZO" secondAttribute="top" id="6q3-de-cWq"/>
                 <constraint firstItem="LYv-Bw-kZO" firstAttribute="top" secondItem="ADI-YP-ykU" secondAttribute="bottom" constant="14" id="Cf9-xJ-4XD"/>
+                <constraint firstItem="blO-YV-mZb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="K6t-MU-lQU"/>
                 <constraint firstItem="pn6-yj-Hz6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Mno-6z-h7A"/>
-                <constraint firstItem="blO-YV-mZb" firstAttribute="leading" secondItem="DkF-bv-RAU" secondAttribute="leading" id="ST3-GY-5AC"/>
+                <constraint firstItem="0XY-TN-JXp" firstAttribute="leading" secondItem="LYv-Bw-kZO" secondAttribute="leading" id="QO1-cT-Ei4"/>
+                <constraint firstItem="0XY-TN-JXp" firstAttribute="trailing" secondItem="LYv-Bw-kZO" secondAttribute="trailing" id="RSL-kp-TWZ"/>
                 <constraint firstItem="ADI-YP-ykU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="Scs-ei-yMg"/>
                 <constraint firstItem="pn6-yj-Hz6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UKw-co-C7g"/>
+                <constraint firstItem="0XY-TN-JXp" firstAttribute="bottom" secondItem="LYv-Bw-kZO" secondAttribute="bottom" id="Wky-c1-oQq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LYv-Bw-kZO" secondAttribute="trailing" constant="35" id="XlJ-DZ-2Gm"/>
                 <constraint firstItem="UeO-0N-rgC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Zo6-1o-xpi"/>
                 <constraint firstItem="blO-YV-mZb" firstAttribute="top" secondItem="LYv-Bw-kZO" secondAttribute="bottom" constant="45" id="atJ-ez-C80"/>
@@ -311,7 +483,7 @@
                 <constraint firstItem="j4G-Sj-hzF" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="dkn-0p-rih"/>
                 <constraint firstItem="pn6-yj-Hz6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fa8-ns-x0q"/>
                 <constraint firstItem="QOb-5l-SFp" firstAttribute="top" secondItem="UeO-0N-rgC" secondAttribute="bottom" constant="56" id="gwW-cR-rro"/>
-                <constraint firstItem="blO-YV-mZb" firstAttribute="trailing" secondItem="DkF-bv-RAU" secondAttribute="trailing" id="nWP-aT-jkJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="blO-YV-mZb" secondAttribute="trailing" constant="35" id="jtB-bl-hPB"/>
                 <constraint firstItem="j4G-Sj-hzF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="p0K-5H-crx"/>
                 <constraint firstItem="UeO-0N-rgC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="pAW-5G-V9s"/>
                 <constraint firstItem="AXG-kV-csc" firstAttribute="top" secondItem="UeO-0N-rgC" secondAttribute="bottom" id="qxO-dd-vIC"/>
@@ -321,12 +493,17 @@
                 <constraint firstItem="QOb-5l-SFp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="vnN-vU-K21"/>
                 <constraint firstItem="ADI-YP-ykU" firstAttribute="top" secondItem="j4G-Sj-hzF" secondAttribute="bottom" constant="25" id="wFG-u0-sks"/>
             </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="0XY-TN-JXp"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="136.80000000000001" y="127.28635682158921"/>
         </view>
     </objects>
     <designables>
         <designable name="blO-YV-mZb">
-            <size key="intrinsicContentSize" width="92" height="29"/>
+            <size key="intrinsicContentSize" width="75" height="32"/>
         </designable>
     </designables>
     <resources>

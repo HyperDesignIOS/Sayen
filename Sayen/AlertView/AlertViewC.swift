@@ -15,7 +15,7 @@ class AlertViewC: UIViewController {
     @IBOutlet weak var tryAgianOut: UIButtonX!
     @IBOutlet weak var textTopCons: NSLayoutConstraint!
     @IBOutlet weak var alertImage: UIImageView!
-    
+    @IBOutlet weak var closeButtonOutlet: UIButton!
     var type : AlertType = .success
     var mainTitle_ = ""
     var subTitle = ""
@@ -59,8 +59,11 @@ class AlertViewC: UIViewController {
             self.alertImage.image = UIImage(named: "Group 1095")
         case .net :
             self.alertImage.image = UIImage(named: "undraw_server_down_s4lk")
+        case .updateRequired:
+            self.alertImage.image = UIImage(named: "Logo-Final-SAYEN")
+            closeButtonOutlet.isHidden = true
         default:
-            self.alertImage.image = UIImage(named: "Group 1095")
+            self.alertImage.image = UIImage(named: "Logo-Final-SAYEN")
         }
     }
 
@@ -88,6 +91,8 @@ class AlertViewC: UIViewController {
             switch type {
             case .error :
                 self.dismissViewC()
+            case .updateRequired:
+                break
             default:
                 self.dismissHandler(success:false)
             }
@@ -101,7 +106,13 @@ class AlertViewC: UIViewController {
         
         DispatchQueue.main.async{ [weak self] in
             guard let self = self else {return}
-              self.dismissViewC()
+            switch self.type {
+            case .updateRequired:
+                break
+            default:
+                self.dismissViewC()
+            }
+              
 //            self?.dismiss(animated: true, completion: {
                 self.completionHandler?(success)
          
