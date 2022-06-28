@@ -40,10 +40,12 @@ extension SubServiceVC : UICollectionViewDelegate , UICollectionViewDataSource ,
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeUserCell", for: indexPath) as! HomeUserCell
         cell.labelCell.text = data[indexPath.row].name
         cell.offerImageView.isHidden = data[indexPath.row].offer == 0 ? true : false
+        cell.infoTextLabel.text = data[indexPath.row].text
         if let url = URL(string: data[indexPath.row].image_path) {
             let placeholderImage = UIImage(named: "Group 1059")!
             cell.image.af_setImage(withURL: url, placeholderImage: placeholderImage)
         }
+        
         return cell
     }
     
@@ -55,16 +57,19 @@ extension SubServiceVC : UICollectionViewDelegate , UICollectionViewDataSource ,
       
       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
           let w = self.collectionView.frame.width / 2.08
-          let h =  self.view.frame.height / 6
+          let h : CGFloat =  160
           let size = CGSize(width: w , height: h)
           return size
       }
+
+ 
     func handleCollectionView(){
         self.collectionView.register(UINib(nibName: "HomeUserCell", bundle: nil), forCellWithReuseIdentifier: "HomeUserCell")
         collectionView.semanticContentAttribute = .forceRightToLeft
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.addSubview(refresher)
+        
     }
     
 }

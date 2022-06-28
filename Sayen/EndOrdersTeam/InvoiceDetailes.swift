@@ -9,6 +9,7 @@
 import UIKit
 
 class InvoiceDetailes: UIViewController {
+    
     @IBOutlet weak var finalPriceTopCons: NSLayoutConstraint!
     @IBOutlet weak var payState: UILabel!
     //    @IBOutlet weak var mainViewHieght: NSLayoutConstraint!
@@ -35,9 +36,11 @@ class InvoiceDetailes: UIViewController {
     @IBOutlet weak var clientTypeLbl: UILabel!
     @IBOutlet weak var paymentSourceContainerV: UIView!
     @IBOutlet weak var paymentSourceLbl: UILabel!
+    
     var data : TeamOrderDetailes?
     var order_id : Int = 0
     var order_status : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tabbar = self.tabBarController as? TabBarController

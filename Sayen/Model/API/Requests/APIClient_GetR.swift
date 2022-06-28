@@ -67,7 +67,7 @@ extension APIClient {
     
     //MARK: Get Services
     
-  static func getServices (completionHandler:@escaping (Bool, [HomeData]? , [OfferService]? , UserProfile_Data?, String?)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+  static func getServices (completionHandler:@escaping (Bool, [HomeData]? , [OfferService]? , UserProfile_Data?, Setting_Data? , [EmService] )->Void , completionFaliure:@escaping (_ error:Error?)->Void){
     performSwiftyRequest(route: .service , headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
               let json = JSON(jsonData)
               print(json)
@@ -76,7 +76,7 @@ extension APIClient {
                 var data : [HomeData] = []
                 let user : UserProfile_Data? = UserProfile_Data(json["user_data"])
                 let versionData : Setting_Data = Setting_Data(json["setting"])
-                  
+                var emergencyServices : [EmService] = []
                 for (_,jsn) in json["services"] {
                         data.append(HomeData(jsn))
                     }
@@ -87,16 +87,19 @@ extension APIClient {
                       let offer = OffersRoot(jsn)
                       OfferData.append(OfferService(offer: offer, service: offerService))
                   }
-                 
+                  for (_,jsn) in json["emergencyServices"] {
+                      emergencyServices.append(EmService(jsn))
+                      }
+                  
                   print(OfferData)
 //                let sms  = json["message"].string ?? json["error"].stringValue
                  let status = data.count > 0 ? true : false
                 if !status {
                     
-                    completionHandler(status,nil, nil ,nil,nil)
+                    completionHandler(status,nil, nil ,nil,nil,[])
                     return
                 }
-                  completionHandler(status,data, OfferData , user,versionData.userAppIosVersion)
+                  completionHandler(status,data, OfferData , user,versionData , emergencyServices)
             }
           }) { (error) in
               DispatchQueue.main.async {
@@ -460,6 +463,50 @@ static func getWorkerEmergencyOrders(completionHandler:@escaping (Bool,[TeamOrde
                     completionHandler(true,sms)
                 }
             }) { (error) in
+                DispatchQueue.main.async {
+                   
+                    print(error.debugDescription)
+                    completionFaliure(error)
+                }
+            }
+        }
+    
+    
+    
+    //MARK: makePdf
+    
+    static func makePdf(order_id : Int , completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+            
+        performSwiftyRequest(route: .makePdf(order_id: order_id) ,  headers: [:] ,  { (jsonData) in
+                let json = JSON(jsonData)
+                DispatchQueue.main.async {
+                    if let pdfPath  = json["path"].string {
+                        completionHandler(true, pdfPath)
+                    }
+                }
+            }) { (error) in
+                DispatchQueue.main.async {
+                   
+                    print(error.debugDescription)
+                    completionFaliure(error)
+                }
+            }
+        }
+    static func showInvoice(order_id : Int , completionHandler:@escaping (Bool,OrderDetails?)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+            
+        performSwiftyRequest(route: .showInvoice(order_id: order_id) ,  headers: [:] ,  { (jsonData) in
+            let json = JSON(jsonData)
+            print(json)
+            DispatchQueue.main.async {
+                guard let status = json["status_code"].int , status == 200  else {
+                    completionHandler(false ,nil)
+                    return
+                }
+                let data = OrderDetails(json["invoice"])
+                print(data)
+                completionHandler(true,data)
+            }
+        }) { (error) in
                 DispatchQueue.main.async {
                    
                     print(error.debugDescription)

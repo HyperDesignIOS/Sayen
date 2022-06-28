@@ -132,12 +132,12 @@
 "notSecretive_main" = "عدم الإلتزام بسرية معلومات المستخدم" ;
 
 //Sub Problems
-"missCalc_sub" = "خطأ فى احتساب الفاتورة" ;
+"missCalc_sub" = "خطأ فى احتساب  تقرير الخدمة" ;
 "notPaying_sub" = "عدم قيد سداد مبلغ مالى فى أنظمة مقدم الخدمة" ;
 "notReturn_sub" = "عدم إعادة مبلغ مالي" ;
 "dualPayment_sub" = "خصم من الرصيد (مسبق الدفع)" ;
 "creaditAddingProb_sub" = "عدم إضافة رصيد (مسبق الدفع)" ;
-"receiptProb_sub" = "عدم تزويد المستخدم بتفاصيل الفاتورة (مفوتر)" ;
+"receiptProb_sub" = "عدم تزويد المستخدم بتقرير الخدمة (مفوتر)" ;
 //
 "lowServ_sub" = "تدنى مستوى الخدمة" ;
 "disconnection_sub" = "انقطاع الخدمة" ;
@@ -705,3 +705,4 @@
 "addMatrialNote" = "اكتب المواد التي تريد ان تضيفهاهنا ....";
 "maxFImages" = "عفوا، الحد الاقصي 5 صور";
 "yourSessionHasBeenEnded" = "عفوا، قم بتسجيل الدخول مرة اخري";
+"noAddress" = "لا يوجد عنوان !";

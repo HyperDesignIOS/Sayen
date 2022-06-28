@@ -13,14 +13,14 @@ class RatingVC: UIViewController {
     @IBOutlet weak var placeHolderLbl2: UILabel!
     @IBOutlet weak var placeHolderLbl: UILabel!
     @IBOutlet weak var workRate: SwiftyStarRatingView!
-    var order_id : Int = 0
+    
     @IBOutlet weak var workerComment: UITextView!
     @IBOutlet weak var workComment: UITextView!
     @IBOutlet weak var workerRate: SwiftyStarRatingView!
     var tabBar : UITabBarController?
     
     var controllerType: RateType = .order
-    
+    var order_id : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         workerComment.delegate = self

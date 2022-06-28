@@ -73,6 +73,8 @@ enum APIRouter: URLRequestConvertible {
     case updateLocation(lat:Double,lng:Double)
     case moyaserSuccessPay(orderId : Int ,id : String , status : String)
     case offers(service_id : Int)
+    case makePdf(order_id : Int)
+    case showInvoice(order_id : Int)
     //v1/common-questions
   
     //v1/static-page/{id}
@@ -85,7 +87,7 @@ enum APIRouter: URLRequestConvertible {
             return .post
         case .changePassword , .resetPass , .update_profile , .update_profileT , .teamStartWork , .teamGoWork , .teamAddPrice , .setPlayerId ,.teamEndWork , .teamfinishWork , .notification_seen,.updateLocation, .teamEmergencyOrderStartWork, .teamEmergencyOrderGoWork, .teamEmergencyOrderEndWork, .teamEmergencyOrderfinishWork:
             return .put
-        case .get_profile ,.service  , .currentOrder , .previousOrder , .userOrder , .userEmergencyOrder, .currentِEmergencyOrder , .previousِEmergencyOrder , .getTeamOrders , .teamOrder , .teaminvoices , .filterOrders , .notifications , .problem_types ,.common_questions , .static_page,.user_buildings , .moyaserSuccessPay  , .getTeamEmergencyOrders,  .teamEmergencyOrder   , .filterTeamEmergencyOrders , .offers:
+        case .get_profile ,.service  , .currentOrder , .previousOrder , .userOrder , .userEmergencyOrder, .currentِEmergencyOrder , .previousِEmergencyOrder , .getTeamOrders , .teamOrder , .teaminvoices , .filterOrders , .notifications , .problem_types ,.common_questions , .static_page,.user_buildings , .moyaserSuccessPay  , .getTeamEmergencyOrders,  .teamEmergencyOrder   , .filterTeamEmergencyOrders , .offers , .makePdf, .showInvoice:
            return .get
 
         }
@@ -156,6 +158,8 @@ enum APIRouter: URLRequestConvertible {
         case .registerTeam : return "team/register"
         case .moyaserSuccessPay : return "user/success-pay"
         case .offers(let service_id): return "offers?service_id=\(service_id)"
+        case .makePdf(let orderId): return "makePdf/\(orderId)"
+        case .showInvoice(let orderId): return "show-invoice/\(orderId)"
          }
     }
 
@@ -250,6 +254,8 @@ enum APIRouter: URLRequestConvertible {
                 return ["name":name,"phone": mobile , "email":email, "password" : password , "country_code" : country_code  ]
         case .moyaserSuccessPay(let orderId,let id, let status) : return ["order_id" : orderId , "id" : id , "status" : status]
         case .offers : return nil
+        case .makePdf : return nil
+        case .showInvoice : return nil
      }
     }
     

@@ -21,6 +21,7 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
             let vc = EmergencyServiceAlert()
             vc.delegate = self
             vc.services = emergenacyServices
+            vc.emergancyInfoText = emergencyInfoText
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overFullScreen
             self.present(vc, animated: true, completion: nil)
@@ -62,6 +63,7 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
             }
         }else {
             cell.labelCell.text = data[indexPath.row].name
+            cell.infoTextLabel.text = data[indexPath.row].text
             cell.offerImageView.isHidden = data[indexPath.row].offer == 0 ? true : false
                 if let url = URL(string: data[indexPath.row].image_path) {
                 let placeholderImage = UIImage(named: "Group 1059")!
@@ -79,7 +81,7 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
       
       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
           let w = self.collectionView.frame.width / 2.08
-          let h =  self.view.frame.height / 6
+          let h : CGFloat =  133
           let size = CGSize(width: w , height: h)
           return size
       }

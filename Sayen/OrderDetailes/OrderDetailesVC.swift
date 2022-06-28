@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import StoreKit
 
 class OrderDetailesVC: UIViewController {
     
@@ -57,7 +58,7 @@ class OrderDetailesVC: UIViewController {
     @IBOutlet weak var requestWarrantyButtonOutlet: UIButtonX!
     @IBOutlet weak var showWarrantyButtonOutlet: UIButtonX!
     @IBOutlet weak var warrantyButtonsStackView: UIStackView!
-    
+    @IBOutlet weak var showInvoiceOutletButton: UIButtonX!
     var tabBar : UITabBarController?
     var statePrice : String = ""
     var order_id : Int = 0
@@ -73,6 +74,7 @@ class OrderDetailesVC: UIViewController {
         super.viewDidLoad()
         paymenSourceContainerV.isHidden = true
         clientContainerV.isHidden = true
+        showInvoiceOutletButton.alpha = 0
         rateBtn.semanticContentAttribute = .forceRightToLeft
         imagesCollection.semanticContentAttribute = .forceRightToLeft
         let tabBar = self.tabBarController as? TabBarController
@@ -197,8 +199,9 @@ class OrderDetailesVC: UIViewController {
         }else if orderStatus == "6"  {
             self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: 800)
             self.cancelOrder.alpha = 1
-            self.workerView.alpha = 0
-            self.waitViewOrder.alpha = 1
+            self.workerView.alpha = 1
+            self.workerName.text = "fanii".localized + " \(data!.team_name!)"
+            self.waitViewOrder.alpha = 0
             self.totalPrcieView.alpha = 0
             self.priceStack.alpha = 0
             self.rateStack.alpha = 0
@@ -257,8 +260,9 @@ class OrderDetailesVC: UIViewController {
             
             
         } else if orderStatus == "3" {
+            showInvoiceOutletButton.alpha = 1
             self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: 750)
-            self.cancelOrder.alpha = 0
+            self.cancelOrder.isHidden = true
             self.workerView.alpha = 0
             self.waitViewOrder.alpha = 0
             self.problemImageLblTopConstraint.constant = 20
@@ -319,7 +323,7 @@ class OrderDetailesVC: UIViewController {
             self.waitViewOrder.alpha = 1
             self.totalPrcieView.alpha = 0
             self.cancelLbl.text = "canceled".localized
-            self.cancelOrder.alpha = 0
+            self.cancelOrder.isHidden = true
             self.rateStack.alpha = 0
             
             //   self.problemlblConst.constant = 20
@@ -422,7 +426,9 @@ class OrderDetailesVC: UIViewController {
         }
         vc.newPriceT = totalValue //  data!.total_before_discount!
         vc.CoponDiscount = data!.coupon_discount!
+        vc.workerName = data!.team_name ?? ""
         vc.order_id = data!.id!
+        vc.initialPrice = data!.initial_price!
         vc.btnsState = self.data!.user_accept_added_price == "1" ? true : false
         if self.btnsState {
             vc.btnsState = true
@@ -440,6 +446,32 @@ class OrderDetailesVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
+    @IBAction func showInvocieButton(_ sender: Any) {
+        let vc = ServiceReportVC()
+        vc.order_id = data!.id!
+      
+        self.navigationController?.pushViewController(vc, animated: false)
+//        if let id =  data!.id {
+//            APIClient.makePdf(order_id: id) { status, urlStr in
+//                if status {
+//
+//                    let webURL = NSURL(string: urlStr)!
+//                    if UIApplication.shared.canOpenURL(webURL as URL) {
+//                        if #available(iOS 10.0, *) {
+//                            UIApplication.shared.open(webURL as URL, options: [:], completionHandler: nil)
+//                        }
+//                        else {
+//                            UIApplication.shared.openURL(webURL as URL)
+//                        }
+//                    }
+//                }
+//            } completionFaliure: { error in
+//                print(error?.localizedDescription)
+//            }
+//
+//        }
+        
+    }
 //    func setImages (imgs : [String]) {
 //        for img in imgs {
 //            if let url = URL(string: img) {
@@ -812,7 +844,7 @@ extension OrderDetailesVC : EndYesOrNo {
 //
 //    } else if orderStatus == "3" {
 //        self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: 750)
-//        self.cancelOrder.alpha = 0
+//        self.cancelOrder.isHidden = true
 //        self.workerView.alpha = 1
 //        self.waitViewOrder.alpha = 0
 //        if data!.team_added_price.count == 0 {
@@ -869,7 +901,7 @@ extension OrderDetailesVC : EndYesOrNo {
 //        self.waitViewOrder.alpha = 1
 //        self.totalPrcieView.alpha = 0
 //        self.cancelLbl.text = "canceled".localized
-//        self.cancelOrder.alpha = 0
+//        self.cancelOrder.isHidden = true
 //        self.rateStack.alpha = 0
 //
 //        //   self.problemlblConst.constant = 20

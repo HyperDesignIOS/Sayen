@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,6 +60,7 @@
                 <outlet property="rateStack" destination="kyx-O7-Sxd" id="kg2-ri-ZcN"/>
                 <outlet property="requestWarrantyButtonOutlet" destination="Fuo-bc-foR" id="2ej-Kx-9dE"/>
                 <outlet property="scrollView" destination="MUk-K6-qrI" id="hC0-rt-oeI"/>
+                <outlet property="showInvoiceOutletButton" destination="VcT-ye-irH" id="sk7-Vd-cSD"/>
                 <outlet property="showWarrantyButtonOutlet" destination="Pe1-jj-4NM" id="0St-Oq-QwR"/>
                 <outlet property="totalPrcieView" destination="T3X-gN-Mdr" id="gXw-D9-oYG"/>
                 <outlet property="totalPrice" destination="hcw-Vl-1JA" id="43J-mk-6Ld"/>
@@ -223,14 +224,17 @@
                                         <constraint firstItem="viD-ot-l3o" firstAttribute="top" secondItem="EOI-hP-zQc" secondAttribute="bottom" constant="6.5" id="zeP-xM-MYz"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fdsfd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANV-rP-ogM">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fdsfd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANV-rP-ogM">
                                     <rect key="frame" x="25" y="90" width="46" height="20"/>
                                     <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="20"/>
                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dfs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBw-g7-F5T">
-                                    <rect key="frame" x="361.5" y="90" width="27.5" height="20"/>
+                                    <rect key="frame" x="329" y="90" width="60" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="W0Z-BV-QlA"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="20"/>
                                     <color key="textColor" red="0.60534828900000004" green="0.67665320630000003" blue="0.73954386139999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
@@ -396,10 +400,10 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kyx-O7-Sxd">
-                                    <rect key="frame" x="20" y="737.5" width="374" height="40"/>
+                                    <rect key="frame" x="35" y="737.5" width="344" height="40"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-bc-foR" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="111.5" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="101.5" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -422,7 +426,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-jj-4NM" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
-                                            <rect key="frame" x="131.5" y="0.0" width="111" height="40"/>
+                                            <rect key="frame" x="121.5" y="0.0" width="101" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -445,7 +449,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmg-hg-4y0" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
-                                            <rect key="frame" x="262.5" y="0.0" width="111.5" height="40"/>
+                                            <rect key="frame" x="242.5" y="0.0" width="101.5" height="40"/>
                                             <color key="backgroundColor" red="0.68951332570000001" green="0.567664206" blue="0.28505024309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                             <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -530,37 +534,32 @@
                                         </mask>
                                     </variation>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="olL-N6-18d">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-be-axL" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
                                     <rect key="frame" x="20" y="737.5" width="374" height="40"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpr-be-axL" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
-                                            <state key="normal" title="إلغاء الطلب">
-                                                <color key="titleColor" systemColor="systemRedColor"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" systemColor="systemPinkColor"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                    <real key="value" value="2"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="cancelOrder:" destination="-1" eventType="touchUpInside" id="thX-51-6rP"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="K1E-kB-GuM"/>
+                                        <constraint firstAttribute="height" constant="40" id="P93-dc-0Ef"/>
                                     </constraints>
-                                </stackView>
-                                <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pCV-Et-rwD">
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
+                                    <state key="normal" title="إلغاء الطلب">
+                                        <color key="titleColor" systemColor="systemRedColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" systemColor="systemPinkColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="cancelOrder:" destination="-1" eventType="touchUpInside" id="thX-51-6rP"/>
+                                    </connections>
+                                </button>
+                                <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pCV-Et-rwD" userLabel="Price Stack View">
                                     <rect key="frame" x="35" y="672.5" width="344" height="40"/>
                                     <subviews>
                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEX-XK-yZ4" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
@@ -624,6 +623,26 @@
                                         <constraint firstItem="hcw-Vl-1JA" firstAttribute="centerY" secondItem="huY-6W-WnC" secondAttribute="centerY" id="aWE-Pb-E9S"/>
                                     </constraints>
                                 </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcT-ye-irH" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
+                                    <rect key="frame" x="118.5" y="797.5" width="177" height="40"/>
+                                    <color key="backgroundColor" red="0.94117647059999998" green="0.86666666670000003" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="177" id="blL-E5-kMb"/>
+                                        <constraint firstAttribute="height" constant="40" id="jhs-Dd-FOR"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="14"/>
+                                    <state key="normal" title="عرض تقرير الخدمة">
+                                        <color key="titleColor" red="0.53994888070000002" green="0.43772861359999998" blue="0.19690179820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="showInvocieButton:" destination="-1" eventType="touchUpInside" id="hLx-JQ-Ul0"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -641,11 +660,10 @@
                                 <constraint firstItem="YNX-Hm-8tR" firstAttribute="top" secondItem="fJP-hV-SfR" secondAttribute="bottom" constant="97" id="7wB-5V-obj"/>
                                 <constraint firstItem="ANV-rP-ogM" firstAttribute="top" secondItem="RnM-oW-49c" secondAttribute="bottom" constant="15" id="APN-LA-HBu"/>
                                 <constraint firstItem="Zte-22-Qik" firstAttribute="top" secondItem="fjB-cb-nGf" secondAttribute="top" id="Az6-Ye-2UH"/>
-                                <constraint firstItem="olL-N6-18d" firstAttribute="top" secondItem="pCV-Et-rwD" secondAttribute="bottom" constant="25" id="BIB-zD-CgD"/>
-                                <constraint firstItem="kyx-O7-Sxd" firstAttribute="trailing" secondItem="olL-N6-18d" secondAttribute="trailing" id="Bw9-ow-A4o"/>
                                 <constraint firstItem="Zte-22-Qik" firstAttribute="centerY" secondItem="fjB-cb-nGf" secondAttribute="centerY" id="CLg-ZD-kY2"/>
                                 <constraint firstItem="G6y-KQ-pSY" firstAttribute="trailing" secondItem="q9W-Bf-FTh" secondAttribute="trailing" id="CWP-c0-XmG"/>
                                 <constraint firstItem="1vK-zV-mpQ" firstAttribute="top" secondItem="G6y-KQ-pSY" secondAttribute="bottom" constant="8" id="Cal-aF-15O"/>
+                                <constraint firstAttribute="trailing" secondItem="qpr-be-axL" secondAttribute="trailing" constant="20" symbolic="YES" id="Con-1G-ki7"/>
                                 <constraint firstItem="G6y-KQ-pSY" firstAttribute="leading" secondItem="2NO-Bl-RoC" secondAttribute="leading" constant="25" id="Dno-oL-8y8"/>
                                 <constraint firstItem="7eG-qz-eD2" firstAttribute="leading" secondItem="2NO-Bl-RoC" secondAttribute="leading" constant="35" id="EP8-sS-xr0"/>
                                 <constraint firstAttribute="trailing" secondItem="uHD-sn-lAU" secondAttribute="trailing" id="F53-Ww-At6"/>
@@ -654,19 +672,23 @@
                                 <constraint firstAttribute="trailing" secondItem="MNP-aa-9Ef" secondAttribute="trailing" id="GJg-7r-XhD"/>
                                 <constraint firstItem="fjB-cb-nGf" firstAttribute="top" secondItem="e4Q-gg-Qr0" secondAttribute="bottom" constant="16" id="Gx0-Rs-c8f"/>
                                 <constraint firstItem="e4Q-gg-Qr0" firstAttribute="top" secondItem="ANV-rP-ogM" secondAttribute="bottom" constant="16" id="HNN-aH-2ao"/>
+                                <constraint firstItem="qpr-be-axL" firstAttribute="top" secondItem="pCV-Et-rwD" secondAttribute="bottom" constant="25" id="KJt-lI-Lov"/>
                                 <constraint firstItem="RnM-oW-49c" firstAttribute="leading" secondItem="2NO-Bl-RoC" secondAttribute="leading" id="KZ0-Xd-dkM"/>
                                 <constraint firstItem="huY-6W-WnC" firstAttribute="leading" secondItem="fJP-hV-SfR" secondAttribute="leading" id="MRL-N0-L0s"/>
+                                <constraint firstAttribute="trailing" secondItem="kyx-O7-Sxd" secondAttribute="trailing" constant="35" id="Nrq-Fh-Mhy"/>
                                 <constraint firstItem="YNX-Hm-8tR" firstAttribute="leading" secondItem="fJP-hV-SfR" secondAttribute="leading" id="Ows-Yk-VWp"/>
                                 <constraint firstAttribute="trailing" secondItem="pCV-Et-rwD" secondAttribute="trailing" constant="35" id="Pi0-vy-2gx"/>
                                 <constraint firstItem="6bd-oD-DLD" firstAttribute="trailing" secondItem="Gko-fM-Nxd" secondAttribute="trailing" id="Sb6-hc-aDi"/>
                                 <constraint firstAttribute="trailing" secondItem="e4Q-gg-Qr0" secondAttribute="trailing" constant="25" id="Sfg-cJ-JaV"/>
-                                <constraint firstAttribute="trailing" secondItem="olL-N6-18d" secondAttribute="trailing" constant="20" id="T4o-Yf-9dx"/>
+                                <constraint firstItem="VcT-ye-irH" firstAttribute="centerX" secondItem="2NO-Bl-RoC" secondAttribute="centerX" id="U7F-y2-JPy"/>
                                 <constraint firstItem="YOS-Nl-oCz" firstAttribute="leading" secondItem="fJP-hV-SfR" secondAttribute="leading" id="UcI-mL-IdE"/>
                                 <constraint firstItem="T3X-gN-Mdr" firstAttribute="leading" secondItem="2NO-Bl-RoC" secondAttribute="leading" id="UgG-SJ-Q7h"/>
+                                <constraint firstItem="kyx-O7-Sxd" firstAttribute="leading" secondItem="2NO-Bl-RoC" secondAttribute="leading" constant="35" id="Va9-SD-CaG"/>
                                 <constraint firstItem="fJP-hV-SfR" firstAttribute="leading" secondItem="2NO-Bl-RoC" secondAttribute="leading" constant="35" id="WPS-ii-7vs"/>
                                 <constraint firstItem="RnM-oW-49c" firstAttribute="top" secondItem="2NO-Bl-RoC" secondAttribute="top" constant="15" id="Wte-De-RPg"/>
-                                <constraint firstItem="kyx-O7-Sxd" firstAttribute="leading" secondItem="olL-N6-18d" secondAttribute="leading" id="cYg-2O-LTn"/>
+                                <constraint firstItem="VcT-ye-irH" firstAttribute="top" secondItem="kyx-O7-Sxd" secondAttribute="bottom" constant="20" id="XYI-Ax-LGZ"/>
                                 <constraint firstItem="hcw-Vl-1JA" firstAttribute="trailing" secondItem="Gko-fM-Nxd" secondAttribute="trailing" id="cfh-Tx-HW8"/>
+                                <constraint firstItem="qpr-be-axL" firstAttribute="leading" secondItem="2NO-Bl-RoC" secondAttribute="leading" constant="20" symbolic="YES" id="dNb-Jw-l2i"/>
                                 <constraint firstItem="T3X-gN-Mdr" firstAttribute="top" secondItem="fJP-hV-SfR" secondAttribute="bottom" constant="52" id="ddu-Oe-FxY"/>
                                 <constraint firstItem="G6y-KQ-pSY" firstAttribute="top" secondItem="Ikj-ZE-ydD" secondAttribute="bottom" constant="16" id="dhB-7k-iyt"/>
                                 <constraint firstAttribute="trailing" secondItem="Ikj-ZE-ydD" secondAttribute="trailing" constant="25" id="drQ-y8-xnc"/>
@@ -679,7 +701,6 @@
                                 <constraint firstAttribute="trailing" secondItem="RnM-oW-49c" secondAttribute="trailing" id="lBl-2t-lUQ"/>
                                 <constraint firstItem="ANV-rP-ogM" firstAttribute="leading" secondItem="2NO-Bl-RoC" secondAttribute="leading" constant="25" id="lWG-Db-6mE"/>
                                 <constraint firstItem="m4S-wm-5fD" firstAttribute="trailing" secondItem="Gko-fM-Nxd" secondAttribute="trailing" id="mKY-sd-ZhY"/>
-                                <constraint firstItem="olL-N6-18d" firstAttribute="leading" secondItem="2NO-Bl-RoC" secondAttribute="leading" constant="20" id="nRP-ad-nfe"/>
                                 <constraint firstAttribute="trailing" secondItem="Ikj-ZE-ydD" secondAttribute="trailing" constant="25" id="nnc-HK-x7F"/>
                                 <constraint firstItem="Zte-22-Qik" firstAttribute="bottom" secondItem="fjB-cb-nGf" secondAttribute="bottom" id="oYe-0E-28A"/>
                                 <constraint firstAttribute="trailing" secondItem="Gko-fM-Nxd" secondAttribute="trailing" constant="35" id="pDl-5H-VX2"/>
@@ -762,6 +783,9 @@
         </designable>
         <designable name="QEX-XK-yZ4">
             <size key="intrinsicContentSize" width="88" height="26"/>
+        </designable>
+        <designable name="VcT-ye-irH">
+            <size key="intrinsicContentSize" width="104" height="26"/>
         </designable>
         <designable name="pmg-hg-4y0">
             <size key="intrinsicContentSize" width="104" height="17"/>

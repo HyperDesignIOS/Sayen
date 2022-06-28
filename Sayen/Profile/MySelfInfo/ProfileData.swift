@@ -127,10 +127,16 @@ class Setting_Data {
         guard let x =  _userAppIosVersion else { return "" }
         return x
     }
+    
+    private var _textEmergency  : String?
+    var textEmergency : String {
+        guard let x =  _textEmergency else { return "" }
+        return x
+    }
 
     init(_ jsonData : JSON) {
         self._userAppIosVersion = jsonData["user_app_ios_version"].stringValue
-        
+        self._textEmergency = jsonData["text_emergency"].stringValue
     }
     
     

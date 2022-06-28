@@ -10,49 +10,57 @@ import UIKit
 class AddPriceVC: UIViewController {
 
     @IBOutlet weak var tableViewHight: NSLayoutConstraint!
-    @IBOutlet weak var allhieghtCons: NSLayoutConstraint!
+//    @IBOutlet weak var allhieghtCons: NSLayoutConstraint!
     @IBOutlet weak var newPrice: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var copnPrice: UILabel!
     @IBOutlet weak var endPriceCon: NSLayoutConstraint!
-    @IBOutlet weak var totPrice: UILabel!
+    @IBOutlet weak var totalPrice: UILabel!
+    @IBOutlet weak var mainPrice: UILabel!
     @IBOutlet weak var copnTitle: UILabel!
     weak var delegate : AcceptPrice!
     @IBOutlet weak var coponView: UIView!
-    
+    @IBOutlet weak var workerNameLabel: UILabel!
+    @IBOutlet weak var totalBottomAnchor: NSLayoutConstraint!
     @IBOutlet weak var btnsStack: UIStackView!
     var team_added_price_desc : [String] = []
     var team_added_price : [String] = []
     var totPriceT : Double = 0.0
     var newPriceT : Double = 0.0
     var CoponDiscount : Double = 0.0
+    var initialPrice : Double = 0.0
     var order_id = 0
     var status = "1"
     var btnsState = false
+    var workerName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.register(UINib(nibName: "AddedPriceCell", bundle: nil), forCellReuseIdentifier: "AddedPriceCell")
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.totPrice.text = "\(totPriceT) " + "Rial".localized
+        self.totalPrice.text = "\(totPriceT) " + "Rial".localized
         self.newPrice.text = "\(newPriceT) " + "Rial".localized
+        self.mainPrice.text = "\(initialPrice) " + "Rial".localized
+        self.workerNameLabel.text = workerName
         if CoponDiscount == 0 {
             self.coponView.alpha = 0
             self.endPriceCon.constant = 20
-            self.allhieghtCons.constant = 450
+//            self.allhieghtCons.constant = 450
             if self.btnsState  {
+                self.totalBottomAnchor.priority = UILayoutPriority(1000)
                 self.btnsStack.alpha = 0
-               self.allhieghtCons.constant = 400
+//               self.allhieghtCons.constant = 400
             }
         }else{
             self.coponView.alpha = 1
             self.copnPrice.text = "\(CoponDiscount) " + "Rial".localized
             self.endPriceCon.constant = 58
-            self.allhieghtCons.constant = 500
+//            self.allhieghtCons.constant = 500
             if self.btnsState  {
                self.btnsStack.alpha = 0
-               self.allhieghtCons.constant = 450
+                self.totalBottomAnchor.priority = UILayoutPriority(1000)
+//               self.allhieghtCons.constant = 450
             }
         }
         
@@ -110,6 +118,7 @@ extension AddPriceVC : UITableViewDelegate , UITableViewDataSource {
         cell.priceDesc.text = "" 
         if indexPath.row < self.team_added_price_desc.count  {
         cell.priceDesc.text = self.team_added_price_desc[indexPath.row]
+            cell.priceDesc.isUserInteractionEnabled = false
         }
         return cell
     }

@@ -18,9 +18,9 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
     var dataProfile: UserProfile_Data?
     var name : String = ""
     var user : UserProfile_Data? = nil
-    var emergenacyServices : [HomeData] = []
+    var emergenacyServices : [EmService] = []
     var offers : [OfferService] = []
-    
+    var emergencyInfoText : String = ""
      lazy var refresher : UIRefreshControl = {
               let refresher = UIRefreshControl()
               refresher.tintColor = .white
@@ -156,7 +156,7 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
     @objc func getAllServices (){
         ad.isLoading()
         self.refresher.endRefreshing()
-        APIClient.getServices(completionHandler: {[weak self] (state, data, offers , user, userAppVersion)    in
+        APIClient.getServices(completionHandler: {[weak self] (state, data, offers , user, settingsData, emergenacyServices)    in
             guard let self = self else {return}
             guard state else{
                 self.showDAlert(title: "", subTitle: "yourSessionHasBeenEnded".localized, type: .updateRequired, buttonTitle: "login".localized) { _ in
@@ -170,7 +170,12 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
             if let user = user {
                 self.user = user
             }
-
+            if let settingsData = settingsData {
+                self.emergencyInfoText = settingsData.textEmergency
+            }
+            if !emergenacyServices.isEmpty {
+                self.emergenacyServices = emergenacyServices
+            }
             if let data = data {
                 if data.count == 0 {
                     self.noDataLbl.alpha = 1
@@ -180,13 +185,7 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
                     print(data[0].checkSub)
                     self.noDataLbl.alpha = 0
                     self.data = data
-                    self.emergenacyServices.removeAll()
-                    data.forEach { service in
-                        let emergencyIds = [1,2]
-                        if emergencyIds.contains(service.id) {
-                            self.emergenacyServices.append(service)
-                        }
-                    }
+          
                     if let offers = offers {
                         self.offers = offers
                         if !offers.isEmpty {

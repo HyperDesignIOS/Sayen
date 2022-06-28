@@ -59,20 +59,25 @@ class PaymentHandler: NSObject {
     func startPayment(price: String, completion: @escaping PaymentCompletionHandler) {
 
         completionHandler = completion
+        
          
         let service = PKPaymentSummaryItem(label:  Constants.merchantName, amount: NSDecimalNumber(string: price), type: .final)
         
         priceAmount = price
         paymentSummaryItems = [service]
 
+        let countryCode = Locale.current.regionCode ?? "SA"
+        let currencyCode = Locale.current.currencyCode ?? "SAR"
+        
         // Create a payment request.
         let paymentRequest = PKPaymentRequest()
         paymentRequest.paymentSummaryItems = paymentSummaryItems
         paymentRequest.merchantIdentifier = Configuration.Merchant.identifier
         paymentRequest.merchantCapabilities = .capability3DS
-        paymentRequest.countryCode = "SA"
-        paymentRequest.currencyCode = "SAR"
+        paymentRequest.countryCode = countryCode
+        paymentRequest.currencyCode =  currencyCode
         paymentRequest.supportedNetworks = PaymentHandler.supportedNetworks
+        paymentRequest.supportedCountries = ["SA"]
 //        paymentRequest.shippingType = .servicePickup
 
 //        paymentRequest.shippingMethods = shippingMethodCalculator()

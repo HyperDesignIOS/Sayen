@@ -747,3 +747,4 @@
 "addMatrial" = "Add Matrial";
 "maxFImages" = "You cannot select maximum 5 images!";
 "yourSessionHasBeenEnded" = "your session has been ended" ;
+"noAddress" = "No Address !";

@@ -71,6 +71,54 @@ struct OfferService {
     
 }
 
+
+
+class EmReasons {
+    var id : Int?
+    var reason : String?
+    var reason_en : String?
+    var service_id : Int?
+    var status : Int?
+    var deleted_at : String?
+    
+    
+    init(_ jsonData : JSON) {
+        self.id = jsonData["id"].intValue
+        self.reason = jsonData["reason"].stringValue
+        self.reason_en = jsonData["reason_en"].stringValue
+        self.service_id = jsonData["service_id"].intValue
+        self.status = jsonData["status"].intValue
+        self.deleted_at = jsonData["deleted_at"].stringValue
+    
+    }
+    
+    
+}
+
+//struct OfferData {
+//    var offer: OffersRoot
+//    var isSelected: Bool
+//
+//}
+struct EmService {
+    var id: Int
+    var title: String
+    var reasons: [EmReasons]
+    
+    init(_ jsonData : JSON) {
+        self.id = jsonData["id"].intValue
+        self.title = jsonData["title"].stringValue
+        self.reasons = [EmReasons]()
+        let reason_Array = jsonData["reasons"].arrayValue
+        for resons_Json in reason_Array{
+            let value = EmReasons(resons_Json)
+            reasons.append(value)
+        }
+    }
+    
+}
+
+
 //"id": 1,
 //"title": "عرض المميز",
 //"title_en": "offer",

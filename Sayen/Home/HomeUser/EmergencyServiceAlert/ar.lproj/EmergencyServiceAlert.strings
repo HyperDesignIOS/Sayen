@@ -6,7 +6,7 @@
 "1XP-KE-tcl.normalTitle" = "موافق";
 
 /* Class = "UILabel"; text = "اكتب حالة الطوارئ الخاصة بك"; ObjectID = "27v-1u-aoX"; */
-"27v-1u-aoX.text" = "اكتب حالة الطوارئ الخاصة بك";
+"27v-1u-aoX.text" = "اختر حالة الطوارئ الخاصة بك";
 
 /* Class = "UILabel"; text = "طلب طوارئ"; ObjectID = "Ei7-oy-bFF"; */
 "Ei7-oy-bFF.text" = "طلب طوارئ";

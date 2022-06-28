@@ -69,8 +69,12 @@ class OrderDetails {
     var warranty : String?
     var type: String?
     var order_id: Int?
-
+    var building : String?
+    var flat : String?
+    var floor : String?
+    var added_price: String?
     var excellence_client : String
+    var service : String?
        var isExcellenceClient : Bool {
           return excellence_client == "1"
       }
@@ -121,6 +125,11 @@ class OrderDetails {
         self.warranty = jsonData["warranty"].string
         self.type = jsonData["type"].string
         self.order_id = jsonData["order_id"].int
+        self.building = jsonData["building"].string
+        self.flat = jsonData["flat"].string
+        self.floor = jsonData["floor"].string
+        self.service = jsonData["service"].string
+        self.added_price = jsonData["added_price"].string
     }
     
     

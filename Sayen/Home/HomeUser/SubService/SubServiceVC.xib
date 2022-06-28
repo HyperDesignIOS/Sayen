@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,8 +36,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEj-gI-eXK">
                     <rect key="frame" x="0.0" y="44" width="414" height="65"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تفاصيل الفاتورة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPh-Qm-7bv">
-                            <rect key="frame" x="144" y="23.5" width="126.5" height="18"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" تقرير الخدمة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPh-Qm-7bv">
+                            <rect key="frame" x="156.5" y="23.5" width="101" height="18"/>
                             <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7L-Cf-Gqu">
-                    <rect key="frame" x="35" y="129" width="344" height="767"/>
+                    <rect key="frame" x="30" y="129" width="354" height="767"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J2Q-jF-Rf0">
                         <size key="itemSize" width="50" height="50"/>
@@ -87,7 +87,7 @@
                 <constraint firstItem="jor-gO-avu" firstAttribute="trailing" secondItem="Jla-TK-Bhr" secondAttribute="trailing" id="75Z-6Q-8Xl"/>
                 <constraint firstAttribute="bottom" secondItem="d7L-Cf-Gqu" secondAttribute="bottom" id="AqF-9a-dLw"/>
                 <constraint firstItem="eEj-gI-eXK" firstAttribute="top" secondItem="Jla-TK-Bhr" secondAttribute="top" id="H4Z-KS-4Sv"/>
-                <constraint firstItem="Jla-TK-Bhr" firstAttribute="trailing" secondItem="d7L-Cf-Gqu" secondAttribute="trailing" constant="35" id="HNn-VB-AxC"/>
+                <constraint firstItem="Jla-TK-Bhr" firstAttribute="trailing" secondItem="d7L-Cf-Gqu" secondAttribute="trailing" constant="30" id="HNn-VB-AxC"/>
                 <constraint firstItem="0Q6-SO-fKJ" firstAttribute="centerY" secondItem="7Pc-o1-zvx" secondAttribute="centerY" id="NOQ-kd-Dyj"/>
                 <constraint firstItem="eEj-gI-eXK" firstAttribute="trailing" secondItem="Jla-TK-Bhr" secondAttribute="trailing" id="P4c-Dp-MZ8"/>
                 <constraint firstItem="jor-gO-avu" firstAttribute="leading" secondItem="Jla-TK-Bhr" secondAttribute="leading" id="RAD-hw-3Nh"/>
@@ -95,7 +95,7 @@
                 <constraint firstItem="jor-gO-avu" firstAttribute="top" secondItem="7Pc-o1-zvx" secondAttribute="top" id="hvX-Fj-F3O"/>
                 <constraint firstItem="d7L-Cf-Gqu" firstAttribute="top" secondItem="eEj-gI-eXK" secondAttribute="bottom" constant="20" id="jYs-6A-STa"/>
                 <constraint firstItem="eEj-gI-eXK" firstAttribute="leading" secondItem="Jla-TK-Bhr" secondAttribute="leading" id="ljW-Aa-1oL"/>
-                <constraint firstItem="d7L-Cf-Gqu" firstAttribute="leading" secondItem="Jla-TK-Bhr" secondAttribute="leading" constant="35" id="pVw-pl-vcK"/>
+                <constraint firstItem="d7L-Cf-Gqu" firstAttribute="leading" secondItem="Jla-TK-Bhr" secondAttribute="leading" constant="30" id="pVw-pl-vcK"/>
                 <constraint firstAttribute="bottom" secondItem="jor-gO-avu" secondAttribute="bottom" id="w6l-ZG-pxV"/>
             </constraints>
             <point key="canvasLocation" x="251" y="-32"/>

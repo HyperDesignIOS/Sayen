@@ -6,7 +6,7 @@
 "EHs-vg-LmZ.text" = "العنوان";
 
 /* Class = "UILabel"; text = "الدور"; ObjectID = "PCM-jp-tos"; */
-"PCM-jp-tos.text"  = "رقم العمارة / الدور / رقم الشقة";
+"PCM-jp-tos.text"  = "العنوان (رقم العمارة / الدور / رقم الشقة)";
 
 /* Class = "UITextField"; placeholder = "اكتب هنا"; ObjectID = "R4e-Tf-gk4"; */
 "R4e-Tf-gk4.placeholder" = "اكتب هنا";

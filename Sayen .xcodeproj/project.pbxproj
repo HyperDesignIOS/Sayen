@@ -351,6 +351,8 @@
 		F27956382778C67E00EBA5A4 /* HomeWorker+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27956372778C67E00EBA5A4 /* HomeWorker+CollectionView.swift */; };
 		F279563A2778C6A600EBA5A4 /* HomeWorker+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27956392778C6A600EBA5A4 /* HomeWorker+TableView.swift */; };
 		F279563C2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279563B2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift */; };
+		F298EA35285F50D80061F8FB /* ServiceReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298EA34285F50D80061F8FB /* ServiceReportVC.swift */; };
+		F298EA37285F50E40061F8FB /* ServiceReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F298EA36285F50E40061F8FB /* ServiceReportVC.xib */; };
 		F29C2EBA27B171E30098F726 /* EmergencyOrderDetailesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29C2EBC27B171E30098F726 /* EmergencyOrderDetailesVC.xib */; };
 		F2A104A727ABD9600012197A /* EmergencyServiceAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A104A227ABD9370012197A /* EmergencyServiceAlert.xib */; };
 		F2A104A827ABD9660012197A /* EmergencyServiceAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1049D27ABD1770012197A /* EmergencyServiceAlert.swift */; };
@@ -706,6 +708,8 @@
 		F27956372778C67E00EBA5A4 /* HomeWorker+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWorker+CollectionView.swift"; sourceTree = "<group>"; };
 		F27956392778C6A600EBA5A4 /* HomeWorker+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWorker+TableView.swift"; sourceTree = "<group>"; };
 		F279563B2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWorker+LocationManager.swift"; sourceTree = "<group>"; };
+		F298EA34285F50D80061F8FB /* ServiceReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReportVC.swift; sourceTree = "<group>"; };
+		F298EA36285F50E40061F8FB /* ServiceReportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceReportVC.xib; sourceTree = "<group>"; };
 		F29C2EBB27B171E30098F726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EmergencyOrderDetailesVC.xib; sourceTree = "<group>"; };
 		F29C2EBE27B171E70098F726 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EmergencyOrderDetailesVC.strings; sourceTree = "<group>"; };
 		F29C2EC027B171EA0098F726 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/EmergencyOrderDetailesVC.strings; sourceTree = "<group>"; };
@@ -1467,6 +1471,7 @@
 		1CECC2FF24942C8000354DD7 /* OrderDetailes */ = {
 			isa = PBXGroup;
 			children = (
+				F298EA33285F4BBC0061F8FB /* ServiceReport */,
 				1CE3DE39249A67DC00B8C065 /* TeamAddPrice */,
 				1CE3DE2F249A51BB00B8C065 /* WorkerOrderDetailes */,
 				1C43BFAE24994DEE000830E5 /* Rating */,
@@ -1624,6 +1629,15 @@
 				F265230227AAE1A600DF488E /* SubServiceVC.xib */,
 			);
 			path = SubService;
+			sourceTree = "<group>";
+		};
+		F298EA33285F4BBC0061F8FB /* ServiceReport */ = {
+			isa = PBXGroup;
+			children = (
+				F298EA34285F50D80061F8FB /* ServiceReportVC.swift */,
+				F298EA36285F50E40061F8FB /* ServiceReportVC.xib */,
+			);
+			path = ServiceReport;
 			sourceTree = "<group>";
 		};
 		F2A1049B27ABD1760012197A /* EmergencyServiceAlert */ = {
@@ -1788,6 +1802,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F24A856A26E15D9C00E7FAA1 /* ForgetPassVc.xib in Resources */,
+				F298EA37285F50E40061F8FB /* ServiceReportVC.xib in Resources */,
 				F240894B26E7550D005CD093 /* EditPhoneVC.xib in Resources */,
 				F240897F26E75AF1005CD093 /* LogOutAlert.xib in Resources */,
 				F240895B26E75827005CD093 /* EditProfileVC.xib in Resources */,
@@ -2170,6 +2185,7 @@
 				1CF81061249259DF0046C6AC /* ReturnDate.swift in Sources */,
 				F26522FC27AAD89D00DF488E /* HomeUser+CollectionView.swift in Sources */,
 				1C309E4824894564002CE4CC /* selfInfoVC.swift in Sources */,
+				F298EA35285F50D80061F8FB /* ServiceReportVC.swift in Sources */,
 				1C906AE5249015BD00B9855F /* OrderDate.swift in Sources */,
 				1CBD1D5324A3945500412A5C /* NotiModel.swift in Sources */,
 				1C365BA1249B60A800FFCF7B /* TeamOrderList.swift in Sources */,
@@ -2888,14 +2904,14 @@
 				CODE_SIGN_ENTITLEMENTS = Sayen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9.2;
+				MARKETING_VERSION = 1.9.6;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";
@@ -2913,14 +2929,14 @@
 				CODE_SIGN_ENTITLEMENTS = Sayen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9.2;
+				MARKETING_VERSION = 1.9.6;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";
