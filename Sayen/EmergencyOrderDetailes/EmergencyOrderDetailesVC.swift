@@ -144,7 +144,7 @@ class EmergencyOrderDetailesVC: UIViewController {
             self.endTitle.textColor = UIColor.brownMainColor
             self.rateButtonOutlet.isHidden = false
             if data?.service_rated == 0 {
-                self.showDAlert(title: "", subTitle:"rateRequestMsg".localized, type: .success, buttonTitle: "تقييم") { (ـ) in
+                self.showDAlert(title: "", subTitle:"rateRequestMsg".localized, type: .success, buttonTitle: "rate".localized) { (ـ) in
                     let vc = RatingVC()
                     vc.order_id = self.data!.id!
                     self.navigationController?.pushViewController(vc, animated: false)

@@ -7,7 +7,7 @@
 
 import UIKit
 class ProfileViewModel {
-    var data : [MenuList] = [.popualarQu,.aboutSayen,.contactUs,.share,.rateApp,.changeLanguage,.logout]
+    var data : [MenuList] = [.popualarQu,.aboutSayen,.contactUs,.share,.rateApp,.changeLanguage,.logout,.deletAccount]
     
     
 }
@@ -16,7 +16,7 @@ class ProfileViewModel {
 
 enum MenuList {
     
-    case popualarQu, aboutSayen,share,rateApp,contactUs,changeLanguage,logout
+    case popualarQu, aboutSayen,share,rateApp,contactUs,changeLanguage,logout,deletAccount
     
     
     func getData() -> (title:String,image:UIImage) {
@@ -35,6 +35,8 @@ enum MenuList {
             return ("changeLanguage".localized ,UIImage(named: "Group 10899")!)
         case .logout:
             return ("signOut".localized ,UIImage(named: "Group 1086")!)
+        case .deletAccount:
+            return ("deletAccount".localized ,UIImage(named: "Group 639")!)
          }
     }
 }

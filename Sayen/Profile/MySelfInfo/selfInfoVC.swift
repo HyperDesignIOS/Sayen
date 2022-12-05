@@ -18,6 +18,7 @@ class selfInfoVC: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var nameTF: UITextField!
+    @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var clint: DLRadioButton!
     @IBOutlet weak var company: DLRadioButton!
     @IBOutlet weak var client_typeLbl: UILabel!
@@ -184,6 +185,7 @@ class selfInfoVC: UIViewController {
                 if let data = data {
                     self.data = data
                     self.nameTF.text = data.name
+                    self.lastNameTF.text = data.lastName
                     self.emailTF.text = data.email
                     
                     if let url = URL(string: data.imageLink) {
@@ -277,6 +279,10 @@ class selfInfoVC: UIViewController {
             self.showDAlert(title: "Error".localized, subTitle: "writeName".localized, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
             return
         }
+        guard let lastName = self.lastNameTF.text , lastName != "" else{
+            self.showDAlert(title: "Error".localized, subTitle: "writeLastName".localized, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
+            return
+        }
         if self.clint.isSelected  {
             guard let _ = selectedData else{
                let alertMessage = "selectBuildingName".localized
@@ -304,7 +310,11 @@ class selfInfoVC: UIViewController {
         ad.isLoading()
         if ad.isUser(){
             let excellence_client = self.clint.isSelected ? "1" : "2"
-            APIClient.changeInfoUser(name: self.nameTF.text!, email: self.emailTF.text!, excellence_client: excellence_client,building_id: self.selectedData?.id ?? 0,flat: self.flatNumTF.text ?? "", completionHandler: { (state, sms) in
+            var buildingId = "\(self.selectedData?.id ?? 0)"
+            if buildingId == "0" {
+                buildingId = ""
+            }
+            APIClient.changeInfoUser(name: self.nameTF.text!, lastName: self.lastNameTF.text!, email: self.emailTF.text!, excellence_client: excellence_client,building_id: buildingId ,flat: self.flatNumTF.text ?? "", completionHandler: { (state, sms) in
                 guard state else{
                     DispatchQueue.main.async {
                         ad.killLoading()

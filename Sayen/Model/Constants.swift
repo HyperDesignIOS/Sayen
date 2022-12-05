@@ -20,10 +20,13 @@ class Constants {
     static let invoicePdf = "https://sayen.co/api/v2/makePdf/"
     static var firebaseTokenKey = "firebaseToken"
     static var merchantName = "Sayn App (Yaqoub Alarfaj)"
+    static var deviceType = "iOS"
     static let  selectedImg = UIImage(named:"Radio-On-Enabled")
     static let deSelectedImg = UIImage(named:"Radio-Off-Enabled")
 //    static let GOOGLE_MAPS_API_KEY = "AIzaSyAwyQnnV0Z4PaFX645Ua1PMX56qlbuHvls"
     static let GOOGLE_MAPS_API_KEY = "AIzaSyD0lvyEMmVw-jCqobmghYJaopzaks9M83A"
+    static var contactUsNumober = "0509997657"
+
     static var currency = "SAR"
       static var user_token  : String {
          set {

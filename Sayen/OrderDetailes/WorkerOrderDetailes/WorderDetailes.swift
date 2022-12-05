@@ -44,6 +44,9 @@ class WorderDetailes: UIViewController {
     @IBOutlet weak var floorLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var addButtonsStackView: UIStackView!
+    @IBOutlet weak var deviceNumberViewHeigt: NSLayoutConstraint!
+    @IBOutlet weak var deviceNumberLabel: UILabel!
+    
     
     var tabBar : UITabBarController?
     var data : TeamOrderDetailes?
@@ -237,6 +240,11 @@ class WorderDetailes: UIViewController {
                 self.data = data
                 print(data.user_name)
                 DispatchQueue.main.async {
+                    if  data.device_numbers == nil || data.device_numbers == "0"{
+                        self.deviceNumberViewHeigt.constant = 0
+                    }else {
+                        self.deviceNumberLabel.text = data.device_numbers
+                    }
                     self.orderId = data.id!
                     self.mainTitle.text = data.title
                     self.orderNum.text = "#\(data.order_number ?? "" )"

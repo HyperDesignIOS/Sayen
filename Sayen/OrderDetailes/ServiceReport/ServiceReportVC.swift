@@ -86,7 +86,8 @@ class ServiceReportVC : UIViewController {
                         address = "noAddress".localized
                     }
                     self.addressLabel.text = address
-                    self.addedPriceLabel.text = (data.added_price ?? "0") + "Rial".localized
+//                    self.addedPriceLabel.text = (data.added_price ?? "0") + "Rial".localized
+                    self.addedPriceLabel.text  = "\(data.final_price!) " + "Rial".localized
                 }
                
               //  print(self.probImages.count)

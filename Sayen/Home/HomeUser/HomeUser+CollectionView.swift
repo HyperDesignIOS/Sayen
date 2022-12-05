@@ -10,13 +10,13 @@ import UIKit
 
 extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return services.count
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard ad.isOnline() else {
             return
         }
-        let checkSub = data[indexPath.row].checkSub
+        let checkSub = services[indexPath.row].checkSub
         if indexPath.row == 0 {
             let vc = EmergencyServiceAlert()
             vc.delegate = self
@@ -33,17 +33,15 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
         } else  {
             if checkSub > 0 {
                 let vc = SubServiceVC()
-                vc.subServiceId = data[indexPath.row].id
-                vc.subServiceTitle =  data[indexPath.row].name
+                vc.subServiceId = services[indexPath.row].id
+                vc.subServiceTitle =  services[indexPath.row].name
                 vc.user = user
                 self.navigationController?.pushViewController(vc, animated: true)
             }else {
                 let vc = SendOrder()
                 vc.user = user
-                vc.infoText = data[indexPath.row].text
-                vc.pageTransformeTitle = data[indexPath.row].name
-                vc.id = data[indexPath.row].id
-                vc.initial_price = String(data[indexPath.row].initial_price)
+                vc.service = services[indexPath.row]
+                
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
@@ -53,19 +51,20 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeUserCell", for: indexPath) as! HomeUserCell
         if indexPath.row == 0 {
             cell.labelCell.text = "emergancyOrder".localized
+            cell.infoTextLabel.text = ""
             cell.image.image = UIImage(named: "siren")!
             cell.offerImageView.isHidden = true 
-        }else if indexPath.row == 1 {
-            if !offers.isEmpty {
+        }else if indexPath.row == 1 && !offers.isEmpty{
+            
                 cell.labelCell.text = "spicailOffers".localized
                 cell.image.image = UIImage(named: "fsdjh87")!
                 cell.offerImageView.isHidden = true
-            }
+            
         }else {
-            cell.labelCell.text = data[indexPath.row].name
-            cell.infoTextLabel.text = data[indexPath.row].text
-            cell.offerImageView.isHidden = data[indexPath.row].offer == 0 ? true : false
-                if let url = URL(string: data[indexPath.row].image_path) {
+            cell.labelCell.text = services[indexPath.row].name
+            cell.infoTextLabel.text = services[indexPath.row].text
+            cell.offerImageView.isHidden = services[indexPath.row].offer == 0 ? true : false
+                if let url = URL(string: services[indexPath.row].image_path) {
                 let placeholderImage = UIImage(named: "Group 1059")!
                 cell.image.af_setImage(withURL: url, placeholderImage: placeholderImage)
             }
@@ -81,7 +80,7 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
       
       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
           let w = self.collectionView.frame.width / 2.08
-          let h : CGFloat =  133
+          let h : CGFloat =  155
           let size = CGSize(width: w , height: h)
           return size
       }
@@ -92,7 +91,7 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
           case UICollectionView.elementKindSectionHeader:
               let reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HomeHeader", for: indexPath) as! HomeHeader
                   
-            reusableview.name.text = "hi".localized + self.name
+              reusableview.name.text = "hi".localized + self.name + "haveAGoodDay".localized
               return reusableview
           default:  fatalError("Unexpected element kind")
           }
@@ -116,5 +115,10 @@ extension HomeUserVC : UICollectionViewDelegate , UICollectionViewDataSource ,UI
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.addSubview(refresher)
+    }
+}
+extension String {
+    func versionCompare(_ otherVersion: String) -> ComparisonResult {
+        return self.compare(otherVersion, options: .numeric)
     }
 }

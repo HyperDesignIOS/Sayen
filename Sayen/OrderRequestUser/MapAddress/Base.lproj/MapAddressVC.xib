@@ -38,7 +38,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="65"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إختيار العنوان" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1i-Zi-pIG">
-                            <rect key="frame" x="163" y="22" width="88" height="21"/>
+                            <rect key="frame" x="154" y="23.5" width="106" height="18"/>
                             <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="18"/>
                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -102,13 +102,13 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="العنوان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHs-vg-LmZ">
-                                    <rect key="frame" x="35" y="360" width="41" height="20"/>
+                                    <rect key="frame" x="35" y="360" width="51.5" height="17"/>
                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtw-sJ-n0g" customClass="CardView" customModule="صاين" customModuleProvider="target">
-                                    <rect key="frame" x="35" y="392" width="344" height="50"/>
+                                    <rect key="frame" x="35" y="389" width="344" height="50"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ynr-G5-ZC5">
                                             <rect key="frame" x="8" y="0.0" width="328" height="50"/>
@@ -127,13 +127,13 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="العنوان (رقم العمارة / الدور / رقم الشقة)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-jp-tos">
-                                    <rect key="frame" x="35" y="462" width="233" height="20"/>
+                                    <rect key="frame" x="35" y="459" width="281" height="17"/>
                                     <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="17"/>
                                     <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1y-ug-N9o" customClass="CardView" customModule="صاين" customModuleProvider="target">
-                                    <rect key="frame" x="35" y="494" width="344" height="50"/>
+                                    <rect key="frame" x="35" y="488" width="344" height="50"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="اكتب هنا" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R4e-Tf-gk4">
                                             <rect key="frame" x="8" y="0.0" width="328" height="50"/>
@@ -152,7 +152,7 @@
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xO3-Iy-aaJ" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
-                                    <rect key="frame" x="35" y="589" width="344" height="40"/>
+                                    <rect key="frame" x="35" y="583" width="344" height="40"/>
                                     <color key="backgroundColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="b5T-fT-HcW"/>
@@ -224,10 +224,10 @@
     </objects>
     <designables>
         <designable name="Tn7-3W-zxi">
-            <size key="intrinsicContentSize" width="113" height="22"/>
+            <size key="intrinsicContentSize" width="135" height="22"/>
         </designable>
         <designable name="xO3-Iy-aaJ">
-            <size key="intrinsicContentSize" width="73" height="32"/>
+            <size key="intrinsicContentSize" width="90" height="29"/>
         </designable>
     </designables>
     <resources>

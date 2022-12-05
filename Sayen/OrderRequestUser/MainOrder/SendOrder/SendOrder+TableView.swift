@@ -14,7 +14,7 @@ extension SendOrder : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OfferTableViewCell", for: indexPath) as! OfferTableViewCell
-        let title = "lang".localized == "ar" ? offers[indexPath.row].offer.title : offers[indexPath.row].offer.title_en
+        let title = offers[indexPath.row].offer.title
         let isSelected = offers[indexPath.row].isSelected
         let price  = "\(offers[indexPath.row].offer.price ?? 0)"
         cell.configerCell(title: title ?? "", isSelected: isSelected , price: price)
@@ -45,9 +45,15 @@ extension SendOrder : UITableViewDelegate , UITableViewDataSource {
         selectedOfferIndexPath = indexPath
         offerQuantityRang  = (max: offers[indexPath.row].offer.to ?? 0, min: offers[indexPath.row].offer.from ?? 0)
         parameters["offer_id"] = offers[indexPath.row].offer.id ?? 0
+        quantitiyTextFeild.text = "\(offerQuantityRang.min)"
+        offerPriceCalculator(count: Float(offerQuantityRang.min) ?? 0.0)
+    }
+    
+    func handleTableView(){
+        offersTableView.register(UINib(nibName: "OfferTableViewCell", bundle: nil), forCellReuseIdentifier: "OfferTableViewCell")
+        offersTableView.addObserver(self, forKeyPath: Constants.contentSizeObserverKey, options: .new, context: nil)
+        offersTableView.delegate = self
+        offersTableView.dataSource = self
         
-     
-       
-       
     }
 }

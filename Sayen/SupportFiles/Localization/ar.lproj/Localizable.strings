@@ -649,6 +649,7 @@
 "changePersonalInfo" = "تعديل البيانات الشخصية";
 "chagneMobile" = "تعديل رقم الجوال";
 "changePassw" = "تغيير كلمة المرور";
+"deleteAccount" = "الغاء الحساب";
 
 "accountSaspended" = "تم إيقاف الحساب من قبل الإدارة";
 "NoInternetConnection" = "مشكلة في الاتصال";
@@ -706,3 +707,11 @@
 "maxFImages" = "عفوا، الحد الاقصي 5 صور";
 "yourSessionHasBeenEnded" = "عفوا، قم بتسجيل الدخول مرة اخري";
 "noAddress" = "لا يوجد عنوان !";
+"rate" = "تقييم الخدمة";
+"ChooseCase" = "اختر الخدمة";
+"deactivateMsg"= "انت علي وشك تعطيل حسابك و يرجي العلم ان الحساب سيتم مسحه خلال ١٤ يوم !";
+"deletAccount" = "حذف الحساب";
+"haveAGoodDay" = "يوم سعيد ,";
+"maxDeviceMsg" = "الحد الاقصي لعدد الاجهزة ";
+"devices" = "اجهزة";
+"writeLastName" = "اكتب اسم العائلة";

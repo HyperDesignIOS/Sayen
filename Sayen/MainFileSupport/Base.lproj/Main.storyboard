@@ -136,7 +136,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-1429" y="787"/>
+            <point key="canvasLocation" x="-1538" y="798"/>
         </scene>
         <!--NotificationVC-->
         <scene sceneID="pbX-IF-sA6">
@@ -198,8 +198,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="طلباتي" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdp-Sd-4jg">
-                                        <rect key="frame" x="20" y="68" width="89" height="30"/>
-                                        <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="30"/>
+                                        <rect key="frame" x="20" y="74" width="71.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="24"/>
                                         <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -448,7 +448,7 @@
     </scenes>
     <designables>
         <designable name="VeH-Mk-hn3">
-            <size key="intrinsicContentSize" width="55.5" height="16"/>
+            <size key="intrinsicContentSize" width="53.5" height="19"/>
         </designable>
     </designables>
     <resources>

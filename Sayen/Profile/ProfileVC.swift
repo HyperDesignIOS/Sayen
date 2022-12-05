@@ -67,7 +67,7 @@ class ProfileVC: UIViewController {
                         let xx = Constants.UserName.prefix(20)
                             self.profileName.text = "\(xx)..."
                         }else{
-                              self.profileName.text = data.name
+                            self.profileName.text = (data.name) + " " + (data.lastName)
                         }
                       
                     }
@@ -192,6 +192,12 @@ extension ProfileVC : UITableViewDelegate , UITableViewDataSource {
             let vc = LogOutAlert()
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: false)
+        case .deletAccount:
+            let vc = LogOutAlert()
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overFullScreen
+            vc.type = .deleteAccount
             self.present(vc, animated: false)
         //    self.navigationController?.pushViewController(vc, animated: false)
         case .share:

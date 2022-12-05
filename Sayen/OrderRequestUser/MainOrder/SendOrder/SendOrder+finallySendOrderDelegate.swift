@@ -40,6 +40,7 @@ extension SendOrder : finallySendOrder , containuToPaymentProtocol , cancelAlert
     }
     
     func continueToPaymentFunc() {
+        configPaymentController()
         self.navigationController?.pushViewController(paymentController, animated: true)
     }
     

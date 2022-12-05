@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "اسم الفني"; ObjectID = "3OG-SP-9Dn"; */
+"3OG-SP-9Dn.text" = "اسم الفني";
+
+/* Class = "UIButton"; normalTitle = "قبول"; ObjectID = "3yc-bZ-EpL"; */
+"3yc-bZ-EpL.normalTitle" = "قبول";
+
+/* Class = "UILabel"; text = "رسوم الفحص و الزيارة"; ObjectID = "52O-AS-n58"; */
+"52O-AS-n58.text" = "رسوم الفحص و الزيارة";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "5Mo-2X-GDY"; */
+"5Mo-2X-GDY.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "قيمه الخصم"; ObjectID = "5zx-e6-lp1"; */
+"5zx-e6-lp1.text" = "قيمه الخصم";
+
+/* Class = "UILabel"; text = "التكلفه النهائية"; ObjectID = "IZ1-G9-Cmg"; */
+"IZ1-G9-Cmg.text" = "التكلفه النهائية";
+
+/* Class = "UIButton"; normalTitle = "رفض"; ObjectID = "Unh-GE-c4V"; */
+"Unh-GE-c4V.normalTitle" = "رفض";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "kML-Cz-dXa"; */
+"kML-Cz-dXa.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "اسم الفني :"; ObjectID = "tgM-Ao-HbH"; */
+"tgM-Ao-HbH.text" = "اسم الفني :";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "tyk-x1-tE9"; */
+"tyk-x1-tE9.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "القيمة المضافة من الفني"; ObjectID = "ziT-bl-Gok"; */
+"ziT-bl-Gok.text" = "القيمة المضافة من الفني";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "zlk-C9-ff5"; */
+"zlk-C9-ff5.text" = "700 ريال";

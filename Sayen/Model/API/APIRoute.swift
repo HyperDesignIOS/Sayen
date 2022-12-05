@@ -12,7 +12,7 @@ enum APIRouter: URLRequestConvertible {
     //user/order?order_type=current&limit={limit}&offset={offset}
     //user/order/{order_id}
     case login(phone : String , password : String , country_code : String)
-    case register(name: String, mobile : String ,password:String,country_code:String,excellence_client:Int,building_id:Int,flat:String)
+    case register(name: String, lastName: String, mobile : String ,password:String,country_code:String,excellence_client:Int,building_id:Int,flat:String)
     case registerTeam(name:String,mobile : String ,email:String,password:String,country_code:String)
 
     case verifyCode(phone : String ,country_code : String, code : String ,code_type : String ,user_type : String)
@@ -21,7 +21,7 @@ enum APIRouter: URLRequestConvertible {
     case resetPass(password : String , user_type : String)
     case changePassword(password : String , user_type : String , old_password : String)
     case changePhone(phone : String , country_code : String , user_type : String)
-    case update_profile(name : String , excellence_client : String , email : String,building_id:Int,flat:String)
+    case update_profile(name : String ,lastName : String , excellence_client : String , email : String,building_id:String,flat:String)
     case update_profileT(name : String , email : String)
     case get_profile(user_type : String)
     case logout(user_type : String)
@@ -168,8 +168,8 @@ enum APIRouter: URLRequestConvertible {
         switch self {
         case.login(let phone,let password ,let country_code):
             return ["phone":phone,"password":password , "country_code" : country_code]
-        case .register(let name, let mobile, let password,let country_code, let excellence_client,let building_id , let flat ):
-            return ["name" : name, "phone" : mobile , "password" : password , "country_code" : country_code , "excellence_client" : excellence_client , "building_id" : building_id , "flat":flat ]
+        case .register(let name, let lastName, let mobile, let password,let country_code, let excellence_client,let building_id , let flat ):
+            return ["name" : name, "last_name" : lastName, "phone" : mobile , "password" : password , "country_code" : country_code , "excellence_client" : excellence_client , "building_id" : building_id , "flat":flat ]
         case .verifyCode(let phone,let country_code,let code,let code_type , let user_type):
             return ["phone": phone , "country_code" : country_code , "code" : code ,"code_type" : code_type ,"user_type" : user_type ]
         case .forgotPass(let mobile,let country_code, let user_type ):
@@ -182,8 +182,8 @@ enum APIRouter: URLRequestConvertible {
             return ["password":password , "user_type":user_type , "old_password" : old_password]
         case .changePhone(let phone , let country_code , let user_type):
             return ["phone":phone,"country_code" : country_code ,"user_type" : user_type]
-        case .update_profile(let name, let excellence_client ,let email,let buildingID  ,let flat ):
-            return ["name":name ,"excellence_client" : excellence_client , "email" : email, "building_id" : buildingID , "flat":flat ]
+        case .update_profile(let name, let lastName, let excellence_client ,let email,let buildingID  ,let flat ):
+            return ["name":name ,"last_name":lastName ,"excellence_client" : excellence_client , "email" : email, "building_id" : buildingID , "flat":flat ]
        case .update_profileT(let name,let email):
             return ["name":name , "email" : email]
         case .get_profile: return nil

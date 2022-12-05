@@ -8,9 +8,19 @@
 import UIKit
 
 class LogOutAlert: UIViewController {
-
+    
+    @IBOutlet weak var alertImage: UIImageView!
+    @IBOutlet weak var alertMsg: UILabel!
+    @IBOutlet weak var deletAccountButtonOutlet: UIButton!
+    
+    var type : LogoutType = .logout
     override func viewDidLoad() {
         super.viewDidLoad()
+        if type == .deleteAccount {
+            alertImage.image = UIImage(named: "remove-user")
+            alertMsg.text = "deactivateMsg".localized
+            deletAccountButtonOutlet.setTitle("deletAccount".localized, for: .normal)
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -46,4 +56,8 @@ class LogOutAlert: UIViewController {
 
     }
 
+}
+enum LogoutType{
+    case logout
+    case deleteAccount
 }

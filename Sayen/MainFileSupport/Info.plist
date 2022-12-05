@@ -52,6 +52,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>لتصوير المشكله الفنية ومراجعتها من فرق الصيانة ولعرض صورتك في الملف الشخصي</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>الحصول علي إحداثياتك وذلك لتسهيل عملية إختيار العنوان وتحديده بسهوله لفريق الصيانة</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>الحصول علي إحداثياتك وذلك لتسهيل عملية إختيار العنوان وتحديده بسهوله لفريق الصيانة</string>
 	<key>NSPhotoLibraryUsageDescription</key>

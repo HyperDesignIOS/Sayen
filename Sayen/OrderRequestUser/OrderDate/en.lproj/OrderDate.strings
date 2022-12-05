@@ -13,3 +13,6 @@
 
 /* Class = "UILabel"; text = "تاريخ و موعد الزيارة"; ObjectID = "yd7-kW-ytu"; */
 "yd7-kW-ytu.text" = "Visit Date, Time";
+
+/* Class = "UILabel"; text = "تاريخ و موعد الزيارة"; ObjectID = "yd7-kW-ytu"; */
+"l6O-Lu-Y0K.text" = "There are no appointments for this day!";

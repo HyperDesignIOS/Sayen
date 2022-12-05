@@ -64,4 +64,11 @@ extension SendOrder : UICollectionViewDelegate , UICollectionViewDataSource  , U
     }
     
     
+      func handleCollectionView(){
+          self.imagesCollection.semanticContentAttribute = .forceRightToLeft
+          self.imagesCollection.register(UINib(nibName: "imagesCell", bundle: nil), forCellWithReuseIdentifier: "imagesCell")
+          self.imagesCollection.delegate = self
+          self.imagesCollection.dataSource = self
+          
+      }
 }

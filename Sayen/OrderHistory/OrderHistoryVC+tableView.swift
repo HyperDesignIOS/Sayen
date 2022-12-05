@@ -25,9 +25,9 @@ extension OrderHistoryVC : UITableViewDelegate , UITableViewDataSource {
         //        cell.setStatus(orderStatus: "6")
         return cell
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 170
+//    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard ad.isOnline() else{return}
         if emergencySwitchOutlet.isOn {

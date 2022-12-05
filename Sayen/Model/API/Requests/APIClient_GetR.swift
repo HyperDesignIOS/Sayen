@@ -830,7 +830,7 @@ static func getWorkerEmergencyOrders(completionHandler:@escaping (Bool,[TeamOrde
     //MARK: BuildingsNames
     static func getBuildingsNames( completionHandler:@escaping (BuildingRoot)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
         ad.isLoading()
-             performSwiftyRequest(route: .user_buildings,headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+             performSwiftyRequest(route: .user_buildings,headers: ["lang":"\(Constants.current_Language)"] ,  { (jsonData) in
                            let json = JSON(jsonData)
 //                           print(json)
                 let data = BuildingRoot(fromJson: json)

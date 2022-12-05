@@ -37,3 +37,6 @@
 
 /* Class = "UILabel"; text = "تعديل البيانات الشخصية"; ObjectID = "ztB-BG-ilD"; */
 "ztB-BG-ilD.text" = "تعديل البيانات الشخصية";
+/* Class = "UITextField"; placeholder = "اكتب هنا"; ObjectID = "V2j-8j-zak"; */
+"06a-zB-SoI.placeholder" = "اكتب اسم العائلة";
+"7AY-gq-FoW.text" = "اسم العائلة";

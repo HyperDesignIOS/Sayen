@@ -247,7 +247,7 @@ extension OrderDate : UIPickerViewDelegate, UIPickerViewDataSource {
             dayName.frame = CGRect(x: 0, y: 40, width: 60, height: 30)
             dayName.text = avilableDateArr[row].dateName
             dayName.textColor = UIColor.brownMainColor
-            dayName.font = UIFont(name: "Tajawal-Bold", size: 15)
+            dayName.font = UIFont(name: "Tajawal-Bold", size: 12)
             dayName.textAlignment = .center
             view.addSubview(dayName)
             view.transform = CGAffineTransform(rotationAngle: -90 * (.pi/180))

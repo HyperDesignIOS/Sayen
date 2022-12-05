@@ -59,6 +59,9 @@ class OrderDetailesVC: UIViewController {
     @IBOutlet weak var showWarrantyButtonOutlet: UIButtonX!
     @IBOutlet weak var warrantyButtonsStackView: UIStackView!
     @IBOutlet weak var showInvoiceOutletButton: UIButtonX!
+    @IBOutlet weak var deviceNumberViewHeigt: NSLayoutConstraint!
+    
+    
     var tabBar : UITabBarController?
     var statePrice : String = ""
     var order_id : Int = 0
@@ -113,6 +116,9 @@ class OrderDetailesVC: UIViewController {
                         self.cashState.text = "paid".localized
                         self.truePay.alpha = 1
                         self.cashState.textColor = .greenColor
+                    }
+                    if data.device_number == nil {
+                        self.deviceNumberViewHeigt.constant = 0
                     }
                     self.upGroundView.alpha = 0
                     self.data = data
@@ -177,7 +183,7 @@ class OrderDetailesVC: UIViewController {
             self.waitViewOrder.alpha = 1
             self.totalPrcieView.alpha = 0
             self.priceStack.alpha = 0
-            self.rateStack.alpha = 0
+            self.rateBtn.alpha = 0
             if data?.coupon_discount == 0 {
                 self.coponView.alpha = 0
                 self.cashConstant.constant = 25
@@ -204,7 +210,7 @@ class OrderDetailesVC: UIViewController {
             self.waitViewOrder.alpha = 0
             self.totalPrcieView.alpha = 0
             self.priceStack.alpha = 0
-            self.rateStack.alpha = 0
+            self.rateBtn.alpha = 0
             if data?.coupon_discount == 0 {
                 self.coponView.alpha = 0
                 self.cashConstant.constant = 25
@@ -234,7 +240,7 @@ class OrderDetailesVC: UIViewController {
                self.priceStack.alpha = 1
             }
             
-            self.rateStack.alpha = 0
+            self.rateBtn.alpha = 0
        
             self.workerView.alpha = 1
             self.waitViewOrder.alpha = 0
@@ -273,7 +279,7 @@ class OrderDetailesVC: UIViewController {
             }
            
             
-            self.rateStack.alpha = data?.service_rated == 0 ? 1 : 0
+            self.rateBtn.alpha = data?.service_rated == 0 ? 1 : 0
           
             self.mainPrice.text = "\(data!.initial_price!) " + "Rial".localized
             self.totalPrice.text = "\(data!.final_price!) " + "Rial".localized
@@ -308,7 +314,7 @@ class OrderDetailesVC: UIViewController {
             self.inProgTitle.textColor = UIColor.brownMainColor
             self.endTitle.textColor = UIColor.brownMainColor
             if data?.service_rated == 0 {
-                self.showDAlert(title: "", subTitle:"rateRequestMsg".localized, type: .success, buttonTitle: "تقييم") { (ـ) in
+                self.showDAlert(title: "", subTitle:"rateRequestMsg".localized, type: .success, buttonTitle: "rate".localized) { (ـ) in
                     let vc = RatingVC()
                     vc.order_id = self.data!.id!
                     vc.controllerType = .order
@@ -324,7 +330,7 @@ class OrderDetailesVC: UIViewController {
             self.totalPrcieView.alpha = 0
             self.cancelLbl.text = "canceled".localized
             self.cancelOrder.isHidden = true
-            self.rateStack.alpha = 0
+            self.rateBtn.alpha = 0
             
             //   self.problemlblConst.constant = 20
             
@@ -376,7 +382,7 @@ class OrderDetailesVC: UIViewController {
                 self.team_added_price = data!.team_added_price
             }
             
-            self.rateStack.alpha = 0
+            self.rateBtn.alpha = 0
             if data?.coupon_discount == 0 {
                 self.coponView.alpha = 0
                 self.cashConstant.constant = 25
@@ -777,7 +783,7 @@ extension OrderDetailesVC : EndYesOrNo {
 //        self.waitViewOrder.alpha = 1
 //        self.totalPrcieView.alpha = 0
 //        self.priceStack.alpha = 0
-//        self.rateStack.alpha = 0
+//        self.rateBtn.alpha = 0
 //        if data?.coupon_discount == 0 {
 //            self.coponView.alpha = 0
 //            self.cashConstant.constant = 25
@@ -811,7 +817,7 @@ extension OrderDetailesVC : EndYesOrNo {
 //           self.priceStack.alpha = 1
 //        }
 //
-//        self.rateStack.alpha = 0
+//        self.rateBtn.alpha = 0
 //
 //        self.workerView.alpha = 1
 //        self.waitViewOrder.alpha = 0
@@ -854,7 +860,7 @@ extension OrderDetailesVC : EndYesOrNo {
 //        }
 //
 //
-//        self.rateStack.alpha = data?.service_rated == 0 ? 1 : 0
+//        self.rateBtn.alpha = data?.service_rated == 0 ? 1 : 0
 //
 //        self.mainPrice.text = "\(data!.initial_price!) " + "Rial".localized
 //        self.totalPrice.text = "\(data!.final_price!) " + "Rial".localized
@@ -902,7 +908,7 @@ extension OrderDetailesVC : EndYesOrNo {
 //        self.totalPrcieView.alpha = 0
 //        self.cancelLbl.text = "canceled".localized
 //        self.cancelOrder.isHidden = true
-//        self.rateStack.alpha = 0
+//        self.rateBtn.alpha = 0
 //
 //        //   self.problemlblConst.constant = 20
 //
@@ -952,7 +958,7 @@ extension OrderDetailesVC : EndYesOrNo {
 //            self.team_added_price = data!.team_added_price
 //        }
 //
-//        self.rateStack.alpha = 0
+//        self.rateBtn.alpha = 0
 //        if data?.coupon_discount == 0 {
 //            self.coponView.alpha = 0
 //            self.cashConstant.constant = 25

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,6 +19,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogOutAlert" customModule="صاين" customModuleProvider="target">
             <connections>
+                <outlet property="alertImage" destination="ENi-QZ-zqe" id="VYF-xu-6u9"/>
+                <outlet property="alertMsg" destination="Eun-Hq-WVo" id="Ric-lf-RLL"/>
+                <outlet property="deletAccountButtonOutlet" destination="a2X-fi-1I4" id="gza-jG-jpD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,14 +40,14 @@
                                 <constraint firstAttribute="height" constant="90" id="i4v-km-qVH"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="هل تريد تسجيل الخروج؟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eun-Hq-WVo">
-                            <rect key="frame" x="100.5" y="150" width="153" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="هل تريد تسجيل الخروج؟" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eun-Hq-WVo">
+                            <rect key="frame" x="30" y="150" width="294" height="18"/>
                             <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="18"/>
                             <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="X6Q-BG-4bQ">
-                            <rect key="frame" x="20" y="201" width="314" height="45"/>
+                            <rect key="frame" x="20" y="198" width="314" height="45"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2X-fi-1I4" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="152" height="45"/>
@@ -87,13 +90,15 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="X6Q-BG-4bQ" firstAttribute="leading" secondItem="VbN-9G-KEg" secondAttribute="leading" constant="20" id="1Kv-wc-OJL"/>
-                        <constraint firstAttribute="height" constant="270" id="2Je-pJ-3Mz"/>
                         <constraint firstItem="Eun-Hq-WVo" firstAttribute="top" secondItem="ENi-QZ-zqe" secondAttribute="bottom" constant="30" id="541-wW-NvC"/>
+                        <constraint firstAttribute="trailing" secondItem="Eun-Hq-WVo" secondAttribute="trailing" constant="30" id="7IN-6i-Bgw"/>
                         <constraint firstAttribute="trailing" secondItem="X6Q-BG-4bQ" secondAttribute="trailing" constant="20" id="HcI-5w-DWT"/>
                         <constraint firstItem="Eun-Hq-WVo" firstAttribute="centerX" secondItem="VbN-9G-KEg" secondAttribute="centerX" id="IHg-Fg-GgR"/>
                         <constraint firstItem="ENi-QZ-zqe" firstAttribute="centerX" secondItem="VbN-9G-KEg" secondAttribute="centerX" id="MpD-HW-0Il"/>
                         <constraint firstItem="X6Q-BG-4bQ" firstAttribute="centerX" secondItem="VbN-9G-KEg" secondAttribute="centerX" id="OcY-qx-rjP"/>
+                        <constraint firstItem="Eun-Hq-WVo" firstAttribute="leading" secondItem="VbN-9G-KEg" secondAttribute="leading" constant="30" id="XTP-nB-OGP"/>
                         <constraint firstItem="X6Q-BG-4bQ" firstAttribute="top" secondItem="Eun-Hq-WVo" secondAttribute="bottom" constant="30" id="a20-hT-EL9"/>
+                        <constraint firstAttribute="bottom" secondItem="X6Q-BG-4bQ" secondAttribute="bottom" constant="27" id="eZM-Jj-b8T"/>
                         <constraint firstItem="ENi-QZ-zqe" firstAttribute="top" secondItem="VbN-9G-KEg" secondAttribute="top" constant="30" id="y8L-oI-QC5"/>
                     </constraints>
                 </view>
@@ -111,10 +116,10 @@
     </objects>
     <designables>
         <designable name="TvH-hx-UDo">
-            <size key="intrinsicContentSize" width="35" height="32"/>
+            <size key="intrinsicContentSize" width="47" height="29"/>
         </designable>
         <designable name="a2X-fi-1I4">
-            <size key="intrinsicContentSize" width="89" height="32"/>
+            <size key="intrinsicContentSize" width="103" height="29"/>
         </designable>
     </designables>
     <resources>

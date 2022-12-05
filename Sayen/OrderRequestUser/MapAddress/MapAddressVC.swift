@@ -37,7 +37,7 @@ class MapAddressVC: UIViewController {
         self.currentOutl.semanticContentAttribute = .forceRightToLeft
         setupGoogleLocation()
         setStyleMap()
-        //    checkLocation()
+            checkLocation()
 
     }
     
@@ -87,7 +87,7 @@ class MapAddressVC: UIViewController {
     }
     
     func checkLocation(){
-//        if !CLLocationManager.locationServicesEnabled() {
+        if !CLLocationManager.locationServicesEnabled() {
         self.showDAlert(title: "Error".localized, subTitle: "disabledLocationService".localized, type: .error, buttonTitle: "openLocationService".localized) { (_) in
                 
                 guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
@@ -98,7 +98,7 @@ class MapAddressVC: UIViewController {
                         print("Settings opened: \(success)")
                     })
                 }
-        //    }
+            }
             
         }
                     
@@ -206,7 +206,7 @@ extension MapAddressVC: GMSMapViewDelegate{
         let lat = marker.position.latitude
         let long = marker.position.longitude
         getAddressFromLatLon(lat, long) { (address) in
-
+            self.addressTextField.text = address
             print("thats the address  \(address)")
         }
     }
@@ -232,7 +232,7 @@ extension MapAddressVC: GMSMapViewDelegate{
         let lat = marker.position.latitude
         let long = marker.position.longitude
         getAddressFromLatLon(lat, long) { (address) in
-
+            self.addressTextField.text = address
             print("thats the address  \(address)")
         }
     }

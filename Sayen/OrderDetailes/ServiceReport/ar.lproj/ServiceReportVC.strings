@@ -1,0 +1,60 @@
+
+/* Class = "UILabel"; text = "نوع العميل"; ObjectID = "6sx-co-32M"; */
+"6sx-co-32M.text" = "نوع العميل";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "9a4-IC-xgN"; */
+"9a4-IC-xgN.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "تقرير الخدمة"; ObjectID = "DAs-5P-oCi"; */
+"DAs-5P-oCi.text" = "تقرير الخدمة";
+
+/* Class = "UILabel"; text = "dfs"; ObjectID = "ECe-h4-K7q"; */
+"ECe-h4-K7q.text" = "dfs";
+
+/* Class = "UILabel"; text = "لم يتم قبول الطلب"; ObjectID = "H0O-aA-LiN"; */
+"H0O-aA-LiN.text" = "لم يتم قبول الطلب";
+
+/* Class = "UILabel"; text = "جهة الدفع"; ObjectID = "PEU-3G-j7Z"; */
+"PEU-3G-j7Z.text" = "جهة الدفع";
+
+/* Class = "UILabel"; text = "القيمة المضافة من الفني"; ObjectID = "U8M-WU-eOK"; */
+"U8M-WU-eOK.text" = "القيمة المضافة من الفني";
+
+/* Class = "UILabel"; text = "التكلفه النهائية"; ObjectID = "V8f-rH-ItY"; */
+"V8f-rH-ItY.text" = "التكلفه النهائية";
+
+/* Class = "UILabel"; text = "حالة الطلب "; ObjectID = "WfV-Ja-K8q"; */
+"WfV-Ja-K8q.text" = "حالة الطلب ";
+
+/* Class = "UILabel"; text = "العنوان (رقم العمارة / الدور / رقم الشقة)"; ObjectID = "ZFS-Zm-L2P"; */
+"ZFS-Zm-L2P.text" = "العنوان (رقم العمارة / الدور / رقم الشقة)";
+
+/* Class = "UILabel"; text = "رسوم الفحص و الزيارة"; ObjectID = "bpI-q7-J6l"; */
+"bpI-q7-J6l.text" = "رسوم الفحص و الزيارة";
+
+/* Class = "UIButton"; normalTitle = "تحميل تقرير الخدمة"; ObjectID = "gUM-rA-x2B"; */
+"gUM-rA-x2B.normalTitle" = "تحميل تقرير الخدمة";
+
+/* Class = "UILabel"; text = "لم يتم قبول الطلب"; ObjectID = "hqe-UB-nbo"; */
+"hqe-UB-nbo.text" = "لم يتم قبول الطلب";
+
+/* Class = "UILabel"; text = "fdsfd"; ObjectID = "jJB-7J-28J"; */
+"jJB-7J-28J.text" = "fdsfd";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "oq1-i6-uUX"; */
+"oq1-i6-uUX.text" = "700 ريال";
+
+/* Class = "UILabel"; text = "غير مدفوع"; ObjectID = "ozk-KM-hJw"; */
+"ozk-KM-hJw.text" = "غير مدفوع";
+
+/* Class = "UILabel"; text = "لم يتم قبول الطلب"; ObjectID = "pjD-vc-Py6"; */
+"pjD-vc-Py6.text" = "لم يتم قبول الطلب";
+
+/* Class = "UILabel"; text = "الفني"; ObjectID = "wUg-Bv-iJi"; */
+"wUg-Bv-iJi.text" = "الفني";
+
+/* Class = "UILabel"; text = "الدفع كاش"; ObjectID = "zCb-ya-hjf"; */
+"zCb-ya-hjf.text" = "الدفع كاش";
+
+/* Class = "UILabel"; text = "700 ريال"; ObjectID = "zPO-Lg-Xv2"; */
+"zPO-Lg-Xv2.text" = "700 ريال";

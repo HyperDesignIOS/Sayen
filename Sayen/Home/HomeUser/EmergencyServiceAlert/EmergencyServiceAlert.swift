@@ -84,7 +84,7 @@ class EmergencyServiceAlert: UIViewController {
             self.selectedServiceId = self.services[index].id
             self.serviceLabel.text = item
             self.selectedReasons = self.services[index].reasons
-            self.selectedReasonLabel.text = ""
+            self.selectedReasonLabel.text = "ChooseCase".localized
             datax.removeAll()
             for x in selectedReasons {
                 datax.append(x.reason ?? "")

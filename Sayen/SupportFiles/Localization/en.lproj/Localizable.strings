@@ -626,6 +626,7 @@
 "enterRightCode" = "Enter right verification code";
 "second" = "Second" ;
 
+
 "thanks" = "Thanks a lot";
 "welcomToSayen" = "Welcom To Sayen";
 
@@ -697,6 +698,7 @@
 "changePersonalInfo" =  "Edit Personal Information";
 "chagneMobile" =  "Change Mobile Number";
 "changePassw"  = "Change Password";
+"deleteAccount" = "Delete Account";
 
 "accountSaspended" = "The account has been suspended by the administration";
 
@@ -748,3 +750,12 @@
 "maxFImages" = "You cannot select maximum 5 images!";
 "yourSessionHasBeenEnded" = "your session has been ended" ;
 "noAddress" = "No Address !";
+"rate" = "Rate Service";
+"ChooseCase" = "Choose Case";
+"deactivateMsg"= "you are about to deactivate your account and it will be deleted in 14 days!";
+"deletAccount" = "Delete Account";
+
+"haveAGoodDay" = ", Have a good day";
+"maxDeviceMsg" = "Maximum number of devices is ";
+"devices" = "devices";
+"writeLastName" = "please, write last name";

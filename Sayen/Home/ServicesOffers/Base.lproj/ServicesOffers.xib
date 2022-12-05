@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,9 +11,6 @@
     <customFonts key="customFonts">
         <array key="Tajawal-Bold.ttf">
             <string>Tajawal-Bold</string>
-        </array>
-        <array key="Tajawal-Medium.ttf">
-            <string>Tajawal-Medium</string>
         </array>
     </customFonts>
     <objects>
@@ -62,23 +59,15 @@
                     <rect key="frame" x="20" y="129" width="374" height="767"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لا توجد إشعارات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzi-s4-heS">
-                    <rect key="frame" x="139" y="438" width="136.5" height="20"/>
-                    <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="20"/>
-                    <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="7qu-RC-ph0"/>
             <color key="backgroundColor" red="0.94901960780000005" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="qOj-wi-Rr5" firstAttribute="top" secondItem="7qu-RC-ph0" secondAttribute="top" id="4dr-5H-KLN"/>
                 <constraint firstAttribute="bottom" secondItem="y9H-C8-JgE" secondAttribute="bottom" id="7bm-0X-mxh"/>
-                <constraint firstItem="kzi-s4-heS" firstAttribute="centerY" secondItem="iab-iw-eK2" secondAttribute="centerY" id="8EK-01-zWv"/>
                 <constraint firstItem="qOj-wi-Rr5" firstAttribute="leading" secondItem="7qu-RC-ph0" secondAttribute="leading" id="HH7-zA-S0k"/>
                 <constraint firstItem="y9H-C8-JgE" firstAttribute="top" secondItem="qOj-wi-Rr5" secondAttribute="bottom" constant="20" id="IDM-l7-Rim"/>
                 <constraint firstItem="y9H-C8-JgE" firstAttribute="leading" secondItem="7qu-RC-ph0" secondAttribute="leading" constant="20" id="NWG-pg-yEC"/>
-                <constraint firstItem="kzi-s4-heS" firstAttribute="centerX" secondItem="iab-iw-eK2" secondAttribute="centerX" id="bsM-vQ-OAx"/>
                 <constraint firstAttribute="trailing" secondItem="qOj-wi-Rr5" secondAttribute="trailing" id="qxH-1a-B6a"/>
                 <constraint firstItem="7qu-RC-ph0" firstAttribute="trailing" secondItem="y9H-C8-JgE" secondAttribute="trailing" constant="20" id="ti0-K7-Sh8"/>
             </constraints>

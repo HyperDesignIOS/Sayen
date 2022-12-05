@@ -33,6 +33,10 @@ class SendOrder: UIViewController {
     @IBOutlet weak var offerQuantityLabel: UILabel!
     @IBOutlet weak var offerPriceLabel: UILabel!
     @IBOutlet weak var quantitiyTextFeild: UITextField!
+    @IBOutlet weak var deviceNumTextField: UITextField!
+    @IBOutlet weak var deviceNumVeiw: UIView!
+    @IBOutlet weak var MaxDeviceLabel: UILabel!
+    @IBOutlet weak var notesTopAnchorToCardsView: NSLayoutConstraint!
     @IBOutlet weak var offerView: UIView!
     
     let picker = UIImagePickerController()
@@ -56,6 +60,7 @@ class SendOrder: UIViewController {
     var infoText = ""
     var calenderNewDate: String = ""
     var user : UserProfile_Data? = nil
+    var service :HomeData?
     var orderId = Int()
     let paymentHandler = PaymentHandler()
     let contianuAlert = ContianuAlert()
@@ -69,44 +74,24 @@ class SendOrder: UIViewController {
     var allImgs : [UIImage] = []
     var offerQuantityRang : (max: Int, min: Int) = (max: 0, min: 0)
     var tabBar : UITabBarController?
+    var deviceNumCount = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        quantitiyTextFeild.delegate = self
-
+        setData()
         getOffers()
-        self.offersTableView.register(UINib(nibName: "OfferTableViewCell", bundle: nil), forCellReuseIdentifier: "OfferTableViewCell")
+      
         configContainerAlert()
-        configPaymentController()
+//        configPaymentController()
         let tabBar = self.tabBarController as! TabBarController
         tabBar.hideTab()
-      
-        self.couponTxt.addTarget(self, action: #selector(couponTxtdidChange(_:)), for: .editingDidEnd)
-        setData ()
-        notesTextV.semanticContentAttribute = .forceRightToLeft
-        
-        self.notesTextV.delegate = self
-        self.imagesCollection.semanticContentAttribute = .forceRightToLeft
-        self.imagesCollection.register(UINib(nibName: "imagesCell", bundle: nil), forCellWithReuseIdentifier: "imagesCell")
-        self.imagesCollection.delegate = self
-        self.imagesCollection.dataSource = self
-        
-        if
-           CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-           CLLocationManager.authorizationStatus() ==  .authorizedAlways
-        {
-            if let currentLocation = locManager.location {
-                self.latTran = currentLocation.coordinate.latitude
-                self.longTran = currentLocation.coordinate.longitude
-            }
-           
-        }
-
-        offersTableView.addObserver(self, forKeyPath: Constants.contentSizeObserverKey, options: .new, context: nil)
-        offersTableView.delegate = self
-        offersTableView.dataSource = self
+        handleLocationManager()
+        handleTableView()
+        handleCollectionView()
+        handleTextFeild()
     }
+    
+    
     
     deinit {
         offersTableView.removeObserver(self, forKeyPath: Constants.contentSizeObserverKey)
@@ -124,11 +109,32 @@ class SendOrder: UIViewController {
         }
     }
     func setData () {
+        if let service = service {
+            infoText = service.text
+            pageTransformeTitle = service.name
+            id = service.id
+            initial_price = String(service.initial_price)
+        }
+        if service?.deviceNumber == 1 {
+            deviceNumVeiw.isHidden = false
+            notesTopAnchorToCardsView.constant = 76
+        }else {
+            deviceNumVeiw.isHidden = true
+            deviceNumCount = 0
+            notesTopAnchorToCardsView.constant = 20
+        }
+//        infoText = "service.text"
+        
         self.initPrice = initial_price
         self.pageTilte.text = "request".localized  + pageTransformeTitle
         self.priceLbl.text = "\(initial_price) " + "Rial".localized
+        
+        
+        
+        
         parameters["price_after_coupon"] = "\(initial_price)"
         parameters["service_id"] = id
+    
         infoLbl.text = infoText
         if infoText.isEmpty {
      //       imageLabelTopAnchor.constant = 16
@@ -174,6 +180,26 @@ class SendOrder: UIViewController {
         paymentController.pricebeforeDis =  "\(pricebeforeDis) " + "Rial".localized
         paymentController.delegate = self
     }
+    
+    @IBAction func increaseDeviceNumButton(_ sender: UIButton){
+        if let maxDevice = service?.numbers {
+            if deviceNumCount<maxDevice {
+                deviceNumCount += 1
+                deviceNumTextField.text = "\(deviceNumCount)"
+            } else if deviceNumCount == maxDevice {
+                MaxDeviceLabel.text = "maxDeviceMsg".localized + " \(maxDevice) " + "devices".localized
+                MaxDeviceLabel.isHidden = false
+            }
+        }
+    }
+    @IBAction func decreaseDeviceNumButton(_ sender: UIButton){
+        if deviceNumCount != 1 {
+            deviceNumCount -= 1
+            deviceNumTextField.text = "\(deviceNumCount)"
+        }
+     
+    }
+    
     @IBAction func openCalnder(_ sender: Any) {
         print(user?.email)
         guard ad.isOnline() else{return}
@@ -323,6 +349,8 @@ class SendOrder: UIViewController {
 
     func sendCashOrder() {
         parameters["notes"] = self.notesTextV.text
+        parameters["numbers"] = deviceNumCount
+        parameters["device_type"] = Constants.deviceType
         print(parameters)
         ad.isLoading()
         APIClient.SendOrder(parameters: parameters, imageDict: images) { [weak self] (state, sms,urlStr, orderId)   in
@@ -453,12 +481,32 @@ class SendOrder: UIViewController {
         tabBar.showTab()
     }
     
+    func offerPriceCalculator(count: Float){
+        if let selectedOfferIndexPath = selectedOfferIndexPath {
+            if  let price =  offers[selectedOfferIndexPath.row].offer.price {
+                offerPriceLabel.text = "\( count * price)"
+                initial_price = "\( count * price)"
+                self.priceLbl.text = "\(initial_price) " + "Rial".localized
+                parameters["price_after_coupon"] = "\(initial_price)"
+                parameters["offer_count"] = quantitiyTextFeild.text ?? ""
+            }
+        }
+       
+    }
+    
+    func handleLocationManager(){
+        if
+           CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+           CLLocationManager.authorizationStatus() ==  .authorizedAlways
+        {
+            if let currentLocation = locManager.location {
+                self.latTran = currentLocation.coordinate.latitude
+                self.longTran = currentLocation.coordinate.longitude
+            }
+           
+        }
+    }
 }
-
-
-
-
-
 
 extension SendOrder : UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -509,19 +557,18 @@ extension SendOrder : UITextFieldDelegate {
             
         }
         if let textInt = Float(textField.text ?? "0")  {
-            if let selectedOfferIndexPath = selectedOfferIndexPath {
-                if  let price =  offers[selectedOfferIndexPath.row].offer.price {
-                    offerPriceLabel.text = "\( textInt * price)"
-                    initial_price = "\( textInt * price)"
-                    self.priceLbl.text = "\(initial_price) " + "Rial".localized
-                    parameters["price_after_coupon"] = "\(initial_price)"
-                    parameters["offer_count"] = quantitiyTextFeild.text ?? ""
-                }
-            }
-           
+            offerPriceCalculator(count: textInt)
         }
            return true
        }
+    
+    func handleTextFeild(){
+        quantitiyTextFeild.delegate = self
+        notesTextV.semanticContentAttribute = .forceRightToLeft
+        notesTextV.delegate = self
+        couponTxt.addTarget(self, action: #selector(couponTxtdidChange(_:)), for: .editingDidEnd)
+        
+    }
     
 }
 

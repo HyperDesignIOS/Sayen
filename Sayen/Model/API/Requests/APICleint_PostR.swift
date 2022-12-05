@@ -70,8 +70,8 @@ extension APIClient {
        "status_code" : 200
      }
      */
-    static func registerRequest(name: String, mobile : String ,password:String,country_code:String,excellence_client : Int,building_id : Int,flat:String, completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
-        performSwiftyRequest(route: .register(name: name, mobile: mobile, password: password, country_code: country_code, excellence_client: excellence_client,building_id:building_id,flat:flat),headers: ["lang":"\(Constants.current_Language)"] ,  { (jsonData) in
+    static func registerRequest(name: String, lastName: String, mobile : String ,password:String,country_code:String,excellence_client : Int,building_id : Int,flat:String, completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+        performSwiftyRequest(route: .register(name: name, lastName: lastName, mobile: mobile, password: password, country_code: country_code, excellence_client: excellence_client,building_id:building_id,flat:flat),headers: ["lang":"\(Constants.current_Language)"] ,  { (jsonData) in
              let json = JSON(jsonData)
             print(json)
             let sms = json["message"].string ?? json["error"].stringValue
@@ -354,9 +354,9 @@ extension APIClient {
     //MARK: updateProfileInfo
     
     
-    static func changeInfoUser(name : String , email : String, excellence_client : String,building_id:Int,flat:String ,  completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
+    static func changeInfoUser(name : String ,lastName : String , email : String, excellence_client : String,building_id:String,flat:String ,  completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void) {
         
-        performSwiftyRequest(route: .update_profile(name: name, excellence_client: excellence_client, email: email,building_id:building_id,flat:flat),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+        performSwiftyRequest(route: .update_profile(name: name, lastName: lastName, excellence_client: excellence_client, email: email,building_id:building_id,flat:flat),headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
             let json = JSON(jsonData)
             DispatchQueue.main.async {
                 let sms  = json["message"].string ?? json["error"].stringValue
@@ -453,7 +453,6 @@ extension APIClient {
                     multipartFormData.append(imageData, withName: "images[\(index)]", fileName: "file.jpeg", mimeType: "image/jpeg")
                 }
             }
-            
             
             for (key, value) in parameters {
                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)

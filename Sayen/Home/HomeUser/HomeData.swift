@@ -23,6 +23,8 @@ class HomeData {
     private var _text : String?
     private  var _checkSub : Int?
     private  var _offer : Int?
+    private  var _numbers : Int?
+    private  var _device_number : Int?
     
     
     
@@ -73,6 +75,14 @@ class HomeData {
         return x
     }
     
+    var numbers : Int {
+        return   _numbers ?? 0
+    }
+    
+    var deviceNumber : Int {
+        return   _device_number ?? 0
+    }
+    
     init(_ jsonData : JSON) {
         
         self._image_path = jsonData["image_path"].stringValue
@@ -83,6 +93,8 @@ class HomeData {
         self._checkSub = jsonData["checkSub"].intValue
         self._text = jsonData["text"].stringValue
         self._offer = jsonData["offer"].intValue
+        self._numbers = jsonData["numbers"].intValue
+        self._device_number = jsonData["device_number"].intValue
     }
     
     

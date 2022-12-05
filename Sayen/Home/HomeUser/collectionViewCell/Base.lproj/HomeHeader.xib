@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,6 +47,12 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vd" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-ZC-X5g">
+                            <rect key="frame" x="0.0" y="120" width="433" height="19"/>
+                            <fontDescription key="fontDescription" name="Tajawal-ExtraBold" family="Tajawal" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DH4-qz-Pjd">
                             <rect key="frame" x="158.5" y="120" width="116" height="19"/>
                             <subviews>
@@ -64,34 +70,29 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfu-Ni-4vF" customClass="UIButtonX" customModule="صاين" customModuleProvider="target">
-                            <rect key="frame" x="159.5" y="155" width="114.5" height="32"/>
-                            <color key="backgroundColor" red="0.84355080130000004" green="0.86997705700000005" blue="0.90980952979999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="طلب طوارئ">
-                                <fontDescription key="titleFontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="18"/>
-                                <color key="baseForegroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </buttonConfiguration>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="5"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="CaT-WA-1r2" firstAttribute="centerX" secondItem="Ptf-AA-ShT" secondAttribute="centerX" id="5Bw-6u-Zbw"/>
-                        <constraint firstItem="xfu-Ni-4vF" firstAttribute="centerX" secondItem="Ptf-AA-ShT" secondAttribute="centerX" id="5SY-BN-Kpt"/>
                         <constraint firstItem="DH4-qz-Pjd" firstAttribute="centerX" secondItem="Ptf-AA-ShT" secondAttribute="centerX" id="6vS-dD-Fcw"/>
+                        <constraint firstItem="2O0-ZC-X5g" firstAttribute="top" secondItem="CaT-WA-1r2" secondAttribute="bottom" id="8iW-7w-ESj"/>
+                        <constraint firstItem="2O0-ZC-X5g" firstAttribute="bottom" secondItem="DH4-qz-Pjd" secondAttribute="bottom" id="D0L-PQ-Nlu"/>
                         <constraint firstItem="A2a-Bn-g5N" firstAttribute="top" secondItem="7CM-Gs-UKh" secondAttribute="bottom" constant="40" id="FvW-x8-DFq"/>
                         <constraint firstItem="DH4-qz-Pjd" firstAttribute="top" secondItem="CaT-WA-1r2" secondAttribute="bottom" id="JVK-JW-wID"/>
+                        <constraint firstItem="2O0-ZC-X5g" firstAttribute="top" secondItem="DH4-qz-Pjd" secondAttribute="top" id="Mdd-Ba-eAH"/>
+                        <constraint firstItem="2O0-ZC-X5g" firstAttribute="leading" secondItem="Ptf-AA-ShT" secondAttribute="leading" id="QyT-Mu-ibj"/>
+                        <constraint firstItem="7CM-Gs-UKh" firstAttribute="top" secondItem="2O0-ZC-X5g" secondAttribute="bottom" constant="8" symbolic="YES" id="Sdt-r7-bd2"/>
                         <constraint firstItem="7CM-Gs-UKh" firstAttribute="top" secondItem="DH4-qz-Pjd" secondAttribute="bottom" constant="8" id="aCZ-g8-lsj"/>
+                        <constraint firstAttribute="trailing" secondItem="2O0-ZC-X5g" secondAttribute="trailing" id="kL7-3P-AfQ"/>
                         <constraint firstItem="7CM-Gs-UKh" firstAttribute="centerX" secondItem="Ptf-AA-ShT" secondAttribute="centerX" id="mPm-zv-bBE"/>
                         <constraint firstItem="A2a-Bn-g5N" firstAttribute="centerX" secondItem="Ptf-AA-ShT" secondAttribute="centerX" id="oT6-Bh-GNm"/>
-                        <constraint firstItem="xfu-Ni-4vF" firstAttribute="top" secondItem="DH4-qz-Pjd" secondAttribute="bottom" constant="16" id="u4v-py-FFK"/>
                         <constraint firstItem="CaT-WA-1r2" firstAttribute="top" secondItem="Ptf-AA-ShT" secondAttribute="top" constant="20" id="wRx-fZ-dVu"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="DH4-qz-Pjd"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
@@ -102,16 +103,11 @@
                 <constraint firstItem="Ptf-AA-ShT" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="nbe-9N-RL0"/>
             </constraints>
             <connections>
-                <outlet property="name" destination="c6u-b4-SCA" id="s8V-Zv-wMU"/>
+                <outlet property="name" destination="2O0-ZC-X5g" id="SoX-uU-SG6"/>
             </connections>
             <point key="canvasLocation" x="292" y="180"/>
         </collectionReusableView>
     </objects>
-    <designables>
-        <designable name="xfu-Ni-4vF">
-            <size key="intrinsicContentSize" width="114.5" height="32"/>
-        </designable>
-    </designables>
     <resources>
         <image name="1-logo splash" width="214.5" height="203"/>
     </resources>

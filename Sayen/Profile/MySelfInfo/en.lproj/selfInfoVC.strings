@@ -37,3 +37,6 @@
 
 /* Class = "UILabel"; text = "تعديل البيانات الشخصية"; ObjectID = "ztB-BG-ilD"; */
 "ztB-BG-ilD.text" = "Edit Personal Info";
+
+"06a-zB-SoI.placeholder" = "Please, write last name";
+"7AY-gq-FoW.text" = "Last name";

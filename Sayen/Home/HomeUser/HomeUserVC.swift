@@ -14,7 +14,7 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
     @IBOutlet weak var HeadView: UICollectionReusableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-     var data : [HomeData] = []
+    var services : [HomeData] = []
     var dataProfile: UserProfile_Data?
     var name : String = ""
     var user : UserProfile_Data? = nil
@@ -36,7 +36,7 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
        print(Constants.current_Language,"-----------")
        handleCollectionView()
         ad.checkIfTokenSent()
-        checkVersion()
+//    checkVersion()
 //        if let navigationController = self.navigationController{
 //            navigationController.setStatusBar(backgroundColor: UIColor(rgb: 0x1F3D69))
 //                    }
@@ -172,6 +172,18 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
             }
             if let settingsData = settingsData {
                 self.emergencyInfoText = settingsData.textEmergency
+                 let bEndVersion = settingsData.userAppIosVersion
+                    if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+                        let compare =  appVersion.versionCompare(bEndVersion)
+                        if compare == .orderedAscending {
+                            self.showDAlert(title: "DearUser".localized, subTitle: "NewVersionAvailable".localized, type: .updateRequired, buttonTitle: "update".localized) { _ in
+                                if let url = URL(string: Constants.userAppstoreUrl) {
+                                    UIApplication.shared.open(url)
+                                }
+                            }
+                        }
+                    }
+                
             }
             if !emergenacyServices.isEmpty {
                 self.emergenacyServices = emergenacyServices
@@ -184,15 +196,15 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
                 }else{
                     print(data[0].checkSub)
                     self.noDataLbl.alpha = 0
-                    self.data = data
+                    self.services = data
           
                     if let offers = offers {
                         self.offers = offers
                         if !offers.isEmpty {
-                            self.data.insert(data[0], at: 0)
+                            self.services.insert(data[0], at: 0)
                         }
                     }
-                    self.data.insert(data[0], at: 0)
+                    self.services.insert(data[0], at: 0)
                     self.collectionView.reloadData()
                     ad.killLoading()
                 }
@@ -202,7 +214,7 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
             self.refresher.endRefreshing()
             self.noDataLbl.alpha = 1
             self.noDataLbl.text = "noInternetConnection".localized
-            self.data = []
+            self.services = []
             self.collectionView.reloadData()
            // self.noDataLbl.alpha = 1
             self.showDAlert(title: "Error".localized, subTitle: "tryAgain".localized, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)

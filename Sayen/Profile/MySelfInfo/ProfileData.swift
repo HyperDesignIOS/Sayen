@@ -13,6 +13,7 @@ class UserProfile_Data {
     
     private var _id : Int?
     private var _name  : String?
+    private var _lastName  : String?
     private var _image  : String?
     private var _email  : String?
     private var _phone  : String?
@@ -54,6 +55,10 @@ class UserProfile_Data {
     }
     var name : String {
         guard let x =    _name  else { return "" }
+        return x
+    }
+    var lastName : String {
+        guard let x =    _lastName  else { return "" }
         return x
     }
     var imageLink : String {
@@ -103,6 +108,7 @@ class UserProfile_Data {
         self._id = jsonData["id"].intValue
         self._image = jsonData["image_path"].stringValue
         self._name = jsonData["name"].stringValue
+        self._lastName = jsonData["last_name"].stringValue
         self._email = jsonData["email"].stringValue
         self._phone = jsonData["phone"].stringValue
         self._active = jsonData["active"].stringValue

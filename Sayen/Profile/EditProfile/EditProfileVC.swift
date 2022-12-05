@@ -90,6 +90,12 @@ extension EditProfileVC : UITableViewDataSource , UITableViewDelegate {
                 let vc = ChangePassVC()
                 self.navigationController?.pushViewController(vc, animated: true)
          
+            case .deletAccount:
+                let vc = LogOutAlert()
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overFullScreen
+                vc.type = .deleteAccount
+                self.present(vc, animated: false)
             }
         }
         

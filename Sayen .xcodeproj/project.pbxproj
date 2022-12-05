@@ -34,9 +34,7 @@
 		1C3D78AF248FC42700759C5D /* SendOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D78AD248FC42600759C5D /* SendOrder.swift */; };
 		1C3D78B4248FE70F00759C5D /* MapAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D78B2248FE70F00759C5D /* MapAddressVC.swift */; };
 		1C43BFA824994389000830E5 /* AddPriceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43BFA624994389000830E5 /* AddPriceVC.swift */; };
-		1C43BFA924994389000830E5 /* AddPriceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C43BFA724994389000830E5 /* AddPriceVC.xib */; };
 		1C43BFAC2499476C000830E5 /* AddedPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43BFAA2499476C000830E5 /* AddedPriceCell.swift */; };
-		1C43BFAD2499476C000830E5 /* AddedPriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C43BFAB2499476C000830E5 /* AddedPriceCell.xib */; };
 		1C43BFB124994E0B000830E5 /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43BFAF24994E0B000830E5 /* RatingVC.swift */; };
 		1C4A659D248E5E700049C877 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4A659C248E5E700049C877 /* ProfileData.swift */; };
 		1C4A659E248E5E700049C877 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4A659C248E5E700049C877 /* ProfileData.swift */; };
@@ -293,7 +291,6 @@
 		84CE28A524E18ACE00A6527C /* OnlinePaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE28A324E18A1100A6527C /* OnlinePaymentVC.swift */; };
 		F203546127AC76C800070CC7 /* OrderHistoryVC+tableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F203546027AC76C800070CC7 /* OrderHistoryVC+tableView.swift */; };
 		F203546427AC791300070CC7 /* EmergencyOrderDetailesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F203546327AC791300070CC7 /* EmergencyOrderDetailesVC.swift */; };
-		F2095CB627CEB755007A130D /* ServicesOffers.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2095CB527CEB755007A130D /* ServicesOffers.xib */; };
 		F2095CB827CEB77C007A130D /* ServicesOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2095CB727CEB77C007A130D /* ServicesOffers.swift */; };
 		F2095CBA27CF9359007A130D /* ServicesOffers+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2095CB927CF9359007A130D /* ServicesOffers+TableView.swift */; };
 		F2095CBE27CF94FE007A130D /* ServiceOfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2095CBC27CF94FE007A130D /* ServiceOfferTableViewCell.swift */; };
@@ -302,6 +299,7 @@
 		F209F19027CD0156002D8665 /* OfferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F209F18E27CD0156002D8665 /* OfferTableViewCell.xib */; };
 		F209F19127CD02D8002D8665 /* HomeUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F209F19327CD02D8002D8665 /* HomeUserCell.xib */; };
 		F209F19B27CD1177002D8665 /* SendOrder+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F209F19A27CD1177002D8665 /* SendOrder+TableView.swift */; };
+		F2145B392896B82D00E2B775 /* ServicesOffers.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2145B3B2896B82D00E2B775 /* ServicesOffers.xib */; };
 		F229E49827ECEC6400F576BA /* AddValuesAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229E49627ECEC6100F576BA /* AddValuesAlert.swift */; };
 		F229E49927ECEFDD00F576BA /* AddValuesAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = F229E49427ECEC4E00F576BA /* AddValuesAlert.xib */; };
 		F240893726E753FC005CD093 /* ChangePassVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F240893A26E753FC005CD093 /* ChangePassVC.xib */; };
@@ -323,6 +321,9 @@
 		F24A856A26E15D9C00E7FAA1 /* ForgetPassVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24A856C26E15D9C00E7FAA1 /* ForgetPassVc.xib */; };
 		F24A857926E3B20100E7FAA1 /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24A857B26E3B20100E7FAA1 /* RegisterVC.xib */; };
 		F24C154727C4F9A300C4F09E /* EmergencyOrderTeam+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C154627C4F9A300C4F09E /* EmergencyOrderTeam+TableView.swift */; };
+		F24ED48F286DC34400B42CB7 /* ServiceReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24ED491286DC34400B42CB7 /* ServiceReportVC.xib */; };
+		F24ED496286DCE9B00B42CB7 /* AddPriceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24ED498286DCE9B00B42CB7 /* AddPriceVC.xib */; };
+		F24ED49D286DCF5800B42CB7 /* AddedPriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24ED49F286DCF5800B42CB7 /* AddedPriceCell.xib */; };
 		F24FB8C0273D4B9B007566EA /* SendOrder+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24FB8BF273D4B9B007566EA /* SendOrder+ImagePicker.swift */; };
 		F24FB8CA273D4C91007566EA /* SendOrder+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24FB8C9273D4C91007566EA /* SendOrder+CollectionView.swift */; };
 		F24FB8D0273D4CD3007566EA /* SendOrder+Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24FB8CF273D4CD3007566EA /* SendOrder+Address.swift */; };
@@ -351,8 +352,8 @@
 		F27956382778C67E00EBA5A4 /* HomeWorker+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27956372778C67E00EBA5A4 /* HomeWorker+CollectionView.swift */; };
 		F279563A2778C6A600EBA5A4 /* HomeWorker+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27956392778C6A600EBA5A4 /* HomeWorker+TableView.swift */; };
 		F279563C2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279563B2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift */; };
+		F287C58A28FB036800E136B6 /* ServiceReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298EA34285F50D80061F8FB /* ServiceReportVC.swift */; };
 		F298EA35285F50D80061F8FB /* ServiceReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298EA34285F50D80061F8FB /* ServiceReportVC.swift */; };
-		F298EA37285F50E40061F8FB /* ServiceReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F298EA36285F50E40061F8FB /* ServiceReportVC.xib */; };
 		F29C2EBA27B171E30098F726 /* EmergencyOrderDetailesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F29C2EBC27B171E30098F726 /* EmergencyOrderDetailesVC.xib */; };
 		F2A104A727ABD9600012197A /* EmergencyServiceAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A104A227ABD9370012197A /* EmergencyServiceAlert.xib */; };
 		F2A104A827ABD9660012197A /* EmergencyServiceAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A1049D27ABD1770012197A /* EmergencyServiceAlert.swift */; };
@@ -438,9 +439,7 @@
 		1C3D78AD248FC42600759C5D /* SendOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOrder.swift; sourceTree = "<group>"; };
 		1C3D78B2248FE70F00759C5D /* MapAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAddressVC.swift; sourceTree = "<group>"; };
 		1C43BFA624994389000830E5 /* AddPriceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriceVC.swift; sourceTree = "<group>"; };
-		1C43BFA724994389000830E5 /* AddPriceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPriceVC.xib; sourceTree = "<group>"; };
 		1C43BFAA2499476C000830E5 /* AddedPriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedPriceCell.swift; sourceTree = "<group>"; };
-		1C43BFAB2499476C000830E5 /* AddedPriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddedPriceCell.xib; sourceTree = "<group>"; };
 		1C43BFAF24994E0B000830E5 /* RatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
 		1C4A659C248E5E700049C877 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
 		1C4A659F248E75DB0049C877 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -611,7 +610,6 @@
 		DF25C98BF6FCABCFB5149065 /* Pods-SayenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SayenTests.release.xcconfig"; path = "Target Support Files/Pods-SayenTests/Pods-SayenTests.release.xcconfig"; sourceTree = "<group>"; };
 		F203546027AC76C800070CC7 /* OrderHistoryVC+tableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderHistoryVC+tableView.swift"; sourceTree = "<group>"; };
 		F203546327AC791300070CC7 /* EmergencyOrderDetailesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyOrderDetailesVC.swift; sourceTree = "<group>"; };
-		F2095CB527CEB755007A130D /* ServicesOffers.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesOffers.xib; sourceTree = "<group>"; };
 		F2095CB727CEB77C007A130D /* ServicesOffers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesOffers.swift; sourceTree = "<group>"; };
 		F2095CB927CF9359007A130D /* ServicesOffers+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServicesOffers+TableView.swift"; sourceTree = "<group>"; };
 		F2095CBC27CF94FE007A130D /* ServiceOfferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOfferTableViewCell.swift; sourceTree = "<group>"; };
@@ -622,6 +620,8 @@
 		F209F19527CD02DB002D8665 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/HomeUserCell.strings; sourceTree = "<group>"; };
 		F209F19727CD02DC002D8665 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HomeUserCell.strings; sourceTree = "<group>"; };
 		F209F19A27CD1177002D8665 /* SendOrder+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+TableView.swift"; sourceTree = "<group>"; };
+		F2145B3A2896B82D00E2B775 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ServicesOffers.xib; sourceTree = "<group>"; };
+		F2145B3D2896B83400E2B775 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ServicesOffers.strings; sourceTree = "<group>"; };
 		F229E49427ECEC4E00F576BA /* AddValuesAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddValuesAlert.xib; sourceTree = "<group>"; };
 		F229E49627ECEC6100F576BA /* AddValuesAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddValuesAlert.swift; sourceTree = "<group>"; };
 		F240893926E753FC005CD093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ChangePassVC.xib; sourceTree = "<group>"; };
@@ -656,6 +656,15 @@
 		F24A858126E3B20600E7FAA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RegisterVC.strings; sourceTree = "<group>"; };
 		F24A858326E3B20800E7FAA1 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/RegisterVC.strings; sourceTree = "<group>"; };
 		F24C154627C4F9A300C4F09E /* EmergencyOrderTeam+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmergencyOrderTeam+TableView.swift"; sourceTree = "<group>"; };
+		F24ED490286DC34400B42CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ServiceReportVC.xib; sourceTree = "<group>"; };
+		F24ED493286DC34800B42CB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ServiceReportVC.strings; sourceTree = "<group>"; };
+		F24ED495286DC34A00B42CB7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ServiceReportVC.strings; sourceTree = "<group>"; };
+		F24ED497286DCE9B00B42CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AddPriceVC.xib; sourceTree = "<group>"; };
+		F24ED49A286DCE9E00B42CB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddPriceVC.strings; sourceTree = "<group>"; };
+		F24ED49C286DCEA200B42CB7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AddPriceVC.strings; sourceTree = "<group>"; };
+		F24ED49E286DCF5800B42CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AddedPriceCell.xib; sourceTree = "<group>"; };
+		F24ED4A1286DCF5A00B42CB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddedPriceCell.strings; sourceTree = "<group>"; };
+		F24ED4A3286DCF5B00B42CB7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/AddedPriceCell.strings; sourceTree = "<group>"; };
 		F24FB8BF273D4B9B007566EA /* SendOrder+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+ImagePicker.swift"; sourceTree = "<group>"; };
 		F24FB8C9273D4C91007566EA /* SendOrder+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+CollectionView.swift"; sourceTree = "<group>"; };
 		F24FB8CF273D4CD3007566EA /* SendOrder+Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SendOrder+Address.swift"; sourceTree = "<group>"; };
@@ -709,7 +718,6 @@
 		F27956392778C6A600EBA5A4 /* HomeWorker+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWorker+TableView.swift"; sourceTree = "<group>"; };
 		F279563B2778C6ED00EBA5A4 /* HomeWorker+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeWorker+LocationManager.swift"; sourceTree = "<group>"; };
 		F298EA34285F50D80061F8FB /* ServiceReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReportVC.swift; sourceTree = "<group>"; };
-		F298EA36285F50E40061F8FB /* ServiceReportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceReportVC.xib; sourceTree = "<group>"; };
 		F29C2EBB27B171E30098F726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EmergencyOrderDetailesVC.xib; sourceTree = "<group>"; };
 		F29C2EBE27B171E70098F726 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EmergencyOrderDetailesVC.strings; sourceTree = "<group>"; };
 		F29C2EC027B171EA0098F726 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/EmergencyOrderDetailesVC.strings; sourceTree = "<group>"; };
@@ -919,9 +927,9 @@
 			isa = PBXGroup;
 			children = (
 				1C43BFA624994389000830E5 /* AddPriceVC.swift */,
-				1C43BFA724994389000830E5 /* AddPriceVC.xib */,
+				F24ED498286DCE9B00B42CB7 /* AddPriceVC.xib */,
 				1C43BFAA2499476C000830E5 /* AddedPriceCell.swift */,
-				1C43BFAB2499476C000830E5 /* AddedPriceCell.xib */,
+				F24ED49F286DCF5800B42CB7 /* AddedPriceCell.xib */,
 			);
 			path = AddPrice;
 			sourceTree = "<group>";
@@ -1551,7 +1559,7 @@
 		F2095CB427CEB70F007A130D /* ServicesOffers */ = {
 			isa = PBXGroup;
 			children = (
-				F2095CB527CEB755007A130D /* ServicesOffers.xib */,
+				F2145B3B2896B82D00E2B775 /* ServicesOffers.xib */,
 				F2095CB727CEB77C007A130D /* ServicesOffers.swift */,
 				F2095CB927CF9359007A130D /* ServicesOffers+TableView.swift */,
 			);
@@ -1635,7 +1643,7 @@
 			isa = PBXGroup;
 			children = (
 				F298EA34285F50D80061F8FB /* ServiceReportVC.swift */,
-				F298EA36285F50E40061F8FB /* ServiceReportVC.xib */,
+				F24ED491286DC34400B42CB7 /* ServiceReportVC.xib */,
 			);
 			path = ServiceReport;
 			sourceTree = "<group>";
@@ -1802,7 +1810,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F24A856A26E15D9C00E7FAA1 /* ForgetPassVc.xib in Resources */,
-				F298EA37285F50E40061F8FB /* ServiceReportVC.xib in Resources */,
+				F24ED48F286DC34400B42CB7 /* ServiceReportVC.xib in Resources */,
 				F240894B26E7550D005CD093 /* EditPhoneVC.xib in Resources */,
 				F240897F26E75AF1005CD093 /* LogOutAlert.xib in Resources */,
 				F240895B26E75827005CD093 /* EditProfileVC.xib in Resources */,
@@ -1831,10 +1839,10 @@
 				1C786D98248682A300BAFC46 /* Tajawal-Medium.ttf in Resources */,
 				1C309E4124893510002CE4CC /* ProfileCell.xib in Resources */,
 				F2789F6D26E54957002ED441 /* AboutUs.xib in Resources */,
-				1C43BFAD2499476C000830E5 /* AddedPriceCell.xib in Resources */,
+				F24ED49D286DCF5800B42CB7 /* AddedPriceCell.xib in Resources */,
 				1C786D92248682A300BAFC46 /* Tajawal-Bold.ttf in Resources */,
 				F209F19027CD0156002D8665 /* OfferTableViewCell.xib in Resources */,
-				1C43BFA924994389000830E5 /* AddPriceVC.xib in Resources */,
+				F24ED496286DCE9B00B42CB7 /* AddPriceVC.xib in Resources */,
 				F2789F5A26E545F7002ED441 /* ContactUsVc.xib in Resources */,
 				F209F19127CD02D8002D8665 /* HomeUserCell.xib in Resources */,
 				1C786DB2248682A300BAFC46 /* InfoPlist.strings in Resources */,
@@ -1860,7 +1868,7 @@
 				1C786D8E248682A300BAFC46 /* Tajawal-ExtraBold.ttf in Resources */,
 				F24A857926E3B20100E7FAA1 /* RegisterVC.xib in Resources */,
 				F2789F4B26E543FF002ED441 /* cancelSendOrder.xib in Resources */,
-				F2095CB627CEB755007A130D /* ServicesOffers.xib in Resources */,
+				F2145B392896B82D00E2B775 /* ServicesOffers.xib in Resources */,
 				1C786D9C248682A300BAFC46 /* Tajawal-Black.ttf in Resources */,
 				F27278CC26E4E10100984069 /* Main.storyboard in Resources */,
 			);
@@ -2409,6 +2417,7 @@
 				1C8F519224B36D8300895FA0 /* CancelOrderAlert.swift in Sources */,
 				1C786CCF2486824000BAFC46 /* VerfyCode.swift in Sources */,
 				1CE3DE47249ABF7B00B8C065 /* AllPriceVCT.swift in Sources */,
+				F287C58A28FB036800E136B6 /* ServiceReportVC.swift in Sources */,
 				F2BEC87C27CC120800078B80 /* AllPriceVCT+ImagePicker.swift in Sources */,
 				F2FA68DC27C7D547007ADD92 /* EmergencyOrderDetailesTeamVC.swift in Sources */,
 				1C786CEC2486827300BAFC46 /* State.swift in Sources */,
@@ -2477,6 +2486,15 @@
 				F209F19727CD02DC002D8665 /* ar */,
 			);
 			name = HomeUserCell.xib;
+			sourceTree = "<group>";
+		};
+		F2145B3B2896B82D00E2B775 /* ServicesOffers.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2145B3A2896B82D00E2B775 /* Base */,
+				F2145B3D2896B83400E2B775 /* en */,
+			);
+			name = ServicesOffers.xib;
 			sourceTree = "<group>";
 		};
 		F240893A26E753FC005CD093 /* ChangePassVC.xib */ = {
@@ -2567,6 +2585,36 @@
 				F24A858326E3B20800E7FAA1 /* ar */,
 			);
 			name = RegisterVC.xib;
+			sourceTree = "<group>";
+		};
+		F24ED491286DC34400B42CB7 /* ServiceReportVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F24ED490286DC34400B42CB7 /* Base */,
+				F24ED493286DC34800B42CB7 /* en */,
+				F24ED495286DC34A00B42CB7 /* ar */,
+			);
+			name = ServiceReportVC.xib;
+			sourceTree = "<group>";
+		};
+		F24ED498286DCE9B00B42CB7 /* AddPriceVC.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F24ED497286DCE9B00B42CB7 /* Base */,
+				F24ED49A286DCE9E00B42CB7 /* en */,
+				F24ED49C286DCEA200B42CB7 /* ar */,
+			);
+			name = AddPriceVC.xib;
+			sourceTree = "<group>";
+		};
+		F24ED49F286DCF5800B42CB7 /* AddedPriceCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F24ED49E286DCF5800B42CB7 /* Base */,
+				F24ED4A1286DCF5A00B42CB7 /* en */,
+				F24ED4A3286DCF5B00B42CB7 /* ar */,
+			);
+			name = AddedPriceCell.xib;
 			sourceTree = "<group>";
 		};
 		F27278AC26E4AAC600984069 /* VerfyCode.xib */ = {
@@ -2911,7 +2959,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9.6;
+				MARKETING_VERSION = 2.0.5;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";
@@ -2936,7 +2984,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9.6;
+				MARKETING_VERSION = 2.0.5;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.It.Sayen;
 				PRODUCT_NAME = "صاين";
@@ -3042,7 +3090,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Sayen Worker.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/SayenTeam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3050,7 +3098,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.2;
 				OTHER_SWIFT_FLAGS = "-D Team";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.it.SayenTeam;
 				PRODUCT_NAME = "فريق صاين";
@@ -3069,7 +3117,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Sayen Worker.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4NR86733N8;
 				INFOPLIST_FILE = "$(SRCROOT)/Sayen/MainFileSupport/SayenTeam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -3077,7 +3125,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.2;
 				OTHER_SWIFT_FLAGS = "-D Team";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cems.it.SayenTeam;
 				PRODUCT_NAME = "فريق صاين";

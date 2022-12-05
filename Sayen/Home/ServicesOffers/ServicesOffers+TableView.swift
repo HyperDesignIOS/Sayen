@@ -15,7 +15,7 @@ extension ServicesOffers : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotiCell", for: indexPath) as! NotiCell
-        let title = "lang".localized == "ar" ? offers[indexPath.row].offer.title : offers[indexPath.row].offer.title_en
+        let title =  offers[indexPath.row].offer.title
         cell.maintitle.text = offers[indexPath.row].service.name
         cell.dateLbl.text = title
         if let url = URL(string: offers[indexPath.row].service.image_path) {

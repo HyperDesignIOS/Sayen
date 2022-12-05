@@ -165,6 +165,7 @@ class AboutUs: UIViewController {
                 self.abutTxt.text = data.content
                 self.facebook = data.facebook
                 self.whatsapp = data.whatsapp
+                Constants.contactUsNumober = data.whatsapp ?? ""
                 self.twitter = data.twitter
                 self.telegram = data.telegram
                 self.instagram = data.instagram

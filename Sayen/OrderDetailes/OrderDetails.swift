@@ -75,6 +75,7 @@ class OrderDetails {
     var added_price: String?
     var excellence_client : String
     var service : String?
+    var device_number: Int?
        var isExcellenceClient : Bool {
           return excellence_client == "1"
       }
@@ -130,6 +131,7 @@ class OrderDetails {
         self.floor = jsonData["floor"].string
         self.service = jsonData["service"].string
         self.added_price = jsonData["added_price"].string
+        self.device_number = jsonData["device_number"].int
     }
     
     
@@ -220,7 +222,7 @@ class TeamOrderDetailes {
         return excellence_client == "1"
     }
     var finish_image: String?
-    
+    var device_numbers : String?
     
   
     init(_ jsonData : JSON) {
@@ -256,6 +258,8 @@ class TeamOrderDetailes {
         self.lng = jsonData["lng"].stringValue
         self.total_before_discount = jsonData["total_before_discount"].doubleValue
         self.finish_image = jsonData["finish_image"].stringValue
+        self.device_numbers = jsonData["device_numbers"].stringValue
+        
         for imageString in jsonData["images"].arrayValue{
             let str = imageString.stringValue
             self.images.append(str)
