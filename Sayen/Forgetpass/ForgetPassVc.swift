@@ -22,6 +22,7 @@ class ForgetPassVc: UIViewController {
         super.viewDidLoad()
         phoneTF.delegate = self
         initViewModel()
+        
     }
     
     var user_type : String {

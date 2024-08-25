@@ -172,6 +172,7 @@ class selfInfoVC: UIViewController {
     func getProfileData() {
        
         ad.isLoading()
+        
         APIClient.getProfileData(user_type: ad.user_type(), completionHandler: { (state, sms, data) in
             self.firstLaunch = false
             guard state else{
@@ -474,6 +475,7 @@ extension selfInfoVC : UIImagePickerControllerDelegate, UINavigationControllerDe
            }
            imageDict["image"] = myThumb
            imageDict["user_type"] = ad.user_type()
+        
            APIClient.postProfileUpdate(parameters: ["user_type":ad.user_type()], imageDict: ["image": myThumb]) {[weak self] (state, sms) in
                
                guard state else {

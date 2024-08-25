@@ -9,7 +9,7 @@
 "EfR-M4-EfI.placeholder" = "********";
 
 /* Class = "UILabel"; text = "كلمة المرور الحاليه"; ObjectID = "Fmy-QM-096"; */
-"Fmy-QM-096.text" = "Current Password";
+"Fmy-QM-096.text" = "Enter Your Verification Code";
 
 /* Class = "UILabel"; text = "تعديل كلمة المرور"; ObjectID = "MzH-OW-9FN"; */
 "MzH-OW-9FN.text" = "Change Password";
@@ -22,3 +22,5 @@
 
 /* Class = "UITextField"; placeholder = "********"; ObjectID = "vav-Nk-jOk"; */
 "vav-Nk-jOk.placeholder" = "********";
+
+

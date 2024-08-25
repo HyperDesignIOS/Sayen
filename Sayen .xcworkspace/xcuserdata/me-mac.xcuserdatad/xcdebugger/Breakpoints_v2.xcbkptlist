@@ -167,38 +167,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9C92B623-537E-420B-8F59-5E113AB4CD2D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sayen/Register/RegisterVM.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "getBuildingsName(completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6C1C6E06-6174-426A-9CD5-94640E8686D2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sayen/Register/RegisterVM.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "getBuildingsName(completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E1AC5850-4E55-424D-9774-AA3B5EA008B2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -238,8 +206,8 @@
             filePath = "Sayen/Model/API/Requests/APICleint_PostR.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "475"
-            endingLineNumber = "475"
+            startingLineNumber = "500"
+            endingLineNumber = "500"
             landmarkName = "SendOrder(parameters:imageDict:completed:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,8 +222,8 @@
             filePath = "Sayen/Model/API/Requests/APICleint_PostR.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "477"
-            endingLineNumber = "477"
+            startingLineNumber = "502"
+            endingLineNumber = "502"
             landmarkName = "SendOrder(parameters:imageDict:completed:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -270,8 +238,8 @@
             filePath = "Sayen/Model/API/Requests/APICleint_PostR.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "447"
-            endingLineNumber = "447"
+            startingLineNumber = "472"
+            endingLineNumber = "472"
             landmarkName = "SendOrder(parameters:imageDict:completed:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -286,9 +254,389 @@
             filePath = "Sayen/Profile/MySelfInfo/selfInfoVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "321"
-            endingLineNumber = "321"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "saveInfo(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15781FA2-7778-4A09-8BF2-AD0D25DAC39B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Profile/ChangPassVC/changePassVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "validateRows()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C6F2822-AAB3-482D-8E66-D250C2F7C738"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Profile/ChangPassVC/changePassVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "validateRows()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76C1169D-2B4E-494F-8B50-EF1CAE27C81E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Profile/ChangPassVC/ChangePassVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "resetAction()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFA58745-7788-4F9D-A6E4-609BCCCB3273"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Profile/ChangPassVC/changePassVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "validateRows()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF36BF24-5EDD-4613-B4D5-B47257A7A7CA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Register/RegisterVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "getBuildingsName(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "490492BD-E866-487C-AF51-B72EAE4337AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Register/RegisterVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "getBuildingsName(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82F14B7A-04A3-4A78-8FE7-B5A060799979"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Register/RegisterVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "confirmRegister()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E565FBA-039F-427D-905C-AC819637BA72"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Register/RegisterVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "confirmRegister()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6E565FBA-039F-427D-905C-AC819637BA72 - c74b6ad52436d857"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "&#x635;&#x627;&#x64a;&#x646;.RegisterVM.confirmRegister() -&gt; ()"
+                  moduleName = "&#x635;&#x627;&#x64a;&#x646;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HyperDesign/AAH/AAH/HyperDesignApps/Sayen/Sayen/Register/RegisterVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "6E565FBA-039F-427D-905C-AC819637BA72 - c74b6ad52436d857"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "&#x635;&#x627;&#x64a;&#x646;.RegisterVM.confirmRegister() -&gt; ()"
+                  moduleName = "&#x635;&#x627;&#x64a;&#x646;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HyperDesign/AAH/AAH/HyperDesignApps/Sayen/Sayen/Register/RegisterVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "6E565FBA-039F-427D-905C-AC819637BA72 - c74b6ad52436d857"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "&#x635;&#x627;&#x64a;&#x646;.RegisterVM.confirmRegister() -&gt; ()"
+                  moduleName = "&#x635;&#x627;&#x64a;&#x646;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HyperDesign/AAH/AAH/HyperDesignApps/Sayen/Sayen/Register/RegisterVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "6E565FBA-039F-427D-905C-AC819637BA72 - c74b6ad52436d857"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "&#x635;&#x627;&#x64a;&#x646;.RegisterVM.confirmRegister() -&gt; ()"
+                  moduleName = "&#x635;&#x627;&#x64a;&#x646;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HyperDesign/AAH/AAH/HyperDesignApps/Sayen/Sayen/Register/RegisterVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "6E565FBA-039F-427D-905C-AC819637BA72 - c74b6ad52436d857"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "&#x635;&#x627;&#x64a;&#x646;.RegisterVM.confirmRegister() -&gt; ()"
+                  moduleName = "&#x635;&#x627;&#x64a;&#x646;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HyperDesign/AAH/AAH/HyperDesignApps/Sayen/Sayen/Register/RegisterVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "432">
+               </Location>
+               <Location
+                  uuid = "6E565FBA-039F-427D-905C-AC819637BA72 - c74b6ad52436d857"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "&#x635;&#x627;&#x64a;&#x646;.RegisterVM.confirmRegister() -&gt; ()"
+                  moduleName = "&#x635;&#x627;&#x64a;&#x646;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HyperDesign/AAH/AAH/HyperDesignApps/Sayen/Sayen/Register/RegisterVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "536">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7C96C20-9D34-4D4D-8580-21A9B3A48442"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Register/RegisterVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "confirmRegister()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A7C96C20-9D34-4D4D-8580-21A9B3A48442 - c74b6ad52436db95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "&#x635;&#x627;&#x64a;&#x646;.RegisterVM.confirmRegister() -&gt; ()"
+                  moduleName = "&#x635;&#x627;&#x64a;&#x646;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HyperDesign/AAH/AAH/HyperDesignApps/Sayen/Sayen/Register/RegisterVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "600">
+               </Location>
+               <Location
+                  uuid = "A7C96C20-9D34-4D4D-8580-21A9B3A48442 - 27765af9e6cfe463"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String) -&gt; () in &#x635;&#x627;&#x64a;&#x646;.RegisterVM.confirmRegister() -&gt; ()"
+                  moduleName = "&#x635;&#x627;&#x64a;&#x646;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HyperDesign/AAH/AAH/HyperDesignApps/Sayen/Sayen/Register/RegisterVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03556365-4913-48B7-841F-F63283BC93FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Register/RegisterVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "confirmRegister()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F92A4D6E-D834-42BC-AEE1-274FC3C6C4D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Register/RegisterVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "confirmRegister()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85BBAF54-ABE4-4F3C-AB8D-DF59C342A04C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Register/RegisterVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "confirmRegister()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4211E33B-DF79-4CA4-B8A5-18CE36219054"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Model/API/Requests/APICleint_PostR.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "registerRequest(name:lastName:email:mobile:password:country_code:excellence_client:building_id:flat:completionHandler:completionFaliure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4211E33B-DF79-4CA4-B8A5-18CE36219054 - b3fe39b78cbe670"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static &#x635;&#x627;&#x64a;&#x646;.APIClient.registerRequest(name: Swift.String, lastName: Swift.String, email: Swift.String, mobile: Swift.String, password: Swift.String, country_code: Swift.String, excellence_client: Swift.Int, building_id: Swift.Int, flat: Swift.String, completionHandler: (Swift.Bool, Swift.String) -&gt; (), completionFaliure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "&#x635;&#x627;&#x64a;&#x646;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HyperDesign/AAH/AAH/HyperDesignApps/Sayen/Sayen/Model/API/Requests/APICleint_PostR.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "372">
+               </Location>
+               <Location
+                  uuid = "4211E33B-DF79-4CA4-B8A5-18CE36219054 - b38dfb9be3ecb457"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in static &#x635;&#x627;&#x64a;&#x646;.APIClient.registerRequest(name: Swift.String, lastName: Swift.String, email: Swift.String, mobile: Swift.String, password: Swift.String, country_code: Swift.String, excellence_client: Swift.Int, building_id: Swift.Int, flat: Swift.String, completionHandler: (Swift.Bool, Swift.String) -&gt; (), completionFaliure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "&#x635;&#x627;&#x64a;&#x646;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/HyperDesign/AAH/AAH/HyperDesignApps/Sayen/Sayen/Model/API/Requests/APICleint_PostR.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFAC38BD-8699-4287-B254-54C2894F1BEA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sayen/Login/LoginVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "initRegisterVM()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -22,6 +22,7 @@ class RegisterVM {
     var userLastName : String?
     var phonenum : String?
     var pass : String?
+    var email : String?
     
     var flatTitle : String?
     var flatNum : String?
@@ -65,6 +66,10 @@ class RegisterVM {
         guard let userLastName = userLastName , userLastName != "" else {
             
             alertMessage = "من فضلك إدخل اسم العائلة"
+            return false
+        }
+        guard let email = email , email != "" else {
+            alertMessage = "من فضلك إدخل البريد الالكتروني "
             return false
         }
         if self.pass == "" {
@@ -113,9 +118,9 @@ class RegisterVM {
             return
         }
        state = .loading
-       guard let  userName = userName,let  userLastName = userLastName,let phonenum = phonenum , let pass = pass else {return}
+       guard let  userName = userName,let  email = email ,let  userLastName = userLastName,let phonenum = phonenum , let pass = pass else {return}
         
-        APIClient.registerRequest(name: userName, lastName: userLastName, mobile: phonenum, password: pass, country_code: "966", excellence_client: clint,building_id: self.selectedData?.id ?? 0 , flat: self.flatNum ?? "" , completionHandler: { (state, sms) in
+        APIClient.registerRequest(name: userName, lastName: userLastName, email: email, mobile: phonenum, password: pass, country_code: "966", excellence_client: clint,building_id: self.selectedData?.id ?? 0 , flat: self.flatNum ?? "" , completionHandler: { (state, sms) in
             guard state else{
                 self.alertMessage = sms
                 self.state = .error

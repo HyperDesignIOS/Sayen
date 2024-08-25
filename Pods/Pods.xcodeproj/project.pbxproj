@@ -577,7 +577,7 @@
 		A5F9594E8A63544999FE1F82E075E07C /* NSDictionary+FIRMessaging.h in Headers */ = {isa = PBXBuildFile; fileRef = E56CC9ECEDDAF6A43C3679AD2A3EA95F /* NSDictionary+FIRMessaging.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A60C9953FF0F08F50CA6E46D7A6DA98F /* GDTCCTCompressionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD0FCDB15320F723996B2C514F6E9C5 /* GDTCCTCompressionHelper.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A639B19E44456598A16EC107F74EF2B8 /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B975B1210C2627C5AD80214F3E5D64 /* UIImageView+AlamofireImage.swift */; };
-		A65440672B555F566C9CE4995FE0C353 /* OpalImagePicker-OpalImagePickerResources in Resources */ = {isa = PBXBuildFile; fileRef = 598756CCCB40FC98DA122084B3B8C925 /* OpalImagePicker-OpalImagePickerResources */; };
+		A65440672B555F566C9CE4995FE0C353 /* OpalImagePickerResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 598756CCCB40FC98DA122084B3B8C925 /* OpalImagePickerResources.bundle */; };
 		A6A429633290980D8FB2C4FE1635E4DD /* GPBAny.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F05EBAF66BF34F0DB325BA6D740D7 /* GPBAny.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A6B5659DE40F2CA838408FA81BD0A682 /* FIRMessagingDataMessageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C390EFBA10D0FFC286086E11B0F5F02D /* FIRMessagingDataMessageManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A6F37FA8B15CB0C8127F931648DE3C66 /* FIRIMessageCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D6668218E44288836899C3ACA495438 /* FIRIMessageCode.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -649,7 +649,7 @@
 		BC5EA4900EA10139640FBFD9D418FDE7 /* GULSecureCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 55941FDF2370840ADCD83BAAFB9CF866 /* GULSecureCoding.m */; };
 		BC60798A675531586FE99309B860EEAC /* FIRInstanceIDCheckinService.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E9A08D7B7622061398F48F2287BEE7 /* FIRInstanceIDCheckinService.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BCB5D133E1253CA4089802F54EF8ABDC /* GULReachabilityMessageCode.h in Headers */ = {isa = PBXBuildFile; fileRef = BB513BA0F9B732F5B922546CA3F01A36 /* GULReachabilityMessageCode.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		BCDFA144F7545AC2FE22E0D2AD6B1C51 /* CDAlertView-CDAlertView in Resources */ = {isa = PBXBuildFile; fileRef = E417FD65D5A1F9B3171583531D47A61C /* CDAlertView-CDAlertView */; };
+		BCDFA144F7545AC2FE22E0D2AD6B1C51 /* CDAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E417FD65D5A1F9B3171583531D47A61C /* CDAlertView.bundle */; };
 		BD6D1AA0D1D44A42A98AF2CE7035456A /* FIRAppAssociationRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = A84AAA83ED94A4D650FECEAB08018261 /* FIRAppAssociationRegistration.m */; };
 		BD7089DFF5F16C70053C5BE9EA23A657 /* GPBRootObject.h in Headers */ = {isa = PBXBuildFile; fileRef = C742F915D3DA40E6E45DA4B7B9179927 /* GPBRootObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD7ECEB6DF4ABBF3C87B84BE5DAF6309 /* GDTCORUploadPackage_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = AB7A1519E722E3AE7BFF24B2544CE184 /* GDTCORUploadPackage_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -2123,7 +2123,7 @@
 		57AEDCBC10BEE9EFC8A5CB5DE5E2C6E2 /* Pods-Sayen Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sayen Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		585167044575FBD4096478CE4283D444 /* FirebaseMessaging-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseMessaging-umbrella.h"; sourceTree = "<group>"; };
 		58951BD2CE4150734B8D08256FC9F4B6 /* MMText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMText.debug.xcconfig; sourceTree = "<group>"; };
-		598756CCCB40FC98DA122084B3B8C925 /* OpalImagePicker-OpalImagePickerResources */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "OpalImagePicker-OpalImagePickerResources"; path = OpalImagePickerResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		598756CCCB40FC98DA122084B3B8C925 /* OpalImagePickerResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpalImagePickerResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A334C1A4D958C4313A86C9E00AAD347 /* FIRLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLibrary.h; path = FirebaseCore/Sources/Private/FIRLibrary.h; sourceTree = "<group>"; };
 		5B15105BE1B96C95FB83EE3902D6FF5F /* FIRInstallationsItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsItem.h; path = FirebaseInstallations/Source/Library/FIRInstallationsItem.h; sourceTree = "<group>"; };
 		5B222222D1BC53B7C6C9F6E2F6B63161 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
@@ -2641,7 +2641,7 @@
 		E2FE45ADD769A826ECC33065176D4A4A /* AAPickerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AAPickerView-umbrella.h"; sourceTree = "<group>"; };
 		E3A4AF2790ABB8F607DEA4E1FA3D426B /* FBLPromise+Retry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Retry.h"; path = "Sources/FBLPromises/include/FBLPromise+Retry.h"; sourceTree = "<group>"; };
 		E408AE3BE2A8985C367D461E340D7375 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		E417FD65D5A1F9B3171583531D47A61C /* CDAlertView-CDAlertView */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CDAlertView-CDAlertView"; path = CDAlertView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E417FD65D5A1F9B3171583531D47A61C /* CDAlertView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDAlertView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4521F021418969ED39D2ED774EC771C /* GPBBootstrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBBootstrap.h; path = objectivec/GPBBootstrap.h; sourceTree = "<group>"; };
 		E4D90A89D82F45D91BB3AC7D9341976B /* GoogleDataTransport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleDataTransport.release.xcconfig; sourceTree = "<group>"; };
 		E5018D132FC0002E3A9B3DA5C8A1DCDC /* FIRComponentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRComponentType.m; path = FirebaseCore/Sources/FIRComponentType.m; sourceTree = "<group>"; };
@@ -3509,7 +3509,7 @@
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
 				C8498160B5D29EF2745E4D41F2D971B5 /* AlamofireImage */,
 				497444E3780E44ED4F4672834DCE1ED8 /* CDAlertView */,
-				E417FD65D5A1F9B3171583531D47A61C /* CDAlertView-CDAlertView */,
+				E417FD65D5A1F9B3171583531D47A61C /* CDAlertView.bundle */,
 				3E26BA03994713FBEB9C3406695782F1 /* DLRadioButton */,
 				9B6725B782188F18CB76A740433F14E4 /* DropDown */,
 				E2B63D462DB7F827C4B11FD51E4F8E2D /* FirebaseCore */,
@@ -3529,7 +3529,7 @@
 				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */,
 				A1B9F27862201CD82B398E0B35B14128 /* NVActivityIndicatorView */,
 				484151C077E2CEBBCACC4EBBF7727D98 /* OpalImagePicker */,
-				598756CCCB40FC98DA122084B3B8C925 /* OpalImagePicker-OpalImagePickerResources */,
+				598756CCCB40FC98DA122084B3B8C925 /* OpalImagePickerResources.bundle */,
 				08636F8F81788FFC72E4DBD47B0D8C51 /* Pods-Sayen  */,
 				3FF137883E134B0B4F1BD19ED2564D59 /* Pods-Sayen  Worker */,
 				774AB8D3CE68140DA046226592B9DF50 /* Pods-Sayen -Sayen UITests */,
@@ -5412,7 +5412,7 @@
 			);
 			name = "OpalImagePicker-OpalImagePickerResources";
 			productName = OpalImagePickerResources;
-			productReference = 598756CCCB40FC98DA122084B3B8C925 /* OpalImagePicker-OpalImagePickerResources */;
+			productReference = 598756CCCB40FC98DA122084B3B8C925 /* OpalImagePickerResources.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		270B5C8571B866812BBBFA40EC688495 /* Pods-Sayen -Sayen UITests */ = {
@@ -6013,7 +6013,7 @@
 			);
 			name = "CDAlertView-CDAlertView";
 			productName = CDAlertView;
-			productReference = E417FD65D5A1F9B3171583531D47A61C /* CDAlertView-CDAlertView */;
+			productReference = E417FD65D5A1F9B3171583531D47A61C /* CDAlertView.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		F1A43A0FFC2FFBC81E90917B5E198DB6 /* Locksmith */ = {
@@ -6150,7 +6150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCDFA144F7545AC2FE22E0D2AD6B1C51 /* CDAlertView-CDAlertView in Resources */,
+				BCDFA144F7545AC2FE22E0D2AD6B1C51 /* CDAlertView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6165,7 +6165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A65440672B555F566C9CE4995FE0C353 /* OpalImagePicker-OpalImagePickerResources in Resources */,
+				A65440672B555F566C9CE4995FE0C353 /* OpalImagePickerResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -8746,6 +8746,7 @@
 			baseConfigurationReference = 5679EC22D58D1E16FD897E4687D8B1A5 /* OpalImagePicker.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OpalImagePicker";
+				DEVELOPMENT_TEAM = 4NR86733N8;
 				IBSC_MODULE = OpalImagePicker;
 				INFOPLIST_FILE = "Target Support Files/OpalImagePicker/ResourceBundle-OpalImagePickerResources-OpalImagePicker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -8938,6 +8939,7 @@
 			baseConfigurationReference = B532AB10A117DC19A8EBDA5E09E01C66 /* CDAlertView.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CDAlertView";
+				DEVELOPMENT_TEAM = 4NR86733N8;
 				IBSC_MODULE = CDAlertView;
 				INFOPLIST_FILE = "Target Support Files/CDAlertView/ResourceBundle-CDAlertView-CDAlertView-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -9791,6 +9793,7 @@
 			baseConfigurationReference = 301B7F6C13239FA6ACB6187D7436D046 /* CDAlertView.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CDAlertView";
+				DEVELOPMENT_TEAM = 4NR86733N8;
 				IBSC_MODULE = CDAlertView;
 				INFOPLIST_FILE = "Target Support Files/CDAlertView/ResourceBundle-CDAlertView-CDAlertView-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -9841,6 +9844,7 @@
 			baseConfigurationReference = 7E025DFB9E2079138F7F6BC44A914C10 /* OpalImagePicker.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OpalImagePicker";
+				DEVELOPMENT_TEAM = 4NR86733N8;
 				IBSC_MODULE = OpalImagePicker;
 				INFOPLIST_FILE = "Target Support Files/OpalImagePicker/ResourceBundle-OpalImagePickerResources-OpalImagePicker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

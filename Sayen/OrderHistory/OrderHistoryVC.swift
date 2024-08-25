@@ -9,17 +9,27 @@ import UIKit
 
 class OrderHistoryVC: UIViewController {
 
+    @IBOutlet weak var emergencySeg: UISegmentedControl!
     @IBOutlet weak var lastAndCurrentSeg: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noDataLbl: UILabel!
-    @IBOutlet weak var emergencySwitchOutlet: UISwitch!
+//    @IBOutlet weak var emergencySwitchOutlet: UISwitch!
     
-    @IBAction func emergencySwitch(_ sender: UISwitch) {
-        if sender.isOn {
-            getEmergencyDataCurrent()
-        }else {
+    
+//    @IBAction func emergencySwitch(_ sender: UISwitch) {
+//        if sender.isOn {
+//            getEmergencyDataCurrent()
+//        }else {
+//            getDataCurrent()
+//        }
+//    }
+    @IBAction func emergencySegAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
             getDataCurrent()
+        }else {
+            getEmergencyDataCurrent()
         }
+        print(sender.selectedSegmentIndex)
     }
     
     
@@ -37,8 +47,10 @@ class OrderHistoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barStyle = .black
-        lastAndCurrentSeg.defaultConfiguration(font: UIFont(name: "Tajawal-Medium", size: 17)!, color: .lightGray)
-        lastAndCurrentSeg.selectedConfiguration(font: UIFont(name: "Tajawal-Medium", size: 17)!, color: .mainColor)
+        lastAndCurrentSeg.defaultConfiguration(font: UIFont(name: "Tajawal-Medium", size: 16)!, color: .lightGray)
+        lastAndCurrentSeg.selectedConfiguration(font: UIFont(name: "Tajawal-Medium", size: 16)!, color: .mainColor)
+        emergencySeg.defaultConfiguration(font: UIFont(name: "Tajawal-Medium", size: 18)!, color: .lightGray)
+        emergencySeg.selectedConfiguration(font: UIFont(name: "Tajawal-Medium", size: 18)!, color: .mainColor)
         lastAndCurrentSeg.semanticContentAttribute = .forceRightToLeft
         self.tableView.register(UINib(nibName: "OrderCell", bundle: nil), forCellReuseIdentifier: "OrderCell")
         self.tableView.delegate = self
@@ -49,28 +61,28 @@ class OrderHistoryVC: UIViewController {
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if emergencySwitchOutlet.isOn {
-            getEmergencyDataCurrent()
-        }else {
+        if emergencySeg.selectedSegmentIndex == 0 {
             getDataCurrent ()
+        }else {
+            getEmergencyDataCurrent()
         }
         lastAndCurrentSeg.addTarget( self, action: #selector(segmentSelected(sender:)), for: UIControl.Event.valueChanged )
     }
    
     @objc func refesherMethod(){
-        if emergencySwitchOutlet.isOn {
-            getEmergencyDataCurrent()
-        }else {
+        if emergencySeg.selectedSegmentIndex == 0 {
             getDataCurrent ()
+        }else {
+            getEmergencyDataCurrent()
         }
     }
     @objc func segmentSelected(sender: UISegmentedControl)
     {
         print("selected index: \(sender.selectedSegmentIndex)")
-        if emergencySwitchOutlet.isOn {
-            getEmergencyDataCurrent()
-        }else {
+        if emergencySeg.selectedSegmentIndex == 0 {
             getDataCurrent ()
+        }else {
+            getEmergencyDataCurrent()
         }
             
   

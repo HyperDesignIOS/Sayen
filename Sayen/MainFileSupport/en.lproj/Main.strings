@@ -20,6 +20,17 @@
 /* Class = "UISegmentedControl"; as2-Xm-xqG.segmentTitles[1] = "سابقه"; ObjectID = "as2-Xm-xqG"; */
 "as2-Xm-xqG.segmentTitles[1]" = "Last";
 
+
+/* Class = "UISegmentedControl"; as2-Xm-xqG.segmentTitles[0] = "حاليه"; ObjectID = "as2-Xm-xqG"; */
+"P4A-5B-c8D.segmentTitles[0]" = "Requests";
+
+/* Class = "UISegmentedControl"; as2-Xm-xqG.segmentTitles[1] = "سابقه"; ObjectID = "as2-Xm-xqG"; */
+"P4A-5B-c8D.segmentTitles[1]" = "Emergency Request";
+
+
+
+
+
 /* Class = "UILabel"; text = "طلباتي"; ObjectID = "cdp-Sd-4jg"; */
 "cdp-Sd-4jg.text" = "Requests";
 

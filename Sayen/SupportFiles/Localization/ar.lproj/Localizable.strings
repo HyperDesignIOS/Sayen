@@ -584,7 +584,7 @@
 
 "requestRecived" = "تم إستلام الطلب";
 "youWillGetVerificationMessage" = "ستصلك رسالة لدي تفعيل الحساب";
-"hi" = "اهلا";
+"hi" = " اهلا ";
 "enterCodeFirst" = "من فضلك قم بإدخال الكود أولا";
 "Rial" = "ريال";
 "request" = "طلب خدمة ";
@@ -711,7 +711,10 @@
 "ChooseCase" = "اختر الخدمة";
 "deactivateMsg"= "انت علي وشك تعطيل حسابك و يرجي العلم ان الحساب سيتم مسحه خلال ١٤ يوم !";
 "deletAccount" = "حذف الحساب";
-"haveAGoodDay" = "يوم سعيد ,";
+"haveAGoodDay" = " يوم سعيد ,";
 "maxDeviceMsg" = "الحد الاقصي لعدد الاجهزة ";
 "devices" = "اجهزة";
 "writeLastName" = "اكتب اسم العائلة";
+"incorrectVerificationCode" = "كود التفعيل غير صحيح";
+"Request ID copied" = "تم نسخ كود الطلب";
+

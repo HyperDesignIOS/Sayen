@@ -212,7 +212,13 @@ class EmergencyOrderDetailesVC: UIViewController {
         vc.controllerType = .EmergencyOrder
         self.navigationController?.pushViewController(vc, animated: false)
     }
-
+    
+    @IBAction func copyButton(_ sender: UIButton){
+        if let orderNum = orderNum.text {
+                UIPasteboard.general.string = "\(orderNum)"
+            Alert.showToastAlert(VC: self, title: "Request ID copied".localized, message: "\(orderNum)")
+            }
+    }
     func acceptOrRefusePrice (status : String){
       //  if status == "1" {self.priceStack.alpha = 0}
         

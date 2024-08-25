@@ -30,13 +30,13 @@ extension OrderHistoryVC : UITableViewDelegate , UITableViewDataSource {
 //    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard ad.isOnline() else{return}
-        if emergencySwitchOutlet.isOn {
-            let vc = EmergencyOrderDetailesVC()
+        if emergencySeg.selectedSegmentIndex == 0{
+            let vc = OrderDetailesVC()
             vc.order_id = data[indexPath.row].id
             vc.order_status = data[indexPath.row].order_status
             self.navigationController?.pushViewController(vc, animated: true)
-        }else {
-            let vc = OrderDetailesVC()
+        }  else {
+            let vc = EmergencyOrderDetailesVC()
             vc.order_id = data[indexPath.row].id
             vc.order_status = data[indexPath.row].order_status
             self.navigationController?.pushViewController(vc, animated: true)

@@ -143,6 +143,7 @@ class HomeUserVC: UIViewController , EmergancyVCDelegate {
             DispatchQueue.main.async {
                 if let data = data {
                     self.dataProfile = data
+                    Constants.UserId = data.id  
                     if data.active == "0" {
                         ad.bnannedAccount(databanned: "201")
                     }

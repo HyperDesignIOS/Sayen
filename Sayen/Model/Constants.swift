@@ -19,6 +19,7 @@ class Constants {
     static let workerAppstoreUrl = "https://apps.apple.com/us/app/sayen-team/id1536320901"
     static let invoicePdf = "https://sayen.co/api/v2/makePdf/"
     static var firebaseTokenKey = "firebaseToken"
+    static var UserId = 0
     static var merchantName = "Sayn App (Yaqoub Alarfaj)"
     static var deviceType = "iOS"
     static let  selectedImg = UIImage(named:"Radio-On-Enabled")

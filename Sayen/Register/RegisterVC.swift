@@ -16,18 +16,18 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var lastNameTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var passTf: UITextField!
-
     @IBOutlet weak var confirmTF: UITextField!
-    
     @IBOutlet weak var niceClint: DLRadioButton!
     @IBOutlet weak var anotherClint: DLRadioButton!
-    
     @IBOutlet weak var flatContainerV: UIStackView!
     @IBOutlet weak var flatNumberContainerV: UIStackView!
     @IBOutlet weak var buildingNoContainerV: CardView!
     @IBOutlet weak var flatNoContainerV: CardView!
     @IBOutlet weak var buildingNoTF: UITextField!
     @IBOutlet weak var flatNumTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
+    
+    
     var passTfS : String = ""
     var confirmTFS : String = ""
     
@@ -47,7 +47,7 @@ class RegisterVC: UIViewController {
         self.phoneTF.delegate = self
         self.passTf.delegate = self
         self.confirmTF.delegate = self
-        
+        self.emailTF.delegate = self
         flatContainerV.isHidden = true
         flatNumberContainerV.isHidden = true
         
@@ -136,7 +136,7 @@ class RegisterVC: UIViewController {
             self.viewModel.phonenum = self.phoneTF.text ?? ""
             self.viewModel.pass = self.passTfS
             self.viewModel.passConfirme = self.confirmTFS
-            
+            self.viewModel.email = self.emailTF.text ?? ""
         }
         
         viewModel.showAlertClosure = { [weak self] () in

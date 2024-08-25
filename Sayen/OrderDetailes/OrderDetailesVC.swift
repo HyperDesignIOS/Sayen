@@ -519,6 +519,12 @@ class OrderDetailesVC: UIViewController {
                }
     }
     
+    @IBAction func copyButton(_ sender: UIButton){
+        if let orderNum = orderNum.text {
+                UIPasteboard.general.string = "\(orderNum)"
+            Alert.showToastAlert(VC: self, title: "Request ID copied".localized, message: "\(orderNum)")
+            }
+    }
     
     
     func popView () {
@@ -1040,3 +1046,16 @@ extension OrderDetailesVC : EndYesOrNo {
 //
 //}
 //}
+struct Alert {
+    
+    static func showToastAlert(VC: UIViewController , title : String , message: String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        DispatchQueue.main.async {
+            VC.present(alertController , animated: true){
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+3.0){
+                    alertController.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+    }
+}

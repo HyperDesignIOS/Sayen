@@ -9,24 +9,32 @@ import UIKit
 
 class ChangePassVC: UIViewController {
     
-    @IBOutlet weak var oldPassTF: UITextField!
+    @IBOutlet weak var vCodeTF: UITextField!
     @IBOutlet weak var newPassTf: UITextField!
     @IBOutlet weak var confirmPassTF: UITextField!
-    var oldPassTFS : String = ""
+    @IBOutlet weak var infoLbl: UILabel!
+    @IBOutlet weak var infoimg: UIImageView!
+    
+    var vCodeTFS : String = ""
     var newPassTfS : String = ""
     var confirmPassTFS : String = ""
     var user_type : String {
         return ad.user_type()
+    }
+    var user_id : Int {
+        return 0
     }
     lazy var viewModel : ChangePassVM = {
         return ChangePassVM()
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.oldPassTF.delegate = self
+        self.vCodeTF.delegate = self
         self.newPassTf.delegate = self
         self.confirmPassTF.delegate = self
         initViewModel()
+        viewModel.initCreateOTP()
+        
         
     }
     
@@ -39,32 +47,38 @@ class ChangePassVC: UIViewController {
                     }
                 }
             }
+        viewModel.showInfoMessage = { [weak self] () in
+                guard let self = self else {return}
+                DispatchQueue.main.async {
+                    if let infoMsg = self.viewModel.infoMessage {
+                        self.infoLbl.text = infoMsg
+                        self.infoimg.isHidden = false
+                    }
+                }
+            }
         viewModel.updateLoadingStatus = {[weak self] () in
             guard let self = self else {return}
             switch self.viewModel.state {
             case .error , .empty:
                 ad.killLoading()
                 self.showDAlert(title: "Error".localized, subTitle: self.viewModel.alertMessage!, type: .error,buttonTitle: "tryAgain".localized, completionHandler: nil)
-
             case .loading:
                 ad.isLoading()
             case .populated :
                 ad.killLoading()
                 DispatchQueue.main.async {
-
                         DispatchQueue.main.async {
-                                  
                             self.showDAlert(title: "thanks".localized, subTitle: "passwordChanged".localized, type: .success, buttonTitle: "") { (_) in
                                 self.goToMenu()
                             }
                            }
-                    
                 }
                
             case .verfy:
                 ad.killLoading()
             }
         }
+        
         
     }
     var tabBar : UITabBarController?
@@ -84,7 +98,7 @@ class ChangePassVC: UIViewController {
     
     
     func resetAction () {
-        viewModel.oldPass = self.oldPassTFS
+        viewModel.userCode = vCodeTF.text
         viewModel.pass = self.newPassTfS
         viewModel.confirmPass = self.confirmPassTFS
         viewModel.initForget(for: self.user_type)
@@ -109,34 +123,6 @@ extension ChangePassVC : UITextFieldDelegate {
      {
          
          
-          
-           if textField == self.oldPassTF {
-               oldPassTFS = oldPassTFS+string
-               if oldPassTFS.count < 16 {
-                   oldPassTF.text = textField.text!+"*"
-                   print("\(oldPassTFS)")
-                   if let char = string.cString(using: String.Encoding.utf8) {
-                       let isBackSpace = strcmp(char, "\\b")
-                       if (isBackSpace == -92) {
-                           print("Backspace was pressed")
-                           self.oldPassTF.text = ""
-                           self.oldPassTFS = ""
-                       }
-                       
-                   }
-                   return false
-               }
-               if let char = string.cString(using: String.Encoding.utf8) {
-                   let isBackSpace = strcmp(char, "\\b")
-                   if (isBackSpace == -92) {
-                       print("Backspace was pressed")
-                       self.oldPassTF.text = ""
-                       self.oldPassTFS = ""
-                   }
-                   
-               }
-               
-           }
            
         if textField == self.newPassTf {
                    newPassTfS = newPassTfS+string

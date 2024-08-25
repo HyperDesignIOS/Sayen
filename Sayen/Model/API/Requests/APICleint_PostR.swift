@@ -70,8 +70,8 @@ extension APIClient {
        "status_code" : 200
      }
      */
-    static func registerRequest(name: String, lastName: String, mobile : String ,password:String,country_code:String,excellence_client : Int,building_id : Int,flat:String, completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
-        performSwiftyRequest(route: .register(name: name, lastName: lastName, mobile: mobile, password: password, country_code: country_code, excellence_client: excellence_client,building_id:building_id,flat:flat),headers: ["lang":"\(Constants.current_Language)"] ,  { (jsonData) in
+    static func registerRequest(name: String, lastName: String, email: String, mobile : String ,password:String,country_code:String,excellence_client : Int,building_id : Int,flat:String, completionHandler:@escaping (Bool,String)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+        performSwiftyRequest(route: .register(name: name, lastName: lastName, email: email  , mobile: mobile, password: password, country_code: country_code, excellence_client: excellence_client,building_id:building_id,flat:flat),headers: ["lang":"\(Constants.current_Language)"] ,  { (jsonData) in
              let json = JSON(jsonData)
             print(json)
             let sms = json["message"].string ?? json["error"].stringValue
@@ -232,6 +232,31 @@ extension APIClient {
          }
      }
     
+    static func createOTP(userId: Int, completionHandler:@escaping (Bool,String,String,Int)->Void , completionFaliure:@escaping (_ error:Error?)->Void){
+     performSwiftyRequest(route: .createOTP(id: userId)   ,headers: ["lang":"\(Constants.current_Language)", "Authorization": "bearer \(Constants.user_token)"] ,  { (jsonData) in
+          let json = JSON(jsonData)
+
+          DispatchQueue.main.async {
+              let sms  = json["message"].string ?? json["error"].stringValue
+              let code = json["code"].string ?? ""
+              guard let status = json["status_code"].int , status == 200  else {
+
+                 //  ad.CurrentRootVC()?.showApiErrorSms(err: sms)
+                completionHandler(false ,sms,code,404)
+                  return
+              }
+
+              completionHandler(true,sms,code,200)
+          }
+
+      }) { (error) in
+          DispatchQueue.main.async {
+             //  ad.CurrentRootVC()?.showApiErrorSms(err: error.debugDescription)
+              print(error.debugDescription)
+              completionFaliure(error)
+          }
+      }
+  }
     
     //MARK: resetNewPass
     static func resetPassword(password : String, user_type : String, completionHandler:@escaping (Bool,String,Int)->Void , completionFaliure:@escaping (_ error:Error?)->Void){

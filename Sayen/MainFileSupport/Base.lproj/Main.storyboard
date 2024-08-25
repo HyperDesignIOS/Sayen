@@ -15,9 +15,6 @@
         <array key="Tajawal-Medium.ttf">
             <string>Tajawal-Medium</string>
         </array>
-        <array key="Tajawal-Regular.ttf">
-            <string>Tajawal-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--ProfileVC-->
@@ -84,9 +81,9 @@
                                         <constraint firstAttribute="width" constant="100" id="B8Y-sS-ajN"/>
                                         <constraint firstAttribute="height" constant="35" id="EBN-e9-UhH"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Tajawal-Regular" family="Tajawal" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="18"/>
                                     <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    <state key="normal" title="حسابي" image="Group 711">
+                                    <state key="normal" title="حسابي">
                                         <color key="titleColor" red="0.53994888070000002" green="0.43772861359999998" blue="0.19690179820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
@@ -197,8 +194,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q89-VR-AYr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="طلباتي" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdp-Sd-4jg">
-                                        <rect key="frame" x="20" y="74" width="71.5" height="24"/>
+                                    <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5ZB-tZ-oS5">
+                                        <rect key="frame" x="345" y="67" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdp-Sd-4jg">
+                                        <rect key="frame" x="20" y="98" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="24"/>
                                         <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -209,33 +210,44 @@
                                         <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5ZB-tZ-oS5">
-                                        <rect key="frame" x="345" y="67" width="51" height="31"/>
-                                        <color key="onTintColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="P4A-5B-c8D">
+                                        <rect key="frame" x="37" y="67" width="340" height="51"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="340" id="Xe0-t4-w2c"/>
+                                            <constraint firstAttribute="height" constant="50" id="ptr-EL-i7t"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="الطلبات "/>
+                                            <segment title="طلبات الطوارئ"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" red="0.60534828900000004" green="0.67665320630000003" blue="0.73954386139999995" alpha="0.58941387560000003" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="emergencySwitch:" destination="sd6-p7-FIh" eventType="valueChanged" id="pPn-75-Fzr"/>
+                                            <action selector="emergencySegAction:" destination="sd6-p7-FIh" eventType="valueChanged" id="GY9-iA-4Sc"/>
                                         </connections>
-                                    </switch>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="HLg-N8-r5t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cdp-Sd-4jg" secondAttribute="trailing" constant="53" id="4Qd-TT-iy2"/>
+                                    <constraint firstItem="P4A-5B-c8D" firstAttribute="centerX" secondItem="q89-VR-AYr" secondAttribute="centerX" id="4xL-zI-Tf7"/>
                                     <constraint firstItem="5ZB-tZ-oS5" firstAttribute="top" secondItem="HLg-N8-r5t" secondAttribute="top" id="Fba-dK-jat"/>
                                     <constraint firstItem="5ZB-tZ-oS5" firstAttribute="leading" secondItem="HLg-N8-r5t" secondAttribute="trailing" constant="16" id="Fnp-vm-n0S"/>
                                     <constraint firstItem="cdp-Sd-4jg" firstAttribute="leading" secondItem="q89-VR-AYr" secondAttribute="leading" constant="20" id="KGL-fa-EJk"/>
                                     <constraint firstAttribute="height" constant="110" id="ObA-JD-3MM"/>
                                     <constraint firstAttribute="trailing" secondItem="5ZB-tZ-oS5" secondAttribute="trailing" constant="20" id="fHI-Ib-Jsc"/>
                                     <constraint firstItem="HLg-N8-r5t" firstAttribute="bottom" secondItem="cdp-Sd-4jg" secondAttribute="bottom" id="iJZ-8W-jss"/>
+                                    <constraint firstItem="P4A-5B-c8D" firstAttribute="top" secondItem="5ZB-tZ-oS5" secondAttribute="top" id="wWM-WT-f8m"/>
                                     <constraint firstAttribute="bottom" secondItem="cdp-Sd-4jg" secondAttribute="bottom" constant="12" id="xAJ-z3-0Jb"/>
                                     <constraint firstItem="5ZB-tZ-oS5" firstAttribute="bottom" secondItem="HLg-N8-r5t" secondAttribute="bottom" id="yZe-DF-ZAr"/>
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="as2-Xm-xqG">
-                                <rect key="frame" x="57" y="120" width="300" height="51"/>
+                                <rect key="frame" x="72" y="140" width="270" height="51"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0Ky-jH-2K3"/>
-                                    <constraint firstAttribute="width" constant="300" id="f4n-3e-pYm"/>
+                                    <constraint firstAttribute="width" constant="270" id="f4n-3e-pYm"/>
                                 </constraints>
                                 <segments>
                                     <segment title="حاليه"/>
@@ -244,11 +256,11 @@
                                 <color key="selectedSegmentTintColor" red="0.60534828900000004" green="0.67665320630000003" blue="0.73954386139999995" alpha="0.58941387559808611" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6DZ-b7-XeH">
-                                <rect key="frame" x="20" y="186" width="374" height="710"/>
+                                <rect key="frame" x="20" y="206" width="374" height="690"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لا توجد طلبات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBt-W1-dRM">
-                                <rect key="frame" x="149.5" y="531" width="115" height="20"/>
+                                <rect key="frame" x="149.5" y="541" width="115" height="20"/>
                                 <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="20"/>
                                 <color key="textColor" red="0.019607843140000001" green="0.20000000000000001" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -263,7 +275,7 @@
                             <constraint firstItem="6DZ-b7-XeH" firstAttribute="top" secondItem="as2-Xm-xqG" secondAttribute="bottom" constant="16" id="P68-1I-PBd"/>
                             <constraint firstItem="as2-Xm-xqG" firstAttribute="centerX" secondItem="CVf-9v-Qjb" secondAttribute="centerX" id="WLO-Bd-w46"/>
                             <constraint firstItem="q89-VR-AYr" firstAttribute="top" secondItem="CVf-9v-Qjb" secondAttribute="top" id="XdF-6F-NMP"/>
-                            <constraint firstItem="as2-Xm-xqG" firstAttribute="top" secondItem="q89-VR-AYr" secondAttribute="bottom" constant="10" id="fcc-2D-Xtc"/>
+                            <constraint firstItem="as2-Xm-xqG" firstAttribute="top" secondItem="q89-VR-AYr" secondAttribute="bottom" constant="30" id="fcc-2D-Xtc"/>
                             <constraint firstItem="q89-VR-AYr" firstAttribute="leading" secondItem="Wxl-DK-k7r" secondAttribute="leading" id="gYJ-0k-Ivd"/>
                             <constraint firstItem="6DZ-b7-XeH" firstAttribute="leading" secondItem="Wxl-DK-k7r" secondAttribute="leading" constant="20" id="i3X-ln-Xuj"/>
                             <constraint firstAttribute="bottom" secondItem="6DZ-b7-XeH" secondAttribute="bottom" id="wsz-Ml-Nfo"/>
@@ -272,7 +284,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Kme-Zz-7sV"/>
                     <connections>
-                        <outlet property="emergencySwitchOutlet" destination="5ZB-tZ-oS5" id="dEj-Lk-SdL"/>
+                        <outlet property="emergencySeg" destination="P4A-5B-c8D" id="guf-lq-csK"/>
                         <outlet property="lastAndCurrentSeg" destination="as2-Xm-xqG" id="0Jy-ib-m54"/>
                         <outlet property="noDataLbl" destination="lBt-W1-dRM" id="E50-PS-oB1"/>
                         <outlet property="tableView" destination="6DZ-b7-XeH" id="Xzb-qM-JEb"/>
@@ -448,12 +460,11 @@
     </scenes>
     <designables>
         <designable name="VeH-Mk-hn3">
-            <size key="intrinsicContentSize" width="53.5" height="19"/>
+            <size key="intrinsicContentSize" width="52" height="30"/>
         </designable>
     </designables>
     <resources>
         <image name="2-back-login" width="360.5" height="450.5"/>
-        <image name="Group 711" width="10.5" height="10.5"/>
         <image name="Home" width="17.5" height="17.5"/>
         <image name="Home-1" width="17.5" height="17.5"/>
         <image name="Rectangle 516" width="360" height="129"/>

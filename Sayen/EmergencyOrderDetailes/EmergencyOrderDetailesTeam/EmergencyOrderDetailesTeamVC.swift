@@ -76,6 +76,14 @@ class EmergencyOrderDetailesTeamVC: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+    @IBAction func copyButton(_ sender: UIButton){
+        if let orderNum = orderNum.text {
+                UIPasteboard.general.string = "\(orderNum)"
+            Alert.showToastAlert(VC: self, title: "Request ID copied".localized, message: "\(orderNum)")
+            }
+    }
+    
+    
     @IBAction func addMatrialButton(_ sender: UIButton){
         let vc = AddValuesAlert()
         vc.controlletType = .AddEmergencyMaterial

@@ -59,6 +59,7 @@ class ProfileVC: UIViewController {
                 ad.killLoading()
                 if let data = data {
                     self.data = data
+                    self.data?.id
                     if data.name == "" {
                         self.profileName.text = data.phone
                     }else{

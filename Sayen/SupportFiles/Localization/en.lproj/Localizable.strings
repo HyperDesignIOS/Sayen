@@ -759,3 +759,5 @@
 "maxDeviceMsg" = "Maximum number of devices is ";
 "devices" = "devices";
 "writeLastName" = "please, write last name";
+"incorrectVerificationCode" = "incorrect verification code";
+"Request ID copied" = "Request ID copied";
